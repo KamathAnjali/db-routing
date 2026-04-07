@@ -1,0 +1,4 @@
+Database: gas_company
+company(Company_ID: int,, Rank: int,, Company: text,, Headquarters: text,, Main_Industry: text,, Sales_billion: real,, Profits_billion: real,, Assets_billion: real,, Market_Value: real,) PK[Company_ID]
+gas_station(Station_ID: int,, Open_Year: int,, Location: text,, Manager_Name: text,, Vice_Manager_Name: text,, Representative_Name: text,) PK[Station_ID]
+station_company(Station_ID: int,, Company_ID: int,, Rank_of_the_Year: int,) PK[Station_ID, Company_ID] FK[Station_ID→gas_station.Station_ID; Company_ID→company.Company_ID]

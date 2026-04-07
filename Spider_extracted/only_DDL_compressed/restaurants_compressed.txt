@@ -1,0 +1,4 @@
+Database: restaurants
+GEOGRAPHIC(CITY_NAME: text,, COUNTY: text,, REGION: text,) PK[CITY_NAME]
+RESTAURANT(ID: int,, NAME: text,, FOOD_TYPE: text,, CITY_NAME: text,, RATING: real,, foreign: key ("CITY_NAME")) PK[ID]
+LOCATION(RESTAURANT_ID: int,, HOUSE_NUMBER: int,, STREET_NAME: text,, CITY_NAME: text,, foreign: key ("CITY_NAME"), foreign: key ("RESTAURANT_ID")) PK[RESTAURANT_ID]

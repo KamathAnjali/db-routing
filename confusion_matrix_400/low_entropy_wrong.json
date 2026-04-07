@@ -1,0 +1,2726 @@
+[
+  {
+    "question_id": 8179,
+    "question": "How many escape games are there in Madison ?",
+    "correct_db": "yelp",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "roller_coaster",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tv_shows",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question is about counting escape games in a specific city (Madison). Relevant domains would include local business directories, entertainment venues, or city-specific services. Databases not related to businesses, entertainment, or geographic locations should be eliminated.",
+      "step1_requirements": "The question requires: 1) A table with business/venue types (e.g., 'escape games'), 2) A table with geographic locations (e.g., 'Madison'), and 3) A way to link these two (e.g., foreign keys or combined tables).",
+      "step2_eliminated": [
+        "roller_coaster",
+        "vehicle_rent",
+        "apartment_rentals",
+        "store_product",
+        "local_govt_mdm",
+        "culture_company",
+        "tv_shows",
+        "product_catalog"
+      ],
+      "step3_comparison": "1) restaurants: Has RESTAURANT table with NAME and CITY_NAME (\u2713), but lacks business type specificity for 'escape games' (\u2717). 2) local_govt_and_lot: Has Things table with Type_of_Thing_Code (potential \u2713) and Organizations table (potential \u2713), but no clear link to Madison (\u2717). No other databases have both business type and geographic specificity.",
+      "scores": [
+        {
+          "db_id": "roller_coaster",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.5
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_and_lot",
+          "score": 0.5
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "store_product",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "tv_shows",
+          "score": 0.0
+        },
+        {
+          "db_id": "product_catalog",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 613,
+    "question": "What are the names of all the media types?",
+    "correct_db": "store_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "chinook_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "store_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tv_shows",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "real_estate_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "art_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tvshow",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "real_estate_properties",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question 'What are the names of all the media types?' falls under the domain of media or entertainment databases. Databases classified under this domain: chinook_1, store_1, culture_company, tv_shows, music_2, tvshow. Databases not in this domain: real_estate_rentals, product_catalog, art_1, real_estate_properties.",
+      "step1_requirements": "The question requires a table that contains media types with a column for media type names.",
+      "step2_eliminated": [
+        "culture_company",
+        "tv_shows",
+        "real_estate_rentals",
+        "product_catalog",
+        "art_1",
+        "music_2",
+        "tvshow",
+        "real_estate_properties"
+      ],
+      "step3_comparison": "chinook_1 has a table 'MediaType' with a column 'Name' (\u2713). store_1 has a table 'media_types' with a column 'name' (\u2713). Both databases directly match the requirement. The other databases either lack the required table or are not in the correct domain.",
+      "scores": [
+        {
+          "db_id": "chinook_1",
+          "score": 0.5
+        },
+        {
+          "db_id": "store_1",
+          "score": 0.5
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "tv_shows",
+          "score": 0.0
+        },
+        {
+          "db_id": "real_estate_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "product_catalog",
+          "score": 0.0
+        },
+        {
+          "db_id": "art_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "music_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "tvshow",
+          "score": 0.0
+        },
+        {
+          "db_id": "real_estate_properties",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 5603,
+    "question": "How many cities have a stadium that was opened before the year of 2006?",
+    "correct_db": "swimming",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "race_track",
+        "llm_score": 0.9
+      },
+      {
+        "db_id": "swimming",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "city_record",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "concert_singer",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "institution_sports",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "game_injury",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "baseball_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "sports_competition",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "gas_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.325083,
+    "reasoning": {
+      "step0_domain": "The question is about cities and stadiums, specifically focusing on stadiums opened before 2006. The domain is sports and venue management.",
+      "step1_requirements": "The question requires tables with columns for cities, stadiums, and the year the stadium was opened.",
+      "step2_eliminated": [
+        "city_record",
+        "concert_singer",
+        "institution_sports",
+        "game_injury",
+        "baseball_1",
+        "swimming",
+        "sports_competition",
+        "gas_company",
+        "store_product"
+      ],
+      "step3_comparison": "The question needs a database with tables for cities and stadiums, including the year the stadium was opened. Only 'race_track' has a 'track' table with 'Year_Opened' column, which can be used to determine if the stadium was opened before 2006. Other databases lack either the stadium information or the opening year.",
+      "scores": [
+        {
+          "db_id": "city_record",
+          "score": 0.0
+        },
+        {
+          "db_id": "concert_singer",
+          "score": 0.0
+        },
+        {
+          "db_id": "institution_sports",
+          "score": 0.0
+        },
+        {
+          "db_id": "game_injury",
+          "score": 0.0
+        },
+        {
+          "db_id": "baseball_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "swimming",
+          "score": 0.1
+        },
+        {
+          "db_id": "sports_competition",
+          "score": 0.0
+        },
+        {
+          "db_id": "gas_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "race_track",
+          "score": 0.9
+        },
+        {
+          "db_id": "store_product",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 6730,
+    "question": "Find the building that has the largest number of faculty members.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "company_office",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "region_building",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.801819,
+    "reasoning": {
+      "step0_domain": "The question domain is academic institutions and their buildings, specifically focusing on faculty members per building. Databases classified as relevant must have tables for buildings and faculty members.",
+      "step1_requirements": "The question requires tables for buildings (with building identifiers) and faculty members (with building assignments).",
+      "step2_eliminated": [
+        "protein_institute",
+        "university_rank",
+        "company_office",
+        "apartment_rentals",
+        "icfp_1",
+        "region_building",
+        "dorm_1"
+      ],
+      "step3_comparison": "The question needs buildings and faculty tables with building assignments. Database 4 (activity_1) has Faculty table with Building column \u2713 but lacks a buildings table \u2717. Database 3 (csu_1) has faculty table but lacks building assignments \u2717. Database 10 (college_3) has Faculty table with Building column \u2713 and Department table with Building column \u2713, making it the best fit.",
+      "scores": [
+        {
+          "db_id": "protein_institute",
+          "score": 0.0
+        },
+        {
+          "db_id": "university_rank",
+          "score": 0.0
+        },
+        {
+          "db_id": "csu_1",
+          "score": 0.1
+        },
+        {
+          "db_id": "activity_1",
+          "score": 0.2
+        },
+        {
+          "db_id": "company_office",
+          "score": 0.0
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "icfp_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "region_building",
+          "score": 0.0
+        },
+        {
+          "db_id": "dorm_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "college_3",
+          "score": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 647,
+    "question": "What are the names of all the tracks that are in both the Movies and music playlists?",
+    "correct_db": "store_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "chinook_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "store_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "sakila_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "movie_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tv_shows",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question domain is music and movie playlists. Databases classified as: music_2 (music), chinook_1 (music), store_1 (music), culture_company (mixed), tracking_orders (retail), sakila_1 (movies), music_1 (music), movie_2 (movies), tv_shows (TV), cre_Doc_and_collections (document management).",
+      "step1_requirements": "The question requires tables for tracks, playlists (specifically 'Movies' and 'music' playlists), and a way to link tracks to playlists.",
+      "step2_eliminated": [
+        "culture_company",
+        "tracking_orders",
+        "sakila_1",
+        "tv_shows",
+        "cre_Doc_and_collections"
+      ],
+      "step3_comparison": "music_2: \u2717 (no playlists table), chinook_1: \u2713 (has Playlist table but lacks direct track-playlist linkage), store_1: \u2713 (similar to chinook_1 but lacks direct linkage), music_1: \u2717 (no playlists table), movie_2: \u2717 (no music playlists or tracks).",
+      "scores": [
+        {
+          "db_id": "music_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "chinook_1",
+          "score": 0.5
+        },
+        {
+          "db_id": "store_1",
+          "score": 0.5
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "tracking_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "sakila_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "music_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "movie_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "tv_shows",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Doc_and_collections",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 624,
+    "question": "What is title of album which track Balls to the Wall belongs to?",
+    "correct_db": "store_1",
+    "correct_db_rank": 3,
+    "top10": [
+      {
+        "db_id": "music_2",
+        "llm_score": 0.9
+      },
+      {
+        "db_id": "chinook_1",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "store_1",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tv_shows",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.394398,
+    "reasoning": {
+      "step0_domain": "The question domain is music, specifically about albums and tracks. Database domains: music_2 (music), chinook_1 (music), store_1 (music), product_catalog (product management), vehicle_rent (vehicle rental), customers_card_transactions (financial transactions), culture_company (media and publishing), tv_shows (television), cre_Doc_and_collections (document management), local_govt_mdm (government services).",
+      "step1_requirements": "The question requires tables and columns that link tracks to albums, specifically: a table for songs with song titles, a table for albums with album titles, and a table that maps songs to albums.",
+      "step2_eliminated": [
+        "product_catalog",
+        "vehicle_rent",
+        "customers_card_transactions",
+        "culture_company",
+        "tv_shows",
+        "cre_Doc_and_collections",
+        "local_govt_mdm"
+      ],
+      "step3_comparison": "music_2 has Songs(Title), Albums(Title), and Tracklists linking them (\u2713). chinook_1 lacks tables for tracks and albums (\u2717). store_1 lacks tables for tracks and albums (\u2717).",
+      "scores": [
+        {
+          "db_id": "music_2",
+          "score": 0.9
+        },
+        {
+          "db_id": "chinook_1",
+          "score": 0.05
+        },
+        {
+          "db_id": "store_1",
+          "score": 0.05
+        },
+        {
+          "db_id": "product_catalog",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.0
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "tv_shows",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Doc_and_collections",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 2425,
+    "question": "list all female (sex is F) candidate names in the alphabetical order.",
+    "correct_db": "candidate_poll",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "candidate_poll",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question is about listing female candidate names in alphabetical order. Domains: student_assessment (education), voter_2 (voting), candidate_poll (political polling), network_2 (social network), customers_and_products_contacts (customer data), local_govt_mdm (government), dorm_1 (student housing), icfp_1 (academic publications), music_2 (music), allergy_1 (student health).",
+      "step1_requirements": "The question requires a table with candidate names, a column indicating sex (F), and the ability to sort names alphabetically.",
+      "step2_eliminated": [
+        "network_2",
+        "customers_and_products_contacts",
+        "local_govt_mdm",
+        "dorm_1",
+        "icfp_1",
+        "music_2",
+        "allergy_1"
+      ],
+      "step3_comparison": "student_assessment: \u2717 (no sex column in Candidates or People), voter_2: \u2713 (Student table has Sex and name columns), candidate_poll: \u2713 (people table has Sex and Name columns), network_2: \u2717 (no candidate data), customers_and_products_contacts: \u2717 (no candidate data), local_govt_mdm: \u2717 (no candidate data), dorm_1: \u2717 (no candidate data), icfp_1: \u2717 (no candidate data), music_2: \u2717 (no candidate data), allergy_1: \u2717 (no candidate data).",
+      "scores": [
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "voter_2",
+          "score": 0.5
+        },
+        {
+          "db_id": "candidate_poll",
+          "score": 0.5
+        },
+        {
+          "db_id": "network_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "dorm_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "icfp_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "music_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "allergy_1",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 1393,
+    "question": "Find the number of rooms with more than 50 capacity for each building.",
+    "correct_db": "college_2",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "inn_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "region_building",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "real_estate_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "company_office",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "real_estate_properties",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "warehouse_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012,
+    "reasoning": {
+      "step0_domain": "The question domain is 'building and room capacity tracking'. Database domains: apartment_rentals (apartment management), dorm_1 (student housing), region_building (regional buildings), inn_1 (hotel rooms), real_estate_rentals (property rentals), company_office (corporate offices), real_estate_properties (property sales), warehouse_1 (storage facilities), protein_institute (educational institutions), local_govt_and_lot (government services).",
+      "step1_requirements": "The question requires tables tracking buildings, rooms, and room capacities. Specifically: a buildings table (with building identifiers), a rooms table (with room capacity and building association).",
+      "step2_eliminated": [
+        "apartment_rentals",
+        "region_building",
+        "real_estate_rentals",
+        "company_office",
+        "real_estate_properties",
+        "warehouse_1",
+        "protein_institute",
+        "local_govt_and_lot"
+      ],
+      "step3_comparison": "dorm_1 has Dorm (building info) and Lives_in (room assignments) but lacks explicit room capacity. inn_1 has Rooms with maxOccupancy (capacity) but lacks building association. dorm_1 \u2717 room capacity, inn_1 \u2713 capacity but \u2717 building link.",
+      "scores": [
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "dorm_1",
+          "score": 0.4
+        },
+        {
+          "db_id": "region_building",
+          "score": 0.0
+        },
+        {
+          "db_id": "inn_1",
+          "score": 0.6
+        },
+        {
+          "db_id": "real_estate_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "company_office",
+          "score": 0.0
+        },
+        {
+          "db_id": "real_estate_properties",
+          "score": 0.0
+        },
+        {
+          "db_id": "warehouse_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "protein_institute",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_and_lot",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 4721,
+    "question": "What is the name and job title of the staff who was assigned the latest?",
+    "correct_db": "department_store",
+    "correct_db_rank": 8,
+    "top10": [
+      {
+        "db_id": "cre_Doc_Workflow",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "cre_Doc_Tracking_DB",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "department_store",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012,
+    "reasoning": {
+      "step0_domain": "The question is about identifying staff members and their job titles, specifically focusing on who was assigned the latest task. This falls under the domain of staff management and task assignment tracking.",
+      "step1_requirements": "The database needs to have tables for staff, their roles/job titles, and task assignments with timestamps to determine the latest assignment.",
+      "step2_eliminated": [
+        "tracking_grants_for_research",
+        "insurance_and_eClaims",
+        "local_govt_and_lot",
+        "student_assessment",
+        "apartment_rentals",
+        "department_store",
+        "local_govt_mdm"
+      ],
+      "step3_comparison": "The databases 'cre_Doc_Workflow', 'cre_Doc_Tracking_DB', and 'driving_school' have tables for staff and roles, but only 'cre_Doc_Workflow' and 'cre_Doc_Tracking_DB' have explicit task assignment tracking with timestamps. 'cre_Doc_Workflow' has a more detailed schema for tracking staff roles and processes, making it the best fit.",
+      "scores": [
+        {
+          "db_id": "tracking_grants_for_research",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_and_lot",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Doc_Workflow",
+          "score": 0.6
+        },
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "department_store",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Doc_Tracking_DB",
+          "score": 0.4
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 10762,
+    "question": "Show all staff name who are above the average age.",
+    "correct_db": "conference",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "department_store",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864,
+    "reasoning": {
+      "step0_domain": "The question domain is 'staff management' with a focus on age-related queries. Per-database domain classification: insurance_and_eClaims (insurance), department_store (retail), boat_1 (sailing), driving_school (education), student_assessment (education), pets_1 (education), vehicle_rent (rental), apartment_rentals (real estate), voter_2 (education), network_2 (social).",
+      "step1_requirements": "The question requires a 'Staff' table with columns for 'name' and 'age' to calculate the average age and filter staff members above it.",
+      "step2_eliminated": [
+        "insurance_and_eClaims",
+        "department_store",
+        "student_assessment",
+        "pets_1",
+        "vehicle_rent",
+        "apartment_rentals",
+        "voter_2",
+        "network_2"
+      ],
+      "step3_comparison": "boat_1: Sailors table has 'name' (\u2713) and 'age' (\u2713). driving_school: Staff table has 'first_name', 'last_name' (\u2713 combined as name) and 'date_of_birth' (\u2717, age not directly stored). boat_1 is the clear winner as it directly provides age data.",
+      "scores": [
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "department_store",
+          "score": 0.0
+        },
+        {
+          "db_id": "boat_1",
+          "score": 0.7
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.3
+        },
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "pets_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "voter_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "network_2",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 6967,
+    "question": "How many books fall into each category?",
+    "correct_db": "culture_company",
+    "correct_db_rank": 6,
+    "top10": [
+      {
+        "db_id": "book_review",
+        "llm_score": 0.842105
+      },
+      {
+        "db_id": "book_2",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "book_press",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "sakila_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Drama_Workshop_Groups",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.609627,
+    "reasoning": {
+      "step0_domain": "The question is about categorizing books, which falls under the domain of book management systems. Databases that do not contain book-related tables or category information are out of domain.",
+      "step1_requirements": "The question requires a database with tables for books and their categories, specifically columns for book titles and category names or types.",
+      "step2_eliminated": [
+        "product_catalog",
+        "culture_company",
+        "sakila_1",
+        "customers_and_products_contacts",
+        "customers_and_orders",
+        "cre_Drama_Workshop_Groups"
+      ],
+      "step3_comparison": "book_2 has a 'book' table but lacks category information \u2717. book_1 has a 'Book' table and an 'Author_Book' table but no explicit category column \u2717. book_press has a 'book' table but no category information \u2717. book_review has a 'book' table with a 'Type' column which could serve as a category \u2713. The eliminated databases either lack book-related tables or do not have category information.",
+      "scores": [
+        {
+          "db_id": "book_2",
+          "score": 0.05
+        },
+        {
+          "db_id": "book_1",
+          "score": 0.05
+        },
+        {
+          "db_id": "book_press",
+          "score": 0.05
+        },
+        {
+          "db_id": "book_review",
+          "score": 0.8
+        },
+        {
+          "db_id": "product_catalog",
+          "score": 0.0
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "sakila_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Drama_Workshop_Groups",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 6324,
+    "question": "How many cities are there in state \"Colorado\"?",
+    "correct_db": "e_government",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "geo",
+        "llm_score": 0.9
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.325083,
+    "reasoning": {
+      "step0_domain": "The question domain is geographic, specifically about cities and states. Databases classified by domain: geo (geographic), store_product (retail), university_rank (education), restaurants (food service), customers_and_products_contacts (customer relations), customers_and_addresses (customer relations), world_1 (geographic), customers_and_orders (retail), vehicle_rent (transportation), flight_2 (transportation).",
+      "step1_requirements": "The question requires tables and columns that can identify cities within the state of Colorado. Specifically, a 'city' table with 'city_name' and 'state_name' columns, and a 'state' table with 'state_name' column.",
+      "step2_eliminated": [
+        "store_product",
+        "university_rank",
+        "restaurants",
+        "customers_and_products_contacts",
+        "customers_and_addresses",
+        "customers_and_orders",
+        "vehicle_rent",
+        "flight_2"
+      ],
+      "step3_comparison": "geo: \u2713 city table with city_name and state_name columns, \u2713 state table with state_name column. world_1: \u2713 city table with Name and District columns (District can represent state), \u2717 no explicit state table. Other databases: \u2717 no relevant tables or columns for geographic city-state queries.",
+      "scores": [
+        {
+          "db_id": "geo",
+          "score": 0.9
+        },
+        {
+          "db_id": "store_product",
+          "score": 0.0
+        },
+        {
+          "db_id": "university_rank",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.0
+        },
+        {
+          "db_id": "world_1",
+          "score": 0.1
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "flight_2",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 8854,
+    "question": "How many flights depart from 'APG'?",
+    "correct_db": "flight_2",
+    "correct_db_rank": 3,
+    "top10": [
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "flight_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "station_weather",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aircraft",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "bike_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question is about flight departures from a specific airport ('APG'). The relevant domain is aviation/flight tracking. Databases flight_2, flight_4, flight_company, flight_1, and aircraft are in the aviation domain. Databases station_weather, apartment_rentals, local_govt_mdm, vehicle_rent, and bike_1 are irrelevant as they cover weather, housing, government, vehicle rentals, and bike sharing respectively.",
+      "step1_requirements": "The question requires a database with flight data, specifically a table that tracks flights and includes columns for departure airport (preferably with IATA codes like 'APG').",
+      "step2_eliminated": [
+        "station_weather",
+        "apartment_rentals",
+        "local_govt_mdm",
+        "vehicle_rent",
+        "bike_1"
+      ],
+      "step3_comparison": "flight_2: \u2717 (no schema provided). flight_4: \u2713 (routes table has src_ap column for departure airport). flight_company: \u2717 (flight table has airport_id but no direct IATA code). flight_1: \u2713 (flight table has origin column for departure airport). aircraft: \u2717 (no flight tracking tables).",
+      "scores": [
+        {
+          "db_id": "flight_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "flight_4",
+          "score": 0.5
+        },
+        {
+          "db_id": "flight_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "station_weather",
+          "score": 0.0
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "flight_1",
+          "score": 0.5
+        },
+        {
+          "db_id": "aircraft",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "bike_1",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 1590,
+    "question": "Return the names and ids of each account, as well as the number of transactions.",
+    "correct_db": "customers_and_invoices",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "customers_and_invoices",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "small_bank_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Docs_and_Epenses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_share_transactions",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_policies",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012,
+    "reasoning": {
+      "step0_domain": "The question domain is financial transactions and account management. Databases classified under this domain: customers_card_transactions, small_bank_1, customers_and_invoices, tracking_share_transactions. Others are eliminated due to irrelevant domains (e.g., insurance, local government, customer orders without transactions).",
+      "step1_requirements": "The question requires: 1) Accounts table with account_id and account_name, 2) Transactions table linked to accounts, 3) Ability to count transactions per account.",
+      "step2_eliminated": [
+        "customers_and_products_contacts",
+        "cre_Docs_and_Epenses",
+        "local_govt_mdm",
+        "customers_and_addresses",
+        "insurance_policies",
+        "customers_and_orders"
+      ],
+      "step3_comparison": "customers_card_transactions: \u2713 Accounts table with account_id/account_name, \u2713 Financial_Transactions linked to accounts via account_id. small_bank_1: \u2717 No transactions table. customers_and_invoices: \u2713 Accounts table with account_id/account_name, \u2713 Financial_Transactions linked to accounts via account_id. tracking_share_transactions: \u2717 No accounts table, only investor-centric transactions.",
+      "scores": [
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.6
+        },
+        {
+          "db_id": "small_bank_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_invoices",
+          "score": 0.4
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Docs_and_Epenses",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.0
+        },
+        {
+          "db_id": "tracking_share_transactions",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_policies",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 3873,
+    "question": "With which kind of payment method were the least number of payments processed?",
+    "correct_db": "insurance_policies",
+    "correct_db_rank": 3,
+    "top10": [
+      {
+        "db_id": "e_commerce",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "insurance_policies",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "products_for_hire",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_campaigns_ecommerce",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "advertising_agencies",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402,
+    "reasoning": {
+      "step0_domain": "The question is about payment methods and their usage in transactions. The relevant domain is payment processing and transaction tracking.",
+      "step1_requirements": "The question requires tables that track payments and their methods, specifically: a payments table with a payment method column and a count of payments per method.",
+      "step2_eliminated": [
+        "insurance_policies",
+        "customers_and_addresses",
+        "customers_and_orders",
+        "customers_and_products_contacts",
+        "products_for_hire",
+        "customers_campaigns_ecommerce",
+        "driving_school",
+        "advertising_agencies"
+      ],
+      "step3_comparison": "The remaining databases are evaluated based on their ability to track payment methods and count payments per method. 'customers_card_transactions' has a 'Financial_Transactions' table with 'card_id' and 'transaction_type', but lacks a direct payment method column. 'e_commerce' has 'Customer_Payment_Methods' with 'payment_method_code' and 'Invoices' which can be linked to payments, providing a clear way to count payments by method.",
+      "scores": [
+        {
+          "db_id": "insurance_policies",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.2
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "products_for_hire",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_campaigns_ecommerce",
+          "score": 0.0
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.0
+        },
+        {
+          "db_id": "advertising_agencies",
+          "score": 0.0
+        },
+        {
+          "db_id": "e_commerce",
+          "score": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 2969,
+    "question": "Return the titles of any movies with an R rating.",
+    "correct_db": "sakila_1",
+    "correct_db_rank": 5,
+    "top10": [
+      {
+        "db_id": "movie_2",
+        "llm_score": 0.9
+      },
+      {
+        "db_id": "movie_1",
+        "llm_score": 0.02
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.02
+      },
+      {
+        "db_id": "imdb",
+        "llm_score": 0.02
+      },
+      {
+        "db_id": "sakila_1",
+        "llm_score": 0.02
+      },
+      {
+        "db_id": "cinema",
+        "llm_score": 0.02
+      },
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tvshow",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.486027,
+    "reasoning": {
+      "step0_domain": "The question domain is 'movies' with a focus on movie ratings. Databases classified as movie-related: movie_2, movie_1, culture_company, imdb, sakila_1, cinema. Non-movie databases: boat_1, restaurants, vehicle_rent, tvshow.",
+      "step1_requirements": "The question requires a table with movie titles and a column indicating the movie's rating (specifically 'R' rating).",
+      "step2_eliminated": [
+        "boat_1",
+        "restaurants",
+        "vehicle_rent",
+        "tvshow"
+      ],
+      "step3_comparison": "movie_2: Movies table has Title and Rating columns (\u2713). movie_1: Movie table has title but no rating column (\u2717). culture_company: movie table has Title but no rating column (\u2717). imdb: movie table has title but no rating column (\u2717). sakila_1: film_text table has title but no rating column (\u2717). cinema: film table has Title but no rating column (\u2717).",
+      "scores": [
+        {
+          "db_id": "movie_2",
+          "score": 0.9
+        },
+        {
+          "db_id": "movie_1",
+          "score": 0.02
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.02
+        },
+        {
+          "db_id": "imdb",
+          "score": 0.02
+        },
+        {
+          "db_id": "sakila_1",
+          "score": 0.02
+        },
+        {
+          "db_id": "cinema",
+          "score": 0.02
+        },
+        {
+          "db_id": "boat_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "tvshow",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 9770,
+    "question": "What are the usernames and passwords of all customers whose phone number starts with '+12'?",
+    "correct_db": "e_commerce",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "customers_campaigns_ecommerce",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "small_bank_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_policies",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.777661,
+    "reasoning": {
+      "step0_domain": "The question is about retrieving customer credentials (usernames and passwords) based on phone number patterns. Relevant databases must contain customer information including phone numbers, usernames, and passwords.",
+      "step1_requirements": "The database must have: 1) A Customers table with phone numbers, 2) Usernames and passwords stored in the Customers table or a related table, 3) Ability to filter phone numbers starting with '+12'.",
+      "step2_eliminated": [
+        "small_bank_1",
+        "vehicle_rent",
+        "driving_school",
+        "insurance_policies",
+        "insurance_and_eClaims"
+      ],
+      "step3_comparison": "Database 10 has all required fields (customer_phone, customer_login, customer_password) \u2713. Database 2 has customer_phone but lacks usernames/passwords \u2717. Database 1 has customer_phone but lacks usernames/passwords \u2717. Database 3 has contact_number but lacks usernames/passwords \u2717. Database 4 has customer_phone but lacks usernames/passwords \u2717. Database 7 has phone_number but lacks usernames/passwords \u2717.",
+      "scores": [
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.05
+        },
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.05
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.05
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.05
+        },
+        {
+          "db_id": "small_bank_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_policies",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_campaigns_ecommerce",
+          "score": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 8897,
+    "question": "Which flight numbers correspond to United Airlines flights?",
+    "correct_db": "flight_2",
+    "correct_db_rank": 4,
+    "top10": [
+      {
+        "db_id": "flight_company",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "insurance_fnol",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pilot_record",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "station_weather",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aircraft",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "gas_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.746033,
+    "reasoning": {
+      "step0_domain": "The question domain is aviation/flight information. Database domains: flight_2 (unknown), flight_company (aviation/flight), flight_4 (aviation/flight), flight_1 (aviation/flight), pilot_record (aviation/pilot), station_weather (railway/weather), aircraft (aviation/aircraft), vehicle_rent (vehicle rental), gas_company (gas industry), insurance_fnol (insurance).",
+      "step1_requirements": "The question requires tables and columns that can link flight numbers to airline names, specifically United Airlines. Needed: flight number column, airline name column, and a way to link them.",
+      "step2_eliminated": [
+        "flight_2",
+        "pilot_record",
+        "station_weather",
+        "vehicle_rent",
+        "gas_company",
+        "insurance_fnol"
+      ],
+      "step3_comparison": "flight_company: \u2713 flight.Vehicle_Flight_number (flight number), \u2713 operate_company.name (airline name), \u2713 flight.company_id links to operate_company.id. flight_4: \u2713 routes.airline (airline code), \u2713 airlines.name (airline name), but no direct flight number column. flight_1: \u2717 no airline name column. aircraft: \u2717 no flight number or airline name columns.",
+      "scores": [
+        {
+          "db_id": "flight_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "flight_company",
+          "score": 0.7
+        },
+        {
+          "db_id": "flight_4",
+          "score": 0.25
+        },
+        {
+          "db_id": "flight_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "pilot_record",
+          "score": 0.0
+        },
+        {
+          "db_id": "station_weather",
+          "score": 0.0
+        },
+        {
+          "db_id": "aircraft",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "gas_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_fnol",
+          "score": 0.05
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 3186,
+    "question": "What are the different locations of the school with the code BUS?",
+    "correct_db": "college_1",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "school_finance",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "school_player",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "school_bus",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Students_Information_Systems",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_transcripts_tracking",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.639032,
+    "reasoning": {
+      "step0_domain": "The question is about school locations and specifically mentions a school code 'BUS'. The domain is educational institutions with a focus on school identification and location data.",
+      "step1_requirements": "The question requires tables and columns that can identify a school by a code (e.g., 'BUS') and provide its location(s).",
+      "step2_eliminated": [
+        "student_assessment",
+        "local_govt_and_lot",
+        "university_rank",
+        "cre_Students_Information_Systems",
+        "local_govt_mdm",
+        "restaurants",
+        "student_transcripts_tracking"
+      ],
+      "step3_comparison": "The question needs a school table with a code and location. Database 1 (school_player) has a school table with School_ID and Location but lacks a code like 'BUS'. Database 2 (school_bus) has a school table with School_ID and Location but also lacks a specific code column. Database 9 (school_finance) has a School table with School_id (which could be a code) and Location, making it the best match.",
+      "scores": [
+        {
+          "db_id": "school_player",
+          "score": 0.1
+        },
+        {
+          "db_id": "school_bus",
+          "score": 0.1
+        },
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_and_lot",
+          "score": 0.0
+        },
+        {
+          "db_id": "university_rank",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Students_Information_Systems",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.0
+        },
+        {
+          "db_id": "school_finance",
+          "score": 0.8
+        },
+        {
+          "db_id": "student_transcripts_tracking",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 870,
+    "question": "Please show the employee first names and ids of employees who serve at least 10 customers.",
+    "correct_db": "chinook_1",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "department_store",
+        "llm_score": 0.842105
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.052632
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurant_bills",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "small_bank_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_fnol",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.609627,
+    "reasoning": {
+      "step0_domain": "The question pertains to employees serving customers, which falls under the domain of customer relationship management (CRM) or service tracking. The relevant databases should have tables for employees, customers, and service relationships.",
+      "step1_requirements": "The question requires tables for employees (with first names and IDs) and customers, along with a relationship indicating which employees serve which customers. The query needs to count customers per employee and filter those serving at least 10 customers.",
+      "step2_eliminated": [
+        "insurance_and_eClaims",
+        "customers_card_transactions",
+        "small_bank_1",
+        "student_assessment",
+        "insurance_fnol",
+        "restaurant_bills"
+      ],
+      "step3_comparison": "The analysis focuses on the presence of employee and customer tables with a service relationship:\n- Database 1 (customers_and_products_contacts): Contains Customers and Contacts tables but no explicit employee or service relationship. \u2717\n- Database 2 (customers_and_addresses): Contains Customers but no employee or service relationship. \u2717\n- Database 5 (customers_and_orders): Contains Customers and Customer_Orders but no employee table. Orders don't imply service. \u2717\n- Database 7 (department_store): Contains Staff (employees) and Customers with Customer_Orders, but orders don't indicate service relationships. \u2717\n- Database 4 (customers_card_transactions): Contains Customers but no employee or service relationship. \u2717\nDatabase 7 remains the best option among the remaining due to having both Staff and Customers tables, despite lack of direct service relationship.",
+      "scores": [
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.05
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.05
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.05
+        },
+        {
+          "db_id": "restaurant_bills",
+          "score": 0.0
+        },
+        {
+          "db_id": "department_store",
+          "score": 0.8
+        },
+        {
+          "db_id": "small_bank_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_fnol",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 8396,
+    "question": "return me the paper with the most citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top10": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012,
+    "reasoning": {
+      "step0_domain": "The question pertains to academic publications and citations. Databases that do not contain information about papers or citations are irrelevant.",
+      "step1_requirements": "The question requires tables that store paper information and citation counts or relationships.",
+      "step2_eliminated": [
+        "local_govt_mdm",
+        "culture_company",
+        "university_rank",
+        "cre_Doc_and_collections",
+        "product_catalog",
+        "music_2"
+      ],
+      "step3_comparison": "scholar has paper table with numCiting column which directly answers the question (\u2713). aan_1 has Citation table but requires counting citations per paper (\u2713). icfp_1 lacks citation information (\u2717). academic has citation_num but not explicitly linked to papers (\u2717).",
+      "scores": [
+        {
+          "db_id": "icfp_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "aan_1",
+          "score": 0.4
+        },
+        {
+          "db_id": "scholar",
+          "score": 0.6
+        },
+        {
+          "db_id": "academic",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "culture_company",
+          "score": 0.0
+        },
+        {
+          "db_id": "university_rank",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Doc_and_collections",
+          "score": 0.0
+        },
+        {
+          "db_id": "product_catalog",
+          "score": 0.0
+        },
+        {
+          "db_id": "music_2",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 8861,
+    "question": "Return the number of flights arriving in Aberdeen.",
+    "correct_db": "flight_2",
+    "correct_db_rank": 3,
+    "top10": [
+      {
+        "db_id": "flight_company",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "station_weather",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aircraft",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question domain is 'flight data', specifically focusing on flights arriving in Aberdeen. Database domains: flight_2 (flight data), station_weather (train and weather data), flight_company (flight and airport data), flight_4 (flight routes and airport data), apartment_rentals (apartment rentals), local_govt_mdm (local government data), vehicle_rent (vehicle rentals), aircraft (aircraft and pilot data), local_govt_and_lot (local government and property data), restaurants (restaurant data).",
+      "step1_requirements": "The question requires tables and columns that can identify flights and their arrival locations, specifically in Aberdeen. Needed: airport table with city or name column, flight table with destination or arrival airport reference.",
+      "step2_eliminated": [
+        "station_weather",
+        "apartment_rentals",
+        "local_govt_mdm",
+        "vehicle_rent",
+        "local_govt_and_lot",
+        "restaurants"
+      ],
+      "step3_comparison": "flight_2: No schema provided, cannot assess. \u2717 flight_company: Has airport table with City column and flight table with airport_id. \u2713 flight_4: Has airports table with city column and routes table with dst_apid referencing airports. \u2713 aircraft: Has airport table but no clear flight or route data. \u2717",
+      "scores": [
+        {
+          "db_id": "flight_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "station_weather",
+          "score": 0.0
+        },
+        {
+          "db_id": "flight_company",
+          "score": 0.5
+        },
+        {
+          "db_id": "flight_4",
+          "score": 0.5
+        },
+        {
+          "db_id": "apartment_rentals",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "aircraft",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_and_lot",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 6658,
+    "question": "When are the birthdays of customer who are classified as 'Good Customer' status?",
+    "correct_db": "driving_school",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "products_for_hire",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_campaigns_ecommerce",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "small_bank_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012,
+    "reasoning": {
+      "step0_domain": "The question domain is customer data management, specifically focusing on customer status and personal information. Database domains are classified as follows: customers_and_products_contacts (customer management), customers_and_addresses (customer management), driving_school (driver education), customers_card_transactions (financial transactions), customers_and_orders (e-commerce), insurance_and_eClaims (insurance), customers_campaigns_ecommerce (marketing), products_for_hire (rental services), small_bank_1 (banking), vehicle_rent (vehicle rental).",
+      "step1_requirements": "The question requires a customers table with columns for customer status (to identify 'Good Customer') and date_of_birth (to find birthdays).",
+      "step2_eliminated": [
+        "customers_and_products_contacts",
+        "customers_and_addresses",
+        "customers_card_transactions",
+        "customers_and_orders",
+        "insurance_and_eClaims",
+        "customers_campaigns_ecommerce",
+        "small_bank_1",
+        "vehicle_rent"
+      ],
+      "step3_comparison": "The driving_school database has a Customers table with customer_status_code (\u2717 lacks 'Good Customer' specificity but has status) and date_of_birth (\u2713). The products_for_hire database has a Customers table with good_or_bad_customer (\u2713 explicit status) but lacks date_of_birth (\u2717). Despite the lack of birthday info, the clarity in customer status makes products_for_hire slightly more relevant for the status part of the query.",
+      "scores": [
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.0
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.4
+        },
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_campaigns_ecommerce",
+          "score": 0.0
+        },
+        {
+          "db_id": "products_for_hire",
+          "score": 0.6
+        },
+        {
+          "db_id": "small_bank_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 4959,
+    "question": "What is the average, maximum, and minimum for the number of hours spent training?",
+    "correct_db": "soccer_2",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.9
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "station_weather",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "soccer_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "coffee_shop",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "train_station",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "bike_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.325083,
+    "reasoning": {
+      "step0_domain": "The question is about training hours, which falls under the domain of fitness, education, or professional development tracking.",
+      "step1_requirements": "The question requires tables and columns that track training hours, such as 'total_hours', 'duration', or similar metrics, along with the ability to calculate averages, maximums, and minimums.",
+      "step2_eliminated": [
+        "station_weather",
+        "soccer_1",
+        "coffee_shop",
+        "train_station",
+        "bike_1",
+        "insurance_and_eClaims",
+        "customers_and_products_contacts"
+      ],
+      "step3_comparison": "The remaining databases are evaluated based on their ability to track and calculate training hours. 'vehicle_rent' has a 'total_hours' column in the 'Renting_history' table, which directly matches the requirement. 'student_assessment' lacks any columns related to training hours. 'driving_school' has a 'Lessons' table but no explicit column for hours spent training.",
+      "scores": [
+        {
+          "db_id": "station_weather",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.9
+        },
+        {
+          "db_id": "student_assessment",
+          "score": 0.0
+        },
+        {
+          "db_id": "soccer_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "coffee_shop",
+          "score": 0.0
+        },
+        {
+          "db_id": "train_station",
+          "score": 0.0
+        },
+        {
+          "db_id": "bike_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "driving_school",
+          "score": 0.1
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 5868,
+    "question": "Show the transaction type code that occurs the most frequently.",
+    "correct_db": "tracking_share_transactions",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "tracking_share_transactions",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "customers_and_invoices",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Docs_and_Epenses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_policies",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.693147,
+    "reasoning": {
+      "step0_domain": "The question is about finding the most frequently occurring transaction type code, which falls under financial transactions or transaction tracking domains. Relevant databases should have tables with transaction records and transaction type codes.",
+      "step1_requirements": "The question requires a table with transaction records that includes a transaction type code field, enabling frequency analysis of transaction types.",
+      "step2_eliminated": [
+        "customers_and_invoices",
+        "customers_and_orders",
+        "cre_Docs_and_Epenses",
+        "insurance_policies",
+        "customers_and_products_contacts",
+        "insurance_and_eClaims",
+        "local_govt_mdm",
+        "customers_and_addresses"
+      ],
+      "step3_comparison": "Database 1 (customers_card_transactions) has a Financial_Transactions table with a transaction_type column (\u2713). Database 2 (tracking_share_transactions) has a Transactions table with a transaction_type_code column and a Ref_Transaction_Types table for reference (\u2713). Databases 3-10 either lack transaction type tracking or are not relevant to financial transactions (\u2717).",
+      "scores": [
+        {
+          "db_id": "customers_card_transactions",
+          "score": 0.5
+        },
+        {
+          "db_id": "tracking_share_transactions",
+          "score": 0.5
+        },
+        {
+          "db_id": "customers_and_invoices",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_orders",
+          "score": 0.0
+        },
+        {
+          "db_id": "cre_Docs_and_Epenses",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_policies",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_products_contacts",
+          "score": 0.0
+        },
+        {
+          "db_id": "insurance_and_eClaims",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        },
+        {
+          "db_id": "customers_and_addresses",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "question_id": 6356,
+    "question": "List names for drivers from Hartford city and younger than 40.",
+    "correct_db": "school_bus",
+    "correct_db_rank": null,
+    "top10": [
+      {
+        "db_id": "driving_school",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_driver",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_racing",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_road_race",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0,
+    "reasoning": {
+      "step0_domain": "The question domain is 'drivers' with specific requirements for age and city. Database domains: vehicle_rent (vehicle rental), vehicle_driver (racing drivers), driving_school (driving instruction), car_racing (racing drivers), boat_1 (sailors), car_1 (car manufacturing), network_2 (social network), restaurants (dining), car_road_race (racing drivers), local_govt_mdm (government services).",
+      "step1_requirements": "The question requires tables with columns for driver names, age, and city (Hartford).",
+      "step2_eliminated": [
+        "vehicle_rent",
+        "boat_1",
+        "car_1",
+        "network_2",
+        "restaurants",
+        "local_govt_mdm"
+      ],
+      "step3_comparison": "vehicle_driver: \u2717 (missing age and city), driving_school: \u2713 (Customers table has first_name, last_name, date_of_birth, and city in Addresses), car_racing: \u2717 (missing city), car_road_race: \u2717 (missing city).",
+      "scores": [
+        {
+          "db_id": "vehicle_rent",
+          "score": 0.0
+        },
+        {
+          "db_id": "vehicle_driver",
+          "score": 0.0
+        },
+        {
+          "db_id": "driving_school",
+          "score": 1.0
+        },
+        {
+          "db_id": "car_racing",
+          "score": 0.0
+        },
+        {
+          "db_id": "boat_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "car_1",
+          "score": 0.0
+        },
+        {
+          "db_id": "network_2",
+          "score": 0.0
+        },
+        {
+          "db_id": "restaurants",
+          "score": 0.0
+        },
+        {
+          "db_id": "car_road_race",
+          "score": 0.0
+        },
+        {
+          "db_id": "local_govt_mdm",
+          "score": 0.0
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,43 @@
+This is a Database called county_public_safety.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. county_public_safety (displayed as: county public safety)
+
+2. city
+
+
+Table 1: Tablename is county_public_safety
+Display name: county public safety
+DDL query for county_public_safety:
+CREATE TABLE "county_public_safety" (
+"County_ID" int,
+"Name" text,
+"Population" int,
+"Police_officers" int,
+"Residents_per_officer" int,
+"Case_burden" int,
+"Crime_rate" real,
+"Police_force" text,
+"Location" text,
+PRIMARY KEY ("County_ID")
+)
+
+
+Table 2: Tablename is city
+DDL query for city:
+CREATE TABLE "city" (
+"City_ID" int,
+"County_ID" int,
+"Name" text,
+"White" real,
+"Black" real,
+"Amerindian" real,
+"Asian" real,
+"Multiracial" real,
+"Hispanic" real,
+PRIMARY KEY ("City_ID"),
+FOREIGN KEY ("County_ID") REFERENCES "county_public_safety"("County_ID")
+)
+

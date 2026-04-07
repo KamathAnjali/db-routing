@@ -1,0 +1,14 @@
+Database: formula_1
+circuits(circuitId: INTEGER, circuitRef: TEXT,, name: TEXT,, location: TEXT,, country: TEXT,, lat: REAL,, lng: REAL,, alt: TEXT,, url: TEXT)
+races(raceId: INTEGER, year: INTEGER,, round: INTEGER,, circuitId: INTEGER,, name: TEXT,, date: TEXT,, time: TEXT,, url: TEXT,, FOREIGN: KEY ("circuitId"))
+drivers(driverId: INTEGER, driverRef: TEXT,, number: TEXT,, code: TEXT,, forename: TEXT,, surname: TEXT,, dob: TEXT,, nationality: TEXT,, url: TEXT)
+status(statusId: INTEGER, status: TEXT)
+seasons(year: INTEGER, url: TEXT)
+constructors(constructorId: INTEGER, constructorRef: TEXT,, name: TEXT,, nationality: TEXT,, url: TEXT)
+constructorStandings(constructorStandingsId: INTEGER, raceId: INTEGER,, constructorId: INTEGER,, points: REAL,, position: INTEGER,, positionText: TEXT,, wins: INTEGER,, FOREIGN: KEY("constructorId"), FOREIGN: KEY("raceId"))
+results(resultId: INTEGER, raceId: INTEGER,, driverId: INTEGER,, constructorId: INTEGER,, number: INTEGER,, grid: INTEGER,, position: TEXT,, positionText: TEXT,, positionOrder: INTEGER,, points: REAL,, laps: TEXT,, time: TEXT,, milliseconds: TEXT,, fastestLap: TEXT,, rank: TEXT,, fastestLapTime: TEXT,, fastestLapSpeed: TEXT,, statusId: INTEGER,, FOREIGN: KEY("constructorId"), FOREIGN: KEY("raceId"), FOREIGN: KEY ("driverId"))
+driverStandings(driverStandingsId: INTEGER, raceId: INTEGER,, driverId: INTEGER,, points: REAL,, position: INTEGER,, positionText: TEXT,, wins: INTEGER,, FOREIGN: KEY("raceId"), FOREIGN: KEY ("driverId"))
+constructorResults(constructorResultsId: INTEGER, raceId: INTEGER,, constructorId: INTEGER,, points: REAL,, status: TEXT,, FOREIGN: KEY("constructorId"), FOREIGN: KEY("raceId"))
+qualifying(qualifyId: INTEGER, raceId: INTEGER,, driverId: INTEGER,, constructorId: INTEGER,, number: INTEGER,, position: INTEGER,, q1: TEXT,, q2: TEXT,, q3: TEXT,, FOREIGN: KEY("constructorId"), FOREIGN: KEY("raceId"), FOREIGN: KEY ("driverId"))
+pitStops(raceId: INTEGER,, driverId: INTEGER,, stop: INTEGER,, lap: INTEGER,, time: TEXT,, duration: TEXT,, milliseconds: INTEGER,, FOREIGN: KEY("raceId"), FOREIGN: KEY ("driverId")) PK[raceId, driverId, stop]
+lapTimes(raceId: INTEGER,, driverId: INTEGER,, lap: INTEGER,, position: INTEGER,, time: TEXT,, milliseconds: INTEGER,, FOREIGN: KEY("raceId"), FOREIGN: KEY ("driverId")) PK[raceId, driverId, lap]

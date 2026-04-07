@@ -1,0 +1,4 @@
+Database: storm_record
+storm(Storm_ID: int,, Name: text,, Dates_active: text,, Max_speed: int,, Damage_millions_USD: real,, Number_Deaths: int,) PK[Storm_ID]
+region(Region_id: int,, Region_code: text,, Region_name: text,) PK[Region_id]
+affected_region(Region_id: int,, Storm_ID: int,, Number_city_affected: real,) PK[Region_id, Storm_ID] FK[Region_id→region.Region_id; Storm_ID→storm.Storm_ID]

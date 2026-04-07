@@ -1,0 +1,3 @@
+Database: institution_sports
+institution(Institution_ID: int,, Name: text,, Team: text,, City: text,, Province: text,, Founded: real,, Affiliation: text,, Enrollment: real,, Endowment: text,, Stadium: text,, Capacity: real,) PK[Institution_ID]
+Championship(Institution_ID: int,, Nickname: text,, Joined: real,, Number_of_Championships: real,, FOREIGN: KEY ("Institution_ID")) PK[Institution_ID]

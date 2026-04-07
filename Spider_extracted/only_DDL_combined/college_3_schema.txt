@@ -1,0 +1,125 @@
+This is a Database called college_3.
+This Database consists of 8 tables.
+
+These tables are:
+
+1. Student (displayed as: student)
+
+2. Faculty (displayed as: faculty)
+
+3. Department (displayed as: department)
+
+4. Member_of (displayed as: member of)
+
+5. Course (displayed as: course)
+
+6. Minor_in (displayed as: minor in)
+
+7. Enrolled_in (displayed as: enrolled in)
+
+8. Gradeconversion (displayed as: grade conversion)
+
+
+Table 1: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+        StuID        INTEGER PRIMARY KEY,
+        LName        VARCHAR(12),
+        Fname        VARCHAR(12),
+        Age      INTEGER,
+        Sex      VARCHAR(1),
+        Major        INTEGER,
+        Advisor      INTEGER,
+        city_code    VARCHAR(3)
+ )
+
+
+Table 2: Tablename is Faculty
+Display name: faculty
+DDL query for Faculty:
+CREATE TABLE Faculty (
+       FacID 	       INTEGER PRIMARY KEY,
+       Lname		VARCHAR(15),
+       Fname		VARCHAR(15),
+       Rank		VARCHAR(15),
+       Sex		VARCHAR(1),
+       Phone		INTEGER,
+       Room		VARCHAR(5),
+       Building		VARCHAR(13)
+)
+
+
+Table 3: Tablename is Department
+Display name: department
+DDL query for Department:
+CREATE TABLE Department (
+       DNO   		INTEGER PRIMARY KEY,
+       Division		VARCHAR(2),
+       DName		VARCHAR(25),
+       Room		VARCHAR(5),
+       Building		VARCHAR(13),
+       DPhone		INTEGER
+)
+
+
+Table 4: Tablename is Member_of
+Display name: member of
+DDL query for Member_of:
+CREATE TABLE Member_of (
+       FacID 	       INTEGER,
+       DNO	       INTEGER,
+       Appt_Type       VARCHAR(15),
+       FOREIGN KEY(FacID) REFERENCES Faculty(FacID),
+       FOREIGN KEY(DNO) REFERENCES Department(DNO)
+)
+
+
+Table 5: Tablename is Course
+Display name: course
+DDL query for Course:
+CREATE TABLE Course (
+       CID   	    	VARCHAR(7) PRIMARY KEY,
+       CName		VARCHAR(40),
+       Credits		INTEGER,
+       Instructor	INTEGER,
+       Days		VARCHAR(5),
+       Hours		VARCHAR(11),
+       DNO		INTEGER,
+       FOREIGN KEY(Instructor) REFERENCES Faculty(FacID),
+       FOREIGN KEY(DNO) REFERENCES Department(DNO)
+)
+
+
+Table 6: Tablename is Minor_in
+Display name: minor in
+DDL query for Minor_in:
+CREATE TABLE Minor_in (
+       StuID 	      INTEGER,
+       DNO		INTEGER,
+       FOREIGN KEY(StuID) REFERENCES Student(StuID),
+       FOREIGN KEY(DNO) REFERENCES Department(DNO)
+)
+
+
+Table 7: Tablename is Enrolled_in
+Display name: enrolled in
+DDL query for Enrolled_in:
+CREATE TABLE Enrolled_in (
+       StuID 		 INTEGER,
+       CID		VARCHAR(7),
+       Grade		VARCHAR(2),
+       FOREIGN KEY(StuID) REFERENCES Student(StuID),
+       FOREIGN KEY(CID) REFERENCES Course(CID),
+       FOREIGN KEY(Grade) REFERENCES Gradeconversion(lettergrade)
+)
+
+
+Table 8: Tablename is Gradeconversion
+Display name: grade conversion
+DDL query for Gradeconversion:
+CREATE TABLE Gradeconversion (
+       lettergrade	     VARCHAR(2) PRIMARY KEY,
+       gradepoint	     FLOAT
+)
+

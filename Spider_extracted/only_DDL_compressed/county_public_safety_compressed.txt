@@ -1,0 +1,3 @@
+Database: county_public_safety
+county_public_safety(County_ID: int,, Name: text,, Population: int,, Police_officers: int,, Residents_per_officer: int,, Case_burden: int,, Crime_rate: real,, Police_force: text,, Location: text,) PK[County_ID]
+city(City_ID: int,, County_ID: int,, Name: text,, White: real,, Black: real,, Amerindian: real,, Asian: real,, Multiracial: real,, Hispanic: real,, FOREIGN: KEY ("County_ID")) PK[City_ID]

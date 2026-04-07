@@ -1,0 +1,9 @@
+Database: local_govt_mdm
+Customer_Master_Index(master_customer_id: INTEGER, cmi_details: VARCHAR(255),) PK[master_customer_id]
+CMI_Cross_References(cmi_cross_ref_id: INTEGER, master_customer_id: INTEGER, source_system_code: CHAR(15)) PK[cmi_cross_ref_id] FK[master_customer_id→Customer_Master_Index.master_customer_id]
+Council_Tax(council_tax_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[council_tax_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]
+Business_Rates(business_rates_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[business_rates_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]
+Benefits_Overpayments(council_tax_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[council_tax_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]
+Parking_Fines(council_tax_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[council_tax_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]
+Rent_Arrears(council_tax_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[council_tax_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]
+Electoral_Register(electoral_register_id: INTEGER, cmi_cross_ref_id: INTEGER) PK[electoral_register_id] FK[cmi_cross_ref_id→CMI_Cross_References.cmi_cross_ref_id]

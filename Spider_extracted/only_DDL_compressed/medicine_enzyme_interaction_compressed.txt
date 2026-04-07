@@ -1,0 +1,4 @@
+Database: medicine_enzyme_interaction
+medicine(id: int,, name: text,, Trade_Name: text,, FDA_approved: text,) PK[id]
+enzyme(id: int,, name: text,, Location: text,, Product: text,, Chromosome: text,, OMIM: int,, Porphyria: text,) PK[id]
+medicine_enzyme_interaction(enzyme_id: int,, medicine_id: int,, interaction_type: text,, foreign: key ("enzyme_id"), foreign: key ("medicine_id")) PK[enzyme_id, medicine_id]

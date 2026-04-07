@@ -1,0 +1,8 @@
+Database: insurance_fnol
+Customers(Customer_ID: INTEGER, Customer_name: VARCHAR(40),) PK[Customer_ID]
+Services(Service_ID: INTEGER, Service_name: VARCHAR(40),) PK[Service_ID]
+Available_Policies(Policy_ID: INTEGER, policy_type_code: CHAR(15),, Customer_Phone: VARCHAR(255),) PK[Policy_ID]
+Customers_Policies(Customer_ID: INTEGER, Policy_ID: INTEGER, Date_Opened: DATE,, Date_Closed: DATE,) PK[Customer_ID, Policy_ID] FK[Customer_ID→Customers.Customer_ID; Policy_ID→Available_Policies.Policy_ID]
+First_Notification_of_Loss(FNOL_ID: INTEGER, Customer_ID: INTEGER, Policy_ID: INTEGER, Service_ID: INTEGER, FOREIGN: KEY (Customer_ID, Policy_ID)) PK[FNOL_ID] FK[Service_ID→Services.Service_ID]
+Claims(Claim_ID: INTEGER, FNOL_ID: INTEGER, Effective_Date: DATE,) PK[Claim_ID] FK[FNOL_ID→First_Notification_of_Loss.FNOL_ID]
+Settlements(Settlement_ID: INTEGER, Claim_ID: INTEGER,, Effective_Date: DATE,, Settlement_Amount: REAL,) PK[Settlement_ID] FK[Claim_ID→Claims.Claim_ID]

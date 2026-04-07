@@ -1,0 +1,105 @@
+This is a Database called government_shift.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Services (displayed as: services)
+
+2. Customers (displayed as: customers)
+
+3. Channels (displayed as: channels)
+
+4. Customers_and_Services (displayed as: customers and services)
+
+5. Customer_Interactions (displayed as: customer interactions)
+
+6. Integration_Platform (displayed as: integration platform)
+
+7. Analytical_Layer (displayed as: analytical layer)
+
+
+Table 1: Tablename is Services
+Display name: services
+DDL query for Services:
+CREATE TABLE Services (
+Service_ID INTEGER NOT NULL,
+Service_Details VARCHAR(255),
+PRIMARY KEY (Service_ID)
+)
+
+
+Table 2: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE Customers (
+Customer_ID INTEGER NOT NULL,
+Customer_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Customer_ID)
+)
+
+
+Table 3: Tablename is Channels
+Display name: channels
+DDL query for Channels:
+CREATE TABLE Channels (
+Channel_ID INTEGER NOT NULL,
+Channel_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Channel_ID)
+)
+
+
+Table 4: Tablename is Customers_and_Services
+Display name: customers and services
+DDL query for Customers_and_Services:
+CREATE TABLE Customers_and_Services (
+Customers_and_Services_ID INTEGER NOT NULL,
+Customer_ID INTEGER,
+Service_ID INTEGER,
+Customers_and_Services_Details CHAR(15) NOT NULL,
+PRIMARY KEY (Customers_and_Services_ID),
+FOREIGN KEY (Service_ID) REFERENCES Services (Service_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID)
+)
+
+
+Table 5: Tablename is Customer_Interactions
+Display name: customer interactions
+DDL query for Customer_Interactions:
+CREATE TABLE Customer_Interactions (
+Customer_Interaction_ID INTEGER NOT NULL,
+Channel_ID INTEGER,
+Customer_ID INTEGER,
+Service_ID INTEGER,
+Status_Code CHAR(15),
+Services_and_Channels_Details VARCHAR(255),
+PRIMARY KEY (Customer_Interaction_ID),
+FOREIGN KEY (Service_ID) REFERENCES Services (Service_ID),
+FOREIGN KEY (Channel_ID) REFERENCES Channels (Channel_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID)
+)
+
+
+Table 6: Tablename is Integration_Platform
+Display name: integration platform
+DDL query for Integration_Platform:
+CREATE TABLE Integration_Platform (
+Integration_Platform_ID INTEGER NOT NULL,
+Customer_Interaction_ID INTEGER NOT NULL,
+Integration_Platform_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Integration_Platform_ID),
+FOREIGN KEY (Customer_Interaction_ID) REFERENCES Customer_Interactions (Customer_Interaction_ID)
+)
+
+
+Table 7: Tablename is Analytical_Layer
+Display name: analytical layer
+DDL query for Analytical_Layer:
+CREATE TABLE Analytical_Layer (
+Analytical_ID INTEGER NOT NULL,
+Customers_and_Services_ID VARCHAR(40) NOT NULL,
+Pattern_Recognition VARCHAR(255) NOT NULL,
+Analytical_Layer_Type_Code CHAR(15),
+PRIMARY KEY (Analytical_ID),
+FOREIGN KEY (Customers_and_Services_ID) REFERENCES Customers_and_Services (Customers_and_Services_ID)
+)
+

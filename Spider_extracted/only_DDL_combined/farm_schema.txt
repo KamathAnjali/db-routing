@@ -1,0 +1,70 @@
+This is a Database called farm.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. city
+
+2. farm
+
+3. farm_competition (displayed as: farm competition)
+
+4. competition_record (displayed as: competition record)
+
+
+Table 1: Tablename is city
+DDL query for city:
+CREATE TABLE "city" (
+"City_ID" int,
+"Official_Name" text,
+"Status" text,
+"Area_km_2" real,
+"Population" real,
+"Census_Ranking" text,
+PRIMARY KEY ("City_ID")
+)
+
+
+Table 2: Tablename is farm
+DDL query for farm:
+CREATE TABLE "farm" (
+"Farm_ID" int,
+"Year" int,
+"Total_Horses" real,
+"Working_Horses" real,
+"Total_Cattle" real,
+"Oxen" real,
+"Bulls" real,
+"Cows" real,
+"Pigs" real,
+"Sheep_and_Goats" real,
+PRIMARY KEY ("Farm_ID")
+)
+
+
+Table 3: Tablename is farm_competition
+Display name: farm competition
+DDL query for farm_competition:
+CREATE TABLE "farm_competition" (
+"Competition_ID" int,
+"Year" int,
+"Theme" text,
+"Host_city_ID" int,
+"Hosts" text,
+PRIMARY KEY ("Competition_ID"),
+FOREIGN KEY (`Host_city_ID`) REFERENCES `city`(`City_ID`)
+)
+
+
+Table 4: Tablename is competition_record
+Display name: competition record
+DDL query for competition_record:
+CREATE TABLE "competition_record" (
+"Competition_ID" int,
+"Farm_ID" int,
+"Rank" int,
+PRIMARY KEY ("Competition_ID","Farm_ID"),
+FOREIGN KEY (`Competition_ID`) REFERENCES `farm_competition`(`Competition_ID`),
+FOREIGN KEY (`Farm_ID`) REFERENCES `farm`(`Farm_ID`)
+)
+

@@ -1,0 +1,3 @@
+Database: ship_mission
+mission(Mission_ID: int,, Ship_ID: int,, Code: text,, Launched_Year: int,, Location: text,, Speed_knots: int,, Fate: text,, FOREIGN: KEY ("Ship_ID")) PK[Mission_ID]
+ship(Ship_ID: int,, Name: text,, Type: text,, Nationality: text,, Tonnage: int,) PK[Ship_ID]

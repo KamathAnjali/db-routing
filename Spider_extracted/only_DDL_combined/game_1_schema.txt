@@ -1,0 +1,63 @@
+This is a Database called game_1.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Student (displayed as: student)
+
+2. Video_Games (displayed as: video games)
+
+3. Plays_Games (displayed as: plays games)
+
+4. SportsInfo (displayed as: sports info)
+
+
+Table 1: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+        StuID        INTEGER PRIMARY KEY,
+        LName        VARCHAR(12),
+        Fname        VARCHAR(12),
+        Age      INTEGER,
+        Sex      VARCHAR(1),
+        Major        INTEGER,
+        Advisor      INTEGER,
+        city_code    VARCHAR(3)
+ )
+
+
+Table 2: Tablename is Video_Games
+Display name: video games
+DDL query for Video_Games:
+CREATE TABLE Video_Games (
+       GameID           INTEGER PRIMARY KEY,
+       GName            VARCHAR(40),
+       GType            VARCHAR(40)
+)
+
+
+Table 3: Tablename is Plays_Games
+Display name: plays games
+DDL query for Plays_Games:
+CREATE TABLE Plays_Games (
+       StuID                INTEGER,
+       GameID            INTEGER,
+       Hours_Played      INTEGER,
+       FOREIGN KEY(GameID) REFERENCES Video_Games(GameID),
+       FOREIGN KEY(StuID) REFERENCES Student(StuID)
+)
+
+
+Table 4: Tablename is SportsInfo
+Display name: sports info
+DDL query for SportsInfo:
+CREATE TABLE SportsInfo (
+  StuID INTEGER,
+  SportName VARCHAR(32),
+  HoursPerWeek INTEGER,
+  GamesPlayed INTEGER,
+  OnScholarship VARCHAR(1),
+  FOREIGN KEY(StuID) REFERENCES Student(StuID)
+)
+

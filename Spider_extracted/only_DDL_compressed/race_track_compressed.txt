@@ -1,0 +1,3 @@
+Database: race_track
+race(Race_ID: int,, Name: text,, Class: text,, Date: text,, Track_ID: text,, FOREIGN: KEY ("Track_ID")) PK[Race_ID]
+track(Track_ID: int,, Name: text,, Location: text,, Seating: real,, Year_Opened: real,) PK[Track_ID]

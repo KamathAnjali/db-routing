@@ -1,0 +1,38 @@
+This is a Database called candidate_poll.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. candidate
+
+2. people
+
+
+Table 1: Tablename is candidate
+DDL query for candidate:
+CREATE TABLE "candidate" (
+"Candidate_ID" int,
+"People_ID" int,
+"Poll_Source" text,
+"Date" text,
+"Support_rate" real,
+"Consider_rate" real,
+"Oppose_rate" real,
+"Unsure_rate" real,
+PRIMARY KEY ("Candidate_ID"),
+FOREIGN KEY ("People_ID") REFERENCES "people"("People_ID")
+)
+
+
+Table 2: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"Sex" text,
+"Name" text,
+"Date_of_Birth" text,
+"Height" real,
+"Weight" real,
+PRIMARY KEY ("People_ID")
+)
+

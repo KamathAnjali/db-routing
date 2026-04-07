@@ -1,0 +1,47 @@
+This is a Database called browser_web.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Web_client_accelerator (displayed as: web client accelerator)
+
+2. browser
+
+3. accelerator_compatible_browser (displayed as: accelerator compatible browser)
+
+
+Table 1: Tablename is Web_client_accelerator
+Display name: web client accelerator
+DDL query for Web_client_accelerator:
+CREATE TABLE "Web_client_accelerator" (
+"id" int,
+"name" text,
+"Operating_system" text,
+"Client" text,
+"Connection" text,
+primary key("id")
+)
+
+
+Table 2: Tablename is browser
+DDL query for browser:
+CREATE TABLE "browser" (
+"id" int,
+"name" text,
+"market_share" real,
+primary key("id")
+)
+
+
+Table 3: Tablename is accelerator_compatible_browser
+Display name: accelerator compatible browser
+DDL query for accelerator_compatible_browser:
+CREATE TABLE "accelerator_compatible_browser" (
+"accelerator_id" int,
+"browser_id" int,
+"compatible_since_year" int,
+primary key("accelerator_id", "browser_id"),
+foreign key ("accelerator_id") references `Web_client_accelerator`("id"),
+foreign key ("browser_id") references `browser`("id")
+)
+

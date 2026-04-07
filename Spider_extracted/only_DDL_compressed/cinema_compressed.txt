@@ -1,0 +1,4 @@
+Database: cinema
+film(Film_ID: int,, Rank_in_series: int,, Number_in_season: int,, Title: text,, Directed_by: text,, Original_air_date: text,, Production_code: text,) PK[Film_ID]
+cinema(Cinema_ID: int,, Name: text,, Openning_year: int,, Capacity: int,, Location: text,) PK[Cinema_ID]
+schedule(Cinema_ID: int,, Film_ID: int,, Date: text,, Show_times_per_day: int,, Price: float,) PK[Cinema_ID, Film_ID] FK[Film_ID→film.Film_ID; Cinema_ID→cinema.Cinema_ID]

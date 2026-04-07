@@ -1,0 +1,5 @@
+Database: cre_Doc_Template_Mgt
+Ref_Template_Types(Template_Type_Code: CHAR(15), Template_Type_Description: VARCHAR(255)) PK[Template_Type_Code]
+Templates(Template_ID: INTEGER, Version_Number: INTEGER, Template_Type_Code: CHAR(15), Date_Effective_From: DATETIME,, Date_Effective_To: DATETIME,, Template_Details: VARCHAR(255)) PK[Template_ID] FK[Template_Type_Code→Ref_Template_Types.Template_Type_Code]
+Documents(Document_ID: INTEGER, Template_ID: INTEGER,, Document_Name: VARCHAR(255),, Document_Description: VARCHAR(255),, Other_Details: VARCHAR(255),) PK[Document_ID] FK[Template_ID→Templates.Template_ID]
+Paragraphs(Paragraph_ID: INTEGER, Document_ID: INTEGER, Paragraph_Text: VARCHAR(255),, Other_Details: VARCHAR(255),) PK[Paragraph_ID] FK[Document_ID→Documents.Document_ID]

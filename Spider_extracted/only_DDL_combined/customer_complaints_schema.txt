@@ -1,0 +1,75 @@
+This is a Database called customer_complaints.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Staff (displayed as: staff)
+
+2. Customers (displayed as: customers)
+
+3. Products (displayed as: products)
+
+4. Complaints (displayed as: complaints)
+
+
+Table 1: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE `Staff` (
+`staff_id` INTEGER PRIMARY KEY,
+`gender` VARCHAR(1),
+`first_name` VARCHAR(80),
+`last_name` VARCHAR(80),
+`email_address` VARCHAR(255),
+`phone_number` VARCHAR(80)
+)
+
+
+Table 2: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE `Customers` (
+`customer_id` INTEGER PRIMARY KEY,
+`customer_type_code` VARCHAR(20) NOT NULL,
+`address_line_1` VARCHAR(80),
+`address_line_2` VARCHAR(80),
+`town_city` VARCHAR(80),
+`state` VARCHAR(80),
+`email_address` VARCHAR(255),
+`phone_number` VARCHAR(80)
+)
+
+
+Table 3: Tablename is Products
+Display name: products
+DDL query for Products:
+CREATE TABLE `Products` (
+`product_id` INTEGER PRIMARY KEY,
+`parent_product_id` INTEGER,
+`product_category_code` VARCHAR(20) NOT NULL,
+`date_product_first_available` DATETIME,
+`date_product_discontinued` DATETIME,
+`product_name` VARCHAR(80),
+`product_description` VARCHAR(255),
+`product_price` DECIMAL(19,4)
+)
+
+
+Table 4: Tablename is Complaints
+Display name: complaints
+DDL query for Complaints:
+CREATE TABLE `Complaints` (
+`complaint_id` INTEGER NOT NULL ,
+`product_id` INTEGER NOT NULL,
+`customer_id` INTEGER NOT NULL,
+`complaint_outcome_code` VARCHAR(20) NOT NULL,
+`complaint_status_code` VARCHAR(20) NOT NULL,
+`complaint_type_code` VARCHAR(20) NOT NULL,
+`date_complaint_raised` DATETIME,
+`date_complaint_closed` DATETIME,
+`staff_id` INTEGER NOT NULL ,
+FOREIGN KEY (`staff_id` ) REFERENCES `Staff`(`staff_id` ),
+FOREIGN KEY (`product_id` ) REFERENCES `Products`(`product_id` ),
+FOREIGN KEY (`customer_id` ) REFERENCES `Customers`(`customer_id` )
+)
+

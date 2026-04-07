@@ -1,0 +1,4 @@
+Database: loan_1
+bank(branch_ID: int, bname: varchar(20),, no_of_customers: int,, city: varchar(10),, state: varchar(20)))
+customer(cust_ID: varchar(3), cust_name: varchar(20),, acc_type: char(1),, acc_bal: int,, no_of_loans: int,, credit_score: int,, branch_ID: int,, state: varchar(20),) FK[branch_ID→bank.branch_ID]
+loan(loan_ID: varchar(3), loan_type: varchar(15),, cust_ID: varchar(3),, branch_ID: varchar(3),, amount: int,) FK[branch_ID→bank.branch_ID; Cust_ID→customer.Cust_ID]

@@ -1,0 +1,8 @@
+Database: cre_Docs_and_Epenses
+Ref_Document_Types(Document_Type_Code: CHAR(15), Document_Type_Name: VARCHAR(255), Document_Type_Description: VARCHAR(255)) PK[Document_Type_Code]
+Ref_Budget_Codes(Budget_Type_Code: CHAR(15), Budget_Type_Description: VARCHAR(255)) PK[Budget_Type_Code]
+Projects(Project_ID: INTEGER, Project_Details: VARCHAR(255),) PK[Project_ID]
+Documents(Document_ID: INTEGER, Document_Type_Code: CHAR(15), Project_ID: INTEGER, Document_Date: DATETIME,, Document_Name: VARCHAR(255),, Document_Description: VARCHAR(255),, Other_Details: VARCHAR(255),) PK[Document_ID] FK[Document_Type_Code→Ref_Document_Types.Document_Type_Code; Project_ID→Projects.Project_ID]
+Statements(Statement_ID: INTEGER, Statement_Details: VARCHAR(255),) PK[Statement_ID] FK[Statement_ID→Documents.Document_ID]
+Documents_with_Expenses(Document_ID: INTEGER, Budget_Type_Code: CHAR(15), Document_Details: VARCHAR(255),) PK[Document_ID] FK[Budget_Type_Code→Ref_Budget_Codes.Budget_Type_Code; Document_ID→Documents.Document_ID]
+Accounts(Account_ID: INTEGER, Statement_ID: INTEGER, Account_Details: VARCHAR(255),) PK[Account_ID] FK[Statement_ID→Statements.Statement_ID]

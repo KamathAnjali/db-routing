@@ -1,0 +1,110 @@
+This is a Database called local_govt_mdm.
+This Database consists of 8 tables.
+
+These tables are:
+
+1. Customer_Master_Index (displayed as: customer master index)
+
+2. CMI_Cross_References (displayed as: cmi cross references)
+
+3. Council_Tax (displayed as: council tax)
+
+4. Business_Rates (displayed as: business rates)
+
+5. Benefits_Overpayments (displayed as: benefits overpayments)
+
+6. Parking_Fines (displayed as: parking fines)
+
+7. Rent_Arrears (displayed as: rent arrears)
+
+8. Electoral_Register (displayed as: electoral register)
+
+
+Table 1: Tablename is Customer_Master_Index
+Display name: customer master index
+DDL query for Customer_Master_Index:
+CREATE TABLE Customer_Master_Index (
+master_customer_id INTEGER NOT NULL,
+cmi_details VARCHAR(255),
+PRIMARY KEY (master_customer_id)
+)
+
+
+Table 2: Tablename is CMI_Cross_References
+Display name: cmi cross references
+DDL query for CMI_Cross_References:
+CREATE TABLE CMI_Cross_References (
+cmi_cross_ref_id INTEGER NOT NULL,
+master_customer_id INTEGER NOT NULL,
+source_system_code CHAR(15) NOT NULL,
+PRIMARY KEY (cmi_cross_ref_id),
+FOREIGN KEY (master_customer_id) REFERENCES Customer_Master_Index (master_customer_id)
+
+)
+
+
+Table 3: Tablename is Council_Tax
+Display name: council tax
+DDL query for Council_Tax:
+CREATE TABLE Council_Tax (
+council_tax_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (council_tax_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+
+
+Table 4: Tablename is Business_Rates
+Display name: business rates
+DDL query for Business_Rates:
+CREATE TABLE Business_Rates (
+business_rates_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (business_rates_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+
+
+Table 5: Tablename is Benefits_Overpayments
+Display name: benefits overpayments
+DDL query for Benefits_Overpayments:
+CREATE TABLE Benefits_Overpayments (
+council_tax_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (council_tax_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+
+
+Table 6: Tablename is Parking_Fines
+Display name: parking fines
+DDL query for Parking_Fines:
+CREATE TABLE Parking_Fines (
+council_tax_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (council_tax_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+
+
+Table 7: Tablename is Rent_Arrears
+Display name: rent arrears
+DDL query for Rent_Arrears:
+CREATE TABLE Rent_Arrears (
+council_tax_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (council_tax_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+
+
+Table 8: Tablename is Electoral_Register
+Display name: electoral register
+DDL query for Electoral_Register:
+CREATE TABLE Electoral_Register (
+electoral_register_id INTEGER NOT NULL,
+cmi_cross_ref_id INTEGER NOT NULL,
+PRIMARY KEY (electoral_register_id),
+FOREIGN KEY (cmi_cross_ref_id) REFERENCES CMI_Cross_References (cmi_cross_ref_id)
+)
+

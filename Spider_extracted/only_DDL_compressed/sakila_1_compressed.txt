@@ -1,0 +1,2 @@
+Database: sakila_1
+film_text(film_id: SMALLINT, title: VARCHAR(255), description: TEXT,) PK[film_id]

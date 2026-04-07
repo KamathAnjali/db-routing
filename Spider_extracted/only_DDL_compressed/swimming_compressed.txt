@@ -1,0 +1,5 @@
+Database: swimming
+swimmer(ID: int,, name: text,, Nationality: text,, meter_100: real,, meter_200: text,, meter_300: text,, meter_400: text,, meter_500: text,, meter_600: text,, meter_700: text,, Time: text,) PK[ID]
+stadium(ID: int,, name: text,, Capacity: int,, City: text,, Country: text,, Opening_year: int,) PK[ID]
+event(ID: int,, Name: text,, Stadium_ID: int,, Year: text,) PK[ID] FK[Stadium_ID→stadium.ID]
+record(ID: int,, Result: text,, Swimmer_ID: int,, Event_ID: int,) PK[Swimmer_ID, Event_ID] FK[Event_ID→event.ID; Swimmer_ID→swimmer.ID]

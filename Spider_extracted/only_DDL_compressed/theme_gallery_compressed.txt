@@ -1,0 +1,4 @@
+Database: theme_gallery
+artist(Artist_ID: int,, Name: text,, Country: text,, Year_Join: int,, Age: int,) PK[Artist_ID]
+exhibition(Exhibition_ID: int,, Year: int,, Theme: text,, Artist_ID: int,, Ticket_Price: real,) PK[Exhibition_ID] FK[Artist_ID→artist.Artist_ID]
+exhibition_record(Exhibition_ID: int,, Date: text,, Attendance: int,) PK[Exhibition_ID, Date] FK[Exhibition_ID→exhibition.Exhibition_ID]

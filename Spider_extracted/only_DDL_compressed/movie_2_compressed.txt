@@ -1,0 +1,3 @@
+Database: movie_2
+Movies(Code: INTEGER, Title: VARCHAR(255), Rating: VARCHAR(255))
+MovieTheaters(Code: INTEGER, Name: VARCHAR(255), Movie: INTEGER,) FK[Movie→Movies.Code]

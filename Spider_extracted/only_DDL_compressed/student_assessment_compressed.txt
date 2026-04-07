@@ -1,0 +1,10 @@
+Database: student_assessment
+Addresses(address_id: INTEGER, line_1: VARCHAR(80),, line_2: VARCHAR(80),, city: VARCHAR(50),, zip_postcode: CHAR(20),, state_province_county: VARCHAR(50),, country: VARCHAR(50),) PK[address_id]
+People(person_id: INTEGER, first_name: VARCHAR(255),, middle_name: VARCHAR(255),, last_name: VARCHAR(255),, cell_mobile_number: VARCHAR(40),, email_address: VARCHAR(40),, login_name: VARCHAR(40),, password: VARCHAR(40),) PK[person_id]
+Students(student_id: INTEGER, student_details: VARCHAR(255),) PK[student_id] FK[student_id→People.person_id]
+Courses(course_id: VARCHAR(100), course_name: VARCHAR(120),, course_description: VARCHAR(255),, other_details: VARCHAR(255),) PK[course_id]
+People_Addresses(person_address_id: INTEGER, person_id: INTEGER, address_id: INTEGER, date_from: DATETIME,, date_to: DATETIME,) PK[person_address_id] FK[person_id→People.person_id; address_id→Addresses.address_id]
+Student_Course_Registrations(student_id: INTEGER, course_id: INTEGER, registration_date: DATETIME) PK[student_id, course_id] FK[student_id→Students.student_id; course_id→Courses.course_id]
+Student_Course_Attendance(student_id: INTEGER, course_id: INTEGER, date_of_attendance: DATETIME, FOREIGN: KEY (student_id, course_id)) PK[student_id, course_id]
+Candidates(candidate_id: INTEGER, candidate_details: VARCHAR(255),) PK[candidate_id] FK[candidate_id→People.person_id]
+Candidate_Assessments(candidate_id: INTEGER, qualification: CHAR(15), assessment_date: DATETIME, asessment_outcome_code: CHAR(15)) PK[candidate_id, qualification] FK[candidate_id→Candidates.candidate_id]

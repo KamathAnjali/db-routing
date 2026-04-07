@@ -1,0 +1,4 @@
+Database: browser_web
+Web_client_accelerator(id: int,, name: text,, Operating_system: text,, Client: text,, Connection: text,) PK[id]
+browser(id: int,, name: text,, market_share: real,) PK[id]
+accelerator_compatible_browser(accelerator_id: int,, browser_id: int,, compatible_since_year: int,, foreign: key ("accelerator_id"), foreign: key ("browser_id")) PK[accelerator_id, browser_id]

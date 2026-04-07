@@ -1,0 +1,62 @@
+This is a Database called tvshow.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. TV_Channel (displayed as: tv channel)
+
+2. TV_series (displayed as: tv series)
+
+3. Cartoon (displayed as: cartoon)
+
+
+Table 1: Tablename is TV_Channel
+Display name: tv channel
+DDL query for TV_Channel:
+CREATE TABLE "TV_Channel" (
+"id" text,
+"series_name" text,
+"Country" text,
+"Language" text,
+"Content" text,
+"Pixel_aspect_ratio_PAR" text,
+"Hight_definition_TV" text,
+"Pay_per_view_PPV" text,
+"Package_Option" text,
+PRIMARY KEY ("id")
+)
+
+
+Table 2: Tablename is TV_series
+Display name: tv series
+DDL query for TV_series:
+CREATE TABLE "TV_series" (
+"id" real,
+"Episode" text,
+"Air_Date" text,
+"Rating" text,
+"Share" real,
+"18_49_Rating_Share" text,
+"Viewers_m" text,
+"Weekly_Rank" real,
+"Channel" text,
+PRIMARY KEY ("id"),
+FOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)
+)
+
+
+Table 3: Tablename is Cartoon
+Display name: cartoon
+DDL query for Cartoon:
+CREATE TABLE "Cartoon" (
+"id" real,
+"Title" text,
+"Directed_by" text,
+"Written_by" text,
+"Original_air_date" text,
+"Production_code" real,
+"Channel" text,
+PRIMARY KEY ("id"),
+FOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)
+)
+

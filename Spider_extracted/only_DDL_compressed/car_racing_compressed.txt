@@ -1,0 +1,5 @@
+Database: car_racing
+country(Country_Id: int,, Country: text,, Capital: text,, Official_native_language: text,, Regoin: text,) PK[Country_Id]
+team(Team_ID: int,, Team: text,, Make: text,, Manager: text,, Sponsor: text,, Car_Owner: text,) PK[Team_ID]
+driver(Driver_ID: int,, Driver: text,, Country: int,, Age: int,, Make: text,, Points: text,, Laps: real,, Winnings: text,) PK[Driver_ID] FK[Country→country.Country_ID]
+team_driver(Team_ID: int,, Driver_ID: int,) PK[Team_ID, Driver_ID] FK[Team_ID→team.Team_ID; Driver_ID→driver.Driver_ID]

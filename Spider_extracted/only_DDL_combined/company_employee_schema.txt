@@ -1,0 +1,50 @@
+This is a Database called company_employee.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. people
+
+2. company
+
+3. employment
+
+
+Table 1: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+    "People_ID" int,
+    "Age" int,
+    "Name" text,
+    "Nationality" text,
+    "Graduation_College" text,
+    PRIMARY KEY ("People_ID")
+)
+
+
+Table 2: Tablename is company
+DDL query for company:
+CREATE TABLE "company" (
+    "Company_ID" real,
+    "Name" text,
+    "Headquarters" text,
+    "Industry" text,
+    "Sales_in_Billion" real,
+    "Profits_in_Billion" real,
+    "Assets_in_Billion" real,
+    "Market_Value_in_Billion" real,
+    PRIMARY KEY ("Company_ID")
+)
+
+
+Table 3: Tablename is employment
+DDL query for employment:
+CREATE TABLE "employment" (
+    "Company_ID" int,
+    "People_ID" int,
+    "Year_working" int,
+    PRIMARY KEY ("Company_ID","People_ID"),
+    FOREIGN KEY ("Company_ID") REFERENCES `company`("Company_ID"),
+    FOREIGN KEY ("People_ID") REFERENCES `people`("People_ID")
+)
+

@@ -1,0 +1,55 @@
+This is a Database called school_finance.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. School (displayed as: school)
+
+2. budget
+
+3. endowment
+
+
+Table 1: Tablename is School
+Display name: school
+DDL query for School:
+CREATE TABLE "School" (
+"School_id" text,
+"School_name" text,
+"Location" text,
+"Mascot" text,
+"Enrollment" int,
+"IHSAA_Class" text,
+"IHSAA_Football_Class" text,
+"County" text,
+PRIMARY KEY ("School_id")
+)
+
+
+Table 2: Tablename is budget
+DDL query for budget:
+CREATE TABLE "budget" (
+"School_id" int,
+"Year" int,
+"Budgeted" int,
+"total_budget_percent_budgeted" real,
+"Invested" int,
+"total_budget_percent_invested" real,
+"Budget_invested_percent" text,
+PRIMARY KEY("School_id","YEAR"),
+FOREIGN KEY("School_id") REFERENCES "School"("School_id")
+
+)
+
+
+Table 3: Tablename is endowment
+DDL query for endowment:
+CREATE TABLE "endowment" (
+"endowment_id" int,
+"School_id" int,
+"donator_name" text,
+"amount" real,
+PRIMARY KEY("endowment_id"),
+FOREIGN KEY("School_id") REFERENCES "School"("School_id")
+)
+

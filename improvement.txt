@@ -1,0 +1,69 @@
+(venv) anjalikamath@Anjalis-MacBook-Pro Code % python3 improvement.py
+Q_ID       | Init Rank  | New Rank   | Status
+-------------------------------------------------------
+10706      | 2          | 1          | ⭐ FIXED
+10720      | 3          | 1          | ⭐ FIXED
+10663      | 2          | 1          | ⭐ FIXED
+10688      | 2          | 1          | ⭐ FIXED
+10695      | 1          | 2          | ❌ REGRESSION
+10703      | 2          | 1          | ⭐ FIXED
+10710      | 2          | 1          | ⭐ FIXED
+10699      | 2          | 1          | ⭐ FIXED
+10704      | 2          | 1          | ⭐ FIXED
+10733      | 1          | 3          | ❌ REGRESSION
+10711      | 2          | 1          | ⭐ FIXED
+10656      | 2          | 1          | ⭐ FIXED
+10709      | 2          | 1          | ⭐ FIXED
+10736      | 2          | 1          | ⭐ FIXED
+10725      | 2          | 1          | ⭐ FIXED
+10684      | 4          | 1          | ⭐ FIXED
+10666      | 2          | 1          | ⭐ FIXED
+10700      | 2          | 1          | ⭐ FIXED
+8297       | 4          | 1          | ⭐ FIXED
+8325       | 5          | 1          | ⭐ FIXED
+8342       | 4          | 1          | ⭐ FIXED
+8242       | 4          | 1          | ⭐ FIXED
+8262       | 3          | 1          | ⭐ FIXED
+8280       | 3          | 1          | ⭐ FIXED
+8404       | 4          | 1          | ⭐ FIXED
+8307       | 4          | 1          | ⭐ FIXED
+8349       | 4          | 1          | ⭐ FIXED
+8291       | 5          | 1          | ⭐ FIXED
+8368       | 4          | 1          | ⭐ FIXED
+8408       | 3          | 1          | ⭐ FIXED
+8375       | 4          | 1          | ⭐ FIXED
+8393       | 4          | 1          | ⭐ FIXED
+8392       | 4          | 1          | ⭐ FIXED
+8350       | 4          | 1          | ⭐ FIXED
+8410       | 3          | 1          | ⭐ FIXED
+8320       | 4          | 1          | ⭐ FIXED
+6749       | 1          | 2          | ❌ REGRESSION
+6752       | 1          | 2          | ❌ REGRESSION
+6735       | 2          | 1          | ⭐ FIXED
+6760       | 2          | 1          | ⭐ FIXED
+6789       | 2          | 1          | ⭐ FIXED
+6736       | 1          | 2          | ❌ REGRESSION
+6748       | 1          | 2          | ❌ REGRESSION
+6721       | 1          | 2          | ❌ REGRESSION
+6716       | 1          | 2          | ❌ REGRESSION
+6751       | 1          | 2          | ❌ REGRESSION
+6727       | 2          | 1          | ⭐ FIXED
+6754       | 1          | 2          | ❌ REGRESSION
+6793       | 3          | 1          | ⭐ FIXED
+6709       | 2          | 1          | ⭐ FIXED
+6753       | 1          | 2          | ❌ REGRESSION
+10477      | 3          | 1          | ⭐ FIXED
+10520      | 3          | 1          | ⭐ FIXED
+10524      | 2          | 1          | ⭐ FIXED
+
+=============================================
+         ROUTER IMPROVEMENT SUMMARY
+=============================================
+Total Questions Matched:  200
+Initial Top-1 Accuracy:   18.50%
+New Code Top-1 Accuracy:  34.50%
+---------------------------------------------
+Total Gains (New Wins):   43
+Total Losses:             11
+Maintained Successes:     26
+=============================================

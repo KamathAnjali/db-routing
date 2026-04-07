@@ -1,0 +1,34 @@
+This is a Database called race_track.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. race
+
+2. track
+
+
+Table 1: Tablename is race
+DDL query for race:
+CREATE TABLE "race" (
+"Race_ID" int,
+"Name" text,
+"Class" text,
+"Date" text,
+"Track_ID" text,
+PRIMARY KEY ("Race_ID"),
+FOREIGN KEY ("Track_ID") REFERENCES "track"("Track_ID")
+)
+
+
+Table 2: Tablename is track
+DDL query for track:
+CREATE TABLE "track" (
+"Track_ID" int,
+"Name" text,
+"Location" text,
+"Seating" real,
+"Year_Opened" real,
+PRIMARY KEY ("Track_ID")
+)
+

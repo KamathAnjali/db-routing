@@ -1,0 +1,5 @@
+Database: orchestra
+conductor(Conductor_ID: int,, Name: text,, Age: int,, Nationality: text,, Year_of_Work: int,) PK[Conductor_ID]
+orchestra(Orchestra_ID: int,, Orchestra: text,, Conductor_ID: int,, Record_Company: text,, Year_of_Founded: real,, Major_Record_Format: text,) PK[Orchestra_ID] FK[Conductor_ID→conductor.Conductor_ID]
+performance(Performance_ID: int,, Orchestra_ID: int,, Type: text,, Date: text,, Weekly_rank: text,, Share: text,) PK[Performance_ID] FK[Orchestra_ID→orchestra.Orchestra_ID]
+show(Show_ID: int,, Performance_ID: int,, If_first_show: bool,, Result: text,, Attendance: real,) FK[Performance_ID→performance.Performance_ID]

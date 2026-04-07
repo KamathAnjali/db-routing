@@ -1,0 +1,39 @@
+This is a Database called car_road_race.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. driver
+
+2. race
+
+
+Table 1: Tablename is driver
+DDL query for driver:
+CREATE TABLE "driver" (
+"Driver_ID" int,
+"Driver_Name" text,
+"Entrant" text,
+"Constructor" text,
+"Chassis" text,
+"Engine" text,
+"Age" int,
+PRIMARY KEY ("Driver_ID")
+)
+
+
+Table 2: Tablename is race
+DDL query for race:
+CREATE TABLE "race" (
+"Road" int,
+"Driver_ID" int,
+"Race_Name" text,
+"Pole_Position" text,
+"Fastest_Lap" text,
+"Winning_driver" text,
+"Winning_team" text,
+"Report" text,
+PRIMARY KEY ("Road"),
+FOREIGN KEY (`Driver_ID`) REFERENCES `driver`(`Driver_ID`)
+)
+

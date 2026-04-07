@@ -1,0 +1,1677 @@
+{
+  "total_questions": 11840,
+  "unique_questions": 11831,
+  "duplicate_questions": 9,
+  "database_counts": {
+    "unique": {
+      "scholar": 569,
+      "geo": 564,
+      "academic": 181,
+      "college_2": 169,
+      "college_1": 164,
+      "restaurants": 125,
+      "hr_1": 121,
+      "world_1": 120,
+      "art_1": 114,
+      "store_1": 112,
+      "yelp": 111,
+      "imdb": 109,
+      "soccer_2": 106,
+      "bike_1": 104,
+      "bakery_1": 104,
+      "music_1": 100,
+      "hospital_1": 100,
+      "music_2": 100,
+      "dorm_1": 100,
+      "allergy_1": 98,
+      "movie_1": 97,
+      "flight_1": 96,
+      "driving_school": 93,
+      "car_1": 92,
+      "cre_Doc_Tracking_DB": 90,
+      "aan_1": 90,
+      "advertising_agencies": 90,
+      "department_store": 88,
+      "customers_and_addresses": 88,
+      "activity_1": 88,
+      "products_gen_characteristics": 86,
+      "game_1": 86,
+      "network_2": 85,
+      "chinook_1": 84,
+      "cre_Theme_park": 84,
+      "cre_Docs_and_Epenses": 84,
+      "cre_Doc_Template_Mgt": 84,
+      "customers_and_invoices": 82,
+      "sakila_1": 82,
+      "baseball_1": 82,
+      "e_learning": 82,
+      "cre_Drama_Workshop_Groups": 82,
+      "wine_1": 82,
+      "flight_4": 82,
+      "dog_kennels": 82,
+      "customers_and_orders": 82,
+      "pilot_1": 82,
+      "customers_card_transactions": 80,
+      "apartment_rentals": 80,
+      "loan_1": 80,
+      "manufactory_1": 80,
+      "flight_2": 80,
+      "e_commerce": 80,
+      "cre_Doc_and_collections": 80,
+      "address_1": 80,
+      "formula_1": 79,
+      "tracking_grants_for_research": 78,
+      "student_transcripts_tracking": 78,
+      "book_1": 78,
+      "boat_1": 78,
+      "warehouse_1": 78,
+      "cre_Students_Information_Systems": 76,
+      "planet_1": 76,
+      "inn_1": 74,
+      "college_3": 74,
+      "voter_2": 72,
+      "real_estate_rentals": 72,
+      "club_1": 70,
+      "csu_1": 69,
+      "election": 68,
+      "student_1": 68,
+      "icfp_1": 66,
+      "wta_1": 62,
+      "tvshow": 62,
+      "music_4": 60,
+      "tracking_orders": 60,
+      "match_season": 58,
+      "network_1": 56,
+      "student_assessment": 53,
+      "sports_competition": 52,
+      "movie_2": 52,
+      "small_bank_1": 50,
+      "car_racing": 50,
+      "insurance_policies": 48,
+      "film_rank": 48,
+      "tracking_software_problems": 48,
+      "ship_1": 48,
+      "scientist_1": 48,
+      "university_basketball": 46,
+      "gas_company": 46,
+      "aircraft": 46,
+      "customer_complaints": 46,
+      "concert_singer": 45,
+      "medicine_enzyme_interaction": 44,
+      "party_people": 44,
+      "storm_record": 44,
+      "document_management": 44,
+      "store_product": 44,
+      "shop_membership": 44,
+      "vehicle_rent": 44,
+      "headphone_store": 44,
+      "conference": 44,
+      "car_road_race": 44,
+      "university_rank": 44,
+      "book_press": 44,
+      "product_catalog": 42,
+      "race_track": 42,
+      "insurance_fnol": 42,
+      "pets_1": 42,
+      "vehicle_driver": 42,
+      "video_game": 42,
+      "tracking_share_transactions": 41,
+      "farm": 40,
+      "musical": 40,
+      "climbing": 40,
+      "insurance_and_eClaims": 40,
+      "theme_gallery": 40,
+      "gymnast": 40,
+      "wrestler": 40,
+      "entrepreneur": 40,
+      "candidate_poll": 40,
+      "county_public_safety": 40,
+      "behavior_monitoring": 40,
+      "program_share": 40,
+      "company_office": 40,
+      "school_player": 40,
+      "device": 40,
+      "city_record": 40,
+      "e_government": 40,
+      "poker_player": 40,
+      "orchestra": 40,
+      "soccer_3": 40,
+      "online_exams": 40,
+      "region_building": 40,
+      "government_shift": 40,
+      "country_language": 40,
+      "institution_sports": 40,
+      "cre_Doc_Workflow": 40,
+      "culture_company": 38,
+      "employee_hire_evaluation": 38,
+      "cre_Doc_Control_Systems": 33,
+      "assets_maintenance": 31,
+      "cinema": 30,
+      "machine_repair": 30,
+      "party_host": 30,
+      "ship_mission": 30,
+      "swimming": 30,
+      "workshop_paper": 30,
+      "course_teach": 30,
+      "singer": 30,
+      "restaurant_bills": 30,
+      "phone_1": 29,
+      "epinions_1": 29,
+      "twitter_1": 27,
+      "school_finance": 26,
+      "body_builder": 24,
+      "train_station": 23,
+      "restaurant_1": 22,
+      "entertainment_awards": 22,
+      "book_2": 21,
+      "perpetrator": 21,
+      "railway": 21,
+      "book_review": 21,
+      "district_spokesman": 21,
+      "election_representative": 20,
+      "wedding": 20,
+      "protein_institute": 20,
+      "sing_contest": 20,
+      "game_injury": 19,
+      "flight_company": 19,
+      "journal_committee": 18,
+      "coffee_shop": 18,
+      "browser_web": 18,
+      "products_for_hire": 18,
+      "news_report": 18,
+      "school_bus": 18,
+      "museum_visit": 18,
+      "riding_club": 17,
+      "mountain_photos": 17,
+      "local_govt_and_lot": 17,
+      "roller_coaster": 17,
+      "architecture": 17,
+      "club_leader": 17,
+      "bike_racing": 17,
+      "department_management": 16,
+      "customer_deliveries": 16,
+      "station_weather": 16,
+      "manufacturer": 16,
+      "company_employee": 16,
+      "battle_death": 16,
+      "bbc_channels": 16,
+      "performance_attendance": 15,
+      "debate": 15,
+      "phone_market": 15,
+      "pilot_record": 15,
+      "local_govt_in_alabama": 15,
+      "decoration_competition": 15,
+      "solvency_ii": 15,
+      "customers_campaigns_ecommerce": 15,
+      "customers_and_products_contacts": 15,
+      "voter_1": 15,
+      "tv_shows": 15,
+      "soccer_1": 14,
+      "local_govt_mdm": 14,
+      "company_1": 7,
+      "real_estate_properties": 4
+    },
+    "total": {
+      "scholar": 569,
+      "geo": 564,
+      "academic": 181,
+      "college_2": 170,
+      "college_1": 164,
+      "restaurants": 125,
+      "hr_1": 124,
+      "world_1": 120,
+      "art_1": 114,
+      "store_1": 112,
+      "yelp": 111,
+      "imdb": 109,
+      "soccer_2": 106,
+      "bike_1": 104,
+      "bakery_1": 104,
+      "music_1": 100,
+      "hospital_1": 100,
+      "music_2": 100,
+      "dorm_1": 100,
+      "allergy_1": 98,
+      "movie_1": 98,
+      "flight_1": 96,
+      "driving_school": 93,
+      "car_1": 92,
+      "cre_Doc_Tracking_DB": 90,
+      "aan_1": 90,
+      "advertising_agencies": 90,
+      "department_store": 88,
+      "customers_and_addresses": 88,
+      "activity_1": 88,
+      "products_gen_characteristics": 86,
+      "game_1": 86,
+      "network_2": 86,
+      "chinook_1": 84,
+      "cre_Theme_park": 84,
+      "cre_Docs_and_Epenses": 84,
+      "cre_Doc_Template_Mgt": 84,
+      "customers_and_invoices": 82,
+      "sakila_1": 82,
+      "baseball_1": 82,
+      "e_learning": 82,
+      "cre_Drama_Workshop_Groups": 82,
+      "wine_1": 82,
+      "flight_4": 82,
+      "dog_kennels": 82,
+      "customers_and_orders": 82,
+      "pilot_1": 82,
+      "customers_card_transactions": 80,
+      "apartment_rentals": 80,
+      "loan_1": 80,
+      "manufactory_1": 80,
+      "flight_2": 80,
+      "e_commerce": 80,
+      "cre_Doc_and_collections": 80,
+      "address_1": 80,
+      "formula_1": 80,
+      "tracking_grants_for_research": 78,
+      "student_transcripts_tracking": 78,
+      "book_1": 78,
+      "boat_1": 78,
+      "warehouse_1": 78,
+      "cre_Students_Information_Systems": 76,
+      "planet_1": 76,
+      "inn_1": 74,
+      "college_3": 74,
+      "voter_2": 72,
+      "real_estate_rentals": 72,
+      "club_1": 70,
+      "csu_1": 70,
+      "election": 68,
+      "student_1": 68,
+      "icfp_1": 66,
+      "wta_1": 62,
+      "tvshow": 62,
+      "music_4": 60,
+      "tracking_orders": 60,
+      "match_season": 58,
+      "network_1": 56,
+      "student_assessment": 53,
+      "sports_competition": 52,
+      "movie_2": 52,
+      "small_bank_1": 50,
+      "car_racing": 50,
+      "insurance_policies": 48,
+      "film_rank": 48,
+      "tracking_software_problems": 48,
+      "ship_1": 48,
+      "scientist_1": 48,
+      "university_basketball": 46,
+      "gas_company": 46,
+      "aircraft": 46,
+      "customer_complaints": 46,
+      "concert_singer": 45,
+      "medicine_enzyme_interaction": 44,
+      "party_people": 44,
+      "storm_record": 44,
+      "document_management": 44,
+      "store_product": 44,
+      "shop_membership": 44,
+      "vehicle_rent": 44,
+      "headphone_store": 44,
+      "conference": 44,
+      "car_road_race": 44,
+      "university_rank": 44,
+      "book_press": 44,
+      "product_catalog": 42,
+      "race_track": 42,
+      "insurance_fnol": 42,
+      "pets_1": 42,
+      "vehicle_driver": 42,
+      "video_game": 42,
+      "tracking_share_transactions": 41,
+      "farm": 40,
+      "musical": 40,
+      "climbing": 40,
+      "insurance_and_eClaims": 40,
+      "theme_gallery": 40,
+      "gymnast": 40,
+      "wrestler": 40,
+      "entrepreneur": 40,
+      "candidate_poll": 40,
+      "county_public_safety": 40,
+      "behavior_monitoring": 40,
+      "program_share": 40,
+      "company_office": 40,
+      "school_player": 40,
+      "device": 40,
+      "city_record": 40,
+      "e_government": 40,
+      "poker_player": 40,
+      "orchestra": 40,
+      "soccer_3": 40,
+      "online_exams": 40,
+      "region_building": 40,
+      "government_shift": 40,
+      "country_language": 40,
+      "institution_sports": 40,
+      "cre_Doc_Workflow": 40,
+      "culture_company": 38,
+      "employee_hire_evaluation": 38,
+      "cre_Doc_Control_Systems": 33,
+      "assets_maintenance": 31,
+      "cinema": 30,
+      "machine_repair": 30,
+      "party_host": 30,
+      "ship_mission": 30,
+      "swimming": 30,
+      "workshop_paper": 30,
+      "course_teach": 30,
+      "singer": 30,
+      "restaurant_bills": 30,
+      "phone_1": 29,
+      "epinions_1": 30,
+      "twitter_1": 27,
+      "school_finance": 26,
+      "body_builder": 24,
+      "train_station": 23,
+      "restaurant_1": 22,
+      "entertainment_awards": 22,
+      "book_2": 21,
+      "perpetrator": 21,
+      "railway": 21,
+      "book_review": 21,
+      "district_spokesman": 21,
+      "election_representative": 20,
+      "wedding": 20,
+      "protein_institute": 20,
+      "sing_contest": 20,
+      "game_injury": 19,
+      "flight_company": 19,
+      "journal_committee": 18,
+      "coffee_shop": 18,
+      "browser_web": 18,
+      "products_for_hire": 18,
+      "news_report": 18,
+      "school_bus": 18,
+      "museum_visit": 18,
+      "riding_club": 17,
+      "mountain_photos": 17,
+      "local_govt_and_lot": 17,
+      "roller_coaster": 17,
+      "architecture": 17,
+      "club_leader": 17,
+      "bike_racing": 17,
+      "department_management": 16,
+      "customer_deliveries": 16,
+      "station_weather": 16,
+      "manufacturer": 16,
+      "company_employee": 16,
+      "battle_death": 16,
+      "bbc_channels": 16,
+      "performance_attendance": 15,
+      "debate": 15,
+      "phone_market": 15,
+      "pilot_record": 15,
+      "local_govt_in_alabama": 15,
+      "decoration_competition": 15,
+      "solvency_ii": 15,
+      "customers_campaigns_ecommerce": 15,
+      "customers_and_products_contacts": 15,
+      "voter_1": 15,
+      "tv_shows": 15,
+      "soccer_1": 14,
+      "local_govt_mdm": 14,
+      "company_1": 7,
+      "real_estate_properties": 4
+    },
+    "by_file": {
+      "train_spider.json": {
+        "department_management": 16,
+        "farm": 40,
+        "student_assessment": 53,
+        "bike_1": 104,
+        "book_2": 21,
+        "musical": 40,
+        "twitter_1": 27,
+        "product_catalog": 42,
+        "flight_1": 96,
+        "allergy_1": 98,
+        "store_1": 112,
+        "journal_committee": 18,
+        "customers_card_transactions": 80,
+        "race_track": 42,
+        "coffee_shop": 18,
+        "chinook_1": 84,
+        "insurance_fnol": 42,
+        "medicine_enzyme_interaction": 44,
+        "university_basketball": 46,
+        "phone_1": 29,
+        "match_season": 58,
+        "climbing": 40,
+        "body_builder": 24,
+        "election_representative": 20,
+        "apartment_rentals": 80,
+        "game_injury": 19,
+        "soccer_1": 14,
+        "performance_attendance": 15,
+        "college_2": 170,
+        "debate": 15,
+        "insurance_and_eClaims": 40,
+        "customers_and_invoices": 82,
+        "wedding": 20,
+        "theme_gallery": 40,
+        "epinions_1": 30,
+        "riding_club": 17,
+        "gymnast": 40,
+        "small_bank_1": 50,
+        "browser_web": 18,
+        "wrestler": 40,
+        "school_finance": 26,
+        "protein_institute": 20,
+        "cinema": 30,
+        "products_for_hire": 18,
+        "phone_market": 15,
+        "gas_company": 46,
+        "party_people": 44,
+        "pilot_record": 15,
+        "cre_Doc_Control_Systems": 33,
+        "company_1": 7,
+        "local_govt_in_alabama": 15,
+        "formula_1": 80,
+        "machine_repair": 30,
+        "entrepreneur": 40,
+        "perpetrator": 21,
+        "csu_1": 70,
+        "candidate_poll": 40,
+        "movie_1": 98,
+        "county_public_safety": 40,
+        "inn_1": 74,
+        "local_govt_mdm": 14,
+        "party_host": 30,
+        "storm_record": 44,
+        "election": 68,
+        "news_report": 18,
+        "restaurant_1": 22,
+        "customer_deliveries": 16,
+        "icfp_1": 66,
+        "sakila_1": 82,
+        "loan_1": 80,
+        "behavior_monitoring": 40,
+        "assets_maintenance": 31,
+        "station_weather": 16,
+        "college_1": 164,
+        "sports_competition": 52,
+        "manufacturer": 16,
+        "hr_1": 124,
+        "music_1": 100,
+        "baseball_1": 82,
+        "mountain_photos": 17,
+        "program_share": 40,
+        "e_learning": 82,
+        "insurance_policies": 48,
+        "hospital_1": 100,
+        "ship_mission": 30,
+        "student_1": 68,
+        "company_employee": 16,
+        "film_rank": 48,
+        "cre_Doc_Tracking_DB": 90,
+        "club_1": 70,
+        "tracking_grants_for_research": 78,
+        "network_2": 86,
+        "decoration_competition": 15,
+        "document_management": 44,
+        "company_office": 40,
+        "solvency_ii": 15,
+        "entertainment_awards": 22,
+        "customers_campaigns_ecommerce": 15,
+        "college_3": 74,
+        "department_store": 88,
+        "aircraft": 46,
+        "local_govt_and_lot": 17,
+        "school_player": 40,
+        "store_product": 44,
+        "soccer_2": 106,
+        "device": 40,
+        "cre_Drama_Workshop_Groups": 82,
+        "music_2": 100,
+        "manufactory_1": 80,
+        "tracking_software_problems": 48,
+        "shop_membership": 44,
+        "voter_2": 72,
+        "products_gen_characteristics": 86,
+        "swimming": 30,
+        "railway": 21,
+        "customers_and_products_contacts": 15,
+        "dorm_1": 100,
+        "customer_complaints": 46,
+        "workshop_paper": 30,
+        "tracking_share_transactions": 41,
+        "cre_Theme_park": 84,
+        "game_1": 86,
+        "customers_and_addresses": 88,
+        "music_4": 60,
+        "roller_coaster": 17,
+        "ship_1": 48,
+        "city_record": 40,
+        "e_government": 40,
+        "school_bus": 18,
+        "flight_company": 19,
+        "cre_Docs_and_Epenses": 84,
+        "scientist_1": 48,
+        "wine_1": 82,
+        "train_station": 23,
+        "driving_school": 93,
+        "activity_1": 88,
+        "flight_4": 82,
+        "tracking_orders": 60,
+        "architecture": 17,
+        "culture_company": 38
+      },
+      "train_others.json": {
+        "geo": 564,
+        "scholar": 569,
+        "yelp": 111,
+        "academic": 181,
+        "imdb": 109,
+        "restaurants": 125
+      },
+      "dev.json": {
+        "concert_singer": 45,
+        "pets_1": 42,
+        "car_1": 92,
+        "flight_2": 80,
+        "employee_hire_evaluation": 38,
+        "cre_Doc_Template_Mgt": 84,
+        "course_teach": 30,
+        "museum_visit": 18,
+        "wta_1": 62,
+        "battle_death": 16,
+        "student_transcripts_tracking": 78,
+        "tvshow": 62,
+        "poker_player": 40,
+        "voter_1": 15,
+        "world_1": 120,
+        "orchestra": 40,
+        "network_1": 56,
+        "dog_kennels": 82,
+        "singer": 30,
+        "real_estate_properties": 4
+      },
+      "test.json": {
+        "soccer_3": 40,
+        "e_commerce": 80,
+        "bbc_channels": 16,
+        "tv_shows": 15,
+        "vehicle_driver": 42,
+        "online_exams": 40,
+        "customers_and_orders": 82,
+        "region_building": 40,
+        "government_shift": 40,
+        "vehicle_rent": 44,
+        "cre_Students_Information_Systems": 76,
+        "book_1": 78,
+        "book_review": 21,
+        "restaurant_bills": 30,
+        "club_leader": 17,
+        "cre_Doc_and_collections": 80,
+        "sing_contest": 20,
+        "address_1": 80,
+        "boat_1": 78,
+        "headphone_store": 44,
+        "aan_1": 90,
+        "conference": 44,
+        "pilot_1": 82,
+        "district_spokesman": 21,
+        "art_1": 114,
+        "car_road_race": 44,
+        "country_language": 40,
+        "real_estate_rentals": 72,
+        "bike_racing": 17,
+        "bakery_1": 104,
+        "car_racing": 50,
+        "institution_sports": 40,
+        "warehouse_1": 78,
+        "university_rank": 44,
+        "movie_2": 52,
+        "planet_1": 76,
+        "video_game": 42,
+        "book_press": 44,
+        "cre_Doc_Workflow": 40,
+        "advertising_agencies": 90
+      }
+    }
+  },
+  "database_summary": [
+    {
+      "db_id": "scholar",
+      "question_count": 569,
+      "percentage": 4.81
+    },
+    {
+      "db_id": "geo",
+      "question_count": 564,
+      "percentage": 4.77
+    },
+    {
+      "db_id": "academic",
+      "question_count": 181,
+      "percentage": 1.53
+    },
+    {
+      "db_id": "college_2",
+      "question_count": 169,
+      "percentage": 1.43
+    },
+    {
+      "db_id": "college_1",
+      "question_count": 164,
+      "percentage": 1.39
+    },
+    {
+      "db_id": "restaurants",
+      "question_count": 125,
+      "percentage": 1.06
+    },
+    {
+      "db_id": "hr_1",
+      "question_count": 121,
+      "percentage": 1.02
+    },
+    {
+      "db_id": "world_1",
+      "question_count": 120,
+      "percentage": 1.01
+    },
+    {
+      "db_id": "art_1",
+      "question_count": 114,
+      "percentage": 0.96
+    },
+    {
+      "db_id": "store_1",
+      "question_count": 112,
+      "percentage": 0.95
+    },
+    {
+      "db_id": "yelp",
+      "question_count": 111,
+      "percentage": 0.94
+    },
+    {
+      "db_id": "imdb",
+      "question_count": 109,
+      "percentage": 0.92
+    },
+    {
+      "db_id": "soccer_2",
+      "question_count": 106,
+      "percentage": 0.9
+    },
+    {
+      "db_id": "bike_1",
+      "question_count": 104,
+      "percentage": 0.88
+    },
+    {
+      "db_id": "bakery_1",
+      "question_count": 104,
+      "percentage": 0.88
+    },
+    {
+      "db_id": "music_1",
+      "question_count": 100,
+      "percentage": 0.85
+    },
+    {
+      "db_id": "hospital_1",
+      "question_count": 100,
+      "percentage": 0.85
+    },
+    {
+      "db_id": "music_2",
+      "question_count": 100,
+      "percentage": 0.85
+    },
+    {
+      "db_id": "dorm_1",
+      "question_count": 100,
+      "percentage": 0.85
+    },
+    {
+      "db_id": "allergy_1",
+      "question_count": 98,
+      "percentage": 0.83
+    },
+    {
+      "db_id": "movie_1",
+      "question_count": 97,
+      "percentage": 0.82
+    },
+    {
+      "db_id": "flight_1",
+      "question_count": 96,
+      "percentage": 0.81
+    },
+    {
+      "db_id": "driving_school",
+      "question_count": 93,
+      "percentage": 0.79
+    },
+    {
+      "db_id": "car_1",
+      "question_count": 92,
+      "percentage": 0.78
+    },
+    {
+      "db_id": "cre_Doc_Tracking_DB",
+      "question_count": 90,
+      "percentage": 0.76
+    },
+    {
+      "db_id": "aan_1",
+      "question_count": 90,
+      "percentage": 0.76
+    },
+    {
+      "db_id": "advertising_agencies",
+      "question_count": 90,
+      "percentage": 0.76
+    },
+    {
+      "db_id": "department_store",
+      "question_count": 88,
+      "percentage": 0.74
+    },
+    {
+      "db_id": "customers_and_addresses",
+      "question_count": 88,
+      "percentage": 0.74
+    },
+    {
+      "db_id": "activity_1",
+      "question_count": 88,
+      "percentage": 0.74
+    },
+    {
+      "db_id": "products_gen_characteristics",
+      "question_count": 86,
+      "percentage": 0.73
+    },
+    {
+      "db_id": "game_1",
+      "question_count": 86,
+      "percentage": 0.73
+    },
+    {
+      "db_id": "network_2",
+      "question_count": 85,
+      "percentage": 0.72
+    },
+    {
+      "db_id": "chinook_1",
+      "question_count": 84,
+      "percentage": 0.71
+    },
+    {
+      "db_id": "cre_Theme_park",
+      "question_count": 84,
+      "percentage": 0.71
+    },
+    {
+      "db_id": "cre_Docs_and_Epenses",
+      "question_count": 84,
+      "percentage": 0.71
+    },
+    {
+      "db_id": "cre_Doc_Template_Mgt",
+      "question_count": 84,
+      "percentage": 0.71
+    },
+    {
+      "db_id": "customers_and_invoices",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "sakila_1",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "baseball_1",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "e_learning",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "cre_Drama_Workshop_Groups",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "wine_1",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "flight_4",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "dog_kennels",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "customers_and_orders",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "pilot_1",
+      "question_count": 82,
+      "percentage": 0.69
+    },
+    {
+      "db_id": "customers_card_transactions",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "apartment_rentals",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "loan_1",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "manufactory_1",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "flight_2",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "e_commerce",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "cre_Doc_and_collections",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "address_1",
+      "question_count": 80,
+      "percentage": 0.68
+    },
+    {
+      "db_id": "formula_1",
+      "question_count": 79,
+      "percentage": 0.67
+    },
+    {
+      "db_id": "tracking_grants_for_research",
+      "question_count": 78,
+      "percentage": 0.66
+    },
+    {
+      "db_id": "student_transcripts_tracking",
+      "question_count": 78,
+      "percentage": 0.66
+    },
+    {
+      "db_id": "book_1",
+      "question_count": 78,
+      "percentage": 0.66
+    },
+    {
+      "db_id": "boat_1",
+      "question_count": 78,
+      "percentage": 0.66
+    },
+    {
+      "db_id": "warehouse_1",
+      "question_count": 78,
+      "percentage": 0.66
+    },
+    {
+      "db_id": "cre_Students_Information_Systems",
+      "question_count": 76,
+      "percentage": 0.64
+    },
+    {
+      "db_id": "planet_1",
+      "question_count": 76,
+      "percentage": 0.64
+    },
+    {
+      "db_id": "inn_1",
+      "question_count": 74,
+      "percentage": 0.63
+    },
+    {
+      "db_id": "college_3",
+      "question_count": 74,
+      "percentage": 0.63
+    },
+    {
+      "db_id": "voter_2",
+      "question_count": 72,
+      "percentage": 0.61
+    },
+    {
+      "db_id": "real_estate_rentals",
+      "question_count": 72,
+      "percentage": 0.61
+    },
+    {
+      "db_id": "club_1",
+      "question_count": 70,
+      "percentage": 0.59
+    },
+    {
+      "db_id": "csu_1",
+      "question_count": 69,
+      "percentage": 0.58
+    },
+    {
+      "db_id": "election",
+      "question_count": 68,
+      "percentage": 0.57
+    },
+    {
+      "db_id": "student_1",
+      "question_count": 68,
+      "percentage": 0.57
+    },
+    {
+      "db_id": "icfp_1",
+      "question_count": 66,
+      "percentage": 0.56
+    },
+    {
+      "db_id": "wta_1",
+      "question_count": 62,
+      "percentage": 0.52
+    },
+    {
+      "db_id": "tvshow",
+      "question_count": 62,
+      "percentage": 0.52
+    },
+    {
+      "db_id": "music_4",
+      "question_count": 60,
+      "percentage": 0.51
+    },
+    {
+      "db_id": "tracking_orders",
+      "question_count": 60,
+      "percentage": 0.51
+    },
+    {
+      "db_id": "match_season",
+      "question_count": 58,
+      "percentage": 0.49
+    },
+    {
+      "db_id": "network_1",
+      "question_count": 56,
+      "percentage": 0.47
+    },
+    {
+      "db_id": "student_assessment",
+      "question_count": 53,
+      "percentage": 0.45
+    },
+    {
+      "db_id": "sports_competition",
+      "question_count": 52,
+      "percentage": 0.44
+    },
+    {
+      "db_id": "movie_2",
+      "question_count": 52,
+      "percentage": 0.44
+    },
+    {
+      "db_id": "small_bank_1",
+      "question_count": 50,
+      "percentage": 0.42
+    },
+    {
+      "db_id": "car_racing",
+      "question_count": 50,
+      "percentage": 0.42
+    },
+    {
+      "db_id": "insurance_policies",
+      "question_count": 48,
+      "percentage": 0.41
+    },
+    {
+      "db_id": "film_rank",
+      "question_count": 48,
+      "percentage": 0.41
+    },
+    {
+      "db_id": "tracking_software_problems",
+      "question_count": 48,
+      "percentage": 0.41
+    },
+    {
+      "db_id": "ship_1",
+      "question_count": 48,
+      "percentage": 0.41
+    },
+    {
+      "db_id": "scientist_1",
+      "question_count": 48,
+      "percentage": 0.41
+    },
+    {
+      "db_id": "university_basketball",
+      "question_count": 46,
+      "percentage": 0.39
+    },
+    {
+      "db_id": "gas_company",
+      "question_count": 46,
+      "percentage": 0.39
+    },
+    {
+      "db_id": "aircraft",
+      "question_count": 46,
+      "percentage": 0.39
+    },
+    {
+      "db_id": "customer_complaints",
+      "question_count": 46,
+      "percentage": 0.39
+    },
+    {
+      "db_id": "concert_singer",
+      "question_count": 45,
+      "percentage": 0.38
+    },
+    {
+      "db_id": "medicine_enzyme_interaction",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "party_people",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "storm_record",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "document_management",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "store_product",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "shop_membership",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "vehicle_rent",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "headphone_store",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "conference",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "car_road_race",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "university_rank",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "book_press",
+      "question_count": 44,
+      "percentage": 0.37
+    },
+    {
+      "db_id": "product_catalog",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "race_track",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "insurance_fnol",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "pets_1",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "vehicle_driver",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "video_game",
+      "question_count": 42,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "tracking_share_transactions",
+      "question_count": 41,
+      "percentage": 0.35
+    },
+    {
+      "db_id": "farm",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "musical",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "climbing",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "insurance_and_eClaims",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "theme_gallery",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "gymnast",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "wrestler",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "entrepreneur",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "candidate_poll",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "county_public_safety",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "behavior_monitoring",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "program_share",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "company_office",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "school_player",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "device",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "city_record",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "e_government",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "poker_player",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "orchestra",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "soccer_3",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "online_exams",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "region_building",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "government_shift",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "country_language",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "institution_sports",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "cre_Doc_Workflow",
+      "question_count": 40,
+      "percentage": 0.34
+    },
+    {
+      "db_id": "culture_company",
+      "question_count": 38,
+      "percentage": 0.32
+    },
+    {
+      "db_id": "employee_hire_evaluation",
+      "question_count": 38,
+      "percentage": 0.32
+    },
+    {
+      "db_id": "cre_Doc_Control_Systems",
+      "question_count": 33,
+      "percentage": 0.28
+    },
+    {
+      "db_id": "assets_maintenance",
+      "question_count": 31,
+      "percentage": 0.26
+    },
+    {
+      "db_id": "cinema",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "machine_repair",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "party_host",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "ship_mission",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "swimming",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "workshop_paper",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "course_teach",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "singer",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "restaurant_bills",
+      "question_count": 30,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "phone_1",
+      "question_count": 29,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "epinions_1",
+      "question_count": 29,
+      "percentage": 0.25
+    },
+    {
+      "db_id": "twitter_1",
+      "question_count": 27,
+      "percentage": 0.23
+    },
+    {
+      "db_id": "school_finance",
+      "question_count": 26,
+      "percentage": 0.22
+    },
+    {
+      "db_id": "body_builder",
+      "question_count": 24,
+      "percentage": 0.2
+    },
+    {
+      "db_id": "train_station",
+      "question_count": 23,
+      "percentage": 0.19
+    },
+    {
+      "db_id": "restaurant_1",
+      "question_count": 22,
+      "percentage": 0.19
+    },
+    {
+      "db_id": "entertainment_awards",
+      "question_count": 22,
+      "percentage": 0.19
+    },
+    {
+      "db_id": "book_2",
+      "question_count": 21,
+      "percentage": 0.18
+    },
+    {
+      "db_id": "perpetrator",
+      "question_count": 21,
+      "percentage": 0.18
+    },
+    {
+      "db_id": "railway",
+      "question_count": 21,
+      "percentage": 0.18
+    },
+    {
+      "db_id": "book_review",
+      "question_count": 21,
+      "percentage": 0.18
+    },
+    {
+      "db_id": "district_spokesman",
+      "question_count": 21,
+      "percentage": 0.18
+    },
+    {
+      "db_id": "election_representative",
+      "question_count": 20,
+      "percentage": 0.17
+    },
+    {
+      "db_id": "wedding",
+      "question_count": 20,
+      "percentage": 0.17
+    },
+    {
+      "db_id": "protein_institute",
+      "question_count": 20,
+      "percentage": 0.17
+    },
+    {
+      "db_id": "sing_contest",
+      "question_count": 20,
+      "percentage": 0.17
+    },
+    {
+      "db_id": "game_injury",
+      "question_count": 19,
+      "percentage": 0.16
+    },
+    {
+      "db_id": "flight_company",
+      "question_count": 19,
+      "percentage": 0.16
+    },
+    {
+      "db_id": "journal_committee",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "coffee_shop",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "browser_web",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "products_for_hire",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "news_report",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "school_bus",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "museum_visit",
+      "question_count": 18,
+      "percentage": 0.15
+    },
+    {
+      "db_id": "riding_club",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "mountain_photos",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "local_govt_and_lot",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "roller_coaster",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "architecture",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "club_leader",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "bike_racing",
+      "question_count": 17,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "department_management",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "customer_deliveries",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "station_weather",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "manufacturer",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "company_employee",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "battle_death",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "bbc_channels",
+      "question_count": 16,
+      "percentage": 0.14
+    },
+    {
+      "db_id": "performance_attendance",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "debate",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "phone_market",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "pilot_record",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "local_govt_in_alabama",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "decoration_competition",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "solvency_ii",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "customers_campaigns_ecommerce",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "customers_and_products_contacts",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "voter_1",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "tv_shows",
+      "question_count": 15,
+      "percentage": 0.13
+    },
+    {
+      "db_id": "soccer_1",
+      "question_count": 14,
+      "percentage": 0.12
+    },
+    {
+      "db_id": "local_govt_mdm",
+      "question_count": 14,
+      "percentage": 0.12
+    },
+    {
+      "db_id": "company_1",
+      "question_count": 7,
+      "percentage": 0.06
+    },
+    {
+      "db_id": "real_estate_properties",
+      "question_count": 4,
+      "percentage": 0.03
+    }
+  ],
+  "stats": {
+    "number_of_databases": 206,
+    "max_questions_per_db": 569,
+    "min_questions_per_db": 4,
+    "avg_questions_per_db": 57.43
+  }
+}

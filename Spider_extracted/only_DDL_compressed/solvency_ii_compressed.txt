@@ -1,0 +1,13 @@
+Database: solvency_ii
+Addresses(Address_ID: INTEGER, address_details: VARCHAR(255),) PK[Address_ID]
+Locations(Location_ID: INTEGER, Other_Details: VARCHAR(255),) PK[Location_ID]
+Products(Product_ID: INTEGER, Product_Type_Code: CHAR(15),, Product_Name: VARCHAR(255),, Product_Price: DECIMAL(20,4),) PK[Product_ID]
+Parties(Party_ID: INTEGER, Party_Details: VARCHAR(255),) PK[Party_ID]
+Assets(Asset_ID: INTEGER, Other_Details: VARCHAR(255),) PK[Asset_ID]
+Channels(Channel_ID: INTEGER, Other_Details: VARCHAR(255),) PK[Channel_ID]
+Finances(Finance_ID: INTEGER, Other_Details: VARCHAR(255),) PK[Finance_ID]
+Events(Event_ID: INTEGER, Address_ID: INTEGER,, Channel_ID: INTEGER, Event_Type_Code: CHAR(15),, Finance_ID: INTEGER, Location_ID: INTEGER) PK[Event_ID] FK[Location_ID→Locations.Location_ID; Address_ID→Addresses.Address_ID; Finance_ID→Finances.Finance_ID]
+Products_in_Events(Product_in_Event_ID: INTEGER, Event_ID: INTEGER, Product_ID: INTEGER) PK[Product_in_Event_ID] FK[Event_ID→Events.Event_ID; Product_ID→Products.Product_ID]
+Parties_in_Events(Party_ID: INTEGER, Event_ID: INTEGER, Role_Code: CHAR(15),) PK[Party_ID, Event_ID] FK[Party_ID→Parties.Party_ID; Event_ID→Events.Event_ID]
+Agreements(Document_ID: INTEGER, Event_ID: INTEGER) PK[Document_ID] FK[Event_ID→Events.Event_ID]
+Assets_in_Events(Asset_ID: INTEGER, Event_ID: INTEGER) PK[Asset_ID, Event_ID] FK[Event_ID→Events.Event_ID; Event_ID→Events.Event_ID]

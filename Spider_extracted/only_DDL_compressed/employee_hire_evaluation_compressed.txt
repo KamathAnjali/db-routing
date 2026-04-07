@@ -1,0 +1,5 @@
+Database: employee_hire_evaluation
+employee(Employee_ID: int,, Name: text,, Age: int,, City: text,) PK[Employee_ID]
+shop(Shop_ID: int,, Name: text,, Location: text,, District: text,, Number_products: int,, Manager_name: text,) PK[Shop_ID]
+hiring(Shop_ID: int,, Employee_ID: int,, Start_from: text,, Is_full_time: bool,) PK[Employee_ID] FK[Shop_ID→shop.Shop_ID; Employee_ID→employee.Employee_ID]
+evaluation(Employee_ID: text,, Year_awarded: text,, Bonus: real,) PK[Employee_ID, Year_awarded] FK[Employee_ID→employee.Employee_ID]

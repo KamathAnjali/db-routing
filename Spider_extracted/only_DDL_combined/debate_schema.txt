@@ -1,0 +1,49 @@
+This is a Database called debate.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. people
+
+2. debate
+
+3. debate_people (displayed as: debate people)
+
+
+Table 1: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"District" text,
+"Name" text,
+"Party" text,
+"Age" int,
+PRIMARY KEY ("People_ID")
+)
+
+
+Table 2: Tablename is debate
+DDL query for debate:
+CREATE TABLE "debate" (
+"Debate_ID" int,
+"Date" text,
+"Venue" text,
+"Num_of_Audience" int,
+PRIMARY KEY ("Debate_ID")
+)
+
+
+Table 3: Tablename is debate_people
+Display name: debate people
+DDL query for debate_people:
+CREATE TABLE "debate_people" (
+"Debate_ID" int,
+"Affirmative" int,
+"Negative" int,
+"If_Affirmative_Win" bool,
+PRIMARY KEY ("Debate_ID","Affirmative","Negative"),
+FOREIGN KEY ("Debate_ID") REFERENCES `debate`("Debate_ID"),
+FOREIGN KEY ("Affirmative") REFERENCES `people`("People_ID"),
+FOREIGN KEY ("Negative") REFERENCES `people`("People_ID")
+)
+

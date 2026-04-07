@@ -1,0 +1,4 @@
+Database: phone_market
+phone(Name: text,, Phone_ID: int,, Memory_in_G: int,, Carrier: text,, Price: real,) PK[Phone_ID]
+market(Market_ID: int,, District: text,, Num_of_employees: int,, Num_of_shops: real,, Ranking: int,) PK[Market_ID]
+phone_market(Market_ID: int,, Phone_ID: text,, Num_of_stock: int,, FOREIGN: KEY ("Market_ID"), FOREIGN: KEY ("Phone_ID")) PK[Market_ID, Phone_ID]

@@ -1,0 +1,3 @@
+Database: student_1
+list(LastName: TEXT,, FirstName: TEXT,, Grade: INTEGER,, Classroom: INTEGER,) PK[LastName, FirstName]
+teachers(LastName: TEXT,, FirstName: TEXT,, Classroom: INTEGER,) PK[LastName, FirstName]

@@ -1,0 +1,128 @@
+question_id,question,correct_db,top1_db,top1_score,top2_score,margin,top1_correct
+8861,Return the number of flights arriving in Aberdeen.,flight_2,flight_company,0.5,0.5,0.0,False
+503,Give the advisor with the most students.,allergy_1,pets_1,0.142857,0.142857,0.0,False
+1653,What are all distinct country for artists?,theme_gallery,music_1,0.3,0.3,0.0,False
+1402,What is the lowest salary in departments with average salary greater than the overall average.,college_2,company_1,0.45,0.45,0.0,False
+8260,"return me the conferences, which have papers by "" H. V. Jagadish "" .",academic,aan_1,0.25,0.25,0.0,False
+2425,list all female (sex is F) candidate names in the alphabetical order.,candidate_poll,voter_2,0.5,0.5,0.0,False
+8903,Give the flight numbers of flights leaving from Aberdeen.,flight_2,flight_company,0.4,0.4,0.0,False
+9823,What are the names and original air dates of tv shows?,tv_shows,tvshow,0.277778,0.277778,0.0,False
+539,What are the top 5 countries by number of invoices and how many do they have?,store_1,customers_and_invoices,0.4,0.4,0.0,False
+6877,What is the id of the most recent order?,tracking_orders,customers_and_orders,0.15,0.15,0.0,False
+11355,Return the most common type of affiliation across all institutions.,institution_sports,university_rank,0.35,0.35,0.0,False
+8119,Give me the papers written by Su-In Lee before 2012 .,scholar,aan_1,0.3,0.3,0.0,False
+8854,How many flights depart from 'APG'?,flight_2,flight_4,0.5,0.5,0.0,False
+2432,What are the names of all movies directed by Steven Spielberg?,movie_1,movie_1,0.25,0.25,0.0,True
+5128,What are the different product names? What is the average product price for each of them?,cre_Drama_Workshop_Groups,manufactory_1,0.3,0.3,0.0,False
+5651,Show the names of customers who have both an order in completed status and an order in part status.,customers_and_products_contacts,customers_and_addresses,0.18,0.18,0.0,False
+6074,What are the names of customers who live in Colorado state?,customers_and_addresses,customers_and_products_contacts,0.25,0.25,0.0,False
+9215,What is the average transcript date?,student_transcripts_tracking,student_transcripts_tracking,0.5,0.5,0.0,True
+5649,Show the name of the customer who has the most orders.,customers_and_products_contacts,customers_and_orders,0.2,0.2,0.0,False
+363,What is the number of employees?,flight_1,company_1,0.3,0.3,0.0,False
+647,What are the names of all the tracks that are in both the Movies and music playlists?,store_1,chinook_1,0.5,0.5,0.0,False
+5089,Count the number of customers recorded.,cre_Drama_Workshop_Groups,customers_and_products_contacts,0.2,0.2,0.0,False
+9775,How many kinds of products have not been sold?,e_commerce,customers_and_orders,0.2,0.2,0.0,False
+8393,"return me the conference, which have the most number of papers by "" H. V. Jagadish "" .",academic,scholar,0.333333,0.333333,0.0,False
+613,What are the names of all the media types?,store_1,chinook_1,0.5,0.5,0.0,False
+106,List the id of students who registered course statistics in the order of registration date.,student_assessment,student_assessment,0.4,0.4,0.0,True
+5345,Which problem log was created most recently? Give me the log id.,tracking_software_problems,tracking_software_problems,0.5,0.5,0.0,True
+5112,"Which city is the address of the store named ""FJA Filming"" located in?",cre_Drama_Workshop_Groups,store_product,0.4,0.4,0.0,False
+3189,Find the description and credit for the course QM-261?,college_1,college_1,0.4,0.4,0.0,True
+4761,What are id and name of the products whose price is lower than 600 or higher than 900?,department_store,customers_and_orders,0.2,0.2,0.0,False
+1889,List the name of the school with the smallest enrollment.,school_finance,school_player,0.25,0.25,0.0,False
+5868,Show the transaction type code that occurs the most frequently.,tracking_share_transactions,customers_card_transactions,0.5,0.5,0.0,False
+11236,Find the first name and last name of a customer who visited on the earliest date.,bakery_1,customers_card_transactions,0.2,0.2,0.0,False
+11296,List all the driver names in descending order of points.,car_racing,car_racing,0.4,0.4,0.0,True
+8179,How many escape games are there in Madison ?,yelp,restaurants,0.5,0.5,0.0,False
+9198,What's the name of the course with most number of enrollments?,student_transcripts_tracking,student_assessment,0.25,0.25,0.0,False
+616,List the name of all playlist.,store_1,store_1,0.5,0.5,0.0,True
+6676,Which country does customer with first name as Carole and last name as Bernhard lived in?,driving_school,driving_school,0.25,0.2,0.04999999999999999,True
+10818,List all pilot names sorted by their ages in the descending order.,pilot_1,pilot_record,0.3,0.25,0.04999999999999999,False
+5339,What is the name and price of the cheapest product?,manufactory_1,e_commerce,0.25,0.2,0.04999999999999999,False
+2080,How many Annual Meeting events happened in the United Kingdom region?,party_people,party_people,0.25,0.2,0.04999999999999999,True
+9772,What are the sizes of all products whose name includes the word 'Dell'?,e_commerce,e_commerce,0.3,0.25,0.04999999999999999,True
+9055,What are the names of the people who teach math courses?,course_teach,course_teach,0.3,0.25,0.04999999999999999,True
+8361,return me the citations of each paper in the VLDB conference .,academic,scholar,0.35,0.3,0.04999999999999999,False
+3875,What is the total amount of payment?,insurance_policies,insurance_policies,0.3,0.25,0.04999999999999999,True
+4420,Find the number of people who is under 40 for each gender.,network_2,voter_2,0.25,0.2,0.04999999999999999,False
+10319,"Show the names of customers and names of dishes they order, in descending order of the quantity of dish.",restaurant_bills,restaurant_bills,0.3,0.25,0.04999999999999999,True
+1019,Return the maximum enrollment across all schools.,university_basketball,school_player,0.3,0.25,0.04999999999999999,False
+4522,"What are the names of documents that contain the substring ""CV""?",document_management,cre_Doc_Tracking_DB,0.2,0.15,0.05000000000000002,False
+6425,List ids and details for all projects.,cre_Docs_and_Epenses,tracking_grants_for_research,0.4,0.35,0.050000000000000044,False
+1107,What are the names of countries that have both players with position forward and players with position defender?,match_season,soccer_1,0.4,0.35,0.050000000000000044,False
+6602,Show the number of trains,train_station,station_weather,0.4,0.35,0.050000000000000044,False
+7619,sharon goldwater 's papers,scholar,icfp_1,0.4,0.35,0.050000000000000044,False
+7725,Question Answering publications,scholar,academic,0.4,0.35,0.050000000000000044,False
+7787,TAIL papers used in NIPS,scholar,scholar,0.315789,0.263158,0.05263099999999998,True
+2465,What are the names of all movies that were created after the most recent Steven Spielberg film?,movie_1,imdb,0.315789,0.263158,0.05263099999999998,False
+3221,how many schools exist in total?,college_1,school_player,0.263158,0.210526,0.05263200000000001,False
+1558,What are the full names of customers with the account name 900?,customers_and_invoices,customers_and_invoices,0.421053,0.368421,0.05263200000000001,True
+1636,How many female people are older than 30 in our record?,wedding,dorm_1,0.222222,0.166667,0.05555499999999999,False
+1472,Find the names of all instructors whose name includes the substring “dar”.,college_2,icfp_1,0.444444,0.388889,0.05555500000000002,False
+5105,Sort the names of products in ascending order of their price.,cre_Drama_Workshop_Groups,e_commerce,0.294118,0.235294,0.05882399999999999,False
+8055,papers published in eccv 2016 by ali farhadi,scholar,scholar,0.343137,0.245098,0.09803900000000002,True
+10697,"Count the number of citations Mckeown , Kathleen has .",aan_1,scholar,0.39604,0.29703,0.09900999999999999,False
+6671,"What is the maximum, minimum, and average amount of money outsanding for all customers?",driving_school,customers_card_transactions,0.39604,0.29703,0.09900999999999999,False
+4762,Give the ids and names of products with price lower than 600 or higher than 900.,department_store,e_commerce,0.3,0.2,0.09999999999999998,False
+4970,List the name of the colleges whose enrollment is greater 18000 sorted by the college's name.,soccer_2,university_rank,0.3,0.2,0.09999999999999998,False
+2910,"What is the first name of the author with last name ""Ueno""?",icfp_1,icfp_1,0.3,0.2,0.09999999999999998,True
+5157,What are the names of the clients who do not have any booking?,cre_Drama_Workshop_Groups,products_for_hire,0.3,0.2,0.09999999999999998,False
+4423,What is the name of all the people who are older than at least one engineer? Order them by age.,network_2,company_1,0.5,0.4,0.09999999999999998,False
+852,What city does the employee who helps the customer with postal code 70174 live in?,chinook_1,customers_and_products_contacts,0.5,0.4,0.09999999999999998,False
+3430,What are the salaries and manager ids for employees who have managers?,hr_1,hr_1,0.5,0.4,0.09999999999999998,True
+928,What are the maximum and minimum settlement amount on record?,insurance_fnol,insurance_policies,0.5,0.4,0.09999999999999998,False
+11028,How many drivers use each constructor?,car_road_race,formula_1,0.5,0.4,0.09999999999999998,False
+4190,Find the number of employees we have.,cre_Doc_Tracking_DB,hr_1,0.3,0.2,0.09999999999999998,False
+8356,return me the total citations of papers in PVLDB in 2005 .,academic,scholar,0.5,0.4,0.09999999999999998,False
+5528,"What is the category and typical buying price  of the product with name ""cumin""?",products_gen_characteristics,products_gen_characteristics,0.4,0.3,0.10000000000000003,True
+4043,Find the first names of all the teachers that teach in classroom 110.,student_1,student_1,0.4,0.3,0.10000000000000003,True
+8273,"return me the papers by "" H. V. Jagadish "" on PVLDB after 2000 .",academic,aan_1,0.4,0.3,0.10000000000000003,False
+4597,What is the average number of audience for festivals?,entertainment_awards,entertainment_awards,0.4,0.3,0.10000000000000003,True
+2735,On average how large is the population of the counties?,election,county_public_safety,0.4,0.3,0.10000000000000003,False
+4582,Show the most common type code across products.,solvency_ii,products_for_hire,0.4,0.3,0.10000000000000003,False
+279,Find the number of followers for each user.,twitter_1,twitter_1,0.4,0.3,0.10000000000000003,True
+7221,how many major cities are there,geo,world_1,0.4,0.3,0.10000000000000003,False
+4429,What are the names of everybody sorted by age in descending order?,network_2,network_2,0.4,0.3,0.10000000000000003,True
+7442,where is mount whitney located,geo,mountain_photos,0.4,0.3,0.10000000000000003,False
+1441,What are the names of instructors who didn't teach?,college_2,college_2,0.4,0.3,0.10000000000000003,True
+7728,What papers talk about Question Answering ?,scholar,scholar,0.4,0.3,0.10000000000000003,True
+2276,Return the weight of the shortest person.,entrepreneur,body_builder,0.4,0.3,0.10000000000000003,False
+6752,Give me the the first and last name of the faculty who advises the most students.,activity_1,college_3,0.4,0.3,0.10000000000000003,False
+8914,What is the number of employees from each city?,employee_hire_evaluation,hr_1,0.4,0.3,0.10000000000000003,False
+4709,What are the staff ids and genders of all staffs whose job title is Department Manager?,department_store,department_store,0.4,0.3,0.10000000000000003,True
+1316,Show the locations that have at least two performances.,performance_attendance,performance_attendance,0.4,0.3,0.10000000000000003,True
+11687,Which authors have published more than 1 book according to the database? Give me their names.,book_press,book_1,0.444444,0.333333,0.11111100000000002,False
+223,Show the title and publication dates of books.,book_2,book_2,0.444444,0.333333,0.11111100000000002,True
+7895,how many papers jamie callan published each year ?,scholar,aan_1,0.444444,0.333333,0.11111100000000002,False
+980,List all public schools and their locations.,university_basketball,school_bus,0.3125,0.1875,0.125,False
+10709,Which 3 affiliations had the most papers in 2009?,aan_1,aan_1,0.4375,0.3125,0.125,True
+11796,Show all the different invoice ids and statuses of the payments,advertising_agencies,advertising_agencies,0.466667,0.333333,0.133334,True
+11747,How many clients are there?,advertising_agencies,local_govt_and_lot,0.3,0.15,0.15,False
+3199,Find the number of classes offered for all class rooms that held at least 2 classes.,college_1,college_1,0.5,0.35,0.15000000000000002,True
+11265,What are the items with chocolate flavor that were purchased at most 10 times.,bakery_1,bakery_1,0.4,0.25,0.15000000000000002,True
+2779,Which county has the largest population? Give me the name of the county.,election,county_public_safety,0.45,0.3,0.15000000000000002,False
+4721,What is the name and job title of the staff who was assigned the latest?,department_store,cre_Doc_Workflow,0.6,0.4,0.19999999999999996,False
+6658,When are the birthdays of customer who are classified as 'Good Customer' status?,driving_school,products_for_hire,0.6,0.4,0.19999999999999996,False
+1393,Find the number of rooms with more than 50 capacity for each building.,college_2,inn_1,0.6,0.4,0.19999999999999996,False
+4019,Show the types of ships that have both ships with tonnage larger than 6000 and ships with tonnage smaller than 4000.,ship_mission,ship_mission,0.6,0.4,0.19999999999999996,True
+1590,"Return the names and ids of each account, as well as the number of transactions.",customers_and_invoices,customers_card_transactions,0.6,0.4,0.19999999999999996,False
+8396,return me the paper with the most citations .,academic,scholar,0.6,0.4,0.19999999999999996,False
+5799,"What are lines 1 and 2 of the addressed of the customer with the email ""vbogisich@example.org""?",customer_complaints,student_assessment,0.35,0.15,0.19999999999999998,False
+5725,What is the first and last name of the students who are not in the largest major?,dorm_1,college_3,0.3,0.1,0.19999999999999998,False
+5091,"Find the phone number and email address of customer ""Harold"".",cre_Drama_Workshop_Groups,driving_school,0.35,0.15,0.19999999999999998,False
+3275,What is department name and office for the professor whose last name is Heffington?,college_1,college_1,0.5,0.3,0.2,True
+4167,"What is the date when the document ""Marry CV"" was stored?",cre_Doc_Tracking_DB,cre_Doc_Tracking_DB,0.4,0.2,0.2,True
+11524,Find the number of movies whose rating is not null.,movie_2,movie_1,0.5,0.3,0.2,False
+3697,Which states have more than 2 parks?,baseball_1,cre_Theme_park,0.5,0.3,0.2,False
+6786,Find the name of the activity that has the largest number of student participants.,activity_1,activity_1,0.5,0.3,0.2,True
+11446,How many universities are in Illinois or Ohio?,university_rank,university_rank,0.5,0.3,0.2,True
+1537,Find the number of records of each policy type and its type code.,insurance_and_eClaims,insurance_policies,0.5,0.3,0.2,False
+65,List the id of students who attended some courses?,student_assessment,student_assessment,0.4,0.2,0.2,True
+3300,What is the name and address of the department with the most students?,college_1,student_transcripts_tracking,0.5,0.3,0.2,False
+8643,where can we find some restaurants in the bay area ?,restaurants,restaurants,0.5,0.3,0.2,True
+8294,"return me all the papers in VLDB conference in "" University of Michigan "" .",academic,aan_1,0.5,0.3,0.2,False
+8649,give me some good restaurants in the bay area ?,restaurants,yelp,0.5,0.3,0.2,False
+3848,"What are the method, date and amount of each payment? Sort the list in ascending order of date.",insurance_policies,insurance_policies,0.5,0.3,0.2,True
+11215,Give the distinct ids for goods that cost less than any Tart.,bakery_1,bakery_1,0.4,0.2,0.2,True
+4030,What are the grade number and classroom number of each class in the list?,student_1,student_1,0.4,0.2,0.2,True
+3778,"Which tests have ""Pass"" results? Return the dates when the tests were taken.",e_learning,e_learning,0.5,0.3,0.2,True

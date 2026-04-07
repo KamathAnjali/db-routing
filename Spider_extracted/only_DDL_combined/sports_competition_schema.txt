@@ -1,0 +1,83 @@
+This is a Database called sports_competition.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. club
+
+2. club_rank (displayed as: club rank)
+
+3. player
+
+4. competition
+
+5. competition_result (displayed as: competition result)
+
+
+Table 1: Tablename is club
+DDL query for club:
+CREATE TABLE "club" (
+"Club_ID" int,
+"name" text,
+"Region" text,
+"Start_year" text,
+PRIMARY KEY ("Club_ID")
+)
+
+
+Table 2: Tablename is club_rank
+Display name: club rank
+DDL query for club_rank:
+CREATE TABLE "club_rank" (
+"Rank" real,
+"Club_ID" int,
+"Gold" real,
+"Silver" real,
+"Bronze" real,
+"Total" real,
+PRIMARY KEY ("Rank","Club_ID")
+FOREIGN KEY (`Club_ID`) REFERENCES `club`(`Club_ID`)
+)
+
+
+Table 3: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+"Player_ID" int,
+"name" text,
+"Position" text,
+"Club_ID" int,
+"Apps" real,
+"Tries" real,
+"Goals" text,
+"Points" real,
+PRIMARY KEY ("Player_ID"),
+FOREIGN KEY (`Club_ID`) REFERENCES `club`(`Club_ID`)
+)
+
+
+Table 4: Tablename is competition
+DDL query for competition:
+CREATE TABLE "competition" (
+"Competition_ID" int,
+"Year" real,
+"Competition_type" text,
+"Country" text,
+PRIMARY KEY ("Competition_ID")
+)
+
+
+Table 5: Tablename is competition_result
+Display name: competition result
+DDL query for competition_result:
+CREATE TABLE "competition_result" (
+"Competition_ID" int,
+"Club_ID_1" int,
+"Club_ID_2" int,
+"Score" text,
+PRIMARY KEY ("Competition_ID","Club_ID_1","Club_ID_2"),
+FOREIGN KEY (`Club_ID_1`) REFERENCES `club`(`Club_ID`),
+FOREIGN KEY (`Club_ID_2`) REFERENCES `club`(`Club_ID`),
+FOREIGN KEY (`Competition_ID`) REFERENCES `competition`(`Competition_ID`)
+)
+

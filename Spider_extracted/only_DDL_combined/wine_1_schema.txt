@@ -1,0 +1,51 @@
+This is a Database called wine_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. grapes
+
+2. appellations
+
+3. wine
+
+
+Table 1: Tablename is grapes
+DDL query for grapes:
+CREATE TABLE "grapes" ( 
+	"ID" INTEGER PRIMARY KEY, 
+	"Grape" TEXT UNIQUE, 
+	"Color" TEXT 
+)
+
+
+Table 2: Tablename is appellations
+DDL query for appellations:
+CREATE TABLE "appellations" ( 
+	"No" INTEGER PRIMARY KEY, 
+	"Appelation" TEXT UNIQUE, 
+	"County" TEXT, 
+	"State" TEXT, 
+	"Area" TEXT, 
+	"isAVA" TEXT
+)
+
+
+Table 3: Tablename is wine
+DDL query for wine:
+CREATE TABLE "wine" ( 
+	"No" INTEGER, 
+	"Grape" TEXT, 
+	"Winery" TEXT, 
+	"Appelation" TEXT, 
+	"State" TEXT, 
+	"Name" TEXT, 
+	"Year" INTEGER, 
+	"Price" INTEGER, 
+	"Score" INTEGER, 
+	"Cases" INTEGER, 
+	"Drink" TEXT,
+	FOREIGN KEY (Grape) REFERENCES grapes(Grape),
+	FOREIGN KEY (Appelation) REFERENCES appellations(Appelation)
+)
+

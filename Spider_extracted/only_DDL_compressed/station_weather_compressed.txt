@@ -1,0 +1,5 @@
+Database: station_weather
+train(id: int,, train_number: int,, name: text,, origin: text,, destination: text,, time: text,, interval: text,) PK[id]
+station(id: int,, network_name: text,, services: text,, local_authority: text,) PK[id]
+route(train_id: int,, station_id: int,, foreign: key ("train_id"), foreign: key ("station_id")) PK[train_id, station_id]
+weekly_weather(station_id: int,, day_of_week: text,, high_temperature: int,, low_temperature: int,, precipitation: real,, wind_speed_mph: int,, foreign: key ("station_id")) PK[station_id, day_of_week]

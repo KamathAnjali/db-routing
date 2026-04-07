@@ -1,0 +1,55 @@
+This is a Database called flight_company.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. airport
+
+2. operate_company (displayed as: operate company)
+
+3. flight
+
+
+Table 1: Tablename is airport
+DDL query for airport:
+CREATE TABLE "airport" (
+"id" int,
+"City" text,
+"Country" text,
+"IATA" text,
+"ICAO" text,
+"name" text,
+primary key("id")
+)
+
+
+Table 2: Tablename is operate_company
+Display name: operate company
+DDL query for operate_company:
+CREATE TABLE "operate_company" (
+"id" int,
+"name" text,
+"Type" text,
+"Principal_activities" text,
+"Incorporated_in" text,
+"Group_Equity_Shareholding" real,
+primary key ("id")
+)
+
+
+Table 3: Tablename is flight
+DDL query for flight:
+CREATE TABLE "flight" (
+"id" int,
+"Vehicle_Flight_number" text,
+"Date" text,
+"Pilot" text,
+"Velocity" real,
+"Altitude" real,
+"airport_id" int,
+"company_id" int,
+primary key ("id"),
+foreign key ("airport_id") references `airport`("id"),
+foreign key ("company_id") references `operate_company`("id")
+)
+

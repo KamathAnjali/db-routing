@@ -1,0 +1,33 @@
+This is a Database called book_2.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. publication
+
+2. book
+
+
+Table 1: Tablename is publication
+DDL query for publication:
+CREATE TABLE "publication" (
+"Publication_ID" int,
+"Book_ID" int,
+"Publisher" text,
+"Publication_Date" text,
+"Price" real,
+PRIMARY KEY ("Publication_ID"),
+FOREIGN KEY ("Book_ID") REFERENCES "book"("Book_ID")
+)
+
+
+Table 2: Tablename is book
+DDL query for book:
+CREATE TABLE "book" (
+"Book_ID" int,
+"Title" text,
+"Issues" real,
+"Writer" text,
+PRIMARY KEY ("Book_ID")
+)
+

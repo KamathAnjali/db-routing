@@ -1,0 +1,5 @@
+Database: machine_repair
+repair(repair_ID: int,, name: text,, Launch_Date: text,, Notes: text,) PK[repair_ID]
+machine(Machine_ID: int,, Making_Year: int,, Class: text,, Team: text,, Machine_series: text,, value_points: real,, quality_rank: int,) PK[Machine_ID]
+technician(technician_id: real,, Name: text,, Team: text,, Starting_Year: real,, Age: int,) PK[technician_id]
+repair_assignment(technician_id: int,, repair_ID: int,, Machine_ID: int,) PK[technician_id, repair_ID, Machine_ID] FK[technician_id→technician.technician_id; repair_ID→repair.repair_ID; Machine_ID→machine.Machine_ID]

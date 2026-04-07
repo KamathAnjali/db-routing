@@ -1,0 +1,4 @@
+Database: company_office
+buildings(id: int,, name: text,, City: text,, Height: int,, Stories: int,, Status: text,) PK[id]
+Companies(id: int,, name: text,, Headquarters: text,, Industry: text,, Sales_billion: real,, Profits_billion: real,, Assets_billion: real,, Market_Value_billion: text,) PK[id]
+Office_locations(building_id: int,, company_id: int,, move_in_year: int,, FOREIGN: KEY ("building_id"), FOREIGN: KEY ("company_id")) PK[building_id, company_id]

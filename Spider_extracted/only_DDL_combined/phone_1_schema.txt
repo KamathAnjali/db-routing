@@ -1,0 +1,57 @@
+This is a Database called phone_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. chip_model (displayed as: chip model)
+
+2. screen_mode (displayed as: screen mode)
+
+3. phone
+
+
+Table 1: Tablename is chip_model
+Display name: chip model
+DDL query for chip_model:
+CREATE TABLE "chip_model" (
+"Model_name" text,
+"Launch_year" real,
+"RAM_MiB" real,
+"ROM_MiB" real,
+"Slots" text,
+"WiFi" text,
+"Bluetooth" text,
+PRIMARY KEY ("Model_name")
+)
+
+
+Table 2: Tablename is screen_mode
+Display name: screen mode
+DDL query for screen_mode:
+CREATE TABLE "screen_mode" (
+"Graphics_mode" real,
+"Char_cells" text,
+"Pixels" text,
+"Hardware_colours" real,
+"used_kb" real,
+"map" text,
+"Type" text,
+PRIMARY KEY ("Graphics_mode")
+)
+
+
+Table 3: Tablename is phone
+DDL query for phone:
+CREATE TABLE "phone" (
+"Company_name" text,
+"Hardware_Model_name" text,
+"Accreditation_type" text,
+"Accreditation_level" text,
+"Date" text,
+"chip_model" text,
+"screen_mode" text,
+PRIMARY KEY("Hardware_Model_name"),
+FOREIGN KEY (`screen_mode`) REFERENCES `screen_mode`(`Graphics_mode`),
+FOREIGN KEY (`chip_model`) REFERENCES `chip_model`(`Model_name`)
+)
+

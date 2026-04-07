@@ -1,0 +1,1040 @@
+{
+  "total_questions": 11831,
+  "train_questions": 5892,
+  "test_questions": 5939,
+  "total_databases": 206,
+  "split_ratio": "50/50 per database",
+  "random_seed": 42,
+  "per_database": {
+    "aan_1": {
+      "total": 90,
+      "train": 45,
+      "test": 45
+    },
+    "academic": {
+      "total": 181,
+      "train": 90,
+      "test": 91
+    },
+    "activity_1": {
+      "total": 88,
+      "train": 44,
+      "test": 44
+    },
+    "address_1": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "advertising_agencies": {
+      "total": 90,
+      "train": 45,
+      "test": 45
+    },
+    "aircraft": {
+      "total": 46,
+      "train": 23,
+      "test": 23
+    },
+    "allergy_1": {
+      "total": 98,
+      "train": 49,
+      "test": 49
+    },
+    "apartment_rentals": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "architecture": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "art_1": {
+      "total": 114,
+      "train": 57,
+      "test": 57
+    },
+    "assets_maintenance": {
+      "total": 31,
+      "train": 15,
+      "test": 16
+    },
+    "bakery_1": {
+      "total": 104,
+      "train": 52,
+      "test": 52
+    },
+    "baseball_1": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "battle_death": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "bbc_channels": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "behavior_monitoring": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "bike_1": {
+      "total": 104,
+      "train": 52,
+      "test": 52
+    },
+    "bike_racing": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "boat_1": {
+      "total": 78,
+      "train": 39,
+      "test": 39
+    },
+    "body_builder": {
+      "total": 24,
+      "train": 12,
+      "test": 12
+    },
+    "book_1": {
+      "total": 78,
+      "train": 39,
+      "test": 39
+    },
+    "book_2": {
+      "total": 21,
+      "train": 10,
+      "test": 11
+    },
+    "book_press": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "book_review": {
+      "total": 21,
+      "train": 10,
+      "test": 11
+    },
+    "browser_web": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "candidate_poll": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "car_1": {
+      "total": 92,
+      "train": 46,
+      "test": 46
+    },
+    "car_racing": {
+      "total": 50,
+      "train": 25,
+      "test": 25
+    },
+    "car_road_race": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "chinook_1": {
+      "total": 84,
+      "train": 42,
+      "test": 42
+    },
+    "cinema": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "city_record": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "climbing": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "club_1": {
+      "total": 70,
+      "train": 35,
+      "test": 35
+    },
+    "club_leader": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "coffee_shop": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "college_1": {
+      "total": 164,
+      "train": 82,
+      "test": 82
+    },
+    "college_2": {
+      "total": 169,
+      "train": 84,
+      "test": 85
+    },
+    "college_3": {
+      "total": 74,
+      "train": 37,
+      "test": 37
+    },
+    "company_1": {
+      "total": 7,
+      "train": 3,
+      "test": 4
+    },
+    "company_employee": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "company_office": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "concert_singer": {
+      "total": 45,
+      "train": 22,
+      "test": 23
+    },
+    "conference": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "country_language": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "county_public_safety": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "course_teach": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "cre_Doc_Control_Systems": {
+      "total": 33,
+      "train": 16,
+      "test": 17
+    },
+    "cre_Doc_Template_Mgt": {
+      "total": 84,
+      "train": 42,
+      "test": 42
+    },
+    "cre_Doc_Tracking_DB": {
+      "total": 90,
+      "train": 45,
+      "test": 45
+    },
+    "cre_Doc_Workflow": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "cre_Doc_and_collections": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "cre_Docs_and_Epenses": {
+      "total": 84,
+      "train": 42,
+      "test": 42
+    },
+    "cre_Drama_Workshop_Groups": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "cre_Students_Information_Systems": {
+      "total": 76,
+      "train": 38,
+      "test": 38
+    },
+    "cre_Theme_park": {
+      "total": 84,
+      "train": 42,
+      "test": 42
+    },
+    "csu_1": {
+      "total": 69,
+      "train": 34,
+      "test": 35
+    },
+    "culture_company": {
+      "total": 38,
+      "train": 19,
+      "test": 19
+    },
+    "customer_complaints": {
+      "total": 46,
+      "train": 23,
+      "test": 23
+    },
+    "customer_deliveries": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "customers_and_addresses": {
+      "total": 88,
+      "train": 44,
+      "test": 44
+    },
+    "customers_and_invoices": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "customers_and_orders": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "customers_and_products_contacts": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "customers_campaigns_ecommerce": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "customers_card_transactions": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "debate": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "decoration_competition": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "department_management": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "department_store": {
+      "total": 88,
+      "train": 44,
+      "test": 44
+    },
+    "device": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "district_spokesman": {
+      "total": 21,
+      "train": 10,
+      "test": 11
+    },
+    "document_management": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "dog_kennels": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "dorm_1": {
+      "total": 100,
+      "train": 50,
+      "test": 50
+    },
+    "driving_school": {
+      "total": 93,
+      "train": 46,
+      "test": 47
+    },
+    "e_commerce": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "e_government": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "e_learning": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "election": {
+      "total": 68,
+      "train": 34,
+      "test": 34
+    },
+    "election_representative": {
+      "total": 20,
+      "train": 10,
+      "test": 10
+    },
+    "employee_hire_evaluation": {
+      "total": 38,
+      "train": 19,
+      "test": 19
+    },
+    "entertainment_awards": {
+      "total": 22,
+      "train": 11,
+      "test": 11
+    },
+    "entrepreneur": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "epinions_1": {
+      "total": 29,
+      "train": 14,
+      "test": 15
+    },
+    "farm": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "film_rank": {
+      "total": 48,
+      "train": 24,
+      "test": 24
+    },
+    "flight_1": {
+      "total": 96,
+      "train": 48,
+      "test": 48
+    },
+    "flight_2": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "flight_4": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "flight_company": {
+      "total": 19,
+      "train": 9,
+      "test": 10
+    },
+    "formula_1": {
+      "total": 79,
+      "train": 39,
+      "test": 40
+    },
+    "game_1": {
+      "total": 86,
+      "train": 43,
+      "test": 43
+    },
+    "game_injury": {
+      "total": 19,
+      "train": 9,
+      "test": 10
+    },
+    "gas_company": {
+      "total": 46,
+      "train": 23,
+      "test": 23
+    },
+    "geo": {
+      "total": 564,
+      "train": 282,
+      "test": 282
+    },
+    "government_shift": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "gymnast": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "headphone_store": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "hospital_1": {
+      "total": 100,
+      "train": 50,
+      "test": 50
+    },
+    "hr_1": {
+      "total": 121,
+      "train": 60,
+      "test": 61
+    },
+    "icfp_1": {
+      "total": 66,
+      "train": 33,
+      "test": 33
+    },
+    "imdb": {
+      "total": 109,
+      "train": 54,
+      "test": 55
+    },
+    "inn_1": {
+      "total": 74,
+      "train": 37,
+      "test": 37
+    },
+    "institution_sports": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "insurance_and_eClaims": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "insurance_fnol": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "insurance_policies": {
+      "total": 48,
+      "train": 24,
+      "test": 24
+    },
+    "journal_committee": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "loan_1": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "local_govt_and_lot": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "local_govt_in_alabama": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "local_govt_mdm": {
+      "total": 14,
+      "train": 7,
+      "test": 7
+    },
+    "machine_repair": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "manufactory_1": {
+      "total": 80,
+      "train": 40,
+      "test": 40
+    },
+    "manufacturer": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "match_season": {
+      "total": 58,
+      "train": 29,
+      "test": 29
+    },
+    "medicine_enzyme_interaction": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "mountain_photos": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "movie_1": {
+      "total": 97,
+      "train": 48,
+      "test": 49
+    },
+    "movie_2": {
+      "total": 52,
+      "train": 26,
+      "test": 26
+    },
+    "museum_visit": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "music_1": {
+      "total": 100,
+      "train": 50,
+      "test": 50
+    },
+    "music_2": {
+      "total": 100,
+      "train": 50,
+      "test": 50
+    },
+    "music_4": {
+      "total": 60,
+      "train": 30,
+      "test": 30
+    },
+    "musical": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "network_1": {
+      "total": 56,
+      "train": 28,
+      "test": 28
+    },
+    "network_2": {
+      "total": 85,
+      "train": 42,
+      "test": 43
+    },
+    "news_report": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "online_exams": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "orchestra": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "party_host": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "party_people": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "performance_attendance": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "perpetrator": {
+      "total": 21,
+      "train": 10,
+      "test": 11
+    },
+    "pets_1": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "phone_1": {
+      "total": 29,
+      "train": 14,
+      "test": 15
+    },
+    "phone_market": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "pilot_1": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "pilot_record": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "planet_1": {
+      "total": 76,
+      "train": 38,
+      "test": 38
+    },
+    "poker_player": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "product_catalog": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "products_for_hire": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "products_gen_characteristics": {
+      "total": 86,
+      "train": 43,
+      "test": 43
+    },
+    "program_share": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "protein_institute": {
+      "total": 20,
+      "train": 10,
+      "test": 10
+    },
+    "race_track": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "railway": {
+      "total": 21,
+      "train": 10,
+      "test": 11
+    },
+    "real_estate_properties": {
+      "total": 4,
+      "train": 2,
+      "test": 2
+    },
+    "real_estate_rentals": {
+      "total": 72,
+      "train": 36,
+      "test": 36
+    },
+    "region_building": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "restaurant_1": {
+      "total": 22,
+      "train": 11,
+      "test": 11
+    },
+    "restaurant_bills": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "restaurants": {
+      "total": 125,
+      "train": 62,
+      "test": 63
+    },
+    "riding_club": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "roller_coaster": {
+      "total": 17,
+      "train": 8,
+      "test": 9
+    },
+    "sakila_1": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "scholar": {
+      "total": 569,
+      "train": 284,
+      "test": 285
+    },
+    "school_bus": {
+      "total": 18,
+      "train": 9,
+      "test": 9
+    },
+    "school_finance": {
+      "total": 26,
+      "train": 13,
+      "test": 13
+    },
+    "school_player": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "scientist_1": {
+      "total": 48,
+      "train": 24,
+      "test": 24
+    },
+    "ship_1": {
+      "total": 48,
+      "train": 24,
+      "test": 24
+    },
+    "ship_mission": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "shop_membership": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "sing_contest": {
+      "total": 20,
+      "train": 10,
+      "test": 10
+    },
+    "singer": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "small_bank_1": {
+      "total": 50,
+      "train": 25,
+      "test": 25
+    },
+    "soccer_1": {
+      "total": 14,
+      "train": 7,
+      "test": 7
+    },
+    "soccer_2": {
+      "total": 106,
+      "train": 53,
+      "test": 53
+    },
+    "soccer_3": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "solvency_ii": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "sports_competition": {
+      "total": 52,
+      "train": 26,
+      "test": 26
+    },
+    "station_weather": {
+      "total": 16,
+      "train": 8,
+      "test": 8
+    },
+    "store_1": {
+      "total": 112,
+      "train": 56,
+      "test": 56
+    },
+    "store_product": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "storm_record": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "student_1": {
+      "total": 68,
+      "train": 34,
+      "test": 34
+    },
+    "student_assessment": {
+      "total": 53,
+      "train": 26,
+      "test": 27
+    },
+    "student_transcripts_tracking": {
+      "total": 78,
+      "train": 39,
+      "test": 39
+    },
+    "swimming": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "theme_gallery": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "tracking_grants_for_research": {
+      "total": 78,
+      "train": 39,
+      "test": 39
+    },
+    "tracking_orders": {
+      "total": 60,
+      "train": 30,
+      "test": 30
+    },
+    "tracking_share_transactions": {
+      "total": 41,
+      "train": 20,
+      "test": 21
+    },
+    "tracking_software_problems": {
+      "total": 48,
+      "train": 24,
+      "test": 24
+    },
+    "train_station": {
+      "total": 23,
+      "train": 11,
+      "test": 12
+    },
+    "tv_shows": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "tvshow": {
+      "total": 62,
+      "train": 31,
+      "test": 31
+    },
+    "twitter_1": {
+      "total": 27,
+      "train": 13,
+      "test": 14
+    },
+    "university_basketball": {
+      "total": 46,
+      "train": 23,
+      "test": 23
+    },
+    "university_rank": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "vehicle_driver": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "vehicle_rent": {
+      "total": 44,
+      "train": 22,
+      "test": 22
+    },
+    "video_game": {
+      "total": 42,
+      "train": 21,
+      "test": 21
+    },
+    "voter_1": {
+      "total": 15,
+      "train": 7,
+      "test": 8
+    },
+    "voter_2": {
+      "total": 72,
+      "train": 36,
+      "test": 36
+    },
+    "warehouse_1": {
+      "total": 78,
+      "train": 39,
+      "test": 39
+    },
+    "wedding": {
+      "total": 20,
+      "train": 10,
+      "test": 10
+    },
+    "wine_1": {
+      "total": 82,
+      "train": 41,
+      "test": 41
+    },
+    "workshop_paper": {
+      "total": 30,
+      "train": 15,
+      "test": 15
+    },
+    "world_1": {
+      "total": 120,
+      "train": 60,
+      "test": 60
+    },
+    "wrestler": {
+      "total": 40,
+      "train": 20,
+      "test": 20
+    },
+    "wta_1": {
+      "total": 62,
+      "train": 31,
+      "test": 31
+    },
+    "yelp": {
+      "total": 111,
+      "train": 55,
+      "test": 56
+    }
+  }
+}

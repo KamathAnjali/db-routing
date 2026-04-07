@@ -1,0 +1,7 @@
+Database: book_1
+Client(IdClient: CHAR(10), Name: VARCHAR(25), Address: VARCHAR(60), NumCC: CHAR(16))
+Orders(IdOrder: CHAR(10), IdClient: CHAR(10), DateOrder: DATE,, DateExped: DATE))
+Author(idAuthor: NUMBER, Name: VARCHAR(25)))
+Book(ISBN: CHAR(15), Title: VARCHAR(60), Author: CHAR(4), PurchasePrice: NUMBER(6,2), SalePrice: NUMBER(6,2))
+Author_Book(ISBN: CHAR(15),, Author: NUMBER,) FK[ISBN→Book.ISBN; Author→Author.idAuthorA]
+Books_Order(ISBN: CHAR(15),, IdOrder: CHAR(10),, amount: NUMBER(3)) FK[ISBN→Book.ISBN; IdOrder→Orders.IdOrder]

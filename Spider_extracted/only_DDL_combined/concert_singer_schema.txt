@@ -1,0 +1,66 @@
+This is a Database called concert_singer.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. stadium
+
+2. singer
+
+3. concert
+
+4. singer_in_concert (displayed as: singer in concert)
+
+
+Table 1: Tablename is stadium
+DDL query for stadium:
+CREATE TABLE "stadium" (
+"Stadium_ID" int,
+"Location" text,
+"Name" text,
+"Capacity" int,
+"Highest" int,
+"Lowest" int,
+"Average" int,
+PRIMARY KEY ("Stadium_ID")
+)
+
+
+Table 2: Tablename is singer
+DDL query for singer:
+CREATE TABLE "singer" (
+"Singer_ID" int,
+"Name" text,
+"Country" text,
+"Song_Name" text,
+"Song_release_year" text,
+"Age" int,
+"Is_male" bool,
+PRIMARY KEY ("Singer_ID")
+)
+
+
+Table 3: Tablename is concert
+DDL query for concert:
+CREATE TABLE "concert" (
+"concert_ID" int,
+"concert_Name" text,
+"Theme" text,
+"Stadium_ID" text,
+"Year" text,
+PRIMARY KEY ("concert_ID"),
+FOREIGN KEY ("Stadium_ID") REFERENCES "stadium"("Stadium_ID")
+)
+
+
+Table 4: Tablename is singer_in_concert
+Display name: singer in concert
+DDL query for singer_in_concert:
+CREATE TABLE "singer_in_concert" (
+"concert_ID" int,
+"Singer_ID" text,
+PRIMARY KEY ("concert_ID","Singer_ID"),
+FOREIGN KEY ("concert_ID") REFERENCES "concert"("concert_ID"),
+FOREIGN KEY ("Singer_ID") REFERENCES "singer"("Singer_ID")
+)
+

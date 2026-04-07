@@ -1,0 +1,107 @@
+This is a Database called insurance_fnol.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Customers (displayed as: customers)
+
+2. Services (displayed as: services)
+
+3. Available_Policies (displayed as: available policies)
+
+4. Customers_Policies (displayed as: customers policies)
+
+5. First_Notification_of_Loss (displayed as: first notification of loss)
+
+6. Claims (displayed as: claims)
+
+7. Settlements (displayed as: settlements)
+
+
+Table 1: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE Customers (
+Customer_ID INTEGER NOT NULL,
+Customer_name VARCHAR(40),
+PRIMARY KEY (Customer_ID)
+)
+
+
+Table 2: Tablename is Services
+Display name: services
+DDL query for Services:
+CREATE TABLE Services (
+Service_ID INTEGER NOT NULL,
+Service_name VARCHAR(40),
+PRIMARY KEY (Service_ID)
+)
+
+
+Table 3: Tablename is Available_Policies
+Display name: available policies
+DDL query for Available_Policies:
+CREATE TABLE Available_Policies (
+Policy_ID INTEGER NOT NULL,
+policy_type_code CHAR(15),
+Customer_Phone VARCHAR(255),
+PRIMARY KEY (Policy_ID),
+UNIQUE (Policy_ID)
+)
+
+
+Table 4: Tablename is Customers_Policies
+Display name: customers policies
+DDL query for Customers_Policies:
+CREATE TABLE Customers_Policies (
+Customer_ID INTEGER NOT NULL,
+Policy_ID INTEGER NOT NULL,
+Date_Opened DATE,
+Date_Closed DATE,
+PRIMARY KEY (Customer_ID, Policy_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID),
+FOREIGN KEY (Policy_ID) REFERENCES Available_Policies (Policy_ID)
+)
+
+
+Table 5: Tablename is First_Notification_of_Loss
+Display name: first notification of loss
+DDL query for First_Notification_of_Loss:
+CREATE TABLE First_Notification_of_Loss (
+FNOL_ID INTEGER NOT NULL,
+Customer_ID INTEGER NOT NULL,
+Policy_ID INTEGER NOT NULL,
+Service_ID INTEGER NOT NULL,
+PRIMARY KEY (FNOL_ID),
+UNIQUE (FNOL_ID),
+FOREIGN KEY (Service_ID) REFERENCES Services (Service_ID),
+FOREIGN KEY (Customer_ID, Policy_ID) REFERENCES Customers_Policies (Customer_ID,Policy_ID)
+)
+
+
+Table 6: Tablename is Claims
+Display name: claims
+DDL query for Claims:
+CREATE TABLE Claims (
+Claim_ID INTEGER NOT NULL,
+FNOL_ID INTEGER NOT NULL,
+Effective_Date DATE,
+PRIMARY KEY (Claim_ID),
+UNIQUE (Claim_ID),
+FOREIGN KEY (FNOL_ID) REFERENCES First_Notification_of_Loss (FNOL_ID)
+)
+
+
+Table 7: Tablename is Settlements
+Display name: settlements
+DDL query for Settlements:
+CREATE TABLE Settlements (
+Settlement_ID INTEGER NOT NULL,
+Claim_ID INTEGER,
+Effective_Date DATE,
+Settlement_Amount REAL,
+PRIMARY KEY (Settlement_ID),
+UNIQUE (Settlement_ID),
+FOREIGN KEY (Claim_ID) REFERENCES Claims (Claim_ID)
+)
+

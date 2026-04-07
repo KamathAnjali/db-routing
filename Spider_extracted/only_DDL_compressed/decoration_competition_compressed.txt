@@ -1,0 +1,4 @@
+Database: decoration_competition
+college(College_ID: int,, Name: text,, Leader_Name: text,, College_Location: text,) PK[College_ID]
+member(Member_ID: int,, Name: text,, Country: text,, College_ID: int,, FOREIGN: KEY ("College_ID")) PK[Member_ID]
+round(Round_ID: int,, Member_ID: int,, Decoration_Theme: text,, Rank_in_Round: int,, FOREIGN: KEY ("Member_ID")) PK[Member_ID, Round_ID]

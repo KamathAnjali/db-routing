@@ -1,0 +1,37 @@
+This is a Database called gymnast.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. gymnast
+
+2. people
+
+
+Table 1: Tablename is gymnast
+DDL query for gymnast:
+CREATE TABLE "gymnast" (
+"Gymnast_ID" int,
+"Floor_Exercise_Points" real,
+"Pommel_Horse_Points" real,
+"Rings_Points" real,
+"Vault_Points" real,
+"Parallel_Bars_Points" real,
+"Horizontal_Bar_Points" real,
+"Total_Points" real,
+PRIMARY KEY ("Gymnast_ID"),
+FOREIGN KEY ("Gymnast_ID") REFERENCES "people"("People_ID")
+)
+
+
+Table 2: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"Name" text,
+"Age" real,
+"Height" real,
+"Hometown" text,
+PRIMARY KEY ("People_ID")
+)
+

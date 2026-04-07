@@ -1,0 +1,6 @@
+Database: customers_and_orders
+Products(product_id: INTEGER, product_type_code: VARCHAR(15),, product_name: VARCHAR(80),, product_price: DOUBLE)
+Addresses(address_id: INTEGER, address_details: VARCHAR(255))
+Customers(customer_id: INTEGER, address_id: INTEGER, payment_method_code: VARCHAR(15),, customer_number: VARCHAR(20),, customer_name: VARCHAR(80),, customer_address: VARCHAR(255),, customer_phone: VARCHAR(80),, customer_email: VARCHAR(80))
+Customer_Orders(order_id: INTEGER, customer_id: INTEGER, order_date: DATETIME, order_status_code: VARCHAR(15),, FOREIGN: KEY (`customer_id` ))
+Order_Items(order_item_id: INTEGER, order_id: INTEGER, product_id: INTEGER, order_quantity: VARCHAR(80),, FOREIGN: KEY (`order_id` ), FOREIGN: KEY (`product_id` ))

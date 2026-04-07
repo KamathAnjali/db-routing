@@ -1,0 +1,6 @@
+Database: dorm_1
+Student(StuID: INTEGER, LName: VARCHAR(12),, Fname: VARCHAR(12),, Age: INTEGER,, Sex: VARCHAR(1),, Major: INTEGER,, Advisor: INTEGER,, city_code: VARCHAR(3))
+Dorm(dormid: INTEGER,, dorm_name: VARCHAR(20),, student_capacity: INTEGER,, gender: VARCHAR(1))
+Dorm_amenity(amenid: INTEGER,, amenity_name: VARCHAR(25))
+Has_amenity(dormid: INTEGER,, amenid: INTEGER,) FK[dormid→Dorm.dormid; amenid→Dorm_amenity.amenid]
+Lives_in(stuid: INTEGER,, dormid: INTEGER,, room_number: INTEGER,) FK[stuid→Student.StuID; dormid→Dorm.dormid]

@@ -1,0 +1,70 @@
+This is a Database called customers_card_transactions.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Accounts (displayed as: accounts)
+
+2. Customers (displayed as: customers)
+
+3. Customers_Cards (displayed as: customers cards)
+
+4. Financial_Transactions (displayed as: financial transactions)
+
+
+Table 1: Tablename is Accounts
+Display name: accounts
+DDL query for Accounts:
+CREATE TABLE `Accounts` (
+`account_id` INTEGER PRIMARY KEY,
+`customer_id` INTEGER NOT NULL,
+`account_name` VARCHAR(50),
+`other_account_details` VARCHAR(255)
+)
+
+
+Table 2: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE `Customers` (
+`customer_id` INTEGER PRIMARY KEY,
+`customer_first_name` VARCHAR(20),
+`customer_last_name` VARCHAR(20),
+`customer_address` VARCHAR(255),
+`customer_phone` VARCHAR(255),
+`customer_email` VARCHAR(255),
+`other_customer_details` VARCHAR(255)
+)
+
+
+Table 3: Tablename is Customers_Cards
+Display name: customers cards
+DDL query for Customers_Cards:
+CREATE TABLE `Customers_Cards` (
+`card_id` INTEGER PRIMARY KEY,
+`customer_id` INTEGER NOT NULL,
+`card_type_code` VARCHAR(15) NOT NULL,
+`card_number` VARCHAR(80),
+`date_valid_from` DATETIME,
+`date_valid_to` DATETIME,
+`other_card_details` VARCHAR(255)
+)
+
+
+Table 4: Tablename is Financial_Transactions
+Display name: financial transactions
+DDL query for Financial_Transactions:
+CREATE TABLE `Financial_Transactions` (
+`transaction_id` INTEGER NOT NULL ,
+`previous_transaction_id` INTEGER,
+`account_id` INTEGER NOT NULL,
+`card_id` INTEGER NOT NULL,
+`transaction_type` VARCHAR(15) NOT NULL,
+`transaction_date` DATETIME,
+`transaction_amount` DOUBLE NULL,
+`transaction_comment` VARCHAR(255),
+`other_transaction_details` VARCHAR(255),
+FOREIGN KEY (`card_id` ) REFERENCES `Customers_Cards`(`card_id` ),
+FOREIGN KEY (`account_id` ) REFERENCES `Accounts`(`account_id` )
+)
+

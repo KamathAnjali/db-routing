@@ -1,0 +1,4 @@
+Database: workshop_paper
+workshop(Workshop_ID: int,, Date: text,, Venue: text,, Name: text,) PK[Workshop_ID]
+submission(Submission_ID: int,, Scores: real,, Author: text,, College: text,) PK[Submission_ID]
+Acceptance(Submission_ID: int,, Workshop_ID: int,, Result: text,, FOREIGN: KEY ("Submission_ID"), FOREIGN: KEY ("Workshop_ID")) PK[Submission_ID, Workshop_ID]

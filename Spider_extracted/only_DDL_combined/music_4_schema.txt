@@ -1,0 +1,52 @@
+This is a Database called music_4.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. artist
+
+2. volume
+
+3. music_festival (displayed as: music festival)
+
+
+Table 1: Tablename is artist
+DDL query for artist:
+CREATE TABLE "artist" (
+    "Artist_ID" int,
+    "Artist" text,
+    "Age" int,
+    "Famous_Title" text,
+    "Famous_Release_date" text,
+    PRIMARY KEY ("Artist_ID")
+)
+
+
+Table 2: Tablename is volume
+DDL query for volume:
+CREATE TABLE "volume" (
+    "Volume_ID" int,
+    "Volume_Issue" text,
+    "Issue_Date" text,
+    "Weeks_on_Top" real,
+    "Song" text,
+    "Artist_ID" int,
+    PRIMARY KEY ("Volume_ID"),
+    FOREIGN KEY (`Artist_ID`) REFERENCES `artist`(`Artist_ID`)
+)
+
+
+Table 3: Tablename is music_festival
+Display name: music festival
+DDL query for music_festival:
+CREATE TABLE "music_festival" (
+    "ID" int,
+    "Music_Festival" text,
+    "Date_of_ceremony" text,
+    "Category" text,
+    "Volume" int,
+    "Result" text,
+    PRIMARY KEY (`ID`),
+    FOREIGN KEY (`Volume`) REFERENCES `volume`(`Volume_ID`)
+)
+

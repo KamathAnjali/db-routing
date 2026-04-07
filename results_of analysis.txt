@@ -1,0 +1,53 @@
+
+=======================================================
+  CHECKPOINT ANALYSIS  —  200 queries
+=======================================================
+  Top-1 correct   : 69  (34.5%)
+  Wrong (in top5) : 95   (47.5%)
+  Not in top5     : 36  (18.0%)
+  Avg entropy     : 0.6354
+  Avg margin      : 0.4833
+
+  Rank distribution:
+    rank 1: 69
+    rank 2: 41
+    rank 3: 43
+    rank 4: 11
+    not_found: 36
+
+  Top confused pairs (correct_db → predicted_db):
+    academic                  → scholar                    (39x)
+    academic                  → aan_1                      (19x)
+    aan_1                     → scholar                    (16x)
+    activity_1                → college_3                  (12x)
+    aan_1                     → academic                   (7x)
+    aan_1                     → icfp_1                     (1x)
+    activity_1                → csu_1                      (1x)
+/Users/anjalikamath/sem 6/SOP/Code/analysis.py:254: UserWarning: You passed a edgecolor/edgecolors ('none') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax6.scatter(r["entropy"], r["margin"], color=color, alpha=0.55,
+
+  Plot saved → ./outputs/checkpoint_analysis.png
+
+=======================================================
+  THRESHOLD RECOMMENDATIONS
+=======================================================
+  entropy 0.0–0.3   acc=49%  n=49 ← FLAG
+  entropy 0.3–0.6   acc=56%  n=9
+  entropy 0.6–0.9   acc=27%  n=74 ← FLAG
+  entropy 0.9–1.1   acc=29%  n=59 ← FLAG
+  entropy 1.1–1.3   acc=33%  n=9 ← FLAG
+  entropy 1.3+      acc=100%  n=0
+
+  margin  0.0–0.1   acc=0%  n=3 ← FLAG
+  margin  0.1–0.2   acc=18%  n=28 ← FLAG
+  margin  0.2–0.3   acc=36%  n=28 ← FLAG
+  margin  0.3–0.5   acc=30%  n=83 ← FLAG
+  margin  0.5–0.7   acc=56%  n=9
+  margin  0.7+      acc=49%  n=49 ← FLAG
+
+  SUGGESTED FLAG RULE:
+    flag if entropy > 0.9  OR  margin < 0.25
+    Queries flagged      : 91/200 (46%)
+    Wrong caught by flag : 68/131 (52%)
+    Wrong missed by flag : 63
+=======================================================

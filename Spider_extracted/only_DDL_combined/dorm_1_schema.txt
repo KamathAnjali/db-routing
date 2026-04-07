@@ -1,0 +1,73 @@
+This is a Database called dorm_1.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. Student (displayed as: student)
+
+2. Dorm (displayed as: dorm)
+
+3. Dorm_amenity (displayed as: dorm amenity)
+
+4. Has_amenity (displayed as: has amenity)
+
+5. Lives_in (displayed as: lives in)
+
+
+Table 1: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+        StuID        INTEGER PRIMARY KEY,
+        LName        VARCHAR(12),
+        Fname        VARCHAR(12),
+        Age      INTEGER,
+        Sex      VARCHAR(1),
+        Major        INTEGER,
+        Advisor      INTEGER,
+        city_code    VARCHAR(3)
+ )
+
+
+Table 2: Tablename is Dorm
+Display name: dorm
+DDL query for Dorm:
+CREATE TABLE Dorm (
+       dormid		INTEGER,
+       dorm_name	VARCHAR(20),
+       student_capacity	INTEGER,
+       gender			VARCHAR(1)
+)
+
+
+Table 3: Tablename is Dorm_amenity
+Display name: dorm amenity
+DDL query for Dorm_amenity:
+CREATE TABLE Dorm_amenity (
+       amenid			INTEGER,
+       amenity_name		VARCHAR(25)
+)
+
+
+Table 4: Tablename is Has_amenity
+Display name: has amenity
+DDL query for Has_amenity:
+CREATE TABLE Has_amenity (
+       dormid			INTEGER,
+       amenid				INTEGER,
+	FOREIGN KEY (dormid) REFERENCES `Dorm`(dormid),
+	FOREIGN KEY (amenid) REFERENCES `Dorm_amenity`(amenid)
+)
+
+
+Table 5: Tablename is Lives_in
+Display name: lives in
+DDL query for Lives_in:
+CREATE TABLE Lives_in (
+       stuid 	      INTEGER,
+       dormid		INTEGER,
+       room_number	INTEGER,
+	FOREIGN KEY (stuid) REFERENCES `Student`(StuID),
+        FOREIGN KEY (dormid) REFERENCES `Dorm`(dormid)
+)
+

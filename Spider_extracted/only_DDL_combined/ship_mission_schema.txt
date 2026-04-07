@@ -1,0 +1,36 @@
+This is a Database called ship_mission.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. mission
+
+2. ship
+
+
+Table 1: Tablename is mission
+DDL query for mission:
+CREATE TABLE "mission" (
+"Mission_ID" int,
+"Ship_ID" int,
+"Code" text,
+"Launched_Year" int,
+"Location" text,
+"Speed_knots" int,
+"Fate" text,
+PRIMARY KEY ("Mission_ID"),
+FOREIGN KEY ("Ship_ID") REFERENCES `ship`("Ship_ID")
+)
+
+
+Table 2: Tablename is ship
+DDL query for ship:
+CREATE TABLE "ship" (
+"Ship_ID" int,
+"Name" text,
+"Type" text,
+"Nationality" text,
+"Tonnage" int,
+PRIMARY KEY ("Ship_ID")
+)
+

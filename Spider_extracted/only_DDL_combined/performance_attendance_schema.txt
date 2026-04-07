@@ -1,0 +1,47 @@
+This is a Database called performance_attendance.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. member
+
+2. performance
+
+3. member_attendance (displayed as: member attendance)
+
+
+Table 1: Tablename is member
+DDL query for member:
+CREATE TABLE "member" (
+    "Member_ID" text,
+    "Name" text,
+    "Nationality" text,
+    "Role" text,
+    PRIMARY KEY ("Member_ID")
+)
+
+
+Table 2: Tablename is performance
+DDL query for performance:
+CREATE TABLE "performance" (
+    "Performance_ID" real,
+    "Date" text,
+    "Host" text,
+    "Location" text,
+    "Attendance" int,
+    PRIMARY KEY ("Performance_ID")
+)
+
+
+Table 3: Tablename is member_attendance
+Display name: member attendance
+DDL query for member_attendance:
+CREATE TABLE "member_attendance" (
+    "Member_ID" int,
+    "Performance_ID" int,
+    "Num_of_Pieces" int,
+    PRIMARY KEY ("Member_ID","Performance_ID"),
+    FOREIGN KEY ("Member_ID") REFERENCES `member`("Member_ID"),
+    FOREIGN KEY ("Performance_ID") REFERENCES `performance`("Performance_ID")
+)
+

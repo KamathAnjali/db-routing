@@ -1,0 +1,64 @@
+This is a Database called station_weather.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. train
+
+2. station
+
+3. route
+
+4. weekly_weather (displayed as: weekly weather)
+
+
+Table 1: Tablename is train
+DDL query for train:
+CREATE TABLE "train" (
+    "id" int,
+    "train_number" int,
+    "name" text,
+    "origin" text,
+    "destination" text,
+    "time" text,
+    "interval" text,
+    primary key ("id")
+)
+
+
+Table 2: Tablename is station
+DDL query for station:
+CREATE TABLE "station" (
+    "id" int,
+    "network_name" text,
+    "services" text,
+    "local_authority" text,
+    primary key ("id")
+)
+
+
+Table 3: Tablename is route
+DDL query for route:
+CREATE TABLE "route" (
+    "train_id" int,
+    "station_id" int,
+    primary key ("train_id", "station_id"),
+    foreign key ("train_id") references `train`("id"),
+    foreign key ("station_id") references `station`("id")
+)
+
+
+Table 4: Tablename is weekly_weather
+Display name: weekly weather
+DDL query for weekly_weather:
+CREATE TABLE "weekly_weather" (
+    "station_id" int,
+    "day_of_week" text,
+    "high_temperature" int,
+    "low_temperature" int,
+    "precipitation" real,
+    "wind_speed_mph" int,
+    primary key ("station_id", "day_of_week"),
+    foreign key ("station_id") references "station"("id")
+)
+

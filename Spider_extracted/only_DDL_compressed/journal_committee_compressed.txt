@@ -1,0 +1,3 @@
+Database: journal_committee
+journal(Journal_ID: int,, Date: text,, Theme: text,, Sales: int,) PK[Journal_ID]
+editor(Editor_ID: int,, Name: text,, Age: real,) PK[Editor_ID]

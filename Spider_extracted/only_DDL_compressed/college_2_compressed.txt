@@ -1,0 +1,12 @@
+Database: college_2
+classroom(building: varchar(15),, room_number: varchar(7),, capacity: numeric(4,0),) PK[building, room_number]
+department(dept_name: varchar(20),, building: varchar(15),, budget: numeric(12,2)) PK[dept_name]
+course(course_id: varchar(8),, title: varchar(50),, dept_name: varchar(20), credits: numeric(2,0), FOREIGN: KEY (dept_name), REFERENCES: department` (dept_name), ON: DELETE) PK[course_id]
+instructor(ID: varchar(5),, name: varchar(20), dept_name: varchar(20),, salary: numeric(8,2), on: delete) PK[ID] FK[dept_name→department.dept_name]
+section(course_id: varchar(8),, sec_id: varchar(8),, semester: varchar(6), check: (semester, year: numeric(4,0), building: varchar(15),, room_number: varchar(7),, time_slot_id: varchar(4),, on: delete, foreign: key (building, room_number), on: delete) PK[course_id, sec_id, semester, year] FK[course_id→course.course_id]
+teaches(ID: varchar(5),, course_id: varchar(8),, sec_id: varchar(8),, semester: varchar(6),, year: numeric(4,0),, foreign: key (course_id,sec_id, semester, year), on: delete, on: delete) PK[ID, course_id, sec_id, semester, year] FK[ID→instructor.ID]
+student(ID: varchar(5),, name: varchar(20), dept_name: varchar(20),, tot_cred: numeric(3,0), on: delete) PK[ID] FK[dept_name→department.dept_name]
+takes(ID: varchar(5),, course_id: varchar(8),, sec_id: varchar(8),, semester: varchar(6),, year: numeric(4,0),, grade: varchar(2),, foreign: key (course_id,sec_id, semester, year), on: delete, on: delete) PK[ID, course_id, sec_id, semester, year] FK[ID→student.ID]
+advisor(s_ID: varchar(5),, i_ID: varchar(5),, on: delete, on: delete) PK[s_ID] FK[i_ID→instructor.ID; s_ID→student.ID]
+time_slot(time_slot_id: varchar(4),, day: varchar(1),, start_hr: numeric(2), start_min: numeric(2), end_hr: numeric(2), end_min: numeric(2)) PK[time_slot_id, day, start_hr, start_min]
+prereq(course_id: varchar(8),, prereq_id: varchar(8),, on: delete) PK[course_id, prereq_id] FK[course_id→course.course_id; prereq_id→course.course_id]

@@ -1,0 +1,66 @@
+This is a Database called orchestra.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. conductor
+
+2. orchestra
+
+3. performance
+
+4. show
+
+
+Table 1: Tablename is conductor
+DDL query for conductor:
+CREATE TABLE "conductor" (
+"Conductor_ID" int,
+"Name" text,
+"Age" int,
+"Nationality" text,
+"Year_of_Work" int,
+PRIMARY KEY ("Conductor_ID")
+)
+
+
+Table 2: Tablename is orchestra
+DDL query for orchestra:
+CREATE TABLE "orchestra" (
+"Orchestra_ID" int,
+"Orchestra" text,
+"Conductor_ID" int,
+"Record_Company" text,
+"Year_of_Founded" real,
+"Major_Record_Format" text,
+PRIMARY KEY ("Orchestra_ID"),
+FOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)
+)
+
+
+Table 3: Tablename is performance
+DDL query for performance:
+CREATE TABLE "performance" (
+"Performance_ID" int,
+"Orchestra_ID" int,
+"Type" text,
+"Date" text,
+"Official_ratings_(millions)" real,
+"Weekly_rank" text,
+"Share" text,
+PRIMARY KEY ("Performance_ID"),
+FOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)
+)
+
+
+Table 4: Tablename is show
+DDL query for show:
+CREATE TABLE "show" (
+"Show_ID" int,
+"Performance_ID" int,
+"If_first_show" bool,
+"Result" text,
+"Attendance" real,
+FOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)
+)
+

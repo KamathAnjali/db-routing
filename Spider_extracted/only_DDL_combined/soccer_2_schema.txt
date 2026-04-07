@@ -1,0 +1,48 @@
+This is a Database called soccer_2.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. College (displayed as: college)
+
+2. Player (displayed as: player)
+
+3. Tryout (displayed as: tryout)
+
+
+Table 1: Tablename is College
+Display name: college
+DDL query for College:
+CREATE TABLE College 
+  ( cName   	varchar(20) NOT NULL,
+    state   	varchar(2),
+    enr     	numeric(5,0),
+    PRIMARY KEY (cName)
+  )
+
+
+Table 2: Tablename is Player
+Display name: player
+DDL query for Player:
+CREATE TABLE Player
+  ( pID			numeric(5,0) NOT NULL,
+  	pName   	varchar(20),
+    yCard   	varchar(3),
+    HS      	numeric(5,0),
+    PRIMARY KEY (pID)
+  )
+
+
+Table 3: Tablename is Tryout
+Display name: tryout
+DDL query for Tryout:
+CREATE TABLE Tryout
+  ( pID			numeric(5,0),
+  	cName   	varchar(20),
+    pPos    	varchar(8),
+    decision    varchar(3),
+    PRIMARY KEY (pID, cName),
+    FOREIGN KEY (pID) REFERENCES Player(pID),
+    FOREIGN KEY (cName) REFERENCES College(cName)
+  )
+

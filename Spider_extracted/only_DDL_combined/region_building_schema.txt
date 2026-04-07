@@ -1,0 +1,35 @@
+This is a Database called region_building.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. building
+
+2. region
+
+
+Table 1: Tablename is building
+DDL query for building:
+CREATE TABLE "building" (
+"Building_ID" int,
+"Region_ID" int,
+"Name" text,
+"Address" text,
+"Number_of_Stories" int,
+"Completed_Year" int,
+PRIMARY KEY ("Building_ID"),
+FOREIGN KEY ("Region_ID") REFERENCES "region"("Region_ID")
+)
+
+
+Table 2: Tablename is region
+DDL query for region:
+CREATE TABLE "region" (
+"Region_ID" int,
+"Name" text,
+"Capital" text,
+"Area" int,
+"Population" int,
+PRIMARY KEY ("Region_ID")
+)
+

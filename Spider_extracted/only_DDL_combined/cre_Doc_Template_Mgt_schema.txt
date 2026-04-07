@@ -1,0 +1,65 @@
+This is a Database called cre_Doc_Template_Mgt.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Ref_Template_Types (displayed as: reference template types)
+
+2. Templates (displayed as: templates)
+
+3. Documents (displayed as: documents)
+
+4. Paragraphs (displayed as: paragraphs)
+
+
+Table 1: Tablename is Ref_Template_Types
+Display name: reference template types
+DDL query for Ref_Template_Types:
+CREATE TABLE Ref_Template_Types (
+Template_Type_Code CHAR(15) NOT NULL,
+Template_Type_Description VARCHAR(255) NOT NULL,
+PRIMARY KEY (Template_Type_Code)
+)
+
+
+Table 2: Tablename is Templates
+Display name: templates
+DDL query for Templates:
+CREATE TABLE Templates (
+Template_ID INTEGER NOT NULL,
+Version_Number INTEGER NOT NULL,
+Template_Type_Code CHAR(15) NOT NULL,
+Date_Effective_From DATETIME,
+Date_Effective_To DATETIME,
+Template_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Template_ID),
+FOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)
+)
+
+
+Table 3: Tablename is Documents
+Display name: documents
+DDL query for Documents:
+CREATE TABLE Documents (
+Document_ID INTEGER NOT NULL,
+Template_ID INTEGER,
+Document_Name VARCHAR(255),
+Document_Description VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Document_ID),
+FOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)
+)
+
+
+Table 4: Tablename is Paragraphs
+Display name: paragraphs
+DDL query for Paragraphs:
+CREATE TABLE Paragraphs (
+Paragraph_ID INTEGER NOT NULL,
+Document_ID INTEGER NOT NULL,
+Paragraph_Text VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Paragraph_ID),
+FOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)
+)
+

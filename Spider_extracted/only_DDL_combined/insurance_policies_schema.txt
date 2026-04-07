@@ -1,0 +1,84 @@
+This is a Database called insurance_policies.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. Customers (displayed as: customers)
+
+2. Customer_Policies (displayed as: customer policies)
+
+3. Claims (displayed as: claims)
+
+4. Settlements (displayed as: settlements)
+
+5. Payments (displayed as: payments)
+
+
+Table 1: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE Customers (
+Customer_ID INTEGER NOT NULL,
+Customer_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Customer_ID)
+)
+
+
+Table 2: Tablename is Customer_Policies
+Display name: customer policies
+DDL query for Customer_Policies:
+CREATE TABLE Customer_Policies (
+Policy_ID INTEGER NOT NULL,
+Customer_ID INTEGER NOT NULL,
+Policy_Type_Code CHAR(15) NOT NULL,
+Start_Date DATE,
+End_Date DATE,
+PRIMARY KEY (Policy_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID)
+)
+
+
+Table 3: Tablename is Claims
+Display name: claims
+DDL query for Claims:
+CREATE TABLE Claims (
+Claim_ID INTEGER NOT NULL,
+Policy_ID INTEGER NOT NULL,
+Date_Claim_Made DATE,
+Date_Claim_Settled DATE,
+Amount_Claimed INTEGER,
+Amount_Settled INTEGER,
+PRIMARY KEY (Claim_ID),
+FOREIGN KEY (Policy_ID) REFERENCES Customer_Policies (Policy_ID)
+)
+
+
+Table 4: Tablename is Settlements
+Display name: settlements
+DDL query for Settlements:
+CREATE TABLE Settlements (
+Settlement_ID INTEGER NOT NULL,
+Claim_ID INTEGER NOT NULL,
+Date_Claim_Made DATE,
+Date_Claim_Settled DATE,
+Amount_Claimed INTEGER,
+Amount_Settled INTEGER,
+Customer_Policy_ID INTEGER NOT NULL,
+PRIMARY KEY (Settlement_ID),
+FOREIGN KEY (Claim_ID) REFERENCES Claims (Claim_ID)
+)
+
+
+Table 5: Tablename is Payments
+Display name: payments
+DDL query for Payments:
+CREATE TABLE Payments (
+Payment_ID INTEGER NOT NULL,
+Settlement_ID INTEGER NOT NULL,
+Payment_Method_Code VARCHAR(255),
+Date_Payment_Made DATE,
+Amount_Payment INTEGER,
+PRIMARY KEY (Payment_ID),
+FOREIGN KEY (Settlement_ID) REFERENCES Settlements (Settlement_ID)
+)
+

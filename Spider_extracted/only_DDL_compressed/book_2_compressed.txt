@@ -1,0 +1,3 @@
+Database: book_2
+publication(Publication_ID: int,, Book_ID: int,, Publisher: text,, Publication_Date: text,, Price: real,, FOREIGN: KEY ("Book_ID")) PK[Publication_ID]
+book(Book_ID: int,, Title: text,, Issues: real,, Writer: text,) PK[Book_ID]

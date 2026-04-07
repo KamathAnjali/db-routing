@@ -1,0 +1,48 @@
+This is a Database called party_host.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. party
+
+2. host
+
+3. party_host (displayed as: party host)
+
+
+Table 1: Tablename is party
+DDL query for party:
+CREATE TABLE "party" (
+"Party_ID" int,
+"Party_Theme" text,
+"Location" text,
+"First_year" text,
+"Last_year" text,
+"Number_of_hosts" int,
+PRIMARY KEY ("Party_ID")
+)
+
+
+Table 2: Tablename is host
+DDL query for host:
+CREATE TABLE "host" (
+"Host_ID" int,
+"Name" text,
+"Nationality" text,
+"Age" text,
+PRIMARY KEY ("Host_ID")
+)
+
+
+Table 3: Tablename is party_host
+Display name: party host
+DDL query for party_host:
+CREATE TABLE "party_host" (
+"Party_ID" int,
+"Host_ID" int,
+"Is_Main_in_Charge" bool,
+PRIMARY KEY ("Party_ID","Host_ID"),
+FOREIGN KEY ("Host_ID") REFERENCES `host`("Host_ID"),
+FOREIGN KEY ("Party_ID") REFERENCES `party`("Party_ID")
+)
+

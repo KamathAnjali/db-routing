@@ -1,0 +1,66 @@
+This is a Database called match_season.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. country
+
+2. team
+
+3. match_season (displayed as: match season)
+
+4. player
+
+
+Table 1: Tablename is country
+DDL query for country:
+CREATE TABLE "country" (
+    "Country_id" int,
+    "Country_name" text,
+    "Capital" text,
+    "Official_native_language" text,
+    PRIMARY KEY ("Country_id")
+)
+
+
+Table 2: Tablename is team
+DDL query for team:
+CREATE TABLE `team` (
+      `Team_id` int,
+      `Name` text,
+      PRIMARY KEY (`Team_id`)
+)
+
+
+Table 3: Tablename is match_season
+Display name: match season
+DDL query for match_season:
+CREATE TABLE "match_season" (
+    "Season" real,
+    "Player" text,
+    "Position" text,
+    "Country" int,
+    "Team" int,
+    "Draft_Pick_Number" int,
+    "Draft_Class" text,
+    "College" text,
+    PRIMARY KEY ("Season"),
+    FOREIGN KEY (`Country`) REFERENCES `country`(`Country_id`),
+    FOREIGN KEY (`Team`) REFERENCES `team`(`Team_id`)
+)
+
+
+Table 4: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+    "Player_ID" int,
+    "Player" text,
+    "Years_Played" text,
+    "Total_WL" text,
+    "Singles_WL" text,
+    "Doubles_WL" text,
+    "Team" int,
+    PRIMARY KEY ("Player_ID"),
+    FOREIGN KEY (`Team`) REFERENCES `team`(`Team_id`)
+)
+

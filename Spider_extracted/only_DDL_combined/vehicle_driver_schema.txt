@@ -1,0 +1,48 @@
+This is a Database called vehicle_driver.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. vehicle
+
+2. driver
+
+3. vehicle_driver (displayed as: vehicle driver)
+
+
+Table 1: Tablename is vehicle
+DDL query for vehicle:
+CREATE TABLE "vehicle" (
+"Vehicle_ID" int,
+"Model" text,
+"Build_Year" text,
+"Top_Speed" int,
+"Power" int,
+"Builder" text,
+"Total_Production" text,
+PRIMARY KEY ("Vehicle_ID")
+)
+
+
+Table 2: Tablename is driver
+DDL query for driver:
+CREATE TABLE "driver" (
+"Driver_ID" int,
+"Name" text,
+"Citizenship" text,
+"Racing_Series" text,
+PRIMARY KEY ("Driver_ID")
+)
+
+
+Table 3: Tablename is vehicle_driver
+Display name: vehicle driver
+DDL query for vehicle_driver:
+CREATE TABLE "vehicle_driver" (
+"Driver_ID" int,
+"Vehicle_ID" int,
+PRIMARY KEY ("Driver_ID","Vehicle_ID"),
+FOREIGN KEY ("Driver_ID") REFERENCES "driver"("Driver_ID"),
+FOREIGN KEY ("Vehicle_ID") REFERENCES "vehicle"("Vehicle_ID")
+)
+

@@ -1,0 +1,38 @@
+This is a Database called journal_committee.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. journal
+
+2. editor
+
+3. journal_committee (displayed as: journal committee)
+
+
+Table 1: Tablename is journal
+DDL query for journal:
+CREATE TABLE "journal" (
+"Journal_ID" int,
+"Date" text,
+"Theme" text,
+"Sales" int,
+PRIMARY KEY ("Journal_ID")
+)
+
+
+Table 2: Tablename is editor
+DDL query for editor:
+CREATE TABLE "editor" (
+"Editor_ID" int,
+"Name" text,
+"Age" real,
+PRIMARY KEY ("Editor_ID")
+)
+
+
+Table 3: Tablename is journal_committee
+Display name: journal committee
+DDL query for journal_committee:
+
+

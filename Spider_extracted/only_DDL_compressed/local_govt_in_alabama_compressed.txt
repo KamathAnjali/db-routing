@@ -1,0 +1,5 @@
+Database: local_govt_in_alabama
+Services(Service_ID: INTEGER, Service_Type_Code: CHAR(15)) PK[Service_ID]
+Participants(Participant_ID: INTEGER, Participant_Type_Code: CHAR(15), Participant_Details: VARCHAR(255),) PK[Participant_ID]
+Events(Event_ID: INTEGER, Service_ID: INTEGER, Event_Details: VARCHAR(255),) PK[Event_ID] FK[Service_ID→Services.Service_ID]
+Participants_in_Events(Event_ID: INTEGER, Participant_ID: INTEGER) PK[Event_ID, Participant_ID] FK[Participant_ID→Participants.Participant_ID; Event_ID→Events.Event_ID]

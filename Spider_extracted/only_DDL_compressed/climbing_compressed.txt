@@ -1,0 +1,3 @@
+Database: climbing
+mountain(Mountain_ID: int,, Name: text,, Height: real,, Prominence: real,, Range: text,, Country: text,) PK[Mountain_ID]
+climber(Climber_ID: int,, Name: text,, Country: text,, Time: text,, Points: real,, Mountain_ID: int,, FOREIGN: KEY ("Mountain_ID")) PK[Climber_ID]

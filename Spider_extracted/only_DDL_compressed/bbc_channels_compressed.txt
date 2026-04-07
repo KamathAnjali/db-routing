@@ -1,0 +1,5 @@
+Database: bbc_channels
+channel(Channel_ID: int,, Name: text,, Analogue_terrestrial_channel: text,, Digital_terrestrial_channel: text,, Internet: text,) PK[Channel_ID]
+director(Director_ID: int,, Name: text,, Age: int,) PK[Director_ID]
+program(Program_ID: int,, Start_Year: real,, Title: text,, Director_ID: int,, Channel_ID: int,, FOREIGN: KEY ("Director_ID"), FOREIGN: KEY ("Channel_ID")) PK[Program_ID]
+director_admin(Director_ID: int,, Channel_ID: int,, Is_first_director: bool,, FOREIGN: KEY ("Director_ID"), FOREIGN: KEY ("Channel_ID")) PK[Director_ID, Channel_ID]

@@ -1,0 +1,3 @@
+Database: region_building
+building(Building_ID: int,, Region_ID: int,, Name: text,, Address: text,, Number_of_Stories: int,, Completed_Year: int,, FOREIGN: KEY ("Region_ID")) PK[Building_ID]
+region(Region_ID: int,, Name: text,, Capital: text,, Area: int,, Population: int,) PK[Region_ID]

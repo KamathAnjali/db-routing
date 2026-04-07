@@ -1,0 +1,3 @@
+Database: ship_1
+captain(Captain_ID: int,, Name: text,, Ship_ID: int,, age: text,, Class: text,, Rank: text,, FOREIGN: KEY ("Ship_ID")) PK[Captain_ID]
+Ship(Ship_ID: int,, Name: text,, Type: text,, Built_Year: real,, Class: text,, Flag: text,) PK[Ship_ID]

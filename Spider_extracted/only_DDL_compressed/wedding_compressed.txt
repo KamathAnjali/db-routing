@@ -1,0 +1,4 @@
+Database: wedding
+people(People_ID: int,, Name: text,, Country: text,, Is_Male: text,, Age: int,) PK[People_ID]
+church(Church_ID: int,, Name: text,, Organized_by: text,, Open_Date: int,, Continuation_of: text,) PK[Church_ID]
+wedding(Church_ID: int,, Male_ID: int,, Female_ID: int,, Year: int,, FOREIGN: KEY ("Church_ID"), FOREIGN: KEY ("Male_ID"), FOREIGN: KEY ("Female_ID")) PK[Church_ID, Male_ID, Female_ID]

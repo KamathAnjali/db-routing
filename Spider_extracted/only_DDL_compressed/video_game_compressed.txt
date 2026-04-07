@@ -1,0 +1,5 @@
+Database: video_game
+platform(Platform_ID: int,, Platform_name: text,, Market_district: text,, Download_rank: int,) PK[Platform_ID]
+game(Game_ID: int,, Title: text,, Release_Date: text,, Franchise: text,, Developers: text,, Platform_ID: int,, Units_sold_Millions: int,, FOREIGN: KEY ("Platform_ID")) PK[Game_ID]
+player(Player_ID: int,, Rank_of_the_year: int,, Player_name: text,, Position: text,, College: text,) PK[Player_ID]
+game_player(Player_ID: int,, Game_ID: int,, If_active: bool,, FOREIGN: KEY ("Player_ID"), FOREIGN: KEY ("Game_ID")) PK[Player_ID, Game_ID]

@@ -1,0 +1,5 @@
+Database: program_share
+program(Program_ID: int,, Name: text,, Origin: text,, Launch: real,, Owner: text,) PK[Program_ID]
+channel(Channel_ID: int,, Name: text,, Owner: text,, Share_in_percent: real,, Rating_in_percent: real,) PK[Channel_ID]
+broadcast(Channel_ID: int,, Program_ID: int,, Time_of_day: text,) PK[Channel_ID, Program_ID] FK[Channel_ID→channel.Channel_ID; Program_ID→program.Program_ID]
+broadcast_share(Channel_ID: int,, Program_ID: int,, Date: text,, Share_in_percent: real,) PK[Channel_ID, Program_ID] FK[Channel_ID→channel.Channel_ID; Program_ID→program.Program_ID]

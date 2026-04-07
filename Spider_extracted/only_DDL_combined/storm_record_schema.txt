@@ -1,0 +1,47 @@
+This is a Database called storm_record.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. storm
+
+2. region
+
+3. affected_region (displayed as: affected region)
+
+
+Table 1: Tablename is storm
+DDL query for storm:
+CREATE TABLE "storm" (
+"Storm_ID" int,
+"Name" text,
+"Dates_active" text,
+"Max_speed" int,
+"Damage_millions_USD" real,
+"Number_Deaths" int,
+PRIMARY KEY ("Storm_ID")
+)
+
+
+Table 2: Tablename is region
+DDL query for region:
+CREATE TABLE "region" (
+`Region_id` int,
+`Region_code` text,
+`Region_name` text,
+PRIMARY KEY ("Region_id")
+)
+
+
+Table 3: Tablename is affected_region
+Display name: affected region
+DDL query for affected_region:
+CREATE TABLE `affected_region` (
+`Region_id` int,
+`Storm_ID` int,
+`Number_city_affected` real,
+PRIMARY KEY (`Region_id`,`Storm_ID`),
+FOREIGN KEY (`Region_id`) REFERENCES `region`(`Region_id`),
+FOREIGN KEY (`Storm_ID`) REFERENCES `storm`(`Storm_ID`)
+)
+

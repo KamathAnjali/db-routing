@@ -1,0 +1,5 @@
+Database: conference
+conference(Conference_ID: int,, Conference_Name: text,, Year: int,, Location: text,) PK[Conference_ID]
+institution(Institution_ID: int,, Institution_Name: text,, Location: text,, Founded: int,) PK[Institution_ID]
+staff(staff_ID: int,, name: text,, Age: int,, Nationality: text,, Institution_ID: int,) PK[staff_ID] FK[Institution_ID→institution.Institution_ID]
+conference_participation(Conference_ID: int,, staff_ID: int,, role: text,) PK[staff_ID, Conference_ID] FK[staff_ID→staff.staff_ID; Conference_ID→conference.Conference_ID]

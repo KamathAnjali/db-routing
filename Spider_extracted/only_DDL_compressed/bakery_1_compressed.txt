@@ -1,0 +1,5 @@
+Database: bakery_1
+customers(Id: INTEGER, LastName: TEXT,, FirstName: TEXT)
+goods(Id: TEXT, Flavor: TEXT,, Food: TEXT,, Price: REAL)
+items(Receipt: INTEGER,, Ordinal: INTEGER,, Item: TEXT,) PK[Receipt, Ordinal] FK[Item→goods.Id]
+receipts(ReceiptNumber: INTEGER, Date: TEXT,, CustomerId: INTEGER,) FK[CustomerId→customers.Id]

@@ -1,0 +1,30 @@
+This is a Database called student_1.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. list
+
+2. teachers
+
+
+Table 1: Tablename is list
+DDL query for list:
+CREATE TABLE "list" ( 
+	"LastName" TEXT, 
+	"FirstName" TEXT, 
+	"Grade" INTEGER, 
+	"Classroom" INTEGER,
+	PRIMARY KEY(LastName, FirstName)
+)
+
+
+Table 2: Tablename is teachers
+DDL query for teachers:
+CREATE TABLE "teachers" ( 
+	"LastName" TEXT, 
+	"FirstName" TEXT, 
+	"Classroom" INTEGER,
+	PRIMARY KEY(LastName, FirstName)
+)
+

@@ -1,0 +1,8 @@
+Database: hr_1
+regions(REGION_ID: decimal(5,0), REGION_NAME: varchar(25)) PK[REGION_ID]
+countries(COUNTRY_ID: varchar(2), COUNTRY_NAME: varchar(40), REGION_ID: decimal(10,0)) PK[COUNTRY_ID] FK[REGION_ID→regions.REGION_ID]
+departments(DEPARTMENT_ID: decimal(4,0), DEPARTMENT_NAME: varchar(30), MANAGER_ID: decimal(6,0), LOCATION_ID: decimal(4,0)) PK[DEPARTMENT_ID]
+jobs(JOB_ID: varchar(10), JOB_TITLE: varchar(35), MIN_SALARY: decimal(6,0), MAX_SALARY: decimal(6,0)) PK[JOB_ID]
+employees(EMPLOYEE_ID: decimal(6,0), FIRST_NAME: varchar(20), LAST_NAME: varchar(25), EMAIL: varchar(25), PHONE_NUMBER: varchar(20), HIRE_DATE: date, JOB_ID: varchar(10), SALARY: decimal(8,2), COMMISSION_PCT: decimal(2,2), MANAGER_ID: decimal(6,0), DEPARTMENT_ID: decimal(4,0)) PK[EMPLOYEE_ID] FK[DEPARTMENT_ID→departments.DEPARTMENT_ID; JOB_ID→jobs.JOB_ID]
+job_history(EMPLOYEE_ID: decimal(6,0), START_DATE: date, END_DATE: date, JOB_ID: varchar(10), DEPARTMENT_ID: decimal(4,0)) PK[EMPLOYEE_ID, START_DATE] FK[EMPLOYEE_ID→employees.EMPLOYEE_ID; DEPARTMENT_ID→departments.DEPARTMENT_ID; JOB_ID→jobs.JOB_ID]
+locations(LOCATION_ID: decimal(4,0), STREET_ADDRESS: varchar(40), POSTAL_CODE: varchar(12), CITY: varchar(30), STATE_PROVINCE: varchar(25), COUNTRY_ID: varchar(2)) PK[LOCATION_ID] FK[COUNTRY_ID→countries.COUNTRY_ID]

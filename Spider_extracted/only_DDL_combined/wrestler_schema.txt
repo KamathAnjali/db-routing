@@ -1,0 +1,37 @@
+This is a Database called wrestler.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. wrestler
+
+2. Elimination (displayed as: elimination)
+
+
+Table 1: Tablename is wrestler
+DDL query for wrestler:
+CREATE TABLE "wrestler" (
+"Wrestler_ID" int,
+"Name" text,
+"Reign" text,
+"Days_held" text,
+"Location" text,
+"Event" text,
+PRIMARY KEY ("Wrestler_ID")
+)
+
+
+Table 2: Tablename is Elimination
+Display name: elimination
+DDL query for Elimination:
+CREATE TABLE "Elimination" (
+"Elimination_ID" text,
+"Wrestler_ID" text,
+"Team" text,
+"Eliminated_By" text,
+"Elimination_Move" text,
+"Time" text,
+PRIMARY KEY ("Elimination_ID"),
+FOREIGN KEY ("Wrestler_ID") REFERENCES "wrestler"("Wrestler_ID")
+)
+

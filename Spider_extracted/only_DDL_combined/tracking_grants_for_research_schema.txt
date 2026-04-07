@@ -1,0 +1,164 @@
+This is a Database called tracking_grants_for_research.
+This Database consists of 12 tables.
+
+These tables are:
+
+1. Document_Types (displayed as: document types)
+
+2. Documents (displayed as: documents)
+
+3. Grants (displayed as: grants)
+
+4. Organisation_Types (displayed as: organisation types)
+
+5. Organisations (displayed as: organisations)
+
+6. Project_Outcomes (displayed as: project outcomes)
+
+7. Project_Staff (displayed as: project staff)
+
+8. Projects (displayed as: projects)
+
+9. Research_Outcomes (displayed as: research outcomes)
+
+10. Research_Staff (displayed as: research staff)
+
+11. Staff_Roles (displayed as: staff roles)
+
+12. Tasks (displayed as: tasks)
+
+
+Table 1: Tablename is Document_Types
+Display name: document types
+DDL query for Document_Types:
+CREATE TABLE `Document_Types` (
+`document_type_code` VARCHAR(10) PRIMARY KEY,
+`document_description` VARCHAR(255) NOT NULL
+)
+
+
+Table 2: Tablename is Documents
+Display name: documents
+DDL query for Documents:
+CREATE TABLE `Documents` (
+`document_id` INTEGER PRIMARY KEY,
+`document_type_code` VARCHAR(10),
+`grant_id` INTEGER NOT NULL,
+`sent_date` DATETIME NOT NULL,
+`response_received_date` DATETIME NOT NULL,
+`other_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`document_type_code` ) REFERENCES `Document_Types`(`document_type_code` ),
+FOREIGN KEY (`grant_id` ) REFERENCES `Grants`(`grant_id` )
+)
+
+
+Table 3: Tablename is Grants
+Display name: grants
+DDL query for Grants:
+CREATE TABLE `Grants` (
+`grant_id` INTEGER PRIMARY KEY,
+`organisation_id` INTEGER NOT NULL,
+`grant_amount` DECIMAL(19,4) NOT NULL DEFAULT 0,
+`grant_start_date` DATETIME NOT NULL,
+`grant_end_date` DATETIME NOT NULL,
+`other_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`organisation_id` ) REFERENCES `Organisations`(`organisation_id` )
+)
+
+
+Table 4: Tablename is Organisation_Types
+Display name: organisation types
+DDL query for Organisation_Types:
+CREATE TABLE `Organisation_Types` (
+`organisation_type` VARCHAR(10) PRIMARY KEY,
+`organisation_type_description` VARCHAR(255) NOT NULL
+)
+
+
+Table 5: Tablename is Organisations
+Display name: organisations
+DDL query for Organisations:
+CREATE TABLE `Organisations` (
+`organisation_id` INTEGER PRIMARY KEY,
+`organisation_type` VARCHAR(10) NOT NULL,
+`organisation_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`organisation_type` ) REFERENCES `Organisation_Types`(`organisation_type` )
+)
+
+
+Table 6: Tablename is Project_Outcomes
+Display name: project outcomes
+DDL query for Project_Outcomes:
+CREATE TABLE `Project_Outcomes` (
+`project_id` INTEGER NOT NULL,
+`outcome_code` VARCHAR(10) NOT NULL,
+`outcome_details` VARCHAR(255),
+FOREIGN KEY (`project_id` ) REFERENCES `Projects`(`project_id` ),FOREIGN KEY (`outcome_code` ) REFERENCES `Research_Outcomes`(`outcome_code` )
+)
+
+
+Table 7: Tablename is Project_Staff
+Display name: project staff
+DDL query for Project_Staff:
+CREATE TABLE `Project_Staff` (
+`staff_id` DOUBLE PRIMARY KEY,
+`project_id` INTEGER NOT NULL,
+`role_code` VARCHAR(10) NOT NULL,
+`date_from` DATETIME,
+`date_to` DATETIME,
+`other_details` VARCHAR(255),
+FOREIGN KEY (`project_id` ) REFERENCES `Projects`(`project_id` ),FOREIGN KEY (`role_code` ) REFERENCES `Staff_Roles`(`role_code` )
+)
+
+
+Table 8: Tablename is Projects
+Display name: projects
+DDL query for Projects:
+CREATE TABLE `Projects` (
+`project_id` INTEGER PRIMARY KEY,
+`organisation_id` INTEGER NOT NULL,
+`project_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`organisation_id` ) REFERENCES `Organisations`(`organisation_id` )
+)
+
+
+Table 9: Tablename is Research_Outcomes
+Display name: research outcomes
+DDL query for Research_Outcomes:
+CREATE TABLE `Research_Outcomes` (
+`outcome_code` VARCHAR(10) PRIMARY KEY,
+`outcome_description` VARCHAR(255) NOT NULL
+)
+
+
+Table 10: Tablename is Research_Staff
+Display name: research staff
+DDL query for Research_Staff:
+CREATE TABLE `Research_Staff` (
+`staff_id` INTEGER PRIMARY KEY,
+`employer_organisation_id` INTEGER NOT NULL,
+`staff_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`employer_organisation_id` ) REFERENCES `Organisations`(`organisation_id` )
+)
+
+
+Table 11: Tablename is Staff_Roles
+Display name: staff roles
+DDL query for Staff_Roles:
+CREATE TABLE `Staff_Roles` (
+`role_code` VARCHAR(10) PRIMARY KEY,
+`role_description` VARCHAR(255) NOT NULL
+)
+
+
+Table 12: Tablename is Tasks
+Display name: tasks
+DDL query for Tasks:
+CREATE TABLE `Tasks` (
+`task_id` INTEGER PRIMARY KEY,
+`project_id` INTEGER NOT NULL,
+`task_details` VARCHAR(255) NOT NULL,
+`eg Agree Objectives` VARCHAR(1),
+FOREIGN KEY (`project_id` ) REFERENCES `Projects`(`project_id` )
+)
+

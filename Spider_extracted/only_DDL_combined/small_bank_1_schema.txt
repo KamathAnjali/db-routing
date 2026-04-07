@@ -1,0 +1,40 @@
+This is a Database called small_bank_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. ACCOUNTS (displayed as: accounts)
+
+2. SAVINGS (displayed as: savings)
+
+3. CHECKING (displayed as: checking)
+
+
+Table 1: Tablename is ACCOUNTS
+Display name: accounts
+DDL query for ACCOUNTS:
+CREATE TABLE ACCOUNTS (
+    custid      BIGINT      NOT NULL PRIMARY KEY,
+    name        VARCHAR(64) NOT NULL
+)
+
+
+Table 2: Tablename is SAVINGS
+Display name: savings
+DDL query for SAVINGS:
+CREATE TABLE SAVINGS (
+    custid      BIGINT      NOT NULL PRIMARY KEY,
+    balance        FLOAT       NOT NULL,
+    FOREIGN KEY (custid) REFERENCES ACCOUNTS (custid)
+)
+
+
+Table 3: Tablename is CHECKING
+Display name: checking
+DDL query for CHECKING:
+CREATE TABLE CHECKING (
+    custid      BIGINT      NOT NULL PRIMARY KEY,
+    balance        FLOAT       NOT NULL,
+    FOREIGN KEY (custid) REFERENCES ACCOUNTS (custid)
+)
+

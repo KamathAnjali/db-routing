@@ -1,0 +1,48 @@
+This is a Database called theme_gallery.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. artist
+
+2. exhibition
+
+3. exhibition_record (displayed as: exhibition record)
+
+
+Table 1: Tablename is artist
+DDL query for artist:
+CREATE TABLE "artist" (
+"Artist_ID" int,
+"Name" text,
+"Country" text,
+"Year_Join" int,
+"Age" int,
+PRIMARY KEY ("Artist_ID")
+)
+
+
+Table 2: Tablename is exhibition
+DDL query for exhibition:
+CREATE TABLE "exhibition" (
+"Exhibition_ID" int,
+"Year" int,
+"Theme" text,
+"Artist_ID" int,
+"Ticket_Price" real,
+PRIMARY KEY ("Exhibition_ID"),
+FOREIGN KEY (`Artist_ID`) REFERENCES `artist`(`Artist_ID`)
+)
+
+
+Table 3: Tablename is exhibition_record
+Display name: exhibition record
+DDL query for exhibition_record:
+CREATE TABLE "exhibition_record" (
+"Exhibition_ID" int,
+"Date" text,
+"Attendance" int,
+PRIMARY KEY ("Exhibition_ID","Date"),
+FOREIGN KEY (`Exhibition_ID`) REFERENCES `exhibition`(`Exhibition_ID`)
+)
+

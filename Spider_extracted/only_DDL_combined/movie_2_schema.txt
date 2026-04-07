@@ -1,0 +1,30 @@
+This is a Database called movie_2.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. Movies (displayed as: movies)
+
+2. MovieTheaters (displayed as: movie theaters)
+
+
+Table 1: Tablename is Movies
+Display name: movies
+DDL query for Movies:
+CREATE TABLE Movies (
+  Code INTEGER PRIMARY KEY,
+  Title VARCHAR(255) NOT NULL,
+  Rating VARCHAR(255) 
+)
+
+
+Table 2: Tablename is MovieTheaters
+Display name: movie theaters
+DDL query for MovieTheaters:
+CREATE TABLE MovieTheaters (
+  Code INTEGER PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL,
+  Movie INTEGER,  
+    FOREIGN KEY (Movie) REFERENCES Movies(Code)
+)
+

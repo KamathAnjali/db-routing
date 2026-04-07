@@ -1,0 +1,4 @@
+Database: pilot_record
+aircraft(Aircraft_ID: int,, Order_Year: int,, Manufacturer: text,, Model: text,, Fleet_Series: text,, Powertrain: text,, Fuel_Propulsion: text,) PK[Aircraft_ID]
+pilot(Pilot_ID: int,, Pilot_name: text,, Rank: int,, Age: int,, Nationality: text,, Position: text,, Join_Year: int,, Team: text,) PK[Pilot_ID]
+pilot_record(Record_ID: int,, Pilot_ID: int,, Aircraft_ID: int,, Date: text,) PK[Pilot_ID, Aircraft_ID, Date] FK[Pilot_ID→pilot.Pilot_ID; Aircraft_ID→aircraft.Aircraft_ID]

@@ -1,0 +1,91 @@
+This is a Database called planet_1.
+This Database consists of 6 tables.
+
+These tables are:
+
+1. Employee (displayed as: employee)
+
+2. Planet (displayed as: planet)
+
+3. Shipment (displayed as: shipment)
+
+4. Has_Clearance (displayed as: has clearance)
+
+5. Client (displayed as: client)
+
+6. Package (displayed as: package)
+
+
+Table 1: Tablename is Employee
+Display name: employee
+DDL query for Employee:
+CREATE TABLE Employee (
+  EmployeeID INTEGER PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL,
+  Position VARCHAR(255) NOT NULL,
+  Salary REAL NOT NULL,
+  Remarks VARCHAR(255)
+)
+
+
+Table 2: Tablename is Planet
+Display name: planet
+DDL query for Planet:
+CREATE TABLE Planet (
+  PlanetID INTEGER PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL,
+  Coordinates REAL NOT NULL
+)
+
+
+Table 3: Tablename is Shipment
+Display name: shipment
+DDL query for Shipment:
+CREATE TABLE Shipment (
+  ShipmentID INTEGER PRIMARY KEY,
+  Date DATE,
+  Manager INTEGER NOT NULL,
+  Planet INTEGER NOT NULL,
+  FOREIGN KEY (Manager) REFERENCES Employee(EmployeeID),
+  FOREIGN KEY (Planet) REFERENCES Planet(PlanetID)
+)
+
+
+Table 4: Tablename is Has_Clearance
+Display name: has clearance
+DDL query for Has_Clearance:
+CREATE TABLE Has_Clearance (
+  Employee INTEGER NOT NULL,
+  Planet INTEGER NOT NULL,
+  Level INTEGER NOT NULL,
+  PRIMARY KEY(Employee, Planet),
+  FOREIGN KEY (Employee) REFERENCES Employee(EmployeeID),
+  FOREIGN KEY (Planet) REFERENCES Planet(PlanetID)
+)
+
+
+Table 5: Tablename is Client
+Display name: client
+DDL query for Client:
+CREATE TABLE Client (
+  AccountNumber INTEGER PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL
+)
+
+
+Table 6: Tablename is Package
+Display name: package
+DDL query for Package:
+CREATE TABLE Package (
+  Shipment INTEGER NOT NULL,
+  PackageNumber INTEGER NOT NULL,
+  Contents VARCHAR(255) NOT NULL,
+  Weight REAL NOT NULL,
+  Sender INTEGER NOT NULL,
+  Recipient INTEGER NOT NULL,
+  PRIMARY KEY(Shipment, PackageNumber),
+  FOREIGN KEY (Shipment) REFERENCES Shipment(ShipmentID),
+  FOREIGN KEY (Sender) REFERENCES Client(AccountNumber),
+  FOREIGN KEY (Recipient) REFERENCES Client(AccountNumber)
+)
+

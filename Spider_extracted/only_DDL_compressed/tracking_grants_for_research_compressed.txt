@@ -1,0 +1,13 @@
+Database: tracking_grants_for_research
+Document_Types(document_type_code: VARCHAR(10), document_description: VARCHAR(255))
+Documents(document_id: INTEGER, document_type_code: VARCHAR(10),, grant_id: INTEGER, sent_date: DATETIME, response_received_date: DATETIME, other_details: VARCHAR(255), FOREIGN: KEY (`document_type_code` ), FOREIGN: KEY (`grant_id` ))
+Grants(grant_id: INTEGER, organisation_id: INTEGER, grant_amount: DECIMAL(19,4), grant_start_date: DATETIME, grant_end_date: DATETIME, other_details: VARCHAR(255), FOREIGN: KEY (`organisation_id` ))
+Organisation_Types(organisation_type: VARCHAR(10), organisation_type_description: VARCHAR(255))
+Organisations(organisation_id: INTEGER, organisation_type: VARCHAR(10), organisation_details: VARCHAR(255), FOREIGN: KEY (`organisation_type` ))
+Project_Outcomes(project_id: INTEGER, outcome_code: VARCHAR(10), outcome_details: VARCHAR(255),, FOREIGN: KEY (`project_id` ))
+Project_Staff(staff_id: DOUBLE, project_id: INTEGER, role_code: VARCHAR(10), date_from: DATETIME,, date_to: DATETIME,, other_details: VARCHAR(255),, FOREIGN: KEY (`project_id` ))
+Projects(project_id: INTEGER, organisation_id: INTEGER, project_details: VARCHAR(255), FOREIGN: KEY (`organisation_id` ))
+Research_Outcomes(outcome_code: VARCHAR(10), outcome_description: VARCHAR(255))
+Research_Staff(staff_id: INTEGER, employer_organisation_id: INTEGER, staff_details: VARCHAR(255), FOREIGN: KEY (`employer_organisation_id` ))
+Staff_Roles(role_code: VARCHAR(10), role_description: VARCHAR(255))
+Tasks(task_id: INTEGER, project_id: INTEGER, task_details: VARCHAR(255), eg: Agree, FOREIGN: KEY (`project_id` ))

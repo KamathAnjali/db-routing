@@ -1,0 +1,83 @@
+This is a Database called product_catalog.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. Attribute_Definitions (displayed as: attribute definitions)
+
+2. Catalogs (displayed as: catalogs)
+
+3. Catalog_Structure (displayed as: catalog structure)
+
+4. Catalog_Contents (displayed as: catalog contents)
+
+5. Catalog_Contents_Additional_Attributes (displayed as: catalog contents additional attributes)
+
+
+Table 1: Tablename is Attribute_Definitions
+Display name: attribute definitions
+DDL query for Attribute_Definitions:
+CREATE TABLE `Attribute_Definitions` (
+`attribute_id` INTEGER PRIMARY KEY,
+`attribute_name` VARCHAR(30),
+`attribute_data_type` VARCHAR(10)
+)
+
+
+Table 2: Tablename is Catalogs
+Display name: catalogs
+DDL query for Catalogs:
+CREATE TABLE `Catalogs` (
+`catalog_id` INTEGER PRIMARY KEY,
+`catalog_name` VARCHAR(50),
+`catalog_publisher` VARCHAR(80),
+`date_of_publication` DATETIME,
+`date_of_latest_revision` DATETIME
+)
+
+
+Table 3: Tablename is Catalog_Structure
+Display name: catalog structure
+DDL query for Catalog_Structure:
+CREATE TABLE `Catalog_Structure` (
+`catalog_level_number` INTEGER PRIMARY KEY,
+`catalog_id` INTEGER NOT NULL,
+`catalog_level_name` VARCHAR(50),
+FOREIGN KEY (`catalog_id` ) REFERENCES `Catalogs`(`catalog_id` )
+)
+
+
+Table 4: Tablename is Catalog_Contents
+Display name: catalog contents
+DDL query for Catalog_Contents:
+CREATE TABLE `Catalog_Contents` (
+`catalog_entry_id` INTEGER PRIMARY KEY,
+`catalog_level_number` INTEGER NOT NULL,
+`parent_entry_id` INTEGER,
+`previous_entry_id` INTEGER,
+`next_entry_id` INTEGER,
+`catalog_entry_name` VARCHAR(80),
+`product_stock_number` VARCHAR(50),
+`price_in_dollars` DOUBLE NULL,
+`price_in_euros` DOUBLE NULL,
+`price_in_pounds` DOUBLE NULL,
+`capacity` VARCHAR(20),
+`length` VARCHAR(20),
+`height` VARCHAR(20),
+`width` VARCHAR(20),
+FOREIGN KEY (`catalog_level_number` ) REFERENCES `Catalog_Structure`(`catalog_level_number` )
+)
+
+
+Table 5: Tablename is Catalog_Contents_Additional_Attributes
+Display name: catalog contents additional attributes
+DDL query for Catalog_Contents_Additional_Attributes:
+CREATE TABLE `Catalog_Contents_Additional_Attributes` (
+`catalog_entry_id` INTEGER NOT NULL,
+`catalog_level_number` INTEGER NOT NULL,
+`attribute_id` INTEGER NOT NULL,
+`attribute_value` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`catalog_entry_id` ) REFERENCES `Catalog_Contents`(`catalog_entry_id` ),
+FOREIGN KEY (`catalog_level_number` ) REFERENCES `Catalog_Structure`(`catalog_level_number` )
+)
+

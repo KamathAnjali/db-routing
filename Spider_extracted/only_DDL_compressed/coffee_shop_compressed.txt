@@ -1,0 +1,5 @@
+Database: coffee_shop
+shop(Shop_ID: int,, Address: text,, Num_of_staff: text,, Score: real,, Open_Year: text,) PK[Shop_ID]
+member(Member_ID: int,, Name: text,, Membership_card: text,, Age: int,, Time_of_purchase: int,, Level_of_membership: int,, Address: text,) PK[Member_ID]
+happy_hour(HH_ID: int,, Shop_ID: int,, Month: text,, Num_of_shaff_in_charge: int,, FOREIGN: KEY ("Shop_ID")) PK[HH_ID, Shop_ID, Month]
+happy_hour_member(HH_ID: int,, Member_ID: int,, Total_amount: real,, FOREIGN: KEY ("Member_ID")) PK[HH_ID, Member_ID]

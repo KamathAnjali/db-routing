@@ -1,0 +1,53 @@
+This is a Database called flight_1.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. flight
+
+2. aircraft
+
+3. employee
+
+4. certificate
+
+
+Table 1: Tablename is flight
+DDL query for flight:
+CREATE TABLE flight(
+	flno number(4,0) primary key,
+	origin varchar2(20),
+	destination varchar2(20),
+	distance number(6,0),
+	departure_date date,
+	arrival_date date,
+	price number(7,2),
+    aid number(9,0),
+    foreign key("aid") references `aircraft`("aid"))
+
+
+Table 2: Tablename is aircraft
+DDL query for aircraft:
+CREATE TABLE aircraft(
+	aid number(9,0) primary key,
+	name varchar2(30),
+	distance number(6,0))
+
+
+Table 3: Tablename is employee
+DDL query for employee:
+CREATE TABLE employee(
+	eid number(9,0) primary key,
+	name varchar2(30),
+	salary number(10,2))
+
+
+Table 4: Tablename is certificate
+DDL query for certificate:
+CREATE TABLE certificate(
+	eid number(9,0),
+	aid number(9,0),
+	primary key(eid,aid),
+	foreign key("eid") references `employee`("eid"),
+	foreign key("aid") references `aircraft`("aid"))
+

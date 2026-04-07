@@ -1,0 +1,5 @@
+Database: icfp_1
+Inst(instID: INTEGER,, name: TEXT,, country: TEXT,) PK[instID]
+Authors(authID: INTEGER,, lname: TEXT,, fname: TEXT,) PK[authID]
+Papers(paperID: INTEGER,, title: TEXT,) PK[paperID]
+Authorship(authID: INTEGER,, instID: INTEGER,, paperID: INTEGER,, authOrder: INTEGER,) PK[authID, instID, paperID] FK[authID→Authors.authID; instID→Inst.instID; paperID→Papers.paperID]

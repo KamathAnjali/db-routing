@@ -1,0 +1,321 @@
+This is a Database called cre_Drama_Workshop_Groups.
+This Database consists of 18 tables.
+
+These tables are:
+
+1. Ref_Payment_Methods (displayed as: reference payment methods)
+
+2. Ref_Service_Types (displayed as: reference service types)
+
+3. Addresses (displayed as: addresses)
+
+4. Products (displayed as: products)
+
+5. Marketing_Regions (displayed as: marketing regions)
+
+6. Clients (displayed as: clients)
+
+7. Drama_Workshop_Groups (displayed as: drama workshop groups)
+
+8. Performers (displayed as: performers)
+
+9. Customers (displayed as: customers)
+
+10. Stores (displayed as: stores)
+
+11. Bookings (displayed as: bookings)
+
+12. Performers_in_Bookings (displayed as: performers in bookings)
+
+13. Customer_Orders (displayed as: customer orders)
+
+14. Order_Items (displayed as: order items)
+
+15. Invoices (displayed as: invoices)
+
+16. Services (displayed as: services)
+
+17. Bookings_Services (displayed as: bookings services)
+
+18. Invoice_Items (displayed as: invoice items)
+
+
+Table 1: Tablename is Ref_Payment_Methods
+Display name: reference payment methods
+DDL query for Ref_Payment_Methods:
+CREATE TABLE Ref_Payment_Methods (
+payment_method_code CHAR(10) NOT NULL,
+payment_method_description VARCHAR(80),
+PRIMARY KEY (payment_method_code),
+UNIQUE (payment_method_code)
+)
+
+
+Table 2: Tablename is Ref_Service_Types
+Display name: reference service types
+DDL query for Ref_Service_Types:
+CREATE TABLE Ref_Service_Types (
+Service_Type_Code CHAR(15) NOT NULL,
+Parent_Service_Type_Code CHAR(15),
+Service_Type_Description VARCHAR(255),
+PRIMARY KEY (Service_Type_Code),
+UNIQUE (Service_Type_Code)
+)
+
+
+Table 3: Tablename is Addresses
+Display name: addresses
+DDL query for Addresses:
+CREATE TABLE Addresses (
+Address_ID VARCHAR(100) NOT NULL,
+Line_1 VARCHAR(255),
+Line_2 VARCHAR(255),
+City_Town VARCHAR(255),
+State_County VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Address_ID),
+UNIQUE (Address_ID)
+)
+
+
+Table 4: Tablename is Products
+Display name: products
+DDL query for Products:
+CREATE TABLE Products (
+Product_ID VARCHAR(100) NOT NULL,
+Product_Name VARCHAR(255),
+Product_Price DECIMAL(20,4),
+Product_Description VARCHAR(255),
+Other_Product_Service_Details VARCHAR(255),
+PRIMARY KEY (Product_ID),
+UNIQUE (Product_ID)
+)
+
+
+Table 5: Tablename is Marketing_Regions
+Display name: marketing regions
+DDL query for Marketing_Regions:
+CREATE TABLE Marketing_Regions (
+Marketing_Region_Code CHAR(15) NOT NULL,
+Marketing_Region_Name VARCHAR(255) NOT NULL,
+Marketing_Region_Descriptrion VARCHAR(255) NOT NULL,
+Other_Details VARCHAR(255),
+PRIMARY KEY (Marketing_Region_Code),
+UNIQUE (Marketing_Region_Code)
+)
+
+
+Table 6: Tablename is Clients
+Display name: clients
+DDL query for Clients:
+CREATE TABLE Clients (
+Client_ID INTEGER NOT NULL,
+Address_ID INTEGER NOT NULL,
+Customer_Email_Address VARCHAR(255),
+Customer_Name VARCHAR(255),
+Customer_Phone VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Client_ID),
+UNIQUE (Client_ID),
+FOREIGN KEY (Address_ID) REFERENCES Addresses (Address_ID)
+)
+
+
+Table 7: Tablename is Drama_Workshop_Groups
+Display name: drama workshop groups
+DDL query for Drama_Workshop_Groups:
+CREATE TABLE Drama_Workshop_Groups (
+Workshop_Group_ID INTEGER NOT NULL,
+Address_ID INTEGER NOT NULL,
+Currency_Code CHAR(15) NOT NULL,
+Marketing_Region_Code CHAR(15) NOT NULL,
+Store_Name VARCHAR(255),
+Store_Phone VARCHAR(255),
+Store_Email_Address VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Workshop_Group_ID),
+UNIQUE (Workshop_Group_ID),
+FOREIGN KEY (Address_ID) REFERENCES Addresses (Address_ID)
+)
+
+
+Table 8: Tablename is Performers
+Display name: performers
+DDL query for Performers:
+CREATE TABLE Performers (
+Performer_ID INTEGER NOT NULL,
+Address_ID INTEGER NOT NULL,
+Customer_Name VARCHAR(255),
+Customer_Phone VARCHAR(255),
+Customer_Email_Address VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Performer_ID),
+UNIQUE (Performer_ID),
+FOREIGN KEY (Address_ID) REFERENCES Addresses (Address_ID)
+)
+
+
+Table 9: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE Customers (
+Customer_ID VARCHAR(100) NOT NULL,
+Address_ID INTEGER NOT NULL,
+Customer_Name VARCHAR(255),
+Customer_Phone VARCHAR(255),
+Customer_Email_Address VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Customer_ID),
+UNIQUE (Customer_ID),
+FOREIGN KEY (Address_ID) REFERENCES Addresses (Address_ID)
+)
+
+
+Table 10: Tablename is Stores
+Display name: stores
+DDL query for Stores:
+CREATE TABLE Stores (
+Store_ID VARCHAR(100) NOT NULL,
+Address_ID INTEGER NOT NULL,
+Marketing_Region_Code CHAR(15) NOT NULL,
+Store_Name VARCHAR(255),
+Store_Phone VARCHAR(255),
+Store_Email_Address VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Store_ID),
+UNIQUE (Store_ID),
+FOREIGN KEY (Address_ID) REFERENCES Addresses (Address_ID),
+FOREIGN KEY (Marketing_Region_Code) REFERENCES Marketing_Regions (Marketing_Region_Code)
+)
+
+
+Table 11: Tablename is Bookings
+Display name: bookings
+DDL query for Bookings:
+CREATE TABLE Bookings (
+Booking_ID INTEGER NOT NULL ,
+Customer_ID INTEGER NOT NULL,
+Workshop_Group_ID VARCHAR(100) NOT NULL,
+Status_Code CHAR(15) NOT NULL,
+Store_ID INTEGER NOT NULL,
+Order_Date DATETIME NOT NULL,
+Planned_Delivery_Date DATETIME NOT NULL,
+Actual_Delivery_Date DATETIME NOT NULL,
+Other_Order_Details VARCHAR(255),
+PRIMARY KEY (Booking_ID),
+UNIQUE (Booking_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Clients (Client_ID),
+FOREIGN KEY (Workshop_Group_ID) REFERENCES Drama_Workshop_Groups (Workshop_Group_ID)
+)
+
+
+Table 12: Tablename is Performers_in_Bookings
+Display name: performers in bookings
+DDL query for Performers_in_Bookings:
+CREATE TABLE Performers_in_Bookings (
+Order_ID INTEGER NOT NULL,
+Performer_ID INTEGER NOT NULL,
+PRIMARY KEY (Order_ID, Performer_ID),
+FOREIGN KEY (Performer_ID) REFERENCES Performers (Performer_ID),
+FOREIGN KEY (Order_ID) REFERENCES Bookings (Booking_ID)
+)
+
+
+Table 13: Tablename is Customer_Orders
+Display name: customer orders
+DDL query for Customer_Orders:
+CREATE TABLE Customer_Orders (
+Order_ID INTEGER NOT NULL ,
+Customer_ID INTEGER NOT NULL,
+Store_ID INTEGER NOT NULL,
+Order_Date DATETIME NOT NULL,
+Planned_Delivery_Date DATETIME NOT NULL,
+Actual_Delivery_Date DATETIME NOT NULL,
+Other_Order_Details VARCHAR(255),
+PRIMARY KEY (Order_ID),
+UNIQUE (Order_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID),
+FOREIGN KEY (Store_ID) REFERENCES Stores (Store_ID)
+)
+
+
+Table 14: Tablename is Order_Items
+Display name: order items
+DDL query for Order_Items:
+CREATE TABLE Order_Items (
+Order_Item_ID INTEGER NOT NULL ,
+Order_ID INTEGER NOT NULL,
+Product_ID INTEGER NOT NULL,
+Order_Quantity VARCHAR(288),
+Other_Item_Details VARCHAR(255),
+PRIMARY KEY (Order_Item_ID),
+FOREIGN KEY (Order_ID) REFERENCES Customer_Orders (Order_ID),
+FOREIGN KEY (Product_ID) REFERENCES Products (Product_ID)
+)
+
+
+Table 15: Tablename is Invoices
+Display name: invoices
+DDL query for Invoices:
+CREATE TABLE Invoices (
+Invoice_ID INTEGER NOT NULL,
+Order_ID INTEGER NOT NULL,
+payment_method_code CHAR(15),
+Product_ID INTEGER NOT NULL,
+Order_Quantity VARCHAR(288),
+Other_Item_Details VARCHAR(255),
+Order_Item_ID INTEGER NOT NULL,
+PRIMARY KEY (Invoice_ID),
+FOREIGN KEY (Order_ID) REFERENCES Customer_Orders (Order_ID),
+FOREIGN KEY (Order_ID) REFERENCES Bookings (Booking_ID),
+FOREIGN KEY (payment_method_code) REFERENCES Ref_Payment_Methods (payment_method_code)
+)
+
+
+Table 16: Tablename is Services
+Display name: services
+DDL query for Services:
+CREATE TABLE Services (
+Service_ID INTEGER NOT NULL,
+Service_Type_Code CHAR(15),
+Workshop_Group_ID INTEGER NOT NULL,
+Product_Description VARCHAR(255),
+Product_Name VARCHAR(255),
+Product_Price DECIMAL(20,4),
+Other_Product_Service_Details VARCHAR(255),
+PRIMARY KEY (Service_ID),
+UNIQUE (Service_ID),
+FOREIGN KEY (Workshop_Group_ID) REFERENCES Drama_Workshop_Groups (Workshop_Group_ID),
+FOREIGN KEY (Service_Type_Code) REFERENCES Ref_Service_Types (Service_Type_Code)
+)
+
+
+Table 17: Tablename is Bookings_Services
+Display name: bookings services
+DDL query for Bookings_Services:
+CREATE TABLE Bookings_Services (
+Order_ID INTEGER NOT NULL,
+Product_ID INTEGER NOT NULL,
+PRIMARY KEY (Order_ID, Product_ID),
+FOREIGN KEY (Order_ID) REFERENCES Bookings (Booking_ID),
+FOREIGN KEY (Product_ID) REFERENCES Services (Service_ID)
+)
+
+
+Table 18: Tablename is Invoice_Items
+Display name: invoice items
+DDL query for Invoice_Items:
+CREATE TABLE Invoice_Items (
+Invoice_Item_ID INTEGER NOT NULL ,
+Invoice_ID INTEGER NOT NULL,
+Order_ID INTEGER NOT NULL,
+Order_Item_ID INTEGER NOT NULL,
+Product_ID INTEGER NOT NULL,
+Order_Quantity INTEGER,
+Other_Item_Details VARCHAR(255),
+PRIMARY KEY (Invoice_Item_ID),
+FOREIGN KEY (Order_Item_ID) REFERENCES Order_Items (Order_Item_ID),
+FOREIGN KEY (Invoice_ID) REFERENCES Invoices (Invoice_ID),
+FOREIGN KEY (Order_ID, Product_ID) REFERENCES Bookings_Services (Order_ID,Product_ID)
+)
+

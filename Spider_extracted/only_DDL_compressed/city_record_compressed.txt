@@ -1,0 +1,5 @@
+Database: city_record
+city(City_ID: int,, City: text,, Hanzi: text,, Hanyu_Pinyin: text,, Regional_Population: int,, GDP: real,) PK[City_ID]
+match(Match_ID: int,, Date: text,, Venue: text,, Score: text,, Result: text,, Competition: text,) PK[Match_ID]
+temperature(City_ID: int,, Jan: real,, Feb: real,, Mar: real,, Apr: real,, Jun: real,, Jul: real,, Aug: real,, Sep: real,, Oct: real,, Nov: real,, Dec: real,) PK[City_ID] FK[City_ID→city.City_ID]
+hosting_city(Year: int,, Match_ID: int,, Host_City: text,) PK[Year] FK[Host_City→city.City_ID; Match_ID→match.Match_ID]

@@ -1,0 +1,46 @@
+This is a Database called club_leader.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. member
+
+2. club
+
+3. club_leader (displayed as: club leader)
+
+
+Table 1: Tablename is member
+DDL query for member:
+CREATE TABLE "member" (
+"Member_ID" int,
+"Name" text,
+"Nationality" text,
+"Age" int,
+PRIMARY KEY ("Member_ID")
+)
+
+
+Table 2: Tablename is club
+DDL query for club:
+CREATE TABLE "club" (
+"Club_ID" int,
+"Overall_Ranking" int,
+"Team_Leader" text,
+"Club_Name" text,
+PRIMARY KEY ("Club_ID")
+)
+
+
+Table 3: Tablename is club_leader
+Display name: club leader
+DDL query for club_leader:
+CREATE TABLE "club_leader" (
+"Club_ID" int,
+"Member_ID" int,
+"Year_Join" text,
+PRIMARY KEY ("Club_ID","Member_ID"),
+FOREIGN KEY ("Club_ID") REFERENCES `club`("Club_ID"),
+FOREIGN KEY ("Member_ID") REFERENCES `member`("Member_ID")
+)
+

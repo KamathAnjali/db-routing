@@ -1,0 +1,17 @@
+Database: imdb
+actor(aid: int,, gender: text,, name: text,, nationality: text,, birth_city: text,, birth_year: int,) PK[aid]
+copyright(id: int,, msid: int,, cid: int,) PK[id]
+cast(id: int,, msid: int,, aid: int,, role: int,, foreign: key("aid"), foreign: key("msid")) PK[id]
+genre(gid: int,, genre: text,) PK[gid]
+classification(id: int,, msid: int,, gid: int,, foreign: key("gid"), foreign: key("msid")) PK[id]
+company(id: int,, name: text,, country_code: text,) PK[id]
+director(did: int,, gender: text,, name: text,, nationality: text,, birth_city: text,, birth_year: int,) PK[did]
+producer(pid: int,, gender: text,, name: text,, nationality: text,, birth_city: text,, birth_year: int,) PK[pid]
+directed_by(id: int,, msid: int,, did: int,, foreign: key("msid"), foreign: key("did")) PK[id]
+keyword(id: int,, keyword: text,) PK[id]
+made_by(id: int,, msid: int,, pid: int,, foreign: key("msid"), foreign: key("pid")) PK[id]
+movie(mid: int,, title: text,, release_year: int,, title_aka: text,, budget: text,) PK[mid]
+tags(id: int,, msid: int,, kid: int,, foreign: key("msid"), foreign: key("kid")) PK[id]
+tv_series(sid: int,, title: text,, release_year: int,, num_of_seasons: int,, num_of_episodes: int,, title_aka: text,, budget: text,) PK[sid]
+writer(wid: int,, gender: text,, name: int,, nationality: int,, num_of_episodes: int,, birth_city: text,, birth_year: int,) PK[wid]
+written_by(id: int,, msid: int,, wid: int,, foreign: key("msid"), foreign: key("wid"))

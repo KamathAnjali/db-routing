@@ -1,0 +1,5 @@
+Database: epinions_1
+item(i_id: integer, title: varchar(20)) PK[i_id]
+review(a_id: integer, u_id: integer, i_id: integer, rating: integer, rank: integer) FK[u_id→useracct.u_id; i_id→item.i_id]
+useracct(u_id: integer, name: varchar(128)) PK[u_id]
+trust(source_u_id: integer)

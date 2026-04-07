@@ -1,0 +1,100 @@
+This is a Database called music_2.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Songs (displayed as: songs)
+
+2. Albums (displayed as: albums)
+
+3. Band (displayed as: band)
+
+4. Instruments (displayed as: instruments)
+
+5. Performance (displayed as: performance)
+
+6. Tracklists (displayed as: track lists)
+
+7. Vocals (displayed as: vocals)
+
+
+Table 1: Tablename is Songs
+Display name: songs
+DDL query for Songs:
+CREATE TABLE "Songs" ( 
+	"SongId" INTEGER PRIMARY KEY, 
+	"Title" TEXT 
+)
+
+
+Table 2: Tablename is Albums
+Display name: albums
+DDL query for Albums:
+CREATE TABLE "Albums" ( 
+	"AId" INTEGER PRIMARY KEY, 
+	"Title" TEXT, 
+	"Year" INTEGER, 
+	"Label" TEXT, 
+	"Type" TEXT )
+
+
+Table 3: Tablename is Band
+Display name: band
+DDL query for Band:
+CREATE TABLE "Band" ( 
+	"Id" INTEGER PRIMARY KEY, 
+	"Firstname" TEXT, 
+	"Lastname" TEXT )
+
+
+Table 4: Tablename is Instruments
+Display name: instruments
+DDL query for Instruments:
+CREATE TABLE "Instruments" ( 
+	"SongId" INTEGER, 
+	"BandmateId" INTEGER, 
+	"Instrument" TEXT ,
+	PRIMARY KEY(SongId, BandmateId, Instrument),
+	FOREIGN KEY (SongId) REFERENCES Songs(SongId),
+	FOREIGN KEY (BandmateId) REFERENCES Band(Id)
+)
+
+
+Table 5: Tablename is Performance
+Display name: performance
+DDL query for Performance:
+CREATE TABLE "Performance" ( 
+	"SongId" INTEGER, 
+	"Bandmate" INTEGER, 
+	"StagePosition" TEXT,
+	PRIMARY KEY(SongId, Bandmate),
+	FOREIGN KEY (SongId) REFERENCES Songs(SongId),
+	FOREIGN KEY (Bandmate) REFERENCES Band(Id)
+)
+
+
+Table 6: Tablename is Tracklists
+Display name: track lists
+DDL query for Tracklists:
+CREATE TABLE "Tracklists" ( 
+	"AlbumId" INTEGER, 
+	"Position" INTEGER, 
+	"SongId" INTEGER ,
+	PRIMARY KEY(AlbumId, Position),
+	FOREIGN KEY (SongId) REFERENCES Songs(SongId),
+	FOREIGN KEY (AlbumId) REFERENCES Albums(AId)
+)
+
+
+Table 7: Tablename is Vocals
+Display name: vocals
+DDL query for Vocals:
+CREATE TABLE "Vocals" ( 
+	"SongId" INTEGER, 
+	"Bandmate" INTEGER, 
+	"Type" TEXT,
+	PRIMARY KEY(SongId, Bandmate),
+	FOREIGN KEY (SongId) REFERENCES Songs(SongId),
+	FOREIGN KEY (Bandmate) REFERENCES Band(Id)
+)
+

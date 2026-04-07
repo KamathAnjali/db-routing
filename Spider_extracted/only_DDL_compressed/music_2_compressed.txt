@@ -1,0 +1,8 @@
+Database: music_2
+Songs(SongId: INTEGER, Title: TEXT)
+Albums(AId: INTEGER, Title: TEXT,, Year: INTEGER,, Label: TEXT,, Type: TEXT)
+Band(Id: INTEGER, Firstname: TEXT,, Lastname: TEXT)
+Instruments(SongId: INTEGER,, BandmateId: INTEGER,, Instrument: TEXT) PK[SongId, BandmateId, Instrument] FK[SongId→Songs.SongId; BandmateId→Band.Id]
+Performance(SongId: INTEGER,, Bandmate: INTEGER,, StagePosition: TEXT,) PK[SongId, Bandmate] FK[SongId→Songs.SongId; Bandmate→Band.Id]
+Tracklists(AlbumId: INTEGER,, Position: INTEGER,, SongId: INTEGER) PK[AlbumId, Position] FK[SongId→Songs.SongId; AlbumId→Albums.AId]
+Vocals(SongId: INTEGER,, Bandmate: INTEGER,, Type: TEXT,) PK[SongId, Bandmate] FK[SongId→Songs.SongId; Bandmate→Band.Id]

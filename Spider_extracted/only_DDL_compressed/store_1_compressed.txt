@@ -1,0 +1,6 @@
+Database: store_1
+artists(id: INTEGER, name: VARCHAR(120))
+sqlite_sequence()
+genres(id: INTEGER, name: VARCHAR(120))
+media_types(id: INTEGER, name: VARCHAR(120))
+playlists(id: INTEGER, name: VARCHAR(120))

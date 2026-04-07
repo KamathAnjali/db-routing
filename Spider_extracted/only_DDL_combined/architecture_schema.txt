@@ -1,0 +1,51 @@
+This is a Database called architecture.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. architect
+
+2. bridge
+
+3. mill
+
+
+Table 1: Tablename is architect
+DDL query for architect:
+CREATE TABLE "architect" (
+"id" text,
+"name" text,
+"nationality" text,
+"gender" text,
+primary key("id")
+)
+
+
+Table 2: Tablename is bridge
+DDL query for bridge:
+CREATE TABLE "bridge" (
+"architect_id" int,
+"id" int,
+"name" text,
+"location" text,
+"length_meters" real,
+"length_feet" real,
+primary key("id"),
+foreign key ("architect_id" ) references `architect`("id")
+)
+
+
+Table 3: Tablename is mill
+DDL query for mill:
+CREATE TABLE "mill" (
+"architect_id" int,
+"id" int,
+"location" text,
+"name" text,
+"type" text,
+"built_year" int,
+"notes" text,
+primary key ("id"),
+foreign key ("architect_id" ) references `architect`("id")
+)
+

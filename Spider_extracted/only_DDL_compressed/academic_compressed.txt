@@ -1,0 +1,16 @@
+Database: academic
+author(aid: int,, homepage: text,, name: text,, oid: int,) PK[aid]
+conference(cid: int,, homepage: text,, name: text,) PK[cid]
+domain(did: int,, name: text,) PK[did]
+domain_author(aid: int,, did: int,, foreign: key("aid"), foreign: key("did")) PK[did, aid]
+domain_conference(cid: int,, did: int,, foreign: key("cid"), foreign: key("did")) PK[did, cid]
+journal(homepage: text,, jid: int,, name: text,) PK[jid]
+domain_journal(did: int,, jid: int,, foreign: key("jid"), foreign: key("did")) PK[did, jid]
+keyword(keyword: text,, kid: int,) PK[kid]
+domain_keyword(did: int,, kid: int,, foreign: key("kid"), foreign: key("did")) PK[did, kid]
+publication(abstract: text,, cid: text,, citation_num: int,, jid: int,, pid: int,, reference_num: int,, title: text,, year: int,, foreign: key("jid"), foreign: key("cid")) PK[pid]
+domain_publication(did: int,, pid: int,, foreign: key("pid"), foreign: key("did")) PK[did, pid]
+organization(continent: text,, homepage: text,, name: text,, oid: int,) PK[oid]
+publication_keyword(pid: int,, kid: int,, foreign: key("pid"), foreign: key("kid")) PK[kid, pid]
+writes(aid: int,, pid: int,, foreign: key("pid"), foreign: key("aid")) PK[aid, pid]
+cite(cited: int,, citing: int,, foreign: key("cited"), foreign: key("citing"))

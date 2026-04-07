@@ -1,0 +1,3 @@
+Database: car_road_race
+driver(Driver_ID: int,, Driver_Name: text,, Entrant: text,, Constructor: text,, Chassis: text,, Engine: text,, Age: int,) PK[Driver_ID]
+race(Road: int,, Driver_ID: int,, Race_Name: text,, Pole_Position: text,, Fastest_Lap: text,, Winning_driver: text,, Winning_team: text,, Report: text,) PK[Road] FK[Driver_ID→driver.Driver_ID]

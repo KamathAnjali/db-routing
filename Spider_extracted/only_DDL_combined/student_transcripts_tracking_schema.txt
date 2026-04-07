@@ -1,0 +1,171 @@
+This is a Database called student_transcripts_tracking.
+This Database consists of 11 tables.
+
+These tables are:
+
+1. Addresses (displayed as: addresses)
+
+2. Courses (displayed as: courses)
+
+3. Departments (displayed as: departments)
+
+4. Degree_Programs (displayed as: degree programs)
+
+5. Sections (displayed as: sections)
+
+6. Semesters (displayed as: semesters)
+
+7. Students (displayed as: students)
+
+8. Student_Enrolment (displayed as: student enrolment)
+
+9. Student_Enrolment_Courses (displayed as: student enrolment courses)
+
+10. Transcripts (displayed as: transcripts)
+
+11. Transcript_Contents (displayed as: transcript contents)
+
+
+Table 1: Tablename is Addresses
+Display name: addresses
+DDL query for Addresses:
+CREATE TABLE `Addresses` (
+`address_id` INTEGER PRIMARY KEY,
+`line_1` VARCHAR(255),
+`line_2` VARCHAR(255),
+`line_3` VARCHAR(255),
+`city` VARCHAR(255),
+`zip_postcode` VARCHAR(20),
+`state_province_county` VARCHAR(255),
+`country` VARCHAR(255),
+`other_address_details` VARCHAR(255)
+)
+
+
+Table 2: Tablename is Courses
+Display name: courses
+DDL query for Courses:
+CREATE TABLE `Courses` (
+`course_id` INTEGER PRIMARY KEY,
+`course_name` VARCHAR(255),
+`course_description` VARCHAR(255),
+`other_details` VARCHAR(255)
+)
+
+
+Table 3: Tablename is Departments
+Display name: departments
+DDL query for Departments:
+CREATE TABLE `Departments` (
+`department_id` INTEGER PRIMARY KEY,
+`department_name` VARCHAR(255),
+`department_description` VARCHAR(255),
+`other_details` VARCHAR(255)
+)
+
+
+Table 4: Tablename is Degree_Programs
+Display name: degree programs
+DDL query for Degree_Programs:
+CREATE TABLE `Degree_Programs` (
+`degree_program_id` INTEGER PRIMARY KEY,
+`department_id` INTEGER NOT NULL,
+`degree_summary_name` VARCHAR(255),
+`degree_summary_description` VARCHAR(255),
+`other_details` VARCHAR(255),
+FOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )
+)
+
+
+Table 5: Tablename is Sections
+Display name: sections
+DDL query for Sections:
+CREATE TABLE `Sections` (
+`section_id` INTEGER PRIMARY KEY,
+`course_id` INTEGER NOT NULL,
+`section_name` VARCHAR(255),
+`section_description` VARCHAR(255),
+`other_details` VARCHAR(255),
+FOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )
+)
+
+
+Table 6: Tablename is Semesters
+Display name: semesters
+DDL query for Semesters:
+CREATE TABLE `Semesters` (
+`semester_id` INTEGER PRIMARY KEY,
+`semester_name` VARCHAR(255),
+`semester_description` VARCHAR(255),
+`other_details` VARCHAR(255)
+)
+
+
+Table 7: Tablename is Students
+Display name: students
+DDL query for Students:
+CREATE TABLE `Students` (
+`student_id` INTEGER PRIMARY KEY,
+`current_address_id` INTEGER NOT NULL,
+`permanent_address_id` INTEGER NOT NULL,
+`first_name` VARCHAR(80),
+`middle_name` VARCHAR(40),
+`last_name` VARCHAR(40),
+`cell_mobile_number` VARCHAR(40),
+`email_address` VARCHAR(40),
+`ssn` VARCHAR(40),
+`date_first_registered` DATETIME,
+`date_left` DATETIME,
+`other_student_details` VARCHAR(255),
+FOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),
+FOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )
+)
+
+
+Table 8: Tablename is Student_Enrolment
+Display name: student enrolment
+DDL query for Student_Enrolment:
+CREATE TABLE `Student_Enrolment` (
+`student_enrolment_id` INTEGER PRIMARY KEY,
+`degree_program_id` INTEGER NOT NULL,
+`semester_id` INTEGER NOT NULL,
+`student_id` INTEGER NOT NULL,
+`other_details` VARCHAR(255),
+FOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),
+FOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),
+FOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )
+)
+
+
+Table 9: Tablename is Student_Enrolment_Courses
+Display name: student enrolment courses
+DDL query for Student_Enrolment_Courses:
+CREATE TABLE `Student_Enrolment_Courses` (
+`student_course_id` INTEGER PRIMARY KEY,
+`course_id` INTEGER NOT NULL,
+`student_enrolment_id` INTEGER NOT NULL,
+FOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),
+FOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )
+)
+
+
+Table 10: Tablename is Transcripts
+Display name: transcripts
+DDL query for Transcripts:
+CREATE TABLE `Transcripts` (
+`transcript_id` INTEGER PRIMARY KEY,
+`transcript_date` DATETIME,
+`other_details` VARCHAR(255)
+)
+
+
+Table 11: Tablename is Transcript_Contents
+Display name: transcript contents
+DDL query for Transcript_Contents:
+CREATE TABLE `Transcript_Contents` (
+`student_course_id` INTEGER NOT NULL,
+`transcript_id` INTEGER NOT NULL,
+FOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),
+FOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )
+)
+

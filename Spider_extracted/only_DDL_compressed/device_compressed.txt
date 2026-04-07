@@ -1,0 +1,4 @@
+Database: device
+device(Device_ID: int,, Device: text,, Carrier: text,, Package_Version: text,, Applications: text,, Software_Platform: text,) PK[Device_ID]
+shop(Shop_ID: int,, Shop_Name: text,, Location: text,, Open_Date: text,, Open_Year: int,) PK[Shop_ID]
+stock(Shop_ID: int,, Device_ID: int,, Quantity: int,) PK[Shop_ID, Device_ID] FK[Shop_ID→shop.Shop_ID; Device_ID→device.Device_ID]

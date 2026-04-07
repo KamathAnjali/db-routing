@@ -1,0 +1,64 @@
+This is a Database called shop_membership.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. member
+
+2. branch
+
+3. membership_register_branch (displayed as: membership register branch)
+
+4. purchase
+
+
+Table 1: Tablename is member
+DDL query for member:
+CREATE TABLE "member" (
+"Member_ID" int,
+"Card_Number" text,
+"Name" text,
+"Hometown" text,
+"Level" int,
+PRIMARY KEY ("Member_ID")
+)
+
+
+Table 2: Tablename is branch
+DDL query for branch:
+CREATE TABLE "branch" (
+"Branch_ID" int,
+"Name" text,
+"Open_year" text,
+"Address_road" text,
+"City" text,
+"membership_amount" text,
+PRIMARY KEY ("Branch_ID")
+)
+
+
+Table 3: Tablename is membership_register_branch
+Display name: membership register branch
+DDL query for membership_register_branch:
+CREATE TABLE "membership_register_branch" (
+"Member_ID" int,
+"Branch_ID" text,
+"Register_Year" text,
+PRIMARY KEY ("Member_ID"),
+FOREIGN KEY ("Member_ID") REFERENCES "member"("Member_ID"),
+FOREIGN KEY ("Branch_ID") REFERENCES "branch"("Branch_ID")
+)
+
+
+Table 4: Tablename is purchase
+DDL query for purchase:
+CREATE TABLE "purchase" (
+"Member_ID" int,
+"Branch_ID" text,
+"Year" text,
+"Total_pounds" real,
+PRIMARY KEY ("Member_ID","Branch_ID","Year"),
+FOREIGN KEY ("Member_ID") REFERENCES "member"("Member_ID"),
+FOREIGN KEY ("Branch_ID") REFERENCES "branch"("Branch_ID")
+)
+

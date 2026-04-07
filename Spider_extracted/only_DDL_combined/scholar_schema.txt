@@ -1,0 +1,131 @@
+This is a Database called scholar.
+This Database consists of 10 tables.
+
+These tables are:
+
+1. venue
+
+2. author
+
+3. dataset
+
+4. journal
+
+5. keyphrase (displayed as: key phrase)
+
+6. paper
+
+7. cite
+
+8. paperDataset (displayed as: paper dataset)
+
+9. paperKeyphrase (displayed as: paper key phrase)
+
+10. writes
+
+
+Table 1: Tablename is venue
+DDL query for venue:
+CREATE TABLE `venue` (
+  `venueId` integer NOT NULL
+,  `venueName` varchar(100) DEFAULT NULL
+,  PRIMARY KEY (`venueId`)
+)
+
+
+Table 2: Tablename is author
+DDL query for author:
+CREATE TABLE `author` (
+  `authorId` integer NOT NULL
+,  `authorName` varchar(50) DEFAULT NULL
+,  PRIMARY KEY (`authorId`)
+)
+
+
+Table 3: Tablename is dataset
+DDL query for dataset:
+CREATE TABLE `dataset` (
+  `datasetId` integer NOT NULL
+,  `datasetName` varchar(50) DEFAULT NULL
+,  PRIMARY KEY (`datasetId`)
+)
+
+
+Table 4: Tablename is journal
+DDL query for journal:
+CREATE TABLE `journal` (
+  `journalId` integer NOT NULL
+,  `journalName` varchar(100) DEFAULT NULL
+,  PRIMARY KEY (`journalId`)
+)
+
+
+Table 5: Tablename is keyphrase
+Display name: key phrase
+DDL query for keyphrase:
+CREATE TABLE `keyphrase` (
+  `keyphraseId` integer NOT NULL
+,  `keyphraseName` varchar(50) DEFAULT NULL
+,  PRIMARY KEY (`keyphraseId`)
+)
+
+
+Table 6: Tablename is paper
+DDL query for paper:
+CREATE TABLE `paper` (
+  `paperId` integer NOT NULL
+,  `title` varchar(300) DEFAULT NULL
+,  `venueId` integer DEFAULT NULL
+,  `year` integer DEFAULT NULL
+,  `numCiting` integer DEFAULT NULL
+,  `numCitedBy` integer DEFAULT NULL
+,  `journalId` integer DEFAULT NULL
+,  PRIMARY KEY (`paperId`)
+,  FOREIGN KEY(`journalId`) REFERENCES `journal`(`journalId`)
+,  FOREIGN KEY(`venueId`) REFERENCES `venue`(`venueId`)
+)
+
+
+Table 7: Tablename is cite
+DDL query for cite:
+CREATE TABLE `cite` (
+  `citingPaperId` integer NOT NULL
+,  `citedPaperId` integer NOT NULL
+,  PRIMARY KEY (`citingPaperId`,`citedPaperId`)
+,  FOREIGN KEY(`citedpaperId`) REFERENCES `paper`(`paperId`)
+,  FOREIGN KEY(`citingpaperId`) REFERENCES `paper`(`paperId`)
+)
+
+
+Table 8: Tablename is paperDataset
+Display name: paper dataset
+DDL query for paperDataset:
+CREATE TABLE `paperDataset` (
+  `paperId` integer DEFAULT NULL
+,  `datasetId` integer DEFAULT NULL
+,  PRIMARY KEY (`datasetId`, `paperId`)
+)
+
+
+Table 9: Tablename is paperKeyphrase
+Display name: paper key phrase
+DDL query for paperKeyphrase:
+CREATE TABLE `paperKeyphrase` (
+  `paperId` integer DEFAULT NULL
+,  `keyphraseId` integer DEFAULT NULL
+,  PRIMARY KEY (`keyphraseId`,`paperId`)
+,  FOREIGN KEY(`paperId`) REFERENCES `paper`(`paperId`)
+,  FOREIGN KEY(`keyphraseId`) REFERENCES `keyphrase`(`keyphraseId`)
+)
+
+
+Table 10: Tablename is writes
+DDL query for writes:
+CREATE TABLE `writes` (
+  `paperId` integer DEFAULT NULL
+,  `authorId` integer DEFAULT NULL
+,  PRIMARY KEY (`paperId`,`authorId`)
+,  FOREIGN KEY(`paperId`) REFERENCES `paper`(`paperId`)
+,  FOREIGN KEY(`authorId`) REFERENCES `author`(`authorId`)
+)
+

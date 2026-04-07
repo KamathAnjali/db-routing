@@ -1,0 +1,47 @@
+This is a Database called manufacturer.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. manufacturer
+
+2. furniture
+
+3. furniture_manufacte (displayed as: furniture manufacte)
+
+
+Table 1: Tablename is manufacturer
+DDL query for manufacturer:
+CREATE TABLE "manufacturer" (
+    "Manufacturer_ID" int,
+    "Open_Year" real,
+    "Name" text,
+    "Num_of_Factories" int,
+    "Num_of_Shops" int,
+    PRIMARY KEY ("Manufacturer_ID")
+)
+
+
+Table 2: Tablename is furniture
+DDL query for furniture:
+CREATE TABLE "furniture" (
+    "Furniture_ID" int,
+    "Name" text,
+    "Num_of_Component" int,
+    "Market_Rate" real,
+    PRIMARY KEY ("Furniture_ID")
+)
+
+
+Table 3: Tablename is furniture_manufacte
+Display name: furniture manufacte
+DDL query for furniture_manufacte:
+CREATE TABLE "furniture_manufacte" (
+    "Manufacturer_ID" int,
+    "Furniture_ID" int,
+    "Price_in_Dollar" real,
+    PRIMARY KEY ("Manufacturer_ID","Furniture_ID"),
+    FOREIGN KEY ("Manufacturer_ID") REFERENCES `manufacturer`("Manufacturer_ID"),
+    FOREIGN KEY ("Furniture_ID") REFERENCES `furniture`("Furniture_ID")
+)
+

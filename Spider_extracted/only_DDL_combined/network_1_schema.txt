@@ -1,0 +1,44 @@
+This is a Database called network_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Highschooler (displayed as: high schooler)
+
+2. Friend (displayed as: friend)
+
+3. Likes (displayed as: likes)
+
+
+Table 1: Tablename is Highschooler
+Display name: high schooler
+DDL query for Highschooler:
+CREATE TABLE Highschooler(
+	ID int primary key, 
+	name text, 
+	grade int)
+
+
+Table 2: Tablename is Friend
+Display name: friend
+DDL query for Friend:
+CREATE TABLE Friend(
+	student_id int, 
+	friend_id int,
+	primary key (student_id,friend_id),
+	foreign key(student_id) references Highschooler(ID),
+	foreign key (friend_id) references Highschooler(ID)
+)
+
+
+Table 3: Tablename is Likes
+Display name: likes
+DDL query for Likes:
+CREATE TABLE Likes(
+	student_id int, 
+	liked_id int,
+	primary key (student_id, liked_id),
+        foreign key (liked_id) references Highschooler(ID),
+        foreign key (student_id) references Highschooler(ID)
+)
+

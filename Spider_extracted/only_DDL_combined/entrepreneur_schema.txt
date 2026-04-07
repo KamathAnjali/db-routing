@@ -1,0 +1,34 @@
+This is a Database called entrepreneur.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. entrepreneur
+
+2. people
+
+
+Table 1: Tablename is entrepreneur
+DDL query for entrepreneur:
+CREATE TABLE "entrepreneur" (
+"Entrepreneur_ID" int,
+"People_ID" int,
+"Company" text,
+"Money_Requested" real,
+"Investor" text,
+PRIMARY KEY ("Entrepreneur_ID"),
+FOREIGN KEY ("People_ID") REFERENCES "people"("People_ID")
+)
+
+
+Table 2: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"Name" text,
+"Height" real,
+"Weight" real,
+"Date_of_Birth" text,
+PRIMARY KEY ("People_ID")
+)
+

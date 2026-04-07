@@ -1,0 +1,58 @@
+This is a Database called local_govt_in_alabama.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Services (displayed as: services)
+
+2. Participants (displayed as: participants)
+
+3. Events (displayed as: events)
+
+4. Participants_in_Events (displayed as: participants in events)
+
+
+Table 1: Tablename is Services
+Display name: services
+DDL query for Services:
+CREATE TABLE Services (
+Service_ID INTEGER NOT NULL,
+Service_Type_Code CHAR(15) NOT NULL,
+PRIMARY KEY (Service_ID)
+)
+
+
+Table 2: Tablename is Participants
+Display name: participants
+DDL query for Participants:
+CREATE TABLE Participants (
+Participant_ID INTEGER NOT NULL,
+Participant_Type_Code CHAR(15) NOT NULL,
+Participant_Details VARCHAR(255),
+PRIMARY KEY (Participant_ID)
+)
+
+
+Table 3: Tablename is Events
+Display name: events
+DDL query for Events:
+CREATE TABLE Events (
+Event_ID INTEGER NOT NULL,
+Service_ID INTEGER NOT NULL,
+Event_Details VARCHAR(255),
+PRIMARY KEY (Event_ID),
+FOREIGN KEY (Service_ID) REFERENCES Services (Service_ID)
+)
+
+
+Table 4: Tablename is Participants_in_Events
+Display name: participants in events
+DDL query for Participants_in_Events:
+CREATE TABLE Participants_in_Events (
+Event_ID INTEGER NOT NULL,
+Participant_ID INTEGER NOT NULL,
+PRIMARY KEY (Event_ID, Participant_ID),
+FOREIGN KEY (Participant_ID) REFERENCES Participants (Participant_ID),
+FOREIGN KEY (Event_ID) REFERENCES Events (Event_ID)
+)
+

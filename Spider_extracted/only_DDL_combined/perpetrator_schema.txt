@@ -1,0 +1,37 @@
+This is a Database called perpetrator.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. perpetrator
+
+2. people
+
+
+Table 1: Tablename is perpetrator
+DDL query for perpetrator:
+CREATE TABLE "perpetrator" (
+"Perpetrator_ID" int,
+"People_ID" int,
+"Date" text,
+"Year" real,
+"Location" text,
+"Country" text,
+"Killed" int,
+"Injured" int,
+PRIMARY KEY ("Perpetrator_ID"),
+FOREIGN KEY ("People_ID") REFERENCES "people"("People_ID")
+)
+
+
+Table 2: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"Name" text,
+"Height" real,
+"Weight" real,
+"Home Town" text,
+PRIMARY KEY ("People_ID")
+)
+

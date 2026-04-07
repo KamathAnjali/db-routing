@@ -1,0 +1,37 @@
+This is a Database called musical.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. musical
+
+2. actor
+
+
+Table 1: Tablename is musical
+DDL query for musical:
+CREATE TABLE "musical" (
+"Musical_ID" int,
+"Name" text,
+"Year" int,
+"Award" text,
+"Category" text,
+"Nominee" text,
+"Result" text,
+PRIMARY KEY ("Musical_ID")
+)
+
+
+Table 2: Tablename is actor
+DDL query for actor:
+CREATE TABLE "actor" (
+"Actor_ID" int,
+"Name" text,
+"Musical_ID" int,
+"Character" text,
+"Duration" text,
+"age" int,
+PRIMARY KEY ("Actor_ID"),
+FOREIGN KEY ("Musical_ID") REFERENCES "actor"("Actor_ID")
+)
+

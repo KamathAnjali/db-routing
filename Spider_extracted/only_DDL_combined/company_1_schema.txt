@@ -1,0 +1,80 @@
+This is a Database called company_1.
+This Database consists of 6 tables.
+
+These tables are:
+
+1. works_on (displayed as: works on)
+
+2. employee
+
+3. department
+
+4. project
+
+5. dependent
+
+6. dept_locations (displayed as: department locations)
+
+
+Table 1: Tablename is works_on
+Display name: works on
+DDL query for works_on:
+CREATE TABLE works_on(
+Essn INTEGER,
+Pno INTEGER,
+Hours REAL,
+PRIMARY KEY(Essn, Pno))
+
+
+Table 2: Tablename is employee
+DDL query for employee:
+CREATE TABLE employee(
+Fname TEXT,
+Minit TEXT,
+Lname TEXT,
+Ssn INTEGER PRIMARY KEY,
+Bdate TEXT,
+Address TEXT,
+Sex TEXT,
+Salary INTEGER,
+Super_ssn INTEGER, 
+Dno INTEGER)
+
+
+Table 3: Tablename is department
+DDL query for department:
+CREATE TABLE department(
+Dname TEXT,
+Dnumber INTEGER PRIMARY KEY,
+Mgr_ssn INTEGER,
+Mgr_start_date TEXT)
+
+
+Table 4: Tablename is project
+DDL query for project:
+CREATE TABLE project(
+Pname Text,
+Pnumber INTEGER PRIMARY KEY,
+Plocation TEXT,
+Dnum INTEGER)
+
+
+Table 5: Tablename is dependent
+DDL query for dependent:
+CREATE TABLE dependent(
+Essn INTEGER,
+Dependent_name TEXT,
+Sex TEXT,
+Bdate TEXT,
+Relationship TEXT,
+PRIMARY KEY(Essn, Dependent_name))
+
+
+Table 6: Tablename is dept_locations
+Display name: department locations
+DDL query for dept_locations:
+CREATE TABLE dept_locations(
+Dnumber INTEGER,
+Dlocation TEXT,
+PRIMARY KEY(Dnumber, Dlocation))
+

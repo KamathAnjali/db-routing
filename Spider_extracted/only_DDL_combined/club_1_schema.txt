@@ -1,0 +1,49 @@
+This is a Database called club_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Student (displayed as: student)
+
+2. Club (displayed as: club)
+
+3. Member_of_club (displayed as: member of club)
+
+
+Table 1: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+         StuID        INTEGER PRIMARY KEY,
+         LName        VARCHAR(12),
+         Fname        VARCHAR(12),
+         Age      INTEGER,
+         Sex      VARCHAR(1),
+         Major        INTEGER,
+         Advisor      INTEGER,
+         city_code    VARCHAR(3)
+  )
+
+
+Table 2: Tablename is Club
+Display name: club
+DDL query for Club:
+CREATE TABLE Club (
+       ClubID           INTEGER PRIMARY KEY,
+       ClubName         VARCHAR(40),
+       ClubDesc         VARCHAR(1024),
+       ClubLocation VARCHAR(40)
+)
+
+
+Table 3: Tablename is Member_of_club
+Display name: member of club
+DDL query for Member_of_club:
+CREATE TABLE Member_of_club (
+       StuID            INTEGER,
+       ClubID           INTEGER,
+       Position     VARCHAR(40),
+       FOREIGN KEY(StuID) REFERENCES Student(StuID),
+       FOREIGN KEY(ClubID) REFERENCES Club(ClubID)
+)
+

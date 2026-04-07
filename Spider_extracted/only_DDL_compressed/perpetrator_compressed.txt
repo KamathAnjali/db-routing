@@ -1,0 +1,3 @@
+Database: perpetrator
+perpetrator(Perpetrator_ID: int,, People_ID: int,, Date: text,, Year: real,, Location: text,, Country: text,, Killed: int,, Injured: int,, FOREIGN: KEY ("People_ID")) PK[Perpetrator_ID]
+people(People_ID: int,, Name: text,, Height: real,, Weight: real,, Home: Town") PK[People_ID]

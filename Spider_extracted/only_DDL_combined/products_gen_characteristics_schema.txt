@@ -1,0 +1,86 @@
+This is a Database called products_gen_characteristics.
+This Database consists of 6 tables.
+
+These tables are:
+
+1. Ref_Characteristic_Types (displayed as: reference characteristic types)
+
+2. Ref_Colors (displayed as: reference colors)
+
+3. Ref_Product_Categories (displayed as: reference product categories)
+
+4. Characteristics (displayed as: characteristics)
+
+5. Products (displayed as: products)
+
+6. Product_Characteristics (displayed as: product characteristics)
+
+
+Table 1: Tablename is Ref_Characteristic_Types
+Display name: reference characteristic types
+DDL query for Ref_Characteristic_Types:
+CREATE TABLE `Ref_Characteristic_Types` (
+`characteristic_type_code` VARCHAR(15) PRIMARY KEY,
+`characteristic_type_description` VARCHAR(80)
+)
+
+
+Table 2: Tablename is Ref_Colors
+Display name: reference colors
+DDL query for Ref_Colors:
+CREATE TABLE `Ref_Colors` (
+`color_code` VARCHAR(15) PRIMARY KEY,
+`color_description` VARCHAR(80)
+)
+
+
+Table 3: Tablename is Ref_Product_Categories
+Display name: reference product categories
+DDL query for Ref_Product_Categories:
+CREATE TABLE `Ref_Product_Categories` (
+`product_category_code` VARCHAR(15) PRIMARY KEY,
+`product_category_description` VARCHAR(80),
+`unit_of_measure` VARCHAR(20)
+)
+
+
+Table 4: Tablename is Characteristics
+Display name: characteristics
+DDL query for Characteristics:
+CREATE TABLE `Characteristics` (
+`characteristic_id` INTEGER PRIMARY KEY,
+`characteristic_type_code` VARCHAR(15) NOT NULL,
+`characteristic_data_type` VARCHAR(10),
+`characteristic_name` VARCHAR(80),
+`other_characteristic_details` VARCHAR(255),
+FOREIGN KEY (`characteristic_type_code` ) REFERENCES `Ref_Characteristic_Types`(`characteristic_type_code` )
+)
+
+
+Table 5: Tablename is Products
+Display name: products
+DDL query for Products:
+CREATE TABLE `Products` (
+`product_id` INTEGER PRIMARY KEY,
+`color_code` VARCHAR(15) NOT NULL,
+`product_category_code` VARCHAR(15) NOT NULL,
+`product_name` VARCHAR(80),
+`typical_buying_price` VARCHAR(20),
+`typical_selling_price` VARCHAR(20),
+`product_description` VARCHAR(255),
+`other_product_details` VARCHAR(255),
+FOREIGN KEY (`product_category_code` ) REFERENCES `Ref_Product_Categories`(`product_category_code` ),FOREIGN KEY (`color_code` ) REFERENCES `Ref_Colors`(`color_code` )
+)
+
+
+Table 6: Tablename is Product_Characteristics
+Display name: product characteristics
+DDL query for Product_Characteristics:
+CREATE TABLE `Product_Characteristics` (
+`product_id` INTEGER NOT NULL,
+`characteristic_id` INTEGER NOT NULL,
+`product_characteristic_value` VARCHAR(50),
+FOREIGN KEY (`characteristic_id` ) REFERENCES `Characteristics`(`characteristic_id` ),
+FOREIGN KEY (`product_id` ) REFERENCES `Products`(`product_id` )
+)
+

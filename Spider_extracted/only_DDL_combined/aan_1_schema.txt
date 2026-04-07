@@ -1,0 +1,75 @@
+This is a Database called aan_1.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. Affiliation (displayed as: affiliation)
+
+2. Author (displayed as: author)
+
+3. Author_list (displayed as: author list)
+
+4. Citation (displayed as: citation)
+
+5. Paper (displayed as: paper)
+
+
+Table 1: Tablename is Affiliation
+Display name: affiliation
+DDL query for Affiliation:
+CREATE TABLE `Affiliation` (
+  `affiliation_id` integer NOT NULL
+,  `name` varchar(255) DEFAULT NULL
+,  `address` varchar(255) DEFAULT NULL
+,  PRIMARY KEY (`affiliation_id`)
+)
+
+
+Table 2: Tablename is Author
+Display name: author
+DDL query for Author:
+CREATE TABLE `Author` (
+  `author_id` integer NOT NULL
+,  `name` varchar(255) DEFAULT NULL
+,  `email` varchar(255) DEFAULT NULL
+,  PRIMARY KEY (`author_id`)
+)
+
+
+Table 3: Tablename is Author_list
+Display name: author list
+DDL query for Author_list:
+CREATE TABLE `Author_list` (
+  `paper_id` varchar(25) NOT NULL
+,  `author_id` integer NOT NULL
+,  `affiliation_id` integer DEFAULT NULL
+,  PRIMARY KEY (`paper_id`,`author_id`)
+,  CONSTRAINT `Author_list_ibfk_1` FOREIGN KEY (`paper_id`) REFERENCES `Paper` (`paper_id`)
+,  CONSTRAINT `Author_list_ibfk_2` FOREIGN KEY (`author_id`) REFERENCES `Author` (`author_id`)
+,  CONSTRAINT `Author_list_ibfk_3` FOREIGN KEY (`affiliation_id`) REFERENCES `Affiliation` (`affiliation_id`)
+)
+
+
+Table 4: Tablename is Citation
+Display name: citation
+DDL query for Citation:
+CREATE TABLE `Citation` (
+  `paper_id` varchar(25) NOT NULL
+,  `cited_paper_id` varchar(25) NOT NULL
+,  PRIMARY KEY (`paper_id`,`cited_paper_id`)
+,  CONSTRAINT `Citation_ibfk_1` FOREIGN KEY (`paper_id`) REFERENCES `Paper` (`paper_id`)
+,  CONSTRAINT `Citation_ibfk_2` FOREIGN KEY (`cited_paper_id`) REFERENCES `Paper` (`paper_id`)
+)
+
+
+Table 5: Tablename is Paper
+Display name: paper
+DDL query for Paper:
+CREATE TABLE `Paper` (
+  `paper_id` varchar(25) NOT NULL
+,  `title` varchar(255) DEFAULT NULL
+,  `venue` varchar(255) DEFAULT NULL
+,  `year` integer DEFAULT NULL
+,  PRIMARY KEY (`paper_id`)
+)
+

@@ -1,0 +1,8 @@
+Database: geo
+state(state_name: text, population: integer, area: double, country_name: varchar(3), capital: text, density: double) PK[state_name]
+city(city_name: text, population: integer, country_name: varchar(3), state_name: text) PK[city_name, state_name] FK[state_name→state.state_name]
+border_info(state_name: text, border: text) PK[border, state_name] FK[state_name→state.state_name; border→state.state_name]
+highlow(state_name: text, highest_elevation: text, lowest_point: text, highest_point: text, lowest_elevation: text) PK[state_name] FK[state_name→state.state_name]
+lake(lake_name: text, area: double, country_name: varchar(3), state_name: text)
+mountain(mountain_name: text, mountain_altitude: integer, country_name: varchar(3), state_name: text) PK[mountain_name, state_name] FK[state_name→state.state_name]
+river(river_name: text, length: integer, country_name: varchar(3), traverse: text) PK[river_name] FK[traverse→state.state_name]

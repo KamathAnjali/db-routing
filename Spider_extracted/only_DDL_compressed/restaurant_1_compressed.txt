@@ -1,0 +1,6 @@
+Database: restaurant_1
+Student(StuID: INTEGER, LName: VARCHAR(12),, Fname: VARCHAR(12),, Age: INTEGER,, Sex: VARCHAR(1),, Major: INTEGER,, Advisor: INTEGER,, city_code: VARCHAR(3))
+Restaurant(ResID: INTEGER, ResName: VARCHAR(100),, Address: VARCHAR(100),, Rating: INTEGER)
+Type_Of_Restaurant(ResID: INTEGER,, ResTypeID: INTEGER,) FK[ResID→Restaurant.ResID; ResTypeID→Restaurant_Type.ResTypeID]
+Restaurant_Type(ResTypeID: INTEGER, ResTypeName: VARCHAR(40),, ResTypeDescription: VARCHAR(100))
+Visits_Restaurant(StuID: INTEGER,, ResID: INTEGER,, Time: TIMESTAMP,, Spent: FLOAT,) FK[StuID→Student.StuID; ResID→Restaurant.ResID]

@@ -1,0 +1,4 @@
+Database: performance_attendance
+member(Member_ID: text,, Name: text,, Nationality: text,, Role: text,) PK[Member_ID]
+performance(Performance_ID: real,, Date: text,, Host: text,, Location: text,, Attendance: int,) PK[Performance_ID]
+member_attendance(Member_ID: int,, Performance_ID: int,, Num_of_Pieces: int,, FOREIGN: KEY ("Member_ID"), FOREIGN: KEY ("Performance_ID")) PK[Member_ID, Performance_ID]

@@ -1,0 +1,36 @@
+This is a Database called poker_player.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. poker_player (displayed as: poker player)
+
+2. people
+
+
+Table 1: Tablename is poker_player
+Display name: poker player
+DDL query for poker_player:
+CREATE TABLE "poker_player" (
+"Poker_Player_ID" int,
+"People_ID" int,
+"Final_Table_Made" real,
+"Best_Finish" real,
+"Money_Rank" real,
+"Earnings" real,
+PRIMARY KEY ("Poker_Player_ID"),
+FOREIGN KEY ("People_ID") REFERENCES `people`("People_ID")
+)
+
+
+Table 2: Tablename is people
+DDL query for people:
+CREATE TABLE "people" (
+"People_ID" int,
+"Nationality" text,
+"Name" text,
+"Birth_Date" text,
+"Height" real,
+PRIMARY KEY ("People_ID")
+)
+

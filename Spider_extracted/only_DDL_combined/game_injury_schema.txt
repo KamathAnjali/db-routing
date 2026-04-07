@@ -1,0 +1,55 @@
+This is a Database called game_injury.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. stadium
+
+2. game
+
+3. injury_accident (displayed as: injury accident)
+
+
+Table 1: Tablename is stadium
+DDL query for stadium:
+CREATE TABLE "stadium" (
+"id" int,
+"name" text,
+"Home_Games" int,
+"Average_Attendance" real,
+"Total_Attendance" real,
+"Capacity_Percentage" real,
+primary key ("id")
+)
+
+
+Table 2: Tablename is game
+DDL query for game:
+CREATE TABLE "game" (
+"stadium_id" int,
+"id" int,
+"Season" int,
+"Date" text,
+"Home_team" text,
+"Away_team" text,
+"Score" text,
+"Competition" text,
+primary key ("id"),
+foreign key ("stadium_id") references `stadium`("id")
+)
+
+
+Table 3: Tablename is injury_accident
+Display name: injury accident
+DDL query for injury_accident:
+CREATE TABLE "injury_accident" (
+"game_id" int,
+"id" int,
+"Player" text,
+"Injury" text,
+"Number_of_matches" text,
+"Source" text,
+primary key ("id"),
+foreign key ("game_id") references `game`("id")
+)
+

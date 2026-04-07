@@ -1,0 +1,3 @@
+Database: election_representative
+election(Election_ID: int,, Representative_ID: int,, Date: text,, Votes: real,, Vote_Percent: real,, Seats: real,, Place: real,, FOREIGN: KEY ("Representative_ID")) PK[Election_ID]
+representative(Representative_ID: int,, Name: text,, State: text,, Party: text,, Lifespan: text,) PK[Representative_ID]

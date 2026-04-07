@@ -1,0 +1,52 @@
+This is a Database called battle_death.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. battle
+
+2. ship
+
+3. death
+
+
+Table 1: Tablename is battle
+DDL query for battle:
+CREATE TABLE "battle" (
+"id" int,
+"name" text,
+"date" text,
+"bulgarian_commander" text,
+"latin_commander" text,
+"result" text,
+primary key("id")
+)
+
+
+Table 2: Tablename is ship
+DDL query for ship:
+CREATE TABLE "ship" (
+"lost_in_battle" int,
+"id" int,
+"name" text,
+"tonnage" text,
+"ship_type" text,
+"location" text,
+"disposition_of_ship" text,
+primary key("id"),
+foreign key (`lost_in_battle`) references `battle`("id") 
+)
+
+
+Table 3: Tablename is death
+DDL query for death:
+CREATE TABLE "death" (
+"caused_by_ship_id" int,
+"id" int,
+"note" text,
+"killed" int,
+"injured" int,
+primary key("id"),
+foreign key ("caused_by_ship_id") references `ship`("id") 
+)
+

@@ -1,0 +1,64 @@
+This is a Database called coffee_shop.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. shop
+
+2. member
+
+3. happy_hour (displayed as: happy hour)
+
+4. happy_hour_member (displayed as: happy hour member)
+
+
+Table 1: Tablename is shop
+DDL query for shop:
+CREATE TABLE "shop" (
+"Shop_ID" int,
+"Address" text,
+"Num_of_staff" text,
+"Score" real,
+"Open_Year" text,
+PRIMARY KEY ("Shop_ID")
+)
+
+
+Table 2: Tablename is member
+DDL query for member:
+CREATE TABLE "member" (
+"Member_ID" int,
+"Name" text,
+"Membership_card" text,
+"Age" int,
+"Time_of_purchase" int,
+"Level_of_membership" int,
+"Address" text,
+PRIMARY KEY ("Member_ID")
+)
+
+
+Table 3: Tablename is happy_hour
+Display name: happy hour
+DDL query for happy_hour:
+CREATE TABLE "happy_hour" (
+"HH_ID" int,
+"Shop_ID" int,
+"Month" text,
+"Num_of_shaff_in_charge" int,
+PRIMARY KEY ("HH_ID","Shop_ID","Month"),
+FOREIGN KEY ("Shop_ID") REFERENCES `shop`("Shop_ID")
+)
+
+
+Table 4: Tablename is happy_hour_member
+Display name: happy hour member
+DDL query for happy_hour_member:
+CREATE TABLE "happy_hour_member" (
+"HH_ID" int,
+"Member_ID" int,
+"Total_amount" real,
+PRIMARY KEY ("HH_ID","Member_ID"),
+FOREIGN KEY ("Member_ID") REFERENCES `member`("Member_ID")
+)
+

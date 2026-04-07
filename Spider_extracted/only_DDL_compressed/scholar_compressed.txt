@@ -1,0 +1,11 @@
+Database: scholar
+venue(venueId: integer, venueName: varchar(100)) PK[venueId]
+author(authorId: integer, authorName: varchar(50)) PK[authorId]
+dataset(datasetId: integer, datasetName: varchar(50)) PK[datasetId]
+journal(journalId: integer, journalName: varchar(100)) PK[journalId]
+keyphrase(keyphraseId: integer, keyphraseName: varchar(50)) PK[keyphraseId]
+paper(paperId: integer, title: varchar(300), venueId: integer, year: integer, numCiting: integer, numCitedBy: integer, journalId: integer) PK[paperId] FK[journalId→journal.journalId; venueId→venue.venueId]
+cite(citingPaperId: integer, citedPaperId: integer) PK[citingPaperId, citedPaperId] FK[citedpaperId→paper.paperId; citingpaperId→paper.paperId]
+paperDataset(paperId: integer, datasetId: integer) PK[datasetId, paperId]
+paperKeyphrase(paperId: integer, keyphraseId: integer) PK[keyphraseId, paperId] FK[paperId→paper.paperId; keyphraseId→keyphrase.keyphraseId]
+writes(paperId: integer, authorId: integer) PK[paperId, authorId] FK[paperId→paper.paperId; authorId→author.authorId]

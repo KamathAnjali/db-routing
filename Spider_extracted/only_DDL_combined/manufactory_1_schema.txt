@@ -1,0 +1,35 @@
+This is a Database called manufactory_1.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. Manufacturers (displayed as: manufacturers)
+
+2. Products (displayed as: products)
+
+
+Table 1: Tablename is Manufacturers
+Display name: manufacturers
+DDL query for Manufacturers:
+CREATE TABLE Manufacturers (
+  Code INTEGER,
+  Name VARCHAR(255) NOT NULL,
+  Headquarter VARCHAR(255) NOT NULL,
+  Founder VARCHAR(255) NOT NULL,
+  Revenue REAL,
+  PRIMARY KEY (Code)   
+)
+
+
+Table 2: Tablename is Products
+Display name: products
+DDL query for Products:
+CREATE TABLE Products (
+  Code INTEGER,
+  Name VARCHAR(255) NOT NULL ,
+  Price DECIMAL NOT NULL ,
+  Manufacturer INTEGER NOT NULL,
+  PRIMARY KEY (Code), 
+  FOREIGN KEY (Manufacturer) REFERENCES Manufacturers(Code)
+)
+

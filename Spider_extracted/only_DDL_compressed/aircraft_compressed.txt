@@ -1,0 +1,6 @@
+Database: aircraft
+pilot(Pilot_Id: int(11), Name: varchar(50), Age: int(11)) PK[Pilot_Id]
+aircraft(Aircraft_ID: int(11), Aircraft: varchar(50), Description: varchar(50), Max_Gross_Weight: varchar(50), Total_disk_area: varchar(50), Max_disk_Loading: varchar(50)) PK[Aircraft_ID]
+match(Round: real,, Location: text,, Country: text,, Date: text,, Fastest_Qualifying: text,, Winning_Pilot: text,, Winning_Aircraft: text,) PK[Round] FK[Winning_Aircraft→aircraft.Aircraft_ID; Winning_Pilot→pilot.Pilot_Id]
+airport(Airport_ID: int,, Airport_Name: text,, Total_Passengers: real,, International_Passengers: real,, Domestic_Passengers: real,, Transit_Passengers: real,, Aircraft_Movements: real,, Freight_Metric_Tonnes: real,) PK[Airport_ID]
+airport_aircraft(ID: int,, Airport_ID: int,, Aircraft_ID: int,, FOREIGN: KEY ("Airport_ID"), FOREIGN: KEY ("Aircraft_ID")) PK[Airport_ID, Aircraft_ID]

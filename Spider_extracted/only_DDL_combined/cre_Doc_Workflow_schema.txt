@@ -1,0 +1,134 @@
+This is a Database called cre_Doc_Workflow.
+This Database consists of 9 tables.
+
+These tables are:
+
+1. Staff (displayed as: staff)
+
+2. Ref_Staff_Roles (displayed as: reference staff roles)
+
+3. Process_Outcomes (displayed as: process outcomes)
+
+4. Process_Status (displayed as: process status)
+
+5. Authors (displayed as: authors)
+
+6. Documents (displayed as: documents)
+
+7. Business_Processes (displayed as: business processes)
+
+8. Documents_Processes (displayed as: documents processes)
+
+9. Staff_in_Processes (displayed as: staff in processes)
+
+
+Table 1: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE Staff (
+staff_id INTEGER NOT NULL,
+staff_details VARCHAR(255) NOT NULL,
+PRIMARY KEY (staff_id)
+)
+
+
+Table 2: Tablename is Ref_Staff_Roles
+Display name: reference staff roles
+DDL query for Ref_Staff_Roles:
+CREATE TABLE Ref_Staff_Roles (
+staff_role_code CHAR(15) NOT NULL,
+staff_role_description VARCHAR(255) NOT NULL,
+PRIMARY KEY (staff_role_code)
+)
+
+
+Table 3: Tablename is Process_Outcomes
+Display name: process outcomes
+DDL query for Process_Outcomes:
+CREATE TABLE Process_Outcomes (
+process_outcome_code CHAR(15) NOT NULL,
+process_outcome_description VARCHAR(255) NOT NULL,
+PRIMARY KEY (process_outcome_code)
+)
+
+
+Table 4: Tablename is Process_Status
+Display name: process status
+DDL query for Process_Status:
+CREATE TABLE Process_Status (
+process_status_code CHAR(15) NOT NULL,
+process_status_description VARCHAR(255) NOT NULL,
+PRIMARY KEY (process_status_code)
+)
+
+
+Table 5: Tablename is Authors
+Display name: authors
+DDL query for Authors:
+CREATE TABLE Authors (
+author_name VARCHAR(255) NOT NULL,
+other_details VARCHAR(255) NOT NULL,
+PRIMARY KEY (author_name)
+)
+
+
+Table 6: Tablename is Documents
+Display name: documents
+DDL query for Documents:
+CREATE TABLE Documents (
+document_id INTEGER NOT NULL,
+author_name VARCHAR(255) NOT NULL,
+document_name VARCHAR(255) NOT NULL,
+document_description VARCHAR(255) NOT NULL,
+other_details VARCHAR(255),
+PRIMARY KEY (document_id),
+FOREIGN KEY (author_name) REFERENCES Authors (author_name)
+)
+
+
+Table 7: Tablename is Business_Processes
+Display name: business processes
+DDL query for Business_Processes:
+CREATE TABLE Business_Processes (
+process_id INTEGER NOT NULL,
+next_process_id INTEGER,
+process_name VARCHAR(255) NOT NULL,
+process_description VARCHAR(255) NOT NULL,
+other_details VARCHAR(255),
+PRIMARY KEY (process_id)
+)
+
+
+Table 8: Tablename is Documents_Processes
+Display name: documents processes
+DDL query for Documents_Processes:
+CREATE TABLE Documents_Processes (
+document_id INTEGER NOT NULL,
+process_id INTEGER NOT NULL,
+process_outcome_code CHAR(15) NOT NULL,
+process_status_code CHAR(15) NOT NULL,
+PRIMARY KEY (document_id, process_id),
+FOREIGN KEY (document_id) REFERENCES Documents (document_id),
+FOREIGN KEY (process_id) REFERENCES Business_Processes (process_id),
+FOREIGN KEY (process_outcome_code) REFERENCES Process_Outcomes (process_outcome_code),
+FOREIGN KEY (process_status_code) REFERENCES Process_Status (process_status_code)
+)
+
+
+Table 9: Tablename is Staff_in_Processes
+Display name: staff in processes
+DDL query for Staff_in_Processes:
+CREATE TABLE Staff_in_Processes (
+document_id INTEGER NOT NULL,
+process_id INTEGER NOT NULL,
+staff_id INTEGER NOT NULL,
+staff_role_code CHAR(15) NOT NULL,
+date_from DATETIME,
+date_to DATETIME,
+other_details VARCHAR(255),
+PRIMARY KEY (document_id, process_id, staff_id),
+FOREIGN KEY (staff_id) REFERENCES Staff (staff_id),
+FOREIGN KEY (document_id, process_id) REFERENCES Documents_Processes (document_id,process_id),
+FOREIGN KEY (staff_role_code) REFERENCES Ref_Staff_Roles (staff_role_code)
+)
+

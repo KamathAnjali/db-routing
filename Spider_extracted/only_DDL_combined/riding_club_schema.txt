@@ -1,0 +1,83 @@
+This is a Database called riding_club.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. player
+
+2. club
+
+3. coach
+
+4. player_coach (displayed as: player coach)
+
+5. match_result (displayed as: match result)
+
+
+Table 1: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+"Player_ID" int,
+"Sponsor_name" text,
+"Player_name" text,
+"Gender" text,
+"Residence" text,
+"Occupation" text,
+"Votes" int,
+"Rank" text,
+PRIMARY KEY ("Player_ID")
+)
+
+
+Table 2: Tablename is club
+DDL query for club:
+CREATE TABLE "club" (
+"Club_ID" int,
+"Club_name" text,
+"Region" text,
+"Start_year" int,
+PRIMARY KEY ("Club_ID")
+)
+
+
+Table 3: Tablename is coach
+DDL query for coach:
+CREATE TABLE "coach" (
+"Coach_ID" int,
+"Coach_name" text,
+"Gender" text,
+"Club_ID" int,
+"Rank" int,
+PRIMARY KEY ("Coach_ID"),
+FOREIGN KEY (`Club_ID`) REFERENCES `club`(`Club_ID`)
+)
+
+
+Table 4: Tablename is player_coach
+Display name: player coach
+DDL query for player_coach:
+CREATE TABLE "player_coach" (
+"Player_ID" int,
+"Coach_ID" int,
+"Starting_year" int,
+PRIMARY KEY ("Player_ID","Coach_ID"),
+FOREIGN KEY (`Player_ID`) REFERENCES `player`(`Player_ID`),
+FOREIGN KEY (`Coach_ID`) REFERENCES `coach`(`Coach_ID`)
+)
+
+
+Table 5: Tablename is match_result
+Display name: match result
+DDL query for match_result:
+CREATE TABLE "match_result" (
+"Rank" int,
+"Club_ID" int,
+"Gold" int,
+"Big_Silver" int,
+"Small_Silver" int,
+"Bronze" int,
+"Points" int,
+PRIMARY KEY ("Rank","Club_ID"),
+FOREIGN KEY (`Club_ID`) REFERENCES `club`(`Club_ID`)
+)
+

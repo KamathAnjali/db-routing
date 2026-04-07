@@ -1,0 +1,4 @@
+Database: debate
+people(People_ID: int,, District: text,, Name: text,, Party: text,, Age: int,) PK[People_ID]
+debate(Debate_ID: int,, Date: text,, Venue: text,, Num_of_Audience: int,) PK[Debate_ID]
+debate_people(Debate_ID: int,, Affirmative: int,, Negative: int,, If_Affirmative_Win: bool,, FOREIGN: KEY ("Debate_ID"), FOREIGN: KEY ("Affirmative"), FOREIGN: KEY ("Negative")) PK[Debate_ID, Affirmative, Negative]

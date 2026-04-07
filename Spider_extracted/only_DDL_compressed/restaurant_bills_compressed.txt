@@ -1,0 +1,4 @@
+Database: restaurant_bills
+customer(Customer_ID: int,, Name: text,, Nationality: text,, Card_Credit: real,, Level_of_Membership: int,) PK[Customer_ID]
+branch(Branch_ID: int,, Manager: text,, Years_opened: int,, Location_of_office: text,) PK[Branch_ID]
+customer_order(Customer_ID: int,, Branch_ID: int,, Dish_Name: text,, Quantity: int,, FOREIGN: KEY ("Customer_ID"), FOREIGN: KEY ("Branch_ID")) PK[Customer_ID, Branch_ID, Dish_Name]

@@ -1,0 +1,125 @@
+This is a Database called sakila_1.
+This Database consists of 16 tables.
+
+These tables are:
+
+1. actor
+
+2. address
+
+3. category
+
+4. city
+
+5. country
+
+6. customer
+
+7. film
+
+8. film_actor (displayed as: film actor)
+
+9. film_category (displayed as: film category)
+
+10. film_text (displayed as: film text)
+
+11. inventory
+
+12. language
+
+13. payment
+
+14. rental
+
+15. staff
+
+16. store
+
+
+Table 1: Tablename is actor
+DDL query for actor:
+
+
+
+Table 2: Tablename is address
+DDL query for address:
+
+
+
+Table 3: Tablename is category
+DDL query for category:
+
+
+
+Table 4: Tablename is city
+DDL query for city:
+
+
+
+Table 5: Tablename is country
+DDL query for country:
+
+
+
+Table 6: Tablename is customer
+DDL query for customer:
+
+
+
+Table 7: Tablename is film
+DDL query for film:
+
+
+
+Table 8: Tablename is film_actor
+Display name: film actor
+DDL query for film_actor:
+
+
+
+Table 9: Tablename is film_category
+Display name: film category
+DDL query for film_category:
+
+
+
+Table 10: Tablename is film_text
+Display name: film text
+DDL query for film_text:
+CREATE TABLE film_text (
+  film_id SMALLINT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  PRIMARY KEY  (film_id)
+)
+
+
+Table 11: Tablename is inventory
+DDL query for inventory:
+
+
+
+Table 12: Tablename is language
+DDL query for language:
+
+
+
+Table 13: Tablename is payment
+DDL query for payment:
+
+
+
+Table 14: Tablename is rental
+DDL query for rental:
+
+
+
+Table 15: Tablename is staff
+DDL query for staff:
+
+
+
+Table 16: Tablename is store
+DDL query for store:
+
+

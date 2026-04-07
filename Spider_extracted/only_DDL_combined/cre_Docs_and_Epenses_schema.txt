@@ -1,0 +1,103 @@
+This is a Database called cre_Docs_and_Epenses.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Ref_Document_Types (displayed as: reference document types)
+
+2. Ref_Budget_Codes (displayed as: reference budget codes)
+
+3. Projects (displayed as: projects)
+
+4. Documents (displayed as: documents)
+
+5. Statements (displayed as: statements)
+
+6. Documents_with_Expenses (displayed as: documents with expenses)
+
+7. Accounts (displayed as: accounts)
+
+
+Table 1: Tablename is Ref_Document_Types
+Display name: reference document types
+DDL query for Ref_Document_Types:
+CREATE TABLE Ref_Document_Types (
+Document_Type_Code CHAR(15) NOT NULL,
+Document_Type_Name VARCHAR(255) NOT NULL,
+Document_Type_Description VARCHAR(255) NOT NULL,
+PRIMARY KEY (Document_Type_Code)
+)
+
+
+Table 2: Tablename is Ref_Budget_Codes
+Display name: reference budget codes
+DDL query for Ref_Budget_Codes:
+CREATE TABLE Ref_Budget_Codes (
+Budget_Type_Code CHAR(15) NOT NULL,
+Budget_Type_Description VARCHAR(255) NOT NULL,
+PRIMARY KEY (Budget_Type_Code)
+)
+
+
+Table 3: Tablename is Projects
+Display name: projects
+DDL query for Projects:
+CREATE TABLE Projects (
+Project_ID INTEGER NOT NULL,
+Project_Details VARCHAR(255),
+PRIMARY KEY (Project_ID)
+)
+
+
+Table 4: Tablename is Documents
+Display name: documents
+DDL query for Documents:
+CREATE TABLE Documents (
+Document_ID INTEGER NOT NULL,
+Document_Type_Code CHAR(15) NOT NULL,
+Project_ID INTEGER NOT NULL,
+Document_Date DATETIME,
+Document_Name VARCHAR(255),
+Document_Description VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Document_ID),
+FOREIGN KEY (Document_Type_Code) REFERENCES Ref_Document_Types (Document_Type_Code),
+FOREIGN KEY (Project_ID) REFERENCES Projects (Project_ID)
+)
+
+
+Table 5: Tablename is Statements
+Display name: statements
+DDL query for Statements:
+CREATE TABLE Statements (
+Statement_ID INTEGER NOT NULL,
+Statement_Details VARCHAR(255),
+PRIMARY KEY (Statement_ID),
+FOREIGN KEY (Statement_ID) REFERENCES Documents (Document_ID)
+)
+
+
+Table 6: Tablename is Documents_with_Expenses
+Display name: documents with expenses
+DDL query for Documents_with_Expenses:
+CREATE TABLE Documents_with_Expenses (
+Document_ID INTEGER NOT NULL,
+Budget_Type_Code CHAR(15) NOT NULL,
+Document_Details VARCHAR(255),
+PRIMARY KEY (Document_ID),
+FOREIGN KEY (Budget_Type_Code) REFERENCES Ref_Budget_Codes (Budget_Type_Code),
+FOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)
+)
+
+
+Table 7: Tablename is Accounts
+Display name: accounts
+DDL query for Accounts:
+CREATE TABLE Accounts (
+Account_ID INTEGER NOT NULL,
+Statement_ID INTEGER NOT NULL,
+Account_Details VARCHAR(255),
+PRIMARY KEY (Account_ID),
+FOREIGN KEY (Statement_ID) REFERENCES Statements (Statement_ID)
+)
+

@@ -1,0 +1,8 @@
+Database: online_exams
+Students(Student_ID: INTEGER, First_Name: VARCHAR(255),, Middle_Name: VARCHAR(255),, Last_Name: VARCHAR(255),, Gender_MFU: CHAR(1),, Student_Address: VARCHAR(255),, Email_Adress: VARCHAR(255),, Cell_Mobile_Phone: VARCHAR(255),, Home_Phone: VARCHAR(255),) PK[Student_ID]
+Questions(Question_ID: INTEGER, Type_of_Question_Code: VARCHAR(15), Question_Text: VARCHAR(255),) PK[Question_ID]
+Exams(Exam_ID: INTEGER, Subject_Code: CHAR(15), Exam_Date: DATETIME,, Exam_Name: VARCHAR(255),) PK[Exam_ID]
+Questions_in_Exams(Exam_ID: INTEGER, Question_ID: INTEGER) PK[Exam_ID, Question_ID] FK[Question_ID→Questions.Question_ID; Exam_ID→Exams.Exam_ID]
+Valid_Answers(Valid_Answer_ID: INTEGER, Question_ID: INTEGER, Valid_Answer_Text: VARCHAR(255),) PK[Valid_Answer_ID] FK[Question_ID→Questions.Question_ID]
+Student_Answers(Student_Answer_ID: INTEGER, Exam_ID: INTEGER, Question_ID: INTEGER, Student_ID: INTEGER, Date_of_Answer: DATETIME,, Comments: VARCHAR(255),, Satisfactory_YN: VARCHAR(1),, Student_Answer_Text: VARCHAR(255),, FOREIGN: KEY (Exam_ID, Question_ID)) PK[Student_Answer_ID] FK[Student_ID→Students.Student_ID]
+Student_Assessments(Student_Answer_ID: VARCHAR(100), Valid_Answer_ID: INTEGER, Student_Answer_Text: VARCHAR(255),, Satisfactory_YN: CHAR(1),, Assessment: VARCHAR(40),) PK[Student_Answer_ID] FK[Valid_Answer_ID→Valid_Answers.Valid_Answer_ID]

@@ -1,0 +1,4 @@
+Database: movie_1
+Movie(mID: int, title: text,, year: int,, director: text)
+Reviewer(rID: int, name: text))
+Rating(rID: int,, mID: int,, stars: int,, ratingDate: date,) FK[mID→Movie.mID; rID→Reviewer.rID]

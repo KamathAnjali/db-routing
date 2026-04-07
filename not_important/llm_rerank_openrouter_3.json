@@ -1,0 +1,492 @@
+[
+  {
+    "question_id": 10706,
+    "question": "Which author had the most papers in the year 2009?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top10": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.35
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.35
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.05
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "movie_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "art_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "district_spokesman",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.231236
+  },
+  {
+    "question_id": 10658,
+    "question": "List names and addresses for all affiliations.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top10": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.416667
+      },
+      {
+        "db_id": "e_government",
+        "llm_score": 0.3125
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.208333
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.03125
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.005208
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.005208
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.005208
+      },
+      {
+        "db_id": "department_store",
+        "llm_score": 0.005208
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.005208
+      },
+      {
+        "db_id": "cre_Drama_Workshop_Groups",
+        "llm_score": 0.005208
+      }
+    ],
+    "overall_entropy": 1.327659
+  },
+  {
+    "question_id": 10690,
+    "question": "What is the id and the number of citations of the most cited paper?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 10649,
+    "question": "Count the number of authors.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.15
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.15
+      },
+      {
+        "db_id": "book_press",
+        "llm_score": 0.15
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.15
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "book_review",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.782047
+  },
+  {
+    "question_id": 10720,
+    "question": "Find the id of the papers whose title has the key word 'translation'.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.366159
+  },
+  {
+    "question_id": 10714,
+    "question": "What is the title of the paper that has most number of authors?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.376227
+  },
+  {
+    "question_id": 10663,
+    "question": "What are the titles and paper ids for papers written in affiliation with Harvard University?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.19355
+  },
+  {
+    "question_id": 10674,
+    "question": "List the names of all authors and their number of papers in descending order by number of papers.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "book_press",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.376227
+  },
+  {
+    "question_id": 10688,
+    "question": "How many reference papers does paper with id D12-1027 have?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top10": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "document_management",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.943348
+  },
+  {
+    "question_id": 10680,
+    "question": "List names of all authors who have only 1 paper.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top10": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_Workflow",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.376227
+  }
+]

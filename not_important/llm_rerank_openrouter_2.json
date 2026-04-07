@@ -1,0 +1,5802 @@
+[
+  {
+    "question_id": 10706,
+    "question": "Which author had the most papers in the year 2009?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10658,
+    "question": "List names and addresses for all affiliations.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "e_government",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10690,
+    "question": "What is the id and the number of citations of the most cited paper?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10649,
+    "question": "Count the number of authors.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "book_press",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10720,
+    "question": "Find the id of the papers whose title has the key word 'translation'.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.220607
+  },
+  {
+    "question_id": 10714,
+    "question": "What is the title of the paper that has most number of authors?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 10663,
+    "question": "What are the titles and paper ids for papers written in affiliation with Harvard University?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10674,
+    "question": "List the names of all authors and their number of papers in descending order by number of papers.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "book_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10688,
+    "question": "How many reference papers does paper with id D12-1027 have?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.15
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.937637
+  },
+  {
+    "question_id": 10680,
+    "question": "List names of all authors who have only 1 paper.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.943348
+  },
+  {
+    "question_id": 10693,
+    "question": "What is the title of the paper which cites the most other papers?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 10695,
+    "question": "What are the 10 most cited papers, and how many citations did each have?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10715,
+    "question": "Give the title of the paper with the most authors.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.279854
+  },
+  {
+    "question_id": 10667,
+    "question": "What are the titles and paper ids for papers which were affiliated with both Stanford and Columbia University?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10707,
+    "question": "What is the name of the author with the most papers in 2009?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 10703,
+    "question": "Which venues and years did Mckeown , Kathleen have papers ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 10710,
+    "question": "How many papers does Columbia University have in or before 2009 ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 10718,
+    "question": "Who has the most papers co-authored with Mckeown , Kathleen ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 10699,
+    "question": "Count the number of papers Mckeown , Kathleen has cited .",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10704,
+    "question": "What are the venues and years where Columbia University had papers ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10697,
+    "question": "Count the number of citations Mckeown , Kathleen has .",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 10733,
+    "question": "How many authors have not published a paper with more than 50 citations?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10727,
+    "question": "How many papers are published in each venue in each year?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.801819
+  },
+  {
+    "question_id": 10711,
+    "question": "Count the number of papers Columbia University had during or prior to 2009 .",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10681,
+    "question": "What are the names of authors who have exactly 1 paper?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.220607
+  },
+  {
+    "question_id": 10656,
+    "question": "How many papers are published in year 2009 by Columbia University?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10685,
+    "question": "Which venue has the fewest publications?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 10719,
+    "question": "What is the name of the author who has co-authored the most papers with Mckeown , Kathleen ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.220607
+  },
+  {
+    "question_id": 10678,
+    "question": "List names of all authors who have more than 50 papers.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.279854
+  },
+  {
+    "question_id": 10691,
+    "question": "Give the id and the number of citations of the most cited paper.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10709,
+    "question": "Which 3 affiliations had the most papers in 2009?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 10689,
+    "question": "Count the number of references the paper with id D12-1027 has.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10687,
+    "question": "Count the number of papers which cited a paper with id A00-1002.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10736,
+    "question": "Find the name of authors who have never published a paper in ACL.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10694,
+    "question": "List top 10 most cited papers and their numbers of citations.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10725,
+    "question": "What is the name of the affiliation which publishes the greatest number of papers among those whose address contains 'China'.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10660,
+    "question": "List all venues and years for papers ordered by year.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 10684,
+    "question": "What is the venue with the least number of publications?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10671,
+    "question": "What are the titles and paper ids which have Mckeown as an author, but not Rambow?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.220607
+  },
+  {
+    "question_id": 10666,
+    "question": "Find all papers with titles and paper IDs collaborated by Stanford University and Columbia University.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10713,
+    "question": "Count the number of papers Stanford University had between 2000 and 2009.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10716,
+    "question": "How many collaborators has Mckeown , Kathleen had ?",
+    "correct_db": "aan_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "insurance_and_eClaims",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10700,
+    "question": "Find the name and number of citations of the author who has most citations among all authors?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 10655,
+    "question": "Count the number of papers in NAACL 2000.",
+    "correct_db": "aan_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10682,
+    "question": "What is the venue and year with the most number of publications?",
+    "correct_db": "aan_1",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "entertainment_awards",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8297,
+    "question": "return me the paper in Databases area with more than 200 citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.25
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.75
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.562335
+  },
+  {
+    "question_id": 8370,
+    "question": "return me the papers written by \" H. V. Jagadish \" and \" Yunyao Li \" on PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8372,
+    "question": "return me the authors who have cooperated with \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8325,
+    "question": "return me the number of keywords in Databases area .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "document_management",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.8
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 8394,
+    "question": "return me the journals, which have more than 10 papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8241,
+    "question": "return me the papers after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8401,
+    "question": "return me the paper after 2000 with the most citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8245,
+    "question": "return me all the organizations in \" North America \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8247,
+    "question": "return me the number of references of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8284,
+    "question": "return me the papers of \" H. V. Jagadish \" containing keyword \" User Study \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8314,
+    "question": "return me the number of papers on VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8351,
+    "question": "return me the number of authors who have papers in the VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8342,
+    "question": "return me the number of papers in \" University of Michigan \" in Databases area .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8310,
+    "question": "return me the number of authors of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8286,
+    "question": "return me the papers in VLDB conference containing keyword \" Information Retrieval \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8289,
+    "question": "return me all the organizations in Databases area located in \" North America \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8294,
+    "question": "return me all the papers in VLDB conference in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8254,
+    "question": "return me the authors who have papers in VLDB conference in 2002 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8319,
+    "question": "return me the number of papers by \" H. V. Jagadish \" on PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8346,
+    "question": "return me the number of papers in PVLDB after 2000 in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8260,
+    "question": "return me the conferences, which have papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8331,
+    "question": "return me the number of keywords in the papers of \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8357,
+    "question": "return me the total citations of papers in PVLDB before 2005 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8354,
+    "question": "return me the total citations of all the papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8295,
+    "question": "return me all the papers in PVLDB in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8288,
+    "question": "return me all the organizations in Databases area .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "document_management",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8348,
+    "question": "return me the number of researchers in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "institution_sports",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8406,
+    "question": "return me the authors who have the most number of papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8237,
+    "question": "return me the homepage of \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8388,
+    "question": "return me the keyword, which have been contained by the most number of papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8324,
+    "question": "return me the number of keywords .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8301,
+    "question": "return me the papers by \" H. V. Jagadish \" on PVLDB with more than 200 citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8318,
+    "question": "return me the number of papers on VLDB conference after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8391,
+    "question": "return me the papers written by \" H. V. Jagadish \" and \" Divesh Srivastava \" with the most number of citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.943348
+  },
+  {
+    "question_id": 8258,
+    "question": "return me the authors who have papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "workshop_paper",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8358,
+    "question": "return me the total citations of papers in PVLDB in each year .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8273,
+    "question": "return me the papers by \" H. V. Jagadish \" on PVLDB after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8242,
+    "question": "return me the homepage of the VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8387,
+    "question": "return me the keyword, which have been contained by the most number of papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8262,
+    "question": "return me the domain where \" H. V. Jagadish \" is focused .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8285,
+    "question": "return me the papers in PVLDB containing keyword \" Keyword search \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8356,
+    "question": "return me the total citations of papers in PVLDB in 2005 .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8412,
+    "question": "return me the keywords, which have been contained by more than 10 papers of \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8280,
+    "question": "return me the keywords related to \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8404,
+    "question": "return me the paper after 2000 in VLDB conference with the most citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 8327,
+    "question": "return me the number of the keywords of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8270,
+    "question": "return me the papers by \" H. V. Jagadish \" on PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "journal_committee",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8360,
+    "question": "return me the total citations of all the papers in the VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8322,
+    "question": "return me the number of papers by \" H. V. Jagadish \" on PVLDB after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8278,
+    "question": "return me all the papers, which contain the keyword \" Natural Language \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8253,
+    "question": "return me the authors who have papers in PVLDB after 2010 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8307,
+    "question": "return me the number of conferences which have papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8268,
+    "question": "return me the papers on PVLDB after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8349,
+    "question": "return me the number of researchers in Databases area in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.801819
+  },
+  {
+    "question_id": 8321,
+    "question": "return me the number of papers by \" H. V. Jagadish \" after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.801819
+  },
+  {
+    "question_id": 8291,
+    "question": "return me all the researchers in Databases area in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "tracking_grants_for_research",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8309,
+    "question": "return me the number of papers written by \" H. V. Jagadish \" in each year .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8330,
+    "question": "return me the number of keywords in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8339,
+    "question": "return me the number of organizations in Databases area .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "document_management",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8239,
+    "question": "return me the year of \" Making database systems usable \"",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "movie_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8368,
+    "question": "return me the papers written by \" H. V. Jagadish \" and \" Divesh Srivastava \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.279854
+  },
+  {
+    "question_id": 8408,
+    "question": "return me the conferences, which have more than 60 papers containing keyword \" Relational Database \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8240,
+    "question": "return me the year of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8383,
+    "question": "return me the conference, which has the most number of papers containing keyword \" Relational Database \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8315,
+    "question": "return me the number of papers on PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "product_catalog",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8375,
+    "question": "return me the number of papers written by \" H. V. Jagadish \" and \" Divesh Srivastava \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.279854
+  },
+  {
+    "question_id": 8340,
+    "question": "return me the number of organizations in Databases area located in \" North America \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8279,
+    "question": "return me the keywords of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 8393,
+    "question": "return me the conference, which have the most number of papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8378,
+    "question": "return me the number of authors who have cooperated with \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 8267,
+    "question": "return me the papers on PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8251,
+    "question": "return me the paper with more than 200 citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8293,
+    "question": "return me all the papers after 2000 in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8302,
+    "question": "return me the papers by \" H. V. Jagadish \" on VLDB conference with more than 200 citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 8392,
+    "question": "return me the conferences, which have more than 10 papers by \" H. V. Jagadish \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "conference",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.801819
+  },
+  {
+    "question_id": 8350,
+    "question": "return me the number of authors who have papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8287,
+    "question": "return me the authors who have papers containing keyword \" Relational Database \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8407,
+    "question": "return me the authors who have more than 10 papers containing keyword \" Relational Database \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8361,
+    "question": "return me the citations of each paper in the VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8359,
+    "question": "return me the number of papers published in PVLDB in each year .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 8263,
+    "question": "return me the authors of \" Making database systems usable \" .",
+    "correct_db": "academic",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8410,
+    "question": "return me the keywords, which have been contained by more than 100 papers in VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 8405,
+    "question": "return me the authors who have more than 10 papers in PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8396,
+    "question": "return me the paper with the most citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 4,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_mdm",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 8269,
+    "question": "return me the papers on VLDB conference after 2000 .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8257,
+    "question": "return me the area of PVLDB .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.1
+      }
+    ],
+    "overall_entropy": 0.897946
+  },
+  {
+    "question_id": 8306,
+    "question": "return me the paper after 2000 in VLDB conference with more than 200 citations .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "culture_company",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8296,
+    "question": "return me all the papers in PVLDB after 2000 in \" University of Michigan \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 3,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 8320,
+    "question": "return me the number of papers by \" H. V. Jagadish \" on VLDB conference .",
+    "correct_db": "academic",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "music_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 8326,
+    "question": "return me the number of papers which contain the keyword \" Natural Language \" .",
+    "correct_db": "academic",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "scholar",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "academic",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "aan_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Doc_and_collections",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 6749,
+    "question": "Show all the faculty ranks and the number of students advised by each rank.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6752,
+    "question": "Give me the the first and last name of the faculty who advises the most students.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.8
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 6777,
+    "question": "What is the name of the activity that has the most faculty members involved in?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6735,
+    "question": "Show all the ranks and the number of male and female faculty for each rank.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6767,
+    "question": "How many activities does Mark Giuliano participate in?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "local_govt_in_alabama",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_card_transactions",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6776,
+    "question": "Find the first and last name of the faculty who is involved in the largest number of activities.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6729,
+    "question": "Which building has most faculty members?",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6760,
+    "question": "Find the number of activities available.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "local_govt_and_lot",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "customers_and_orders",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6789,
+    "question": "Find the first names of professors who are not playing Canoeing or Kayaking.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6724,
+    "question": "Count the number of Professors who have office in building NEB.",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "company_office",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6708,
+    "question": "What is the total number of faculty members?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.029653
+  },
+  {
+    "question_id": 6771,
+    "question": "Show the first and last name of all the faculty members who participated in some activity, together with the number of activities they participated in.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6742,
+    "question": "Who is the advisor of Linda Smith? Give me the first name and last name.",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 6774,
+    "question": "How many faculty members participate in each activity? Return the activity names and the number of faculty members.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6736,
+    "question": "How many faculty members do we have for each rank and gender?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6713,
+    "question": "Show the rank, first name, and last name for all the faculty.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "student_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6748,
+    "question": "What are the faculty id and the number of students each faculty has?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6764,
+    "question": "Which faculty do not participate in any activity? Find their faculty ids.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6725,
+    "question": "Show the first name and last name for all the instructors.",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "student_1",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "course_teach",
+        "llm_score": 0.1
+      },
+      {
+        "db_id": "driving_school",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 1.220607
+  },
+  {
+    "question_id": 6730,
+    "question": "Find the building that has the largest number of faculty members.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "company_office",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6785,
+    "question": "What is the name of the activity with the most students?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.3
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6746,
+    "question": "Which students are advised by Michael Goodrich? Give me their first and last names.",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6762,
+    "question": "Give me the number of faculty members who participate in an activity",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6721,
+    "question": "Show the phone, room, and building for the faculty named Jerry Prince.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6716,
+    "question": "What are the first name, last name, and phone number of all the female faculty members?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6738,
+    "question": "Find the faculty rank that has the least members.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 6787,
+    "question": "Find the first names of the faculty members who are playing Canoeing or Kayaking.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6786,
+    "question": "Find the name of the activity that has the largest number of student participants.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6719,
+    "question": "How many female Professors do we have?",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "college_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6715,
+    "question": "Show the first name, last name, and phone number for all female faculty members.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6751,
+    "question": "What are the first and last name of the faculty who has the most students?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "student_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6741,
+    "question": "What are the first name and last name of Linda Smith's advisor?",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "address_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6720,
+    "question": "Count the number of female Professors we have.",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "network_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6723,
+    "question": "How many Professors are in building NEB?",
+    "correct_db": "activity_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6727,
+    "question": "Show all the buildings along with the number of faculty members the buildings have.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "region_building",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "protein_institute",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "apartment_rentals",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6763,
+    "question": "Show the ids of the faculty who don't participate in any activity.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6754,
+    "question": "Which faculty members advise two ore more students? Give me their faculty ids.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.8
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 6733,
+    "question": "For each faculty rank, show the number of faculty members who have it.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "csu_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.7
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 6793,
+    "question": "Find the ids of the students who participate in Canoeing and Kayaking.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "school_player",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6709,
+    "question": "What ranks do we have for faculty?",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "college_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 6784,
+    "question": "Tell me the first and last name of the student who has the most activities.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Students_Information_Systems",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6791,
+    "question": "Find the first names of the faculty members who participate in Canoeing and Kayaking.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "boat_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6753,
+    "question": "Show the ids for all the faculty members who have at least 2 students.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 2,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "college_3",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 6781,
+    "question": "Show the ids for all the students who participate in an activity and are under 20.",
+    "correct_db": "activity_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "activity_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10492,
+    "question": "Show ids for all female (sex is F) students living in state PA.",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.3
+      }
+    ],
+    "overall_entropy": 1.0889
+  },
+  {
+    "question_id": 10461,
+    "question": "What are all the city names for cities in the USA, ordered by latitude?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "geo",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10475,
+    "question": "Count the number of students living in China.",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "student_assessment",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Students_Information_Systems",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10477,
+    "question": "What are the first names and majors of students living in Baltimore?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "address_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10512,
+    "question": "What is the name of the city closest to Chicago?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "tv_shows",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "geo",
+        "llm_score": 1.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10466,
+    "question": "List all states with at least two cities.",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "geo",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10491,
+    "question": "What the the student ids for students not living in the USA?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "student_assessment",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "student_transcripts_tracking",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Students_Information_Systems",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10507,
+    "question": "What are the city codes corresponding to cities with distances less than 1000?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10517,
+    "question": "For each city, what is the the city code and sum of distances from each?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10493,
+    "question": "What are the student ids for female students in the state of PA?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.5
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "dorm_1",
+        "llm_score": 0.5
+      }
+    ],
+    "overall_entropy": 0.693147
+  },
+  {
+    "question_id": 10470,
+    "question": "Which country has fewest number of cities?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "world_1",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "geo",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "country_language",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 10520,
+    "question": "How far do Linda (first name) Smith (last name) and Tracy (first name) Kim (last name) live?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "customers_and_products_contacts",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "address_1",
+        "llm_score": 0.8
+      },
+      {
+        "db_id": "customers_and_addresses",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "vehicle_rent",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.500402
+  },
+  {
+    "question_id": 10458,
+    "question": "How many cities are in Canada?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "world_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "geo",
+        "llm_score": 0.3
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "roller_coaster",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10487,
+    "question": "What are the names of cities with at least three students?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "club_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10464,
+    "question": "Show all countries and number of cities in each .",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "world_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "geo",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "city_record",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "country_language",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "car_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10468,
+    "question": "Which state has most number of cities?",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "geo",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "university_rank",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "store_product",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10524,
+    "question": "Which state does the student whose first name is Linda live in?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "address_1",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "allergy_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "student_transcripts_tracking",
+        "llm_score": 0.2
+      }
+    ],
+    "overall_entropy": 0.950271
+  },
+  {
+    "question_id": 10519,
+    "question": "What are the city name and average distances from each city?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "city_record",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "geo",
+        "llm_score": 0.3
+      }
+    ],
+    "overall_entropy": 0.610864
+  },
+  {
+    "question_id": 10505,
+    "question": "What are the city codes of cities with distance greater than average?",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 1.0
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.0
+  },
+  {
+    "question_id": 10478,
+    "question": "Show the number of students living in each country.",
+    "correct_db": "address_1",
+    "correct_db_rank": null,
+    "top5": [
+      {
+        "db_id": "student_assessment",
+        "llm_score": 0.6
+      },
+      {
+        "db_id": "voter_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "icfp_1",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "cre_Students_Information_Systems",
+        "llm_score": 0.4
+      },
+      {
+        "db_id": "pets_1",
+        "llm_score": 0.0
+      }
+    ],
+    "overall_entropy": 0.673012
+  },
+  {
+    "question_id": 10506,
+    "question": "Show me the city code of two cities with a distance less than 1000.",
+    "correct_db": "address_1",
+    "correct_db_rank": 1,
+    "top5": [
+      {
+        "db_id": "address_1",
+        "llm_score": 0.7
+      },
+      {
+        "db_id": "flight_2",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "world_1",
+        "llm_score": 0.2
+      },
+      {
+        "db_id": "restaurants",
+        "llm_score": 0.0
+      },
+      {
+        "db_id": "flight_4",
+        "llm_score": 0.1
+      }
+    ],
+    "overall_entropy": 0.801819
+  }
+]

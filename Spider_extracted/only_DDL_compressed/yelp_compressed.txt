@@ -1,0 +1,8 @@
+Database: yelp
+business(bid: int,, business_id: text,, name: text,, full_address: text,, city: text,, latitude: text,, longitude: text,, review_count: int,, is_open: int,, rating: real,, state: text,) PK[bid]
+category(id: int,, business_id: text,, category_name: text,, foreign: key("business_id")) PK[id]
+user(uid: int,, user_id: text,, name: text,) PK[uid]
+checkin(cid: int,, business_id: text,, count: int,, day: text,, foreign: key("business_id")) PK[cid]
+neighbourhood(id: int,, business_id: text,, neighbourhood_name: text,, foreign: key("business_id")) PK[id]
+review(rid: int,, business_id: text,, user_id: text,, rating: real,, text: text,, year: int,, month: text,, foreign: key("business_id"), foreign: key("user_id")) PK[rid]
+tip(tip_id: int,, business_id: text,, text: text,, user_id: text,, likes: int,, year: int,, month: text,, foreign: key("business_id"), foreign: key("user_id")) PK[tip_id]

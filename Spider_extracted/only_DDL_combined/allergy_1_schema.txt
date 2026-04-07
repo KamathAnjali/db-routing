@@ -1,0 +1,46 @@
+This is a Database called allergy_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Allergy_Type (displayed as: allergy type)
+
+2. Has_Allergy (displayed as: has allergy)
+
+3. Student (displayed as: student)
+
+
+Table 1: Tablename is Allergy_Type
+Display name: allergy type
+DDL query for Allergy_Type:
+CREATE TABLE Allergy_Type (
+       Allergy 		  VARCHAR(20) PRIMARY KEY,
+       AllergyType 	  VARCHAR(20)
+)
+
+
+Table 2: Tablename is Has_Allergy
+Display name: has allergy
+DDL query for Has_Allergy:
+CREATE TABLE Has_Allergy (
+       StuID 		 INTEGER,
+       Allergy 		 VARCHAR(20),
+       FOREIGN KEY(StuID) REFERENCES Student(StuID),
+       FOREIGN KEY(Allergy) REFERENCES Allergy_Type(Allergy)
+)
+
+
+Table 3: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+        StuID        INTEGER PRIMARY KEY,
+        LName        VARCHAR(12),
+        Fname        VARCHAR(12),
+        Age      INTEGER,
+        Sex      VARCHAR(1),
+        Major        INTEGER,
+        Advisor      INTEGER,
+        city_code    VARCHAR(3)
+ )
+

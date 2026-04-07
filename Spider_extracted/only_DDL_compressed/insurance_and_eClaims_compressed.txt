@@ -1,0 +1,8 @@
+Database: insurance_and_eClaims
+Customers(Customer_ID: INTEGER, Customer_Details: VARCHAR(255)) PK[Customer_ID]
+Staff(Staff_ID: INTEGER, Staff_Details: VARCHAR(255)) PK[Staff_ID]
+Policies(Policy_ID: INTEGER, Customer_ID: INTEGER, Policy_Type_Code: CHAR(15), Start_Date: DATETIME,, End_Date: DATETIME,) PK[Policy_ID] FK[Customer_ID→Customers.Customer_ID]
+Claim_Headers(Claim_Header_ID: INTEGER, Claim_Status_Code: CHAR(15), Claim_Type_Code: CHAR(15), Policy_ID: INTEGER, Date_of_Claim: DATETIME,, Date_of_Settlement: DATETIME,, Amount_Claimed: DECIMAL(20,4),, Amount_Piad: DECIMAL(20,4),) PK[Claim_Header_ID] FK[Policy_ID→Policies.Policy_ID]
+Claims_Documents(Claim_ID: INTEGER, Document_Type_Code: CHAR(15), Created_by_Staff_ID: INTEGER,, Created_Date: INTEGER,) PK[Claim_ID, Document_Type_Code] FK[Claim_ID→Claim_Headers.Claim_Header_ID; Created_by_Staff_ID→Staff.Staff_ID]
+Claims_Processing_Stages(Claim_Stage_ID: INTEGER, Next_Claim_Stage_ID: INTEGER,, Claim_Status_Name: VARCHAR(255), Claim_Status_Description: VARCHAR(255)) PK[Claim_Stage_ID]
+Claims_Processing(Claim_Processing_ID: INTEGER, Claim_ID: INTEGER, Claim_Outcome_Code: CHAR(15), Claim_Stage_ID: INTEGER, Staff_ID: INTEGER,) PK[Claim_Processing_ID] FK[Claim_ID→Claim_Headers.Claim_Header_ID; Staff_ID→Staff.Staff_ID]

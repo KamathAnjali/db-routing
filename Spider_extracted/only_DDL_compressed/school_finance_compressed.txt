@@ -1,0 +1,4 @@
+Database: school_finance
+School(School_id: text,, School_name: text,, Location: text,, Mascot: text,, Enrollment: int,, IHSAA_Class: text,, IHSAA_Football_Class: text,, County: text,) PK[School_id]
+budget(School_id: int,, Year: int,, Budgeted: int,, total_budget_percent_budgeted: real,, Invested: int,, total_budget_percent_invested: real,, Budget_invested_percent: text,, FOREIGN: KEY("School_id")) PK[School_id, YEAR]
+endowment(endowment_id: int,, School_id: int,, donator_name: text,, amount: real,, FOREIGN: KEY("School_id")) PK[endowment_id]

@@ -1,0 +1,4 @@
+Database: district_spokesman
+district(District_ID: int,, Name: text,, Area_km: real,, Population: real,, Density_km: real,, Government_website: text,) PK[District_ID]
+spokesman(Spokesman_ID: int,, Name: text,, Age: int,, Speach_title: text,, Rank_position: real,, Points: real,) PK[Spokesman_ID]
+spokesman_district(Spokesman_ID: int,, District_ID: int,, Start_year: text,, FOREIGN: KEY ("Spokesman_ID"), FOREIGN: KEY ("District_ID")) PK[Spokesman_ID]

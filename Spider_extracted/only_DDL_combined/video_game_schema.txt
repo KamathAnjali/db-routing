@@ -1,0 +1,64 @@
+This is a Database called video_game.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. platform
+
+2. game
+
+3. player
+
+4. game_player (displayed as: game player)
+
+
+Table 1: Tablename is platform
+DDL query for platform:
+CREATE TABLE "platform" (
+"Platform_ID" int,
+"Platform_name" text,
+"Market_district" text,
+"Download_rank" int,
+PRIMARY KEY ("Platform_ID")
+)
+
+
+Table 2: Tablename is game
+DDL query for game:
+CREATE TABLE "game" (
+"Game_ID" int,
+"Title" text,
+"Release_Date" text,
+"Franchise" text,
+"Developers" text,
+"Platform_ID" int,
+"Units_sold_Millions" int,
+PRIMARY KEY ("Game_ID"),
+FOREIGN KEY ("Platform_ID") REFERENCES platform("Platform_ID")
+)
+
+
+Table 3: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+"Player_ID" int,
+"Rank_of_the_year" int,
+"Player_name" text,
+"Position" text,
+"College" text,
+PRIMARY KEY ("Player_ID")
+)
+
+
+Table 4: Tablename is game_player
+Display name: game player
+DDL query for game_player:
+CREATE TABLE "game_player" (
+"Player_ID" int,
+"Game_ID" int,
+"If_active" bool,
+PRIMARY KEY ("Player_ID","Game_ID"),
+FOREIGN KEY ("Player_ID") REFERENCES player("Player_ID"),
+FOREIGN KEY ("Game_ID") REFERENCES game("Game_ID")
+)
+

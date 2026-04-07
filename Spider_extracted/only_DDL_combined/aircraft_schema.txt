@@ -1,0 +1,83 @@
+This is a Database called aircraft.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. pilot
+
+2. aircraft
+
+3. match
+
+4. airport
+
+5. airport_aircraft (displayed as: airport aircraft)
+
+
+Table 1: Tablename is pilot
+DDL query for pilot:
+CREATE TABLE `pilot` (
+  `Pilot_Id` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Age` int(11) NOT NULL,
+  PRIMARY KEY (`Pilot_Id`)
+)
+
+
+Table 2: Tablename is aircraft
+DDL query for aircraft:
+CREATE TABLE `aircraft` (
+  "Aircraft_ID" int(11) NOT NULL,
+  "Aircraft" varchar(50) NOT NULL,
+  "Description" varchar(50) NOT NULL,
+  "Max_Gross_Weight" varchar(50) NOT NULL,
+  "Total_disk_area" varchar(50) NOT NULL,
+  "Max_disk_Loading" varchar(50) NOT NULL,
+  PRIMARY KEY (`Aircraft_ID`)
+)
+
+
+Table 3: Tablename is match
+DDL query for match:
+CREATE TABLE `match` (
+"Round" real,
+"Location" text,
+"Country" text,
+"Date" text,
+"Fastest_Qualifying" text,
+"Winning_Pilot" text,
+"Winning_Aircraft" text,
+PRIMARY KEY ("Round"),
+FOREIGN KEY (`Winning_Aircraft`) REFERENCES `aircraft`(`Aircraft_ID`),
+FOREIGN KEY (`Winning_Pilot`) REFERENCES `pilot`(`Pilot_Id`)
+)
+
+
+Table 4: Tablename is airport
+DDL query for airport:
+CREATE TABLE `airport` (
+"Airport_ID" int,
+"Airport_Name" text,
+"Total_Passengers" real,
+"%_Change_2007" text,
+"International_Passengers" real,
+"Domestic_Passengers" real,
+"Transit_Passengers" real,
+"Aircraft_Movements" real,
+"Freight_Metric_Tonnes" real,
+PRIMARY KEY ("Airport_ID")
+)
+
+
+Table 5: Tablename is airport_aircraft
+Display name: airport aircraft
+DDL query for airport_aircraft:
+CREATE TABLE `airport_aircraft` (
+"ID" int,
+"Airport_ID" int,
+"Aircraft_ID" int,
+PRIMARY KEY ("Airport_ID","Aircraft_ID"),
+FOREIGN KEY ("Airport_ID") REFERENCES `airport`(`Airport_ID`),
+FOREIGN KEY ("Aircraft_ID") REFERENCES `aircraft`(`Aircraft_ID`)
+)
+

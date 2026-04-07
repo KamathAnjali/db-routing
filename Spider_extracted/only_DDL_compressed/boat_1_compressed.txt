@@ -1,0 +1,4 @@
+Database: boat_1
+Sailors(sid: INTEGER, name: TEXT,, rating: INTEGER,, age: INTEGER)
+Boats(bid: INTEGER, name: TEXT,, color: TEXT)
+Reserves(sid: INTEGER,, bid: INTEGER,, day: TEXT,) FK[sid→Sailors.sid; bid→Boats.bid]

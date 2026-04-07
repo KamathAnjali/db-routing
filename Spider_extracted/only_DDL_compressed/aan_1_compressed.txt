@@ -1,0 +1,6 @@
+Database: aan_1
+Affiliation(affiliation_id: integer, name: varchar(255), address: varchar(255)) PK[affiliation_id]
+Author(author_id: integer, name: varchar(255), email: varchar(255)) PK[author_id]
+Author_list(paper_id: varchar(25), author_id: integer, affiliation_id: integer) PK[paper_id, author_id] FK[paper_id→Paper.paper_id; author_id→Author.author_id; affiliation_id→Affiliation.affiliation_id]
+Citation(paper_id: varchar(25), cited_paper_id: varchar(25)) PK[paper_id, cited_paper_id] FK[paper_id→Paper.paper_id; cited_paper_id→Paper.paper_id]
+Paper(paper_id: varchar(25), title: varchar(255), venue: varchar(255), year: integer) PK[paper_id]

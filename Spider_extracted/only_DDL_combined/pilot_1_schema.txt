@@ -1,0 +1,30 @@
+This is a Database called pilot_1.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. PilotSkills (displayed as: pilot skills)
+
+2. Hangar (displayed as: hangar)
+
+
+Table 1: Tablename is PilotSkills
+Display name: pilot skills
+DDL query for PilotSkills:
+CREATE TABLE PilotSkills
+  (pilot_name CHAR(15) NOT NULL,
+  plane_name CHAR(15) NOT NULL,
+  age INTEGER,
+  PRIMARY KEY (pilot_name, plane_name),
+  FOREIGN KEY (plane_name) REFERENCES Hangar(plane_name)
+  )
+
+
+Table 2: Tablename is Hangar
+Display name: hangar
+DDL query for Hangar:
+CREATE TABLE Hangar
+  (plane_name CHAR(15) NOT NULL PRIMARY KEY,
+   location CHAR(15)
+  )
+

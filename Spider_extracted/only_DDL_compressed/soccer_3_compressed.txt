@@ -1,0 +1,3 @@
+Database: soccer_3
+club(Club_ID: int,, Name: text,, Manager: text,, Captain: text,, Manufacturer: text,, Sponsor: text,) PK[Club_ID]
+player(Player_ID: real,, Name: text,, Country: text,, Earnings: real,, Events_number: int,, Wins_count: int,, Club_ID: int,, FOREIGN: KEY ("Club_ID")) PK[Player_ID]

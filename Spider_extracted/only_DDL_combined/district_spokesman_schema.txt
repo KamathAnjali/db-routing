@@ -1,0 +1,50 @@
+This is a Database called district_spokesman.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. district
+
+2. spokesman
+
+3. spokesman_district (displayed as: spokesman district)
+
+
+Table 1: Tablename is district
+DDL query for district:
+CREATE TABLE "district" (
+"District_ID" int,
+"Name" text,
+"Area_km" real,
+"Population" real,
+"Density_km" real,
+"Government_website" text,
+PRIMARY KEY ("District_ID")
+)
+
+
+Table 2: Tablename is spokesman
+DDL query for spokesman:
+CREATE TABLE "spokesman" (
+"Spokesman_ID" int,
+"Name" text,
+"Age" int,
+"Speach_title" text,
+"Rank_position" real,
+"Points" real,
+PRIMARY KEY ("Spokesman_ID")
+)
+
+
+Table 3: Tablename is spokesman_district
+Display name: spokesman district
+DDL query for spokesman_district:
+CREATE TABLE "spokesman_district" (
+"Spokesman_ID" int,
+"District_ID" int,
+"Start_year" text,
+PRIMARY KEY ("Spokesman_ID"),
+FOREIGN KEY ("Spokesman_ID") REFERENCES "spokesman"("Spokesman_ID"),
+FOREIGN KEY ("District_ID") REFERENCES "district"("District_ID")
+)
+

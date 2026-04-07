@@ -1,0 +1,40 @@
+This is a Database called institution_sports.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. institution
+
+2. Championship (displayed as: championship)
+
+
+Table 1: Tablename is institution
+DDL query for institution:
+CREATE TABLE "institution" (
+"Institution_ID" int,
+"Name" text,
+"Team" text,
+"City" text,
+"Province" text,
+"Founded" real,
+"Affiliation" text,
+"Enrollment" real,
+"Endowment" text,
+"Stadium" text,
+"Capacity" real,
+PRIMARY KEY ("Institution_ID")
+)
+
+
+Table 2: Tablename is Championship
+Display name: championship
+DDL query for Championship:
+CREATE TABLE "Championship" (
+"Institution_ID" int,
+"Nickname" text,
+"Joined" real,
+"Number_of_Championships" real,
+PRIMARY KEY ("Institution_ID"),
+FOREIGN KEY ("Institution_ID") REFERENCES `institution`("Institution_ID")
+)
+

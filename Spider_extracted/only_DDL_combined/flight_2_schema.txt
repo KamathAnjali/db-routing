@@ -1,0 +1,45 @@
+This is a Database called flight_2.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. airlines
+
+2. airports
+
+3. flights
+
+
+Table 1: Tablename is airlines
+DDL query for airlines:
+CREATE TABLE 'airlines' (
+	uid INTEGER PRIMARY KEY, 
+	Airline TEXT, 
+	Abbreviation TEXT, 
+	Country TEXT
+)
+
+
+Table 2: Tablename is airports
+DDL query for airports:
+CREATE TABLE 'airports' (
+	City TEXT, 
+	AirportCode TEXT PRIMARY KEY, 
+	AirportName TEXT, 
+	Country TEXT, 
+	CountryAbbrev TEXT
+)
+
+
+Table 3: Tablename is flights
+DDL query for flights:
+CREATE TABLE 'flights' (
+	Airline INTEGER, 
+	FlightNo INTEGER, 
+	SourceAirport TEXT, 
+	DestAirport TEXT, 
+	PRIMARY KEY(Airline, FlightNo),
+	FOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),
+	FOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)
+)
+

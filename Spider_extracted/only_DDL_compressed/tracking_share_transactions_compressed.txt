@@ -1,0 +1,8 @@
+Database: tracking_share_transactions
+Investors(investor_id: INTEGER, Investor_details: VARCHAR(255))
+Lots(lot_id: INTEGER, investor_id: INTEGER, lot_details: VARCHAR(255),, FOREIGN: KEY (`investor_id` ))
+Ref_Transaction_Types(transaction_type_code: VARCHAR(10), transaction_type_description: VARCHAR(80))
+Transactions(transaction_id: INTEGER, investor_id: INTEGER, transaction_type_code: VARCHAR(10), date_of_transaction: DATETIME,, amount_of_transaction: DECIMAL(19,4),, share_count: VARCHAR(40),, other_details: VARCHAR(255),, FOREIGN: KEY (`investor_id` ))
+Sales(sales_transaction_id: INTEGER, sales_details: VARCHAR(255),, FOREIGN: KEY (`sales_transaction_id` ))
+Purchases(purchase_transaction_id: INTEGER, purchase_details: VARCHAR(255), FOREIGN: KEY (`purchase_transaction_id` ))
+Transactions_Lots(transaction_id: INTEGER, lot_id: INTEGER, FOREIGN: KEY (`lot_id` ), FOREIGN: KEY (`transaction_id` ))

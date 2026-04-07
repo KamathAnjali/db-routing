@@ -1,0 +1,111 @@
+This is a Database called insurance_and_eClaims.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Customers (displayed as: customers)
+
+2. Staff (displayed as: staff)
+
+3. Policies (displayed as: policies)
+
+4. Claim_Headers (displayed as: claim headers)
+
+5. Claims_Documents (displayed as: claims documents)
+
+6. Claims_Processing_Stages (displayed as: claims processing stages)
+
+7. Claims_Processing (displayed as: claims processing)
+
+
+Table 1: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE Customers (
+Customer_ID INTEGER NOT NULL,
+Customer_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Customer_ID)
+)
+
+
+Table 2: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE Staff (
+Staff_ID INTEGER NOT NULL,
+Staff_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Staff_ID)
+)
+
+
+Table 3: Tablename is Policies
+Display name: policies
+DDL query for Policies:
+CREATE TABLE Policies (
+Policy_ID INTEGER NOT NULL,
+Customer_ID INTEGER NOT NULL,
+Policy_Type_Code CHAR(15) NOT NULL,
+Start_Date DATETIME,
+End_Date DATETIME,
+PRIMARY KEY (Policy_ID),
+FOREIGN KEY (Customer_ID) REFERENCES Customers (Customer_ID)
+)
+
+
+Table 4: Tablename is Claim_Headers
+Display name: claim headers
+DDL query for Claim_Headers:
+CREATE TABLE Claim_Headers (
+Claim_Header_ID INTEGER NOT NULL,
+Claim_Status_Code CHAR(15) NOT NULL,
+Claim_Type_Code CHAR(15) NOT NULL,
+Policy_ID INTEGER NOT NULL,
+Date_of_Claim DATETIME,
+Date_of_Settlement DATETIME,
+Amount_Claimed DECIMAL(20,4),
+Amount_Piad DECIMAL(20,4),
+PRIMARY KEY (Claim_Header_ID),
+FOREIGN KEY (Policy_ID) REFERENCES Policies (Policy_ID)
+)
+
+
+Table 5: Tablename is Claims_Documents
+Display name: claims documents
+DDL query for Claims_Documents:
+CREATE TABLE Claims_Documents (
+Claim_ID INTEGER NOT NULL,
+Document_Type_Code CHAR(15) NOT NULL,
+Created_by_Staff_ID INTEGER,
+Created_Date INTEGER,
+PRIMARY KEY (Claim_ID, Document_Type_Code),
+FOREIGN KEY (Claim_ID) REFERENCES Claim_Headers (Claim_Header_ID),
+FOREIGN KEY (Created_by_Staff_ID) REFERENCES Staff (Staff_ID)
+)
+
+
+Table 6: Tablename is Claims_Processing_Stages
+Display name: claims processing stages
+DDL query for Claims_Processing_Stages:
+CREATE TABLE Claims_Processing_Stages (
+Claim_Stage_ID INTEGER NOT NULL,
+Next_Claim_Stage_ID INTEGER,
+Claim_Status_Name VARCHAR(255) NOT NULL,
+Claim_Status_Description VARCHAR(255) NOT NULL,
+PRIMARY KEY (Claim_Stage_ID)
+)
+
+
+Table 7: Tablename is Claims_Processing
+Display name: claims processing
+DDL query for Claims_Processing:
+CREATE TABLE Claims_Processing (
+Claim_Processing_ID INTEGER NOT NULL,
+Claim_ID INTEGER NOT NULL,
+Claim_Outcome_Code CHAR(15) NOT NULL,
+Claim_Stage_ID INTEGER NOT NULL,
+Staff_ID INTEGER,
+PRIMARY KEY (Claim_Processing_ID),
+FOREIGN KEY (Claim_ID) REFERENCES Claim_Headers (Claim_Header_ID),
+FOREIGN KEY (Staff_ID) REFERENCES Staff (Staff_ID)
+)
+

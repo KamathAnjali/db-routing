@@ -1,0 +1,4 @@
+Database: mountain_photos
+mountain(id: int,, name: text,, Height: real,, Prominence: real,, Range: text,, Country: text,) PK[id]
+camera_lens(id: int,, brand: text,, name: text,, focal_length_mm: real,, max_aperture: real,) PK[id]
+photos(id: int,, camera_lens_id: int,, mountain_id: int,, color: text,, name: text,, foreign: key("camera_lens_id"), foreign: key("mountain_id")) PK[id]

@@ -1,0 +1,37 @@
+This is a Database called ship_1.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. captain
+
+2. Ship (displayed as: ship)
+
+
+Table 1: Tablename is captain
+DDL query for captain:
+CREATE TABLE "captain" (
+"Captain_ID" int,
+"Name" text,
+"Ship_ID" int,
+"age" text,
+"Class" text,
+"Rank" text,
+PRIMARY KEY ("Captain_ID"),
+FOREIGN KEY ("Ship_ID") REFERENCES "Ship"("Ship_ID")
+)
+
+
+Table 2: Tablename is Ship
+Display name: ship
+DDL query for Ship:
+CREATE TABLE "Ship" (
+"Ship_ID" int,
+"Name" text,
+"Type" text,
+"Built_Year" real,
+"Class" text,
+"Flag" text,
+PRIMARY KEY ("Ship_ID")
+)
+

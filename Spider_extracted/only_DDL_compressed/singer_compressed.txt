@@ -1,0 +1,3 @@
+Database: singer
+singer(Singer_ID: int,, Name: text,, Birth_Year: real,, Net_Worth_Millions: real,, Citizenship: text,) PK[Singer_ID]
+song(Song_ID: int,, Title: text,, Singer_ID: int,, Sales: real,, Highest_Position: real,, FOREIGN: KEY ("Singer_ID")) PK[Song_ID]

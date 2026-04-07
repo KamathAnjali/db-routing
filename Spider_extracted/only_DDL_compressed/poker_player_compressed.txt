@@ -1,0 +1,3 @@
+Database: poker_player
+poker_player(Poker_Player_ID: int,, People_ID: int,, Final_Table_Made: real,, Best_Finish: real,, Money_Rank: real,, Earnings: real,, FOREIGN: KEY ("People_ID")) PK[Poker_Player_ID]
+people(People_ID: int,, Nationality: text,, Name: text,, Birth_Date: text,, Height: real,) PK[People_ID]

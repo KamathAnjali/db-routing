@@ -1,0 +1,4 @@
+Database: sing_contest
+participants(id: int,, name: text,, popularity: real,) PK[id]
+songs(id: int,, language: text,, original_artist: text,, name: text,, english_translation: text,) PK[id]
+performance_score(participant_id: int,, songs_id: int,, voice_sound_quality: real,, rhythm_tempo: real,, stage_presence: real,, foreign: key("participant_id"), foreign: key("songs_id")) PK[participant_id, songs_id]

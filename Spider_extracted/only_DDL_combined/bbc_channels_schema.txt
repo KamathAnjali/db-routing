@@ -1,0 +1,62 @@
+This is a Database called bbc_channels.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. channel
+
+2. director
+
+3. program
+
+4. director_admin (displayed as: director admin)
+
+
+Table 1: Tablename is channel
+DDL query for channel:
+CREATE TABLE "channel" (
+"Channel_ID" int,
+"Name" text,
+"Analogue_terrestrial_channel" text,
+"Digital_terrestrial_channel" text,
+"Internet" text,
+PRIMARY KEY ("Channel_ID")
+)
+
+
+Table 2: Tablename is director
+DDL query for director:
+CREATE TABLE "director" (
+"Director_ID" int,
+"Name" text,
+"Age" int,
+PRIMARY KEY ("Director_ID")
+)
+
+
+Table 3: Tablename is program
+DDL query for program:
+CREATE TABLE "program" (
+"Program_ID" int,
+"Start_Year" real,
+"Title" text,
+"Director_ID" int,
+"Channel_ID" int,
+PRIMARY KEY ("Program_ID"),
+FOREIGN KEY ("Director_ID") REFERENCES "director"("Director_ID"),
+FOREIGN KEY ("Channel_ID") REFERENCES "channel"("Channel_ID")
+)
+
+
+Table 4: Tablename is director_admin
+Display name: director admin
+DDL query for director_admin:
+CREATE TABLE "director_admin" (
+"Director_ID" int,
+"Channel_ID" int,
+"Is_first_director" bool,
+PRIMARY KEY ("Director_ID","Channel_ID"),
+FOREIGN KEY ("Director_ID") REFERENCES "director"("Director_ID"),
+FOREIGN KEY ("Channel_ID") REFERENCES "channel"("Channel_ID")
+)
+

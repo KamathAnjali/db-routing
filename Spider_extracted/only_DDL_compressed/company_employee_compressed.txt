@@ -1,0 +1,4 @@
+Database: company_employee
+people(People_ID: int,, Age: int,, Name: text,, Nationality: text,, Graduation_College: text,) PK[People_ID]
+company(Company_ID: real,, Name: text,, Headquarters: text,, Industry: text,, Sales_in_Billion: real,, Profits_in_Billion: real,, Assets_in_Billion: real,, Market_Value_in_Billion: real,) PK[Company_ID]
+employment(Company_ID: int,, People_ID: int,, Year_working: int,, FOREIGN: KEY ("Company_ID"), FOREIGN: KEY ("People_ID")) PK[Company_ID, People_ID]

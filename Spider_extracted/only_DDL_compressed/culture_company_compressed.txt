@@ -1,0 +1,4 @@
+Database: culture_company
+book_club(book_club_id: int,, Year: int,, Author_or_Editor: text,, Book_Title: text,, Publisher: text,, Category: text,, Result: text,) PK[book_club_id]
+movie(movie_id: int,, Title: text,, Year: int,, Director: text,, Budget_million: real,, Gross_worldwide: int,) PK[movie_id]
+culture_company(Company_name: text,, Type: text,, Incorporated_in: text,, Group_Equity_Shareholding: real,, book_club_id: text,, movie_id: text,, FOREIGN: KEY ("book_club_id"), FOREIGN: KEY ("movie_id")) PK[Company_name]

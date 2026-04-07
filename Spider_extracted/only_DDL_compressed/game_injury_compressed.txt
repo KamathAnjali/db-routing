@@ -1,0 +1,4 @@
+Database: game_injury
+stadium(id: int,, name: text,, Home_Games: int,, Average_Attendance: real,, Total_Attendance: real,, Capacity_Percentage: real,) PK[id]
+game(stadium_id: int,, id: int,, Season: int,, Date: text,, Home_team: text,, Away_team: text,, Score: text,, Competition: text,, foreign: key ("stadium_id")) PK[id]
+injury_accident(game_id: int,, id: int,, Player: text,, Injury: text,, Number_of_matches: text,, Source: text,, foreign: key ("game_id")) PK[id]

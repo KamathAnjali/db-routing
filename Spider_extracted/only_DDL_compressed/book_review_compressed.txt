@@ -1,0 +1,3 @@
+Database: book_review
+book(Book_ID: int,, Title: text,, Type: text,, Pages: int,, Chapters: int,, Audio: text,, Release: text,) PK[Book_ID]
+review(Review_ID: int,, Book_ID: int,, Rating: real,, Readers_in_Million: real,, Rank: int,, FOREIGN: KEY ("Book_ID")) PK[Review_ID]

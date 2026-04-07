@@ -1,0 +1,5 @@
+Database: party_people
+region(Region_ID: int,, Region_name: text,, Date: text,, Label: text,, Format: text,, Catalogue: text,) PK[Region_ID]
+party(Party_ID: int,, Minister: text,, Took_office: text,, Left_office: text,, Region_ID: int,, Party_name: text,) PK[Party_ID] FK[Region_ID→region.Region_ID]
+member(Member_ID: int,, Member_Name: text,, Party_ID: text,, In_office: text,) PK[Member_ID] FK[Party_ID→party.Party_ID]
+party_events(Event_ID: int,, Event_Name: text,, Party_ID: int,, Member_in_charge_ID: int,) PK[Event_ID] FK[Party_ID→party.Party_ID; Member_in_charge_ID→member.Member_ID]

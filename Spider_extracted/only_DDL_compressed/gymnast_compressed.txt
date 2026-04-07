@@ -1,0 +1,3 @@
+Database: gymnast
+gymnast(Gymnast_ID: int,, Floor_Exercise_Points: real,, Pommel_Horse_Points: real,, Rings_Points: real,, Vault_Points: real,, Parallel_Bars_Points: real,, Horizontal_Bar_Points: real,, Total_Points: real,, FOREIGN: KEY ("Gymnast_ID")) PK[Gymnast_ID]
+people(People_ID: int,, Name: text,, Age: real,, Height: real,, Hometown: text,) PK[People_ID]

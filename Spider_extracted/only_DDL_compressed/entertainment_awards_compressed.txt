@@ -1,0 +1,4 @@
+Database: entertainment_awards
+festival_detail(Festival_ID: int,, Festival_Name: text,, Chair_Name: text,, Location: text,, Year: int,, Num_of_Audience: int,) PK[Festival_ID]
+artwork(Artwork_ID: int,, Type: text,, Name: text,) PK[Artwork_ID]
+nomination(Artwork_ID: int,, Festival_ID: int,, Result: text,, FOREIGN: KEY ("Artwork_ID"), FOREIGN: KEY ("Festival_ID")) PK[Artwork_ID, Festival_ID]

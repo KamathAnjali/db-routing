@@ -1,0 +1,53 @@
+This is a Database called bakery_1.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. customers
+
+2. goods
+
+3. items
+
+4. receipts
+
+
+Table 1: Tablename is customers
+DDL query for customers:
+CREATE TABLE "customers" (
+	"Id" INTEGER PRIMARY KEY,
+	"LastName" TEXT,
+	"FirstName" TEXT
+)
+
+
+Table 2: Tablename is goods
+DDL query for goods:
+CREATE TABLE "goods" (
+	"Id" TEXT PRIMARY KEY,
+	"Flavor" TEXT,
+	"Food" TEXT,
+	"Price" REAL
+)
+
+
+Table 3: Tablename is items
+DDL query for items:
+CREATE TABLE "items" (
+	"Receipt" INTEGER,
+	"Ordinal" INTEGER,
+	"Item" TEXT,
+	PRIMARY KEY(Receipt, Ordinal),
+	FOREIGN KEY (Item) REFERENCES goods(Id)
+)
+
+
+Table 4: Tablename is receipts
+DDL query for receipts:
+CREATE TABLE "receipts" (
+	"ReceiptNumber" INTEGER PRIMARY KEY,
+	"Date" TEXT,
+	"CustomerId" INTEGER,
+	FOREIGN KEY(CustomerId) REFERENCES customers(Id)
+)
+

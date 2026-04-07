@@ -1,0 +1,46 @@
+This is a Database called workshop_paper.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. workshop
+
+2. submission
+
+3. Acceptance (displayed as: acceptance)
+
+
+Table 1: Tablename is workshop
+DDL query for workshop:
+CREATE TABLE "workshop" (
+"Workshop_ID" int,
+"Date" text,
+"Venue" text,
+"Name" text,
+PRIMARY KEY ("Workshop_ID")
+)
+
+
+Table 2: Tablename is submission
+DDL query for submission:
+CREATE TABLE "submission" (
+"Submission_ID" int,
+"Scores" real,
+"Author" text,
+"College" text,
+PRIMARY KEY ("Submission_ID")
+)
+
+
+Table 3: Tablename is Acceptance
+Display name: acceptance
+DDL query for Acceptance:
+CREATE TABLE "Acceptance" (
+"Submission_ID" int,
+"Workshop_ID" int,
+"Result" text,
+PRIMARY KEY ("Submission_ID","Workshop_ID"),
+FOREIGN KEY ("Submission_ID") REFERENCES `submission`("Submission_ID"),
+FOREIGN KEY ("Workshop_ID") REFERENCES `workshop`("Workshop_ID")
+)
+

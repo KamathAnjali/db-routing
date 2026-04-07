@@ -1,0 +1,67 @@
+22:30:03  INFO    Checkpoint saved (100 entries).
+22:30:03  INFO  
+=======================================================
+22:30:03  INFO    FINAL SUMMARY — 100 queries
+22:30:03  INFO    Top-1 accuracy : 73/100 = 73.0%
+22:30:03  INFO    Top-2 accuracy : 86/100 = 86.0%
+22:30:03  INFO    Not in top10    : 6
+22:30:03  INFO    Avg entropy    : 0.7685
+22:30:03  INFO    Total time     : 37.5 min
+22:30:03  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+22:30:03  INFO  =======================================================
+
+
+=======================================================
+12:15:13  INFO    FINAL SUMMARY — 200 queries
+12:15:13  INFO    Top-1 accuracy : 143/200 = 71.5%
+12:15:13  INFO    Top-2 accuracy : 167/200 = 83.5%
+12:15:13  INFO    Not in top10    : 14
+12:15:13  INFO    Avg entropy    : 0.7684
+12:15:13  INFO    Total time     : 42.9 min
+12:15:13  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+
+=======================================================
+13:47:23  INFO    FINAL SUMMARY — 300 queries
+13:47:23  INFO    Top-1 accuracy : 218/300 = 72.7%
+13:47:23  INFO    Top-2 accuracy : 250/300 = 83.3%
+13:47:23  INFO    Not in top10    : 20
+13:47:23  INFO    Avg entropy    : 0.8129
+13:47:23  INFO    Total time     : 49.2 min
+13:47:23  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+13:47:23  INFO  =======================================================
+=======================================================
+15:29:55  INFO    FINAL SUMMARY — 400 queries
+15:29:55  INFO    Top-1 accuracy : 287/400 = 71.8%
+15:29:55  INFO    Top-2 accuracy : 330/400 = 82.5%
+15:29:55  INFO    Not in top10    : 28
+15:29:55  INFO    Avg entropy    : 0.8086
+15:29:55  INFO    Total time     : 40.6 min
+15:29:55  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+15:29:55  INFO  =======================================================
+=======================================================
+16:15:19  INFO    FINAL SUMMARY — 500 queries
+16:15:19  INFO    Top-1 accuracy : 357/500 = 71.4%
+16:15:19  INFO    Top-2 accuracy : 410/500 = 82.0%
+16:15:19  INFO    Not in top10    : 33
+16:15:19  INFO    Avg entropy    : 0.8296
+16:15:19  INFO    Total time     : 41.4 min
+16:15:19  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+16:15:19  INFO  =======================================================
+=======================================================
+13:29:14  INFO    FINAL SUMMARY — 600 queries
+13:29:14  INFO    Top-1 accuracy : 423/600 = 70.5%
+13:29:14  INFO    Top-2 accuracy : 488/600 = 81.3%
+13:29:14  INFO    Not in top10    : 39
+13:29:14  INFO    Avg entropy    : 0.8490
+13:29:14  INFO    Total time     : 23.6 min
+13:29:14  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+13:29:14  INFO  =======================================================
+=======================================================
+16:24:44  INFO    FINAL SUMMARY — 750 queries
+16:24:44  INFO    Top-1 accuracy : 533/750 = 71.1%
+16:24:44  INFO    Top-2 accuracy : 613/750 = 81.7%
+16:24:44  INFO    Not in top10    : 46
+16:24:44  INFO    Avg entropy    : 0.8583
+16:24:44  INFO    Total time     : 89.8 min
+16:24:44  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+16:24:44  INFO  =======================================================

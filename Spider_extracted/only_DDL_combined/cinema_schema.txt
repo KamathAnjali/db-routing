@@ -1,0 +1,50 @@
+This is a Database called cinema.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. film
+
+2. cinema
+
+3. schedule
+
+
+Table 1: Tablename is film
+DDL query for film:
+CREATE TABLE "film" (
+"Film_ID" int,
+"Rank_in_series" int,
+"Number_in_season" int,
+"Title" text,
+"Directed_by" text,
+"Original_air_date" text,
+"Production_code" text,
+PRIMARY KEY ("Film_ID")
+)
+
+
+Table 2: Tablename is cinema
+DDL query for cinema:
+CREATE TABLE "cinema" (
+"Cinema_ID" int,
+"Name" text,
+"Openning_year" int,
+"Capacity" int,
+"Location" text,
+PRIMARY KEY ("Cinema_ID"))
+
+
+Table 3: Tablename is schedule
+DDL query for schedule:
+CREATE TABLE "schedule" (
+"Cinema_ID" int,
+"Film_ID" int,
+"Date" text,
+"Show_times_per_day" int,
+"Price" float,
+PRIMARY KEY ("Cinema_ID","Film_ID"),
+FOREIGN KEY (`Film_ID`) REFERENCES `film`(`Film_ID`),
+FOREIGN KEY (`Cinema_ID`) REFERENCES `cinema`(`Cinema_ID`)
+)
+

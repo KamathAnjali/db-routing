@@ -1,0 +1,42 @@
+This is a Database called election.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. county
+
+2. party
+
+3. election
+
+
+Table 1: Tablename is county
+DDL query for county:
+CREATE TABLE "county" (
+"County_Id" int,
+"County_name" text,
+"Population" real,
+"Zip_code" text,
+PRIMARY KEY ("County_Id")
+)
+
+
+Table 2: Tablename is party
+DDL query for party:
+CREATE TABLE "party" (
+"Party_ID" int,
+"Year" real,
+"Party" text,
+"Governor" text,
+"Lieutenant_Governor" text,
+"Comptroller" text,
+"Attorney_General" text,
+"US_Senate" text,
+PRIMARY KEY ("Party_ID")
+)
+
+
+Table 3: Tablename is election
+DDL query for election:
+
+

@@ -1,0 +1,4 @@
+Database: flight_company
+airport(id: int,, City: text,, Country: text,, IATA: text,, ICAO: text,, name: text,) PK[id]
+operate_company(id: int,, name: text,, Type: text,, Principal_activities: text,, Incorporated_in: text,, Group_Equity_Shareholding: real,) PK[id]
+flight(id: int,, Vehicle_Flight_number: text,, Date: text,, Pilot: text,, Velocity: real,, Altitude: real,, airport_id: int,, company_id: int,, foreign: key ("airport_id"), foreign: key ("company_id")) PK[id]

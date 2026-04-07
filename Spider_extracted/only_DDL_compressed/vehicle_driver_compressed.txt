@@ -1,0 +1,4 @@
+Database: vehicle_driver
+vehicle(Vehicle_ID: int,, Model: text,, Build_Year: text,, Top_Speed: int,, Power: int,, Builder: text,, Total_Production: text,) PK[Vehicle_ID]
+driver(Driver_ID: int,, Name: text,, Citizenship: text,, Racing_Series: text,) PK[Driver_ID]
+vehicle_driver(Driver_ID: int,, Vehicle_ID: int,, FOREIGN: KEY ("Driver_ID"), FOREIGN: KEY ("Vehicle_ID")) PK[Driver_ID, Vehicle_ID]

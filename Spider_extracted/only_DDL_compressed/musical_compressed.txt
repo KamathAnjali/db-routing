@@ -1,0 +1,3 @@
+Database: musical
+musical(Musical_ID: int,, Name: text,, Year: int,, Award: text,, Category: text,, Nominee: text,, Result: text,) PK[Musical_ID]
+actor(Actor_ID: int,, Name: text,, Musical_ID: int,, Character: text,, Duration: text,, age: int,, FOREIGN: KEY ("Musical_ID")) PK[Actor_ID]

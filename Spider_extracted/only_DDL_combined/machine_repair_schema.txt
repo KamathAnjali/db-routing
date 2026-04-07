@@ -1,0 +1,64 @@
+This is a Database called machine_repair.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. repair
+
+2. machine
+
+3. technician
+
+4. repair_assignment (displayed as: repair assignment)
+
+
+Table 1: Tablename is repair
+DDL query for repair:
+CREATE TABLE "repair" (
+"repair_ID" int,
+"name" text,
+"Launch_Date" text,
+"Notes" text,
+PRIMARY KEY ("repair_ID")
+)
+
+
+Table 2: Tablename is machine
+DDL query for machine:
+CREATE TABLE "machine" (
+"Machine_ID" int,
+"Making_Year" int,
+"Class" text,
+"Team" text,
+"Machine_series" text,
+"value_points" real,
+"quality_rank" int,
+PRIMARY KEY ("Machine_ID")
+)
+
+
+Table 3: Tablename is technician
+DDL query for technician:
+CREATE TABLE "technician" (
+"technician_id" real,
+"Name" text,
+"Team" text,
+"Starting_Year" real,
+"Age" int,
+PRIMARY Key ("technician_id")
+)
+
+
+Table 4: Tablename is repair_assignment
+Display name: repair assignment
+DDL query for repair_assignment:
+CREATE TABLE "repair_assignment" (
+"technician_id" int,
+"repair_ID" int,
+"Machine_ID" int,
+PRIMARY Key ("technician_id","repair_ID","Machine_ID"),
+FOREIGN KEY (`technician_id`) REFERENCES `technician`(`technician_id`),
+FOREIGN KEY (`repair_ID`) REFERENCES `repair`(`repair_ID`),
+FOREIGN KEY (`Machine_ID`) REFERENCES `machine`(`Machine_ID`)
+)
+

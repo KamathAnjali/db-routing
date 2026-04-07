@@ -1,0 +1,8 @@
+Database: cre_Doc_and_collections
+Document_Subsets(Document_Subset_ID: INTEGER, Document_Subset_Name: VARCHAR(255), Document_Subset_Details: VARCHAR(255)) PK[Document_Subset_ID]
+Collection_Subsets(Collection_Subset_ID: INTEGER, Collection_Subset_Name: VARCHAR(255), Collecrtion_Subset_Details: VARCHAR(255)) PK[Collection_Subset_ID]
+Document_Objects(Document_Object_ID: INTEGER, Parent_Document_Object_ID: INTEGER,, Owner: VARCHAR(255),, Description: VARCHAR(255),, Other_Details: VARCHAR(255),) PK[Document_Object_ID]
+Collections(Collection_ID: INTEGER, Parent_Collection_ID: INTEGER,, Collection_Name: VARCHAR(255),, Collection_Description: VARCHAR(255),) PK[Collection_ID]
+Documents_in_Collections(Document_Object_ID: INTEGER, Collection_ID: INTEGER) PK[Document_Object_ID, Collection_ID] FK[Document_Object_ID→Document_Objects.Document_Object_ID; Collection_ID→Collections.Collection_ID]
+Document_Subset_Members(Document_Object_ID: INTEGER, Related_Document_Object_ID: INTEGER, Document_Subset_ID: INTEGER, FOREIGN: KEY (Related_Document_Object_ID)) PK[Document_Object_ID, Related_Document_Object_ID] FK[Document_Object_ID→Document_Objects.Document_Object_ID; Document_Subset_ID→Document_Subsets.Document_Subset_ID]
+Collection_Subset_Members(Collection_ID: INTEGER, Related_Collection_ID: INTEGER, Collection_Subset_ID: INTEGER) PK[Collection_ID, Related_Collection_ID] FK[Collection_ID→Collections.Collection_ID; Related_Collection_ID→Collections.Collection_ID; Collection_Subset_ID→Collection_Subsets.Collection_Subset_ID]

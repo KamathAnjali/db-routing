@@ -1,0 +1,3 @@
+Database: roller_coaster
+roller_coaster(Roller_Coaster_ID: int,, Name: text,, Park: text,, Country_ID: int,, Length: real,, Height: real,, Speed: text,, Opened: text,, Status: text,, FOREIGN: KEY ("Country_ID")) PK[Roller_Coaster_ID]
+country(Country_ID: int,, Name: text,, Population: int,, Area: int,, Languages: text,) PK[Country_ID]

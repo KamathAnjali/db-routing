@@ -1,0 +1,4 @@
+Database: museum_visit
+museum(Museum_ID: int,, Name: text,, Num_of_Staff: int,, Open_Year: text,) PK[Museum_ID]
+visitor(ID: int,, Name: text,, Level_of_membership: int,, Age: int,) PK[ID]
+visit(Museum_ID: int,, visitor_ID: text,, Num_of_Ticket: int,, Total_spent: real,, FOREIGN: KEY ("Museum_ID"), FOREIGN: KEY ("visitor_ID")) PK[Museum_ID, visitor_ID]

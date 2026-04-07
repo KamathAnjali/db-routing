@@ -1,0 +1,202 @@
+This is a Database called real_estate_rentals.
+This Database consists of 13 tables.
+
+These tables are:
+
+1. Ref_Age_Categories (displayed as: ref age categories)
+
+2. Ref_Property_Types (displayed as: ref property types)
+
+3. Ref_Room_Types (displayed as: ref room types)
+
+4. Ref_User_Categories (displayed as: ref user categories)
+
+5. Addresses (displayed as: addresses)
+
+6. Features (displayed as: features)
+
+7. Users (displayed as: users)
+
+8. Properties (displayed as: properties)
+
+9. Property_Features (displayed as: property features)
+
+10. Property_Photos (displayed as: property photos)
+
+11. Rooms (displayed as: rooms)
+
+12. User_Property_History (displayed as: user property history)
+
+13. User_Searches (displayed as: user searches)
+
+
+Table 1: Tablename is Ref_Age_Categories
+Display name: ref age categories
+DDL query for Ref_Age_Categories:
+CREATE TABLE `Ref_Age_Categories` (
+`age_category_code` VARCHAR(15) PRIMARY KEY,
+`age_category_description` VARCHAR(80)
+)
+
+
+Table 2: Tablename is Ref_Property_Types
+Display name: ref property types
+DDL query for Ref_Property_Types:
+CREATE TABLE `Ref_Property_Types` (
+`property_type_code` VARCHAR(15) PRIMARY KEY,
+`property_type_description` VARCHAR(80)
+)
+
+
+Table 3: Tablename is Ref_Room_Types
+Display name: ref room types
+DDL query for Ref_Room_Types:
+CREATE TABLE `Ref_Room_Types` (
+`room_type_code` VARCHAR(15) PRIMARY KEY,
+`room_type_description` VARCHAR(80)
+)
+
+
+Table 4: Tablename is Ref_User_Categories
+Display name: ref user categories
+DDL query for Ref_User_Categories:
+CREATE TABLE `Ref_User_Categories` (
+`user_category_code` VARCHAR(15) PRIMARY KEY,
+`user_category_description` VARCHAR(80)
+)
+
+
+Table 5: Tablename is Addresses
+Display name: addresses
+DDL query for Addresses:
+CREATE TABLE `Addresses` (
+`address_id` INTEGER PRIMARY KEY,
+`line_1_number_building` VARCHAR(80),
+`line_2_number_street` VARCHAR(80),
+`line_3_area_locality` VARCHAR(80),
+`town_city` VARCHAR(80),
+`zip_postcode` VARCHAR(20),
+`county_state_province` VARCHAR(80),
+`country` VARCHAR(50),
+`other_address_details` VARCHAR(255)
+)
+
+
+Table 6: Tablename is Features
+Display name: features
+DDL query for Features:
+CREATE TABLE `Features` (
+`feature_id` INTEGER PRIMARY KEY,
+`feature_name` VARCHAR(80),
+`feature_description` VARCHAR(80)
+)
+
+
+Table 7: Tablename is Users
+Display name: users
+DDL query for Users:
+CREATE TABLE `Users` (
+`user_id` INTEGER PRIMARY KEY,
+`age_category_code` VARCHAR(15),
+`user_category_code` VARCHAR(15),
+`user_address_id` INTEGER NOT NULL,
+`is_buyer` VARCHAR(1),
+`is_seller` VARCHAR(1),
+`login_name` VARCHAR(25),
+`password` VARCHAR(8),
+`date_registered` DATETIME,
+`first_name` VARCHAR(80),
+`middle_name` VARCHAR(80),
+`last_name` VARCHAR(80),
+`other_user_details` VARCHAR(255)
+)
+
+
+Table 8: Tablename is Properties
+Display name: properties
+DDL query for Properties:
+CREATE TABLE `Properties` (
+`property_id` INTEGER PRIMARY KEY,
+`property_address_id` INTEGER NOT NULL,
+`owner_user_id` INTEGER NOT NULL,
+`property_type_code` VARCHAR(15) NOT NULL,
+`date_on_market` DATETIME,
+`date_off_market` DATETIME,
+`property_name` VARCHAR(80),
+`property_description` VARCHAR(255),
+`garage_yn` VARCHAR(1),
+`parking_lots` VARCHAR(1),
+`room_count` VARCHAR(10),
+`vendor_requested_price` DOUBLE NULL,
+`price_min` DOUBLE NULL,
+`price_max` DOUBLE NULL,
+`other_property_details` VARCHAR(255),
+FOREIGN KEY (`owner_user_id` ) REFERENCES `Users`(`user_id` ),
+FOREIGN KEY (`property_address_id` ) REFERENCES `Addresses`(`address_id` ),
+FOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )
+)
+
+
+Table 9: Tablename is Property_Features
+Display name: property features
+DDL query for Property_Features:
+CREATE TABLE `Property_Features` (
+`property_id` INTEGER NOT NULL,
+`feature_id` INTEGER NOT NULL,
+`feature_value` VARCHAR(80),
+`property_feature_description` VARCHAR(80),
+FOREIGN KEY (`feature_id` ) REFERENCES `Features`(`feature_id` ),
+FOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )
+)
+
+
+Table 10: Tablename is Property_Photos
+Display name: property photos
+DDL query for Property_Photos:
+CREATE TABLE `Property_Photos` (
+`property_id` INTEGER NOT NULL,
+`photo_seq` INTEGER NOT NULL,
+`photo_title` VARCHAR(30),
+`photo_description` VARCHAR(255),
+`photo_filename` VARCHAR(255),
+FOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )
+)
+
+
+Table 11: Tablename is Rooms
+Display name: rooms
+DDL query for Rooms:
+CREATE TABLE `Rooms` (
+`property_id` INTEGER NOT NULL,
+`room_number` VARCHAR(10) NOT NULL,
+`room_type_code` VARCHAR(15) NOT NULL,
+`room_size` VARCHAR(20),
+`other_room_details` VARCHAR(255),
+FOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` ),
+FOREIGN KEY (`room_type_code` ) REFERENCES `Ref_Room_Types`(`room_type_code` )
+)
+
+
+Table 12: Tablename is User_Property_History
+Display name: user property history
+DDL query for User_Property_History:
+CREATE TABLE `User_Property_History` (
+`user_id` INTEGER NOT NULL,
+`property_id` INTEGER NOT NULL,
+`datestamp` DATETIME NOT NULL,
+FOREIGN KEY (`user_id` ) REFERENCES `Users`(`user_id` ),
+FOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )
+)
+
+
+Table 13: Tablename is User_Searches
+Display name: user searches
+DDL query for User_Searches:
+CREATE TABLE `User_Searches` (
+`user_id` INTEGER NOT NULL,
+`search_seq` INTEGER NOT NULL,
+`search_datetime` DATETIME,
+`search_string` VARCHAR(80),
+FOREIGN KEY (`user_id` ) REFERENCES `Users`(`user_id` )
+)
+

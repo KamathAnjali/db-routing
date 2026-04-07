@@ -1,0 +1,45 @@
+This is a Database called voter_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. AREA_CODE_STATE (displayed as: area code state)
+
+2. CONTESTANTS (displayed as: contestants)
+
+3. VOTES (displayed as: votes)
+
+
+Table 1: Tablename is AREA_CODE_STATE
+Display name: area code state
+DDL query for AREA_CODE_STATE:
+CREATE TABLE `AREA_CODE_STATE` (
+  `area_code` integer NOT NULL
+,  `state` varchar(2) NOT NULL
+,  PRIMARY KEY (`area_code`)
+)
+
+
+Table 2: Tablename is CONTESTANTS
+Display name: contestants
+DDL query for CONTESTANTS:
+CREATE TABLE `CONTESTANTS` (
+  `contestant_number` integer
+,  `contestant_name` varchar(50) NOT NULL
+,  PRIMARY KEY (`contestant_number`)
+)
+
+
+Table 3: Tablename is VOTES
+Display name: votes
+DDL query for VOTES:
+CREATE TABLE `VOTES` (
+  `vote_id` integer NOT NULL PRIMARY KEY
+,  `phone_number` integer NOT NULL
+,  `state` varchar(2) NOT NULL
+,  `contestant_number` integer NOT NULL
+,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+, 	FOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)
+, 	FOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)
+)
+

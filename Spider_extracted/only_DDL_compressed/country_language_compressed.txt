@@ -1,0 +1,4 @@
+Database: country_language
+languages(id: integer,, name: text,) PK[id]
+countries(id: integer,, name: text,, overall_score: real,, justice_score: real,, health_score: real,, education_score: real,, economics_score: real,, politics_score: real,) PK[id]
+official_languages(language_id: integer,, country_id: integer,, FOREIGN: KEY ("language_id"), FOREIGN: KEY ("country_id")) PK[language_id, country_id]

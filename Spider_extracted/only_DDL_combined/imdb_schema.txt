@@ -1,0 +1,230 @@
+This is a Database called imdb.
+This Database consists of 16 tables.
+
+These tables are:
+
+1. actor
+
+2. copyright
+
+3. cast
+
+4. genre
+
+5. classification
+
+6. company
+
+7. director
+
+8. producer
+
+9. directed_by (displayed as: directed by)
+
+10. keyword
+
+11. made_by (displayed as: made by)
+
+12. movie
+
+13. tags
+
+14. tv_series (displayed as: tv series)
+
+15. writer
+
+16. written_by (displayed as: written by)
+
+
+Table 1: Tablename is actor
+DDL query for actor:
+CREATE TABLE "actor" (
+"aid" int,
+"gender" text,
+"name" text,
+"nationality" text,
+"birth_city" text,
+"birth_year" int,
+primary key("aid")
+)
+
+
+Table 2: Tablename is copyright
+DDL query for copyright:
+CREATE TABLE "copyright" (
+"id" int,
+"msid" int,
+"cid" int,
+primary key("id")
+)
+
+
+Table 3: Tablename is cast
+DDL query for cast:
+CREATE TABLE "cast" (
+"id" int,
+"msid" int,
+"aid" int,
+"role" int,
+primary key("id"),
+foreign key("aid") references `actor`("aid"),
+foreign key("msid") references `copyright`("msid")
+)
+
+
+Table 4: Tablename is genre
+DDL query for genre:
+CREATE TABLE "genre" (
+"gid" int,
+"genre" text,
+primary key("gid")
+)
+
+
+Table 5: Tablename is classification
+DDL query for classification:
+CREATE TABLE "classification" (
+"id" int,
+"msid" int,
+"gid" int,
+primary key("id"),
+foreign key("gid") references `genre`("gid"),
+foreign key("msid") references `copyright`("msid")
+)
+
+
+Table 6: Tablename is company
+DDL query for company:
+CREATE TABLE "company" (
+"id" int,
+"name" text,
+"country_code" text,
+primary key("id")
+)
+
+
+Table 7: Tablename is director
+DDL query for director:
+CREATE TABLE "director" (
+"did" int,
+"gender" text,
+"name" text,
+"nationality" text,
+"birth_city" text,
+"birth_year" int,
+primary key("did")
+)
+
+
+Table 8: Tablename is producer
+DDL query for producer:
+CREATE TABLE "producer" (
+"pid" int,
+"gender" text,
+"name" text,
+"nationality" text,
+"birth_city" text,
+"birth_year" int,
+primary key("pid")
+)
+
+
+Table 9: Tablename is directed_by
+Display name: directed by
+DDL query for directed_by:
+CREATE TABLE "directed_by" (
+"id" int,
+"msid" int,
+"did" int,
+primary key("id"),
+foreign key("msid") references `copyright`("msid"),
+foreign key("did") references `director`("did")
+)
+
+
+Table 10: Tablename is keyword
+DDL query for keyword:
+CREATE TABLE "keyword" (
+"id" int,
+"keyword" text,
+primary key("id")
+)
+
+
+Table 11: Tablename is made_by
+Display name: made by
+DDL query for made_by:
+CREATE TABLE "made_by" (
+"id" int,
+"msid" int,
+"pid" int,
+primary key("id"),
+foreign key("msid") references `copyright`("msid"),
+foreign key("pid") references `producer`("pid")
+)
+
+
+Table 12: Tablename is movie
+DDL query for movie:
+CREATE TABLE "movie" (
+"mid" int,
+"title" text,
+"release_year" int,
+"title_aka" text,
+"budget" text,
+primary key("mid")
+)
+
+
+Table 13: Tablename is tags
+DDL query for tags:
+CREATE TABLE "tags" (
+"id" int,
+"msid" int,
+"kid" int,
+primary key("id"),
+foreign key("msid") references `copyright`("msid"),
+foreign key("kid") references `keyword`("kid")
+)
+
+
+Table 14: Tablename is tv_series
+Display name: tv series
+DDL query for tv_series:
+CREATE TABLE "tv_series" (
+"sid" int,
+"title" text,
+"release_year" int,
+"num_of_seasons" int,
+"num_of_episodes" int,
+"title_aka" text,
+"budget" text,
+primary key("sid")
+)
+
+
+Table 15: Tablename is writer
+DDL query for writer:
+CREATE TABLE "writer" (
+"wid" int,
+"gender" text,
+"name" int,
+"nationality" int,
+"num_of_episodes" int,
+"birth_city" text,
+"birth_year" int,
+primary key("wid")
+)
+
+
+Table 16: Tablename is written_by
+Display name: written by
+DDL query for written_by:
+CREATE TABLE "written_by" (
+"id" int,
+"msid" int,
+"wid" int,
+foreign key("msid") references `copyright`("msid"),
+foreign key("wid") references `writer`("wid")
+)
+

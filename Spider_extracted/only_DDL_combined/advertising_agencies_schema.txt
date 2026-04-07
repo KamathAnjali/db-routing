@@ -1,0 +1,101 @@
+This is a Database called advertising_agencies.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Agencies (displayed as: agencies)
+
+2. Staff (displayed as: staff)
+
+3. Clients (displayed as: clients)
+
+4. Invoices (displayed as: invoices)
+
+5. Meetings (displayed as: meetings)
+
+6. Payments (displayed as: payments)
+
+7. Staff_in_Meetings (displayed as: staff in meetings)
+
+
+Table 1: Tablename is Agencies
+Display name: agencies
+DDL query for Agencies:
+CREATE TABLE `Agencies` (
+`agency_id` INTEGER PRIMARY KEY,
+`agency_details` VARCHAR(255) NOT NULL
+)
+
+
+Table 2: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE `Staff` (
+`staff_id` INTEGER PRIMARY KEY,
+`agency_id` INTEGER NOT NULL,
+`staff_details` VARCHAR(255) NOT NULL
+)
+
+
+Table 3: Tablename is Clients
+Display name: clients
+DDL query for Clients:
+CREATE TABLE `Clients` (
+`client_id` INTEGER PRIMARY KEY,
+`agency_id` INTEGER NOT NULL,
+`sic_code` VARCHAR(10) NOT NULL,
+`client_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`agency_id` ) REFERENCES `Agencies`(`agency_id` )
+)
+
+
+Table 4: Tablename is Invoices
+Display name: invoices
+DDL query for Invoices:
+CREATE TABLE `Invoices` (
+`invoice_id` INTEGER PRIMARY KEY,
+`client_id` INTEGER NOT NULL,
+`invoice_status` VARCHAR(10) NOT NULL,
+`invoice_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`client_id` ) REFERENCES `Clients`(`client_id` )
+)
+
+
+Table 5: Tablename is Meetings
+Display name: meetings
+DDL query for Meetings:
+CREATE TABLE `Meetings` (
+`meeting_id` INTEGER PRIMARY KEY,
+`client_id` INTEGER NOT NULL,
+`meeting_outcome` VARCHAR(10) NOT NULL,
+`meeting_type` VARCHAR(10) NOT NULL,
+`billable_yn` VARCHAR(1),
+`start_date_time` DATETIME,
+`end_date_time` DATETIME,
+`purpose_of_meeting` VARCHAR(255),
+`other_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`client_id` ) REFERENCES `Clients`(`client_id` )
+)
+
+
+Table 6: Tablename is Payments
+Display name: payments
+DDL query for Payments:
+CREATE TABLE `Payments` (
+`payment_id` INTEGER NOT NULL ,
+`invoice_id` INTEGER NOT NULL,
+`payment_details` VARCHAR(255) NOT NULL,
+FOREIGN KEY (`invoice_id` ) REFERENCES `Invoices`(`invoice_id` )
+)
+
+
+Table 7: Tablename is Staff_in_Meetings
+Display name: staff in meetings
+DDL query for Staff_in_Meetings:
+CREATE TABLE `Staff_in_Meetings` (
+`meeting_id` INTEGER NOT NULL,
+`staff_id` INTEGER NOT NULL,
+FOREIGN KEY (`meeting_id` ) REFERENCES `Meetings`(`meeting_id` ),
+FOREIGN KEY (`staff_id` ) REFERENCES `Staff`(`staff_id` )
+)
+

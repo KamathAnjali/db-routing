@@ -1,0 +1,34 @@
+This is a Database called singer.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. singer
+
+2. song
+
+
+Table 1: Tablename is singer
+DDL query for singer:
+CREATE TABLE "singer" (
+"Singer_ID" int,
+"Name" text,
+"Birth_Year" real,
+"Net_Worth_Millions" real,
+"Citizenship" text,
+PRIMARY KEY ("Singer_ID")
+)
+
+
+Table 2: Tablename is song
+DDL query for song:
+CREATE TABLE "song" (
+"Song_ID" int,
+"Title" text,
+"Singer_ID" int,
+"Sales" real,
+"Highest_Position" real,
+PRIMARY KEY ("Song_ID"),
+FOREIGN KEY ("Singer_ID") REFERENCES `singer`("Singer_ID")
+)
+

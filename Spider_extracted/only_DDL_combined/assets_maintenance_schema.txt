@@ -1,0 +1,214 @@
+This is a Database called assets_maintenance.
+This Database consists of 14 tables.
+
+These tables are:
+
+1. Third_Party_Companies (displayed as: third party companies)
+
+2. Maintenance_Contracts (displayed as: maintenance contracts)
+
+3. Parts (displayed as: parts)
+
+4. Skills (displayed as: skills)
+
+5. Staff (displayed as: staff)
+
+6. Assets (displayed as: assets)
+
+7. Asset_Parts (displayed as: asset parts)
+
+8. Maintenance_Engineers (displayed as: maintenance engineers)
+
+9. Engineer_Skills (displayed as: engineer skills)
+
+10. Fault_Log (displayed as: fault log)
+
+11. Engineer_Visits (displayed as: engineer visits)
+
+12. Part_Faults (displayed as: part faults)
+
+13. Fault_Log_Parts (displayed as: fault log parts)
+
+14. Skills_Required_To_Fix (displayed as: skills required to fix)
+
+
+Table 1: Tablename is Third_Party_Companies
+Display name: third party companies
+DDL query for Third_Party_Companies:
+CREATE TABLE `Third_Party_Companies` (
+`company_id` INTEGER PRIMARY KEY ,
+`company_type` VARCHAR(5) NOT NULL,
+`company_name` VARCHAR(255),
+`company_address` VARCHAR(255),
+`other_company_details` VARCHAR(255)
+)
+
+
+Table 2: Tablename is Maintenance_Contracts
+Display name: maintenance contracts
+DDL query for Maintenance_Contracts:
+CREATE TABLE `Maintenance_Contracts` (
+`maintenance_contract_id` INTEGER PRIMARY KEY,
+`maintenance_contract_company_id` INTEGER NOT NULL,
+`contract_start_date` DATETIME,
+`contract_end_date` DATETIME,
+`other_contract_details` VARCHAR(255),
+FOREIGN KEY (`maintenance_contract_company_id` ) REFERENCES `Third_Party_Companies`(`company_id` )
+)
+
+
+Table 3: Tablename is Parts
+Display name: parts
+DDL query for Parts:
+CREATE TABLE `Parts` (
+`part_id` INTEGER PRIMARY KEY,
+`part_name` VARCHAR(255),
+`chargeable_yn` VARCHAR(1),
+`chargeable_amount` VARCHAR(20),
+`other_part_details` VARCHAR(255)
+)
+
+
+Table 4: Tablename is Skills
+Display name: skills
+DDL query for Skills:
+CREATE TABLE `Skills` (
+`skill_id` INTEGER PRIMARY KEY,
+`skill_code` VARCHAR(20),
+`skill_description` VARCHAR(255)
+)
+
+
+Table 5: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE `Staff` (
+`staff_id` INTEGER PRIMARY KEY,
+`staff_name` VARCHAR(255),
+`gender` VARCHAR(1),
+`other_staff_details` VARCHAR(255)
+)
+
+
+Table 6: Tablename is Assets
+Display name: assets
+DDL query for Assets:
+CREATE TABLE `Assets` (
+`asset_id` INTEGER PRIMARY KEY,
+`maintenance_contract_id` INTEGER NOT NULL,
+`supplier_company_id` INTEGER NOT NULL,
+`asset_details` VARCHAR(255),
+`asset_make` VARCHAR(20),
+`asset_model` VARCHAR(20),
+`asset_acquired_date` DATETIME,
+`asset_disposed_date` DATETIME,
+`other_asset_details` VARCHAR(255),
+FOREIGN KEY (`maintenance_contract_id` )
+REFERENCES `Maintenance_Contracts`(`maintenance_contract_id` ),
+FOREIGN KEY (`supplier_company_id` ) REFERENCES `Third_Party_Companies`(`company_id` )
+)
+
+
+Table 7: Tablename is Asset_Parts
+Display name: asset parts
+DDL query for Asset_Parts:
+CREATE TABLE `Asset_Parts` (
+`asset_id` INTEGER NOT NULL,
+`part_id` INTEGER NOT NULL,
+FOREIGN KEY (`part_id` ) REFERENCES `Parts`(`part_id` ),
+FOREIGN KEY (`asset_id` ) REFERENCES `Assets`(`asset_id` )
+)
+
+
+Table 8: Tablename is Maintenance_Engineers
+Display name: maintenance engineers
+DDL query for Maintenance_Engineers:
+CREATE TABLE `Maintenance_Engineers` (
+`engineer_id` INTEGER PRIMARY KEY,
+`company_id` INTEGER NOT NULL,
+`first_name` VARCHAR(50),
+`last_name` VARCHAR(50),
+`other_details` VARCHAR(255),
+FOREIGN KEY (`company_id` ) REFERENCES `Third_Party_Companies`(`company_id` )
+)
+
+
+Table 9: Tablename is Engineer_Skills
+Display name: engineer skills
+DDL query for Engineer_Skills:
+CREATE TABLE `Engineer_Skills` (
+`engineer_id` INTEGER NOT NULL,
+`skill_id` INTEGER NOT NULL,
+FOREIGN KEY (`engineer_id` ) REFERENCES `Maintenance_Engineers`(`engineer_id` ),
+FOREIGN KEY (`skill_id` ) REFERENCES `Skills`(`skill_id` )
+)
+
+
+Table 10: Tablename is Fault_Log
+Display name: fault log
+DDL query for Fault_Log:
+CREATE TABLE `Fault_Log` (
+`fault_log_entry_id` INTEGER PRIMARY KEY,
+`asset_id` INTEGER NOT NULL,
+`recorded_by_staff_id` INTEGER NOT NULL,
+`fault_log_entry_datetime` DATETIME,
+`fault_description` VARCHAR(255),
+`other_fault_details` VARCHAR(255),
+FOREIGN KEY (`asset_id` ) REFERENCES `Assets`(`asset_id` ),
+FOREIGN KEY (`recorded_by_staff_id` ) REFERENCES `Staff`(`staff_id` )
+)
+
+
+Table 11: Tablename is Engineer_Visits
+Display name: engineer visits
+DDL query for Engineer_Visits:
+CREATE TABLE `Engineer_Visits` (
+`engineer_visit_id` INTEGER PRIMARY KEY,
+`contact_staff_id` INTEGER,
+`engineer_id` INTEGER NOT NULL,
+`fault_log_entry_id` INTEGER NOT NULL,
+`fault_status` VARCHAR(10) NOT NULL,
+`visit_start_datetime` DATETIME,
+`visit_end_datetime` DATETIME,
+`other_visit_details` VARCHAR(255),
+FOREIGN KEY (`fault_log_entry_id` ) REFERENCES `Fault_Log`(`fault_log_entry_id` ),
+FOREIGN KEY (`engineer_id` ) REFERENCES `Maintenance_Engineers`(`engineer_id` ),
+FOREIGN KEY (`contact_staff_id` ) REFERENCES `Staff`(`staff_id` )
+)
+
+
+Table 12: Tablename is Part_Faults
+Display name: part faults
+DDL query for Part_Faults:
+CREATE TABLE `Part_Faults` (
+`part_fault_id` INTEGER PRIMARY KEY,
+`part_id` INTEGER NOT NULL,
+`fault_short_name` VARCHAR(20),
+`fault_description` VARCHAR(255),
+`other_fault_details` VARCHAR(255),
+FOREIGN KEY (`part_id` ) REFERENCES `Parts`(`part_id` )
+)
+
+
+Table 13: Tablename is Fault_Log_Parts
+Display name: fault log parts
+DDL query for Fault_Log_Parts:
+CREATE TABLE `Fault_Log_Parts` (
+`fault_log_entry_id` INTEGER NOT NULL,
+`part_fault_id` INTEGER NOT NULL,
+`fault_status` VARCHAR(10) NOT NULL,
+FOREIGN KEY (`part_fault_id` ) REFERENCES `Part_Faults`(`part_fault_id` ),
+FOREIGN KEY (`fault_log_entry_id` ) REFERENCES `Fault_Log`(`fault_log_entry_id` )
+)
+
+
+Table 14: Tablename is Skills_Required_To_Fix
+Display name: skills required to fix
+DDL query for Skills_Required_To_Fix:
+CREATE TABLE `Skills_Required_To_Fix` (
+`part_fault_id` INTEGER NOT NULL,
+`skill_id` INTEGER NOT NULL,
+FOREIGN KEY (`part_fault_id` ) REFERENCES `Part_Faults`(`part_fault_id` ),
+FOREIGN KEY (`skill_id` ) REFERENCES `Skills`(`skill_id` )
+)
+

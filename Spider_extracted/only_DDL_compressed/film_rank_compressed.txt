@@ -1,0 +1,4 @@
+Database: film_rank
+film(Film_ID: int,, Title: text,, Studio: text,, Director: text,, Gross_in_dollar: int,) PK[Film_ID]
+market(Market_ID: int,, Country: text,, Number_cities: int,) PK[Market_ID]
+film_market_estimation(Estimation_ID: int,, Low_Estimate: real,, High_Estimate: real,, Film_ID: int,, Type: text,, Market_ID: int,, Year: int,, FOREIGN: KEY ("Film_ID"), FOREIGN: KEY ("Market_ID")) PK[Estimation_ID]

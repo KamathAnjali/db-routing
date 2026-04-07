@@ -1,0 +1,4 @@
+Database: bike_racing
+bike(id: int,, product_name: text,, weight: int,, price: real,, material: text,) PK[id]
+cyclist(id: int,, heat: int,, name: text,, nation: text,, result: real,) PK[id]
+cyclists_own_bikes(cyclist_id: int,, bike_id: int,, purchase_year: int,, foreign: key("cyclist_id"), foreign: key("bike_id")) PK[cyclist_id, bike_id]

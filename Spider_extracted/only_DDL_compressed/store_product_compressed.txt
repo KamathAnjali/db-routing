@@ -1,0 +1,6 @@
+Database: store_product
+product(product_id: int,, product: text,, dimensions: text,, dpi: real,, pages_per_minute_color: real,, max_page_size: text,, interface: text,) PK[product_id]
+store(Store_ID: int,, Store_Name: text,, Type: text,, Area_size: real,, Number_of_product_category: real,, Ranking: int,) PK[Store_ID]
+district(District_ID: int,, District_name: text,, Headquartered_City: text,, City_Population: real,, City_Area: real,) PK[District_ID]
+store_product(Store_ID: int,, Product_ID: int,) PK[Store_ID, Product_ID] FK[Store_ID→store.Store_ID; Product_ID→product.Product_ID]
+store_district(Store_ID: int,, District_ID: int,) PK[Store_ID] FK[Store_ID→store.Store_ID; District_ID→district.District_ID]

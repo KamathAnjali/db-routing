@@ -1,0 +1,4 @@
+Database: flight_4
+routes(rid: integer, dst_apid: integer,, dst_ap: varchar(4),, src_apid: bigint,, src_ap: varchar(4),, alid: bigint,, airline: varchar(4),, codeshare: text,) FK[dst_apid→airports.apid; src_apid→airports.apid; alid→airlines.alid]
+airports(apid: integer, name: text, city: text,, country: text,, x: real,, y: real,, elevation: bigint,, iata: character, icao: character)
+airlines(alid: integer, name: text,, iata: varchar(2),, icao: varchar(3),, callsign: text,, country: text,, active: varchar(2))

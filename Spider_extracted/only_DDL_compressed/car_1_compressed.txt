@@ -1,0 +1,7 @@
+Database: car_1
+continents(ContId: INTEGER, Continent: TEXT)
+countries(CountryId: INTEGER, CountryName: TEXT,, Continent: INTEGER,) FK[Continent→continents.ContId]
+car_makers(Id: INTEGER, Maker: TEXT,, FullName: TEXT,, Country: TEXT,) FK[Country→countries.CountryId]
+model_list(ModelId: INTEGER, Maker: INTEGER,, Model: TEXT) FK[Maker→car_makers.Id]
+car_names(MakeId: INTEGER, Model: TEXT,, Make: TEXT,) FK[Model→model_list.Model]
+cars_data(Id: INTEGER, MPG: TEXT,, Cylinders: INTEGER,, Edispl: REAL,, Horsepower: TEXT,, Weight: INTEGER,, Accelerate: REAL,, Year: INTEGER,) FK[Id→car_names.MakeId]

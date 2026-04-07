@@ -1,0 +1,4 @@
+Database: headphone_store
+headphone(Headphone_ID: int,, Model: text,, Class: text,, Construction: text,, Earpads: text,, Price: int,) PK[Headphone_ID]
+store(Store_ID: int,, Name: text,, Neighborhood: text,, Parking: text,, Date_Opened: text,) PK[Store_ID]
+stock(Store_ID: int,, Headphone_ID: int,, Quantity: int,) PK[Store_ID, Headphone_ID] FK[Store_ID→store.Store_ID; Headphone_ID→headphone.Headphone_ID]

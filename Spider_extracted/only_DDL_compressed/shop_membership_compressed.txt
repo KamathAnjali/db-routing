@@ -1,0 +1,5 @@
+Database: shop_membership
+member(Member_ID: int,, Card_Number: text,, Name: text,, Hometown: text,, Level: int,) PK[Member_ID]
+branch(Branch_ID: int,, Name: text,, Open_year: text,, Address_road: text,, City: text,, membership_amount: text,) PK[Branch_ID]
+membership_register_branch(Member_ID: int,, Branch_ID: text,, Register_Year: text,, FOREIGN: KEY ("Member_ID"), FOREIGN: KEY ("Branch_ID")) PK[Member_ID]
+purchase(Member_ID: int,, Branch_ID: text,, Year: text,, Total_pounds: real,, FOREIGN: KEY ("Member_ID"), FOREIGN: KEY ("Branch_ID")) PK[Member_ID, Branch_ID, Year]

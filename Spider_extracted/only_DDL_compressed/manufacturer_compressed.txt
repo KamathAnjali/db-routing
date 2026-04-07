@@ -1,0 +1,4 @@
+Database: manufacturer
+manufacturer(Manufacturer_ID: int,, Open_Year: real,, Name: text,, Num_of_Factories: int,, Num_of_Shops: int,) PK[Manufacturer_ID]
+furniture(Furniture_ID: int,, Name: text,, Num_of_Component: int,, Market_Rate: real,) PK[Furniture_ID]
+furniture_manufacte(Manufacturer_ID: int,, Furniture_ID: int,, Price_in_Dollar: real,, FOREIGN: KEY ("Manufacturer_ID"), FOREIGN: KEY ("Furniture_ID")) PK[Manufacturer_ID, Furniture_ID]

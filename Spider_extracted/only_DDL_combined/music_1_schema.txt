@@ -1,0 +1,67 @@
+This is a Database called music_1.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. genre
+
+2. artist
+
+3. files
+
+4. song
+
+
+Table 1: Tablename is genre
+DDL query for genre:
+CREATE TABLE genre(
+	g_name varchar2(20) not null,
+	rating varchar2(10),
+	most_popular_in varchar2(50),
+	primary key(g_name)
+)
+
+
+Table 2: Tablename is artist
+DDL query for artist:
+CREATE TABLE artist(
+	artist_name varchar2(50) not null,
+	country varchar2(20),
+	gender varchar2(20),
+	preferred_genre varchar2(50),
+	constraint a_name primary key(artist_name),
+	foreign key(preferred_genre) references genre(g_name) ON DELETE CASCADE
+)
+
+
+Table 3: Tablename is files
+DDL query for files:
+CREATE TABLE files(
+	f_id number(10) not null,
+	artist_name varchar2(50),
+	file_size varchar2(20),
+	duration varchar2(20),
+	formats varchar2(20),
+	primary key(f_id),
+	foreign key(artist_name) references artist(artist_name) ON DELETE CASCADE
+)
+
+
+Table 4: Tablename is song
+DDL query for song:
+CREATE TABLE song(
+	song_name varchar2(50),
+	artist_name varchar2(50),
+	country varchar2(20),
+	f_id number(10),
+    	genre_is varchar2(20),
+	rating number(10) check(rating>0 and rating<11),
+	languages varchar2(20),
+	releasedate Date, 
+	resolution number(10) not null,
+	constraint s_name primary key(song_name),
+	foreign key(artist_name) references artist(artist_name) ON DELETE CASCADE,
+	foreign key(f_id) references files(f_id) ON DELETE CASCADE,
+	foreign key(genre_is) references genre(g_name) ON DELETE CASCADE
+)
+

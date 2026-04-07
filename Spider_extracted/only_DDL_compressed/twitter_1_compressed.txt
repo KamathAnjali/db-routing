@@ -1,0 +1,4 @@
+Database: twitter_1
+follows(f1: int(11), f2: int(11)) PK[f1, f2] FK[f1→user_profiles.uid; f2→user_profiles.uid]
+tweets(id: bigint(20), uid: int(11), text: char(140), createdate: datetime) PK[id] FK[uid→user_profiles.uid]
+user_profiles(uid: int(11))

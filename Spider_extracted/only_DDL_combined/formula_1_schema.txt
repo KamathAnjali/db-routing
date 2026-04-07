@@ -1,0 +1,227 @@
+This is a Database called formula_1.
+This Database consists of 13 tables.
+
+These tables are:
+
+1. circuits
+
+2. races
+
+3. drivers
+
+4. status
+
+5. seasons
+
+6. constructors
+
+7. constructorStandings (displayed as: constructor standings)
+
+8. results
+
+9. driverStandings (displayed as: driver standings)
+
+10. constructorResults (displayed as: constructor results)
+
+11. qualifying
+
+12. pitStops (displayed as: pit stops)
+
+13. lapTimes (displayed as: lap times)
+
+
+Table 1: Tablename is circuits
+DDL query for circuits:
+CREATE TABLE "circuits" (
+"circuitId" INTEGER PRIMARY KEY,
+  "circuitRef" TEXT,
+  "name" TEXT,
+  "location" TEXT,
+  "country" TEXT,
+  "lat" REAL,
+  "lng" REAL,
+  "alt" TEXT,
+  "url" TEXT
+)
+
+
+Table 2: Tablename is races
+DDL query for races:
+CREATE TABLE "races" (
+"raceId" INTEGER PRIMARY KEY,
+  "year" INTEGER,
+  "round" INTEGER,
+  "circuitId" INTEGER,
+  "name" TEXT,
+  "date" TEXT,
+  "time" TEXT,
+  "url" TEXT,
+  FOREIGN KEY ("circuitId") REFERENCES "circuits"("circuitId")
+)
+
+
+Table 3: Tablename is drivers
+DDL query for drivers:
+CREATE TABLE "drivers" (
+"driverId" INTEGER PRIMARY KEY,
+  "driverRef" TEXT,
+  "number" TEXT,
+  "code" TEXT,
+  "forename" TEXT,
+  "surname" TEXT,
+  "dob" TEXT,
+  "nationality" TEXT,
+  "url" TEXT
+)
+
+
+Table 4: Tablename is status
+DDL query for status:
+CREATE TABLE "status" (
+"statusId" INTEGER PRIMARY KEY,
+  "status" TEXT
+)
+
+
+Table 5: Tablename is seasons
+DDL query for seasons:
+CREATE TABLE "seasons" (
+"year" INTEGER PRIMARY KEY,
+  "url" TEXT
+)
+
+
+Table 6: Tablename is constructors
+DDL query for constructors:
+CREATE TABLE "constructors" (
+	"constructorId" INTEGER PRIMARY KEY,
+  "constructorRef" TEXT,
+  "name" TEXT,
+  "nationality" TEXT,
+  "url" TEXT
+)
+
+
+Table 7: Tablename is constructorStandings
+Display name: constructor standings
+DDL query for constructorStandings:
+CREATE TABLE "constructorStandings" (
+	"constructorStandingsId" INTEGER PRIMARY KEY,
+  "raceId" INTEGER,
+  "constructorId" INTEGER,
+  "points" REAL,
+  "position" INTEGER,
+  "positionText" TEXT,
+  "wins" INTEGER,
+  FOREIGN KEY("constructorId") REFERENCES "constructors"("constructorId"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId")
+)
+
+
+Table 8: Tablename is results
+DDL query for results:
+CREATE TABLE "results" (
+"resultId" INTEGER PRIMARY KEY,
+  "raceId" INTEGER,
+  "driverId" INTEGER,
+  "constructorId" INTEGER,
+  "number" INTEGER,
+  "grid" INTEGER,
+  "position" TEXT,
+  "positionText" TEXT,
+  "positionOrder" INTEGER,
+  "points" REAL,
+  "laps" TEXT,
+  "time" TEXT,
+  "milliseconds" TEXT,
+  "fastestLap" TEXT,
+  "rank" TEXT,
+  "fastestLapTime" TEXT,
+  "fastestLapSpeed" TEXT,
+  "statusId" INTEGER,
+  FOREIGN KEY("constructorId") REFERENCES "constructors"("constructorId"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId"),
+  FOREIGN KEY ("driverId") REFERENCES "drivers"("driverId")
+)
+
+
+Table 9: Tablename is driverStandings
+Display name: driver standings
+DDL query for driverStandings:
+CREATE TABLE "driverStandings" (
+"driverStandingsId" INTEGER PRIMARY KEY,
+  "raceId" INTEGER,
+  "driverId" INTEGER,
+  "points" REAL,
+  "position" INTEGER,
+  "positionText" TEXT,
+  "wins" INTEGER,
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId"),
+  FOREIGN KEY ("driverId") REFERENCES "drivers"("driverId")
+)
+
+
+Table 10: Tablename is constructorResults
+Display name: constructor results
+DDL query for constructorResults:
+CREATE TABLE "constructorResults" (
+"constructorResultsId" INTEGER PRIMARY KEY,
+  "raceId" INTEGER,
+  "constructorId" INTEGER,
+  "points" REAL,
+  "status" TEXT,
+  FOREIGN KEY("constructorId") REFERENCES "constructors"("constructorId"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId")
+)
+
+
+Table 11: Tablename is qualifying
+DDL query for qualifying:
+CREATE TABLE "qualifying" (
+"qualifyId" INTEGER PRIMARY KEY,
+  "raceId" INTEGER,
+  "driverId" INTEGER,
+  "constructorId" INTEGER,
+  "number" INTEGER,
+  "position" INTEGER,
+  "q1" TEXT,
+  "q2" TEXT,
+  "q3" TEXT,
+  FOREIGN KEY("constructorId") REFERENCES "constructors"("constructorId"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId"),
+  FOREIGN KEY ("driverId") REFERENCES "drivers"("driverId")
+)
+
+
+Table 12: Tablename is pitStops
+Display name: pit stops
+DDL query for pitStops:
+CREATE TABLE "pitStops" (
+"raceId" INTEGER,
+  "driverId" INTEGER,
+  "stop" INTEGER,
+  "lap" INTEGER,
+  "time" TEXT,
+  "duration" TEXT,
+  "milliseconds" INTEGER,
+  PRIMARY KEY ("raceId", "driverId", "stop"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId"),
+  FOREIGN KEY ("driverId") REFERENCES "drivers"("driverId")
+)
+
+
+Table 13: Tablename is lapTimes
+Display name: lap times
+DDL query for lapTimes:
+CREATE TABLE "lapTimes" (
+"raceId" INTEGER,
+  "driverId" INTEGER,
+  "lap" INTEGER,
+  "position" INTEGER,
+  "time" TEXT,
+  "milliseconds" INTEGER,
+  PRIMARY KEY("raceId", "driverId", "lap"),
+  FOREIGN KEY("raceId") REFERENCES "races"("raceId"),
+  FOREIGN KEY ("driverId") REFERENCES "drivers"("driverId")
+)
+

@@ -1,0 +1,205 @@
+This is a Database called academic.
+This Database consists of 15 tables.
+
+These tables are:
+
+1. author
+
+2. conference
+
+3. domain
+
+4. domain_author (displayed as: domain author)
+
+5. domain_conference (displayed as: domain conference)
+
+6. journal
+
+7. domain_journal (displayed as: domain journal)
+
+8. keyword
+
+9. domain_keyword (displayed as: domain keyword)
+
+10. publication
+
+11. domain_publication (displayed as: domain publication)
+
+12. organization
+
+13. publication_keyword (displayed as: publication keyword)
+
+14. writes
+
+15. cite
+
+
+Table 1: Tablename is author
+DDL query for author:
+CREATE TABLE "author" (
+"aid" int,
+"homepage" text,
+"name" text,
+"oid" int,
+primary key("aid")
+)
+
+
+Table 2: Tablename is conference
+DDL query for conference:
+CREATE TABLE "conference" (
+"cid" int,
+"homepage" text,
+"name" text,
+primary key ("cid")
+)
+
+
+Table 3: Tablename is domain
+DDL query for domain:
+CREATE TABLE "domain" (
+"did" int,
+"name" text,
+primary key ("did")
+)
+
+
+Table 4: Tablename is domain_author
+Display name: domain author
+DDL query for domain_author:
+CREATE TABLE "domain_author" (
+"aid" int, 
+"did" int,
+primary key ("did", "aid"),
+foreign key("aid") references `author`("aid"),
+foreign key("did") references `domain`("did")
+)
+
+
+Table 5: Tablename is domain_conference
+Display name: domain conference
+DDL query for domain_conference:
+CREATE TABLE "domain_conference" (
+"cid" int,
+"did" int,
+primary key ("did", "cid"),
+foreign key("cid") references `conference`("cid"),
+foreign key("did") references `domain`("did")
+)
+
+
+Table 6: Tablename is journal
+DDL query for journal:
+CREATE TABLE "journal" (
+"homepage" text,
+"jid" int,
+"name" text,
+primary key("jid")
+)
+
+
+Table 7: Tablename is domain_journal
+Display name: domain journal
+DDL query for domain_journal:
+CREATE TABLE "domain_journal" (
+"did" int,
+"jid" int,
+primary key ("did", "jid"),
+foreign key("jid") references "journal"("jid"),
+foreign key("did") references "domain"("did")
+)
+
+
+Table 8: Tablename is keyword
+DDL query for keyword:
+CREATE TABLE "keyword" (
+"keyword" text,
+"kid" int,
+primary key("kid")
+)
+
+
+Table 9: Tablename is domain_keyword
+Display name: domain keyword
+DDL query for domain_keyword:
+CREATE TABLE "domain_keyword" (
+"did" int,
+"kid" int,
+primary key ("did", "kid"),
+foreign key("kid") references "keyword"("kid"),
+foreign key("did") references "domain"("did")
+)
+
+
+Table 10: Tablename is publication
+DDL query for publication:
+CREATE TABLE "publication" (
+"abstract" text,
+"cid" text,
+"citation_num" int,
+"jid" int,
+"pid" int,
+"reference_num" int,
+"title" text,
+"year" int,
+primary key("pid"),
+foreign key("jid") references "journal"("jid"),
+foreign key("cid") references "conference"("cid")
+)
+
+
+Table 11: Tablename is domain_publication
+Display name: domain publication
+DDL query for domain_publication:
+CREATE TABLE "domain_publication" (
+"did" int,
+"pid" int,
+primary key ("did", "pid"),
+foreign key("pid") references "publication"("pid"),
+foreign key("did") references "domain"("did")
+)
+
+
+Table 12: Tablename is organization
+DDL query for organization:
+CREATE TABLE "organization" (
+"continent" text,
+"homepage" text,
+"name" text,
+"oid" int,
+primary key("oid")
+)
+
+
+Table 13: Tablename is publication_keyword
+Display name: publication keyword
+DDL query for publication_keyword:
+CREATE TABLE "publication_keyword" (
+"pid" int,
+"kid" int,
+primary key ("kid", "pid"),
+foreign key("pid") references "publication"("pid"),
+foreign key("kid") references "keyword"("kid")
+)
+
+
+Table 14: Tablename is writes
+DDL query for writes:
+CREATE TABLE "writes" (
+"aid" int,
+"pid" int,
+primary key ("aid", "pid"),
+foreign key("pid") references "publication"("pid"),
+foreign key("aid") references "author"("aid")
+)
+
+
+Table 15: Tablename is cite
+DDL query for cite:
+CREATE TABLE "cite" (
+"cited" int,
+"citing"  int,
+foreign key("cited") references "publication"("pid"),
+foreign key("citing") references "publication"("pid")
+)
+

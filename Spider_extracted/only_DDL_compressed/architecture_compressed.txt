@@ -1,0 +1,4 @@
+Database: architecture
+architect(id: text,, name: text,, nationality: text,, gender: text,) PK[id]
+bridge(architect_id: int,, id: int,, name: text,, location: text,, length_meters: real,, length_feet: real,, foreign: key ("architect_id" )) PK[id]
+mill(architect_id: int,, id: int,, location: text,, name: text,, type: text,, built_year: int,, notes: text,, foreign: key ("architect_id" )) PK[id]

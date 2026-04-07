@@ -1,0 +1,12 @@
+Database: local_govt_and_lot
+Customers(customer_id: INTEGER, customer_details: VARCHAR(255),) PK[customer_id]
+Properties(property_id: INTEGER, property_type_code: CHAR(15), property_address: VARCHAR(255),, other_details: VARCHAR(255),) PK[property_id]
+Residents(resident_id: INTEGER, property_id: INTEGER, date_moved_in: DATETIME, date_moved_out: DATETIME, other_details: VARCHAR(255),) PK[resident_id, property_id, date_moved_in] FK[property_id→Properties.property_id]
+Organizations(organization_id: INTEGER, parent_organization_id: INTEGER,, organization_details: VARCHAR(255),) PK[organization_id]
+Services(service_id: INTEGER, organization_id: INTEGER, service_type_code: CHAR(15), service_details: VARCHAR(255),) PK[service_id] FK[organization_id→Organizations.organization_id]
+Residents_Services(resident_id: INTEGER, service_id: INTEGER, date_moved_in: DATETIME,, property_id: INTEGER,, date_requested: DATETIME,, date_provided: DATETIME,, other_details: VARCHAR(255),, FOREIGN: KEY (resident_id, property_id, date_moved_in)) PK[resident_id, service_id] FK[service_id→Services.service_id]
+Things(thing_id: INTEGER, organization_id: INTEGER, Type_of_Thing_Code: CHAR(15), service_type_code: CHAR(10), service_details: VARCHAR(255),) PK[thing_id] FK[organization_id→Organizations.organization_id]
+Customer_Events(Customer_Event_ID: INTEGER, customer_id: INTEGER,, date_moved_in: DATETIME,, property_id: INTEGER,, resident_id: INTEGER,, thing_id: INTEGER, FOREIGN: KEY (resident_id, property_id, date_moved_in)) PK[Customer_Event_ID] FK[thing_id→Things.thing_id; customer_id→Customers.customer_id]
+Customer_Event_Notes(Customer_Event_Note_ID: INTEGER, Customer_Event_ID: INTEGER, service_type_code: CHAR(15), resident_id: INTEGER, property_id: INTEGER, date_moved_in: DATETIME) PK[Customer_Event_Note_ID] FK[Customer_Event_ID→Customer_Events.Customer_Event_ID]
+Timed_Status_of_Things(thing_id: INTEGER, Date_and_Date: DATETIME, Status_of_Thing_Code: CHAR(15)) PK[thing_id, Date_and_Date, Status_of_Thing_Code] FK[thing_id→Things.thing_id]
+Timed_Locations_of_Things(thing_id: INTEGER, Date_and_Time: DATETIME, Location_Code: CHAR(15)) PK[thing_id, Date_and_Time, Location_Code] FK[thing_id→Things.thing_id]

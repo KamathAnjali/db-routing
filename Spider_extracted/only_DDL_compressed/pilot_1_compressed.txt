@@ -1,0 +1,3 @@
+Database: pilot_1
+PilotSkills(pilot_name: CHAR(15), plane_name: CHAR(15), age: INTEGER,) PK[pilot_name, plane_name] FK[plane_name→Hangar.plane_name]
+Hangar(plane_name: CHAR(15), location: CHAR(15))

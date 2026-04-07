@@ -1,0 +1,39 @@
+This is a Database called roller_coaster.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. roller_coaster (displayed as: roller coaster)
+
+2. country
+
+
+Table 1: Tablename is roller_coaster
+Display name: roller coaster
+DDL query for roller_coaster:
+CREATE TABLE "roller_coaster" (
+"Roller_Coaster_ID" int,
+"Name" text,
+"Park" text,
+"Country_ID" int,
+"Length" real,
+"Height" real,
+"Speed" text,
+"Opened" text,
+"Status" text,
+PRIMARY KEY ("Roller_Coaster_ID"),
+FOREIGN KEY ("Country_ID") REFERENCES `country`("Country_ID")
+)
+
+
+Table 2: Tablename is country
+DDL query for country:
+CREATE TABLE "country" (
+"Country_ID" int,
+"Name" text,
+"Population" int,
+"Area" int,
+"Languages" text,
+PRIMARY KEY ("Country_ID")
+)
+

@@ -1,0 +1,5 @@
+Database: farm
+city(City_ID: int,, Official_Name: text,, Status: text,, Area_km_2: real,, Population: real,, Census_Ranking: text,) PK[City_ID]
+farm(Farm_ID: int,, Year: int,, Total_Horses: real,, Working_Horses: real,, Total_Cattle: real,, Oxen: real,, Bulls: real,, Cows: real,, Pigs: real,, Sheep_and_Goats: real,) PK[Farm_ID]
+farm_competition(Competition_ID: int,, Year: int,, Theme: text,, Host_city_ID: int,, Hosts: text,) PK[Competition_ID] FK[Host_city_ID→city.City_ID]
+competition_record(Competition_ID: int,, Farm_ID: int,, Rank: int,) PK[Competition_ID, Farm_ID] FK[Competition_ID→farm_competition.Competition_ID; Farm_ID→farm.Farm_ID]

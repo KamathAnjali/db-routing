@@ -1,0 +1,86 @@
+This is a Database called car_1.
+This Database consists of 6 tables.
+
+These tables are:
+
+1. continents
+
+2. countries
+
+3. car_makers (displayed as: car makers)
+
+4. model_list (displayed as: model list)
+
+5. car_names (displayed as: car names)
+
+6. cars_data (displayed as: cars data)
+
+
+Table 1: Tablename is continents
+DDL query for continents:
+CREATE TABLE "continents" ( 
+	"ContId" INTEGER PRIMARY KEY, 
+	"Continent" TEXT 
+)
+
+
+Table 2: Tablename is countries
+DDL query for countries:
+CREATE TABLE "countries" (
+	"CountryId" INTEGER PRIMARY KEY, 
+	"CountryName" TEXT, 
+	"Continent" INTEGER,
+	FOREIGN KEY (Continent) REFERENCES continents(ContId)
+)
+
+
+Table 3: Tablename is car_makers
+Display name: car makers
+DDL query for car_makers:
+CREATE TABLE "car_makers" ( 
+	"Id" INTEGER PRIMARY KEY, 
+	"Maker" TEXT, 
+	"FullName" TEXT, 
+	"Country" TEXT,
+	FOREIGN KEY (Country) REFERENCES countries(CountryId)
+)
+
+
+Table 4: Tablename is model_list
+Display name: model list
+DDL query for model_list:
+CREATE TABLE "model_list" ( 
+	"ModelId" INTEGER PRIMARY KEY, 
+	"Maker" INTEGER, 
+	"Model" TEXT UNIQUE,
+	FOREIGN KEY (Maker) REFERENCES car_makers (Id)
+
+)
+
+
+Table 5: Tablename is car_names
+Display name: car names
+DDL query for car_names:
+CREATE TABLE "car_names" ( 
+	"MakeId" INTEGER PRIMARY KEY, 
+	"Model" TEXT, 
+	"Make" TEXT,
+	FOREIGN KEY (Model) REFERENCES model_list (Model)
+)
+
+
+Table 6: Tablename is cars_data
+Display name: cars data
+DDL query for cars_data:
+CREATE TABLE "cars_data" (
+	"Id" INTEGER PRIMARY KEY, 
+	"MPG" TEXT, 
+	"Cylinders" INTEGER, 
+	"Edispl" REAL, 
+	"Horsepower" TEXT, 
+	"Weight" INTEGER, 
+	"Accelerate" REAL, 
+	"Year" INTEGER,
+	FOREIGN KEY (Id) REFERENCES car_names (MakeId)
+)
+

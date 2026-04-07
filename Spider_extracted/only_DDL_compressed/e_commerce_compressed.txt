@@ -1,0 +1,9 @@
+Database: e_commerce
+Products(product_id: INTEGER, parent_product_id: INTEGER,, product_name: VARCHAR(80),, product_price: DECIMAL(19,4), product_color: VARCHAR(50),, product_size: VARCHAR(50),, product_description: VARCHAR(255))
+Customers(customer_id: INTEGER, gender_code: VARCHAR(1), customer_first_name: VARCHAR(50),, customer_middle_initial: VARCHAR(1),, customer_last_name: VARCHAR(50),, email_address: VARCHAR(255),, login_name: VARCHAR(80),, login_password: VARCHAR(20),, phone_number: VARCHAR(255),, address_line_1: VARCHAR(255),, town_city: VARCHAR(50),, county: VARCHAR(50),, country: VARCHAR(50))
+Customer_Payment_Methods(customer_id: INTEGER, payment_method_code: VARCHAR(10), FOREIGN: KEY (`customer_id` ))
+Invoices(invoice_number: INTEGER, invoice_status_code: VARCHAR(10), invoice_date: DATETIME)
+Orders(order_id: INTEGER, customer_id: INTEGER, order_status_code: VARCHAR(10), date_order_placed: DATETIME, FOREIGN: KEY (`customer_id` ))
+Order_Items(order_item_id: INTEGER, product_id: INTEGER, order_id: INTEGER, order_item_status_code: VARCHAR(10), FOREIGN: KEY (`product_id` ), FOREIGN: KEY (`order_id` ))
+Shipments(shipment_id: INTEGER, order_id: INTEGER, invoice_number: INTEGER, shipment_tracking_number: VARCHAR(80),, shipment_date: DATETIME,, FOREIGN: KEY (`invoice_number` ), FOREIGN: KEY (`order_id` ))
+Shipment_Items(shipment_id: INTEGER, order_item_id: INTEGER, FOREIGN: KEY (`shipment_id` ), FOREIGN: KEY (`order_item_id` )) PK[shipment_id, order_item_id]

@@ -1,0 +1,102 @@
+This is a Database called tracking_orders.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Customers (displayed as: customers)
+
+2. Invoices (displayed as: invoices)
+
+3. Orders (displayed as: orders)
+
+4. Products (displayed as: products)
+
+5. Order_Items (displayed as: order items)
+
+6. Shipments (displayed as: shipments)
+
+7. Shipment_Items (displayed as: shipment items)
+
+
+Table 1: Tablename is Customers
+Display name: customers
+DDL query for Customers:
+CREATE TABLE `Customers` (
+`customer_id` INTEGER PRIMARY KEY,
+`customer_name` VARCHAR(80),
+`customer_details` VARCHAR(255)
+)
+
+
+Table 2: Tablename is Invoices
+Display name: invoices
+DDL query for Invoices:
+CREATE TABLE `Invoices` (
+`invoice_number` INTEGER PRIMARY KEY,
+`invoice_date` DATETIME,
+`invoice_details` VARCHAR(255)
+)
+
+
+Table 3: Tablename is Orders
+Display name: orders
+DDL query for Orders:
+CREATE TABLE `Orders` (
+`order_id` INTEGER PRIMARY KEY,
+`customer_id` INTEGER NOT NULL,
+`order_status` VARCHAR(10) NOT NULL,
+`date_order_placed` DATETIME NOT NULL,
+`order_details` VARCHAR(255),
+FOREIGN KEY (`customer_id` ) REFERENCES `Customers`(`customer_id` )
+)
+
+
+Table 4: Tablename is Products
+Display name: products
+DDL query for Products:
+CREATE TABLE `Products` (
+`product_id` INTEGER PRIMARY KEY,
+`product_name` VARCHAR(80),
+`product_details` VARCHAR(255)
+)
+
+
+Table 5: Tablename is Order_Items
+Display name: order items
+DDL query for Order_Items:
+CREATE TABLE `Order_Items` (
+`order_item_id` INTEGER PRIMARY KEY,
+`product_id` INTEGER NOT NULL,
+`order_id` INTEGER NOT NULL,
+`order_item_status` VARCHAR(10) NOT NULL,
+`order_item_details` VARCHAR(255),
+FOREIGN KEY (`order_id` ) REFERENCES `Orders`(`order_id` ),
+FOREIGN KEY (`product_id` ) REFERENCES `Products`(`product_id` )
+)
+
+
+Table 6: Tablename is Shipments
+Display name: shipments
+DDL query for Shipments:
+CREATE TABLE `Shipments` (
+`shipment_id` INTEGER PRIMARY KEY,
+`order_id` INTEGER NOT NULL,
+`invoice_number` INTEGER NOT NULL,
+`shipment_tracking_number` VARCHAR(80),
+`shipment_date` DATETIME,
+`other_shipment_details` VARCHAR(255),
+FOREIGN KEY (`order_id` ) REFERENCES `Orders`(`order_id` ),
+FOREIGN KEY (`invoice_number` ) REFERENCES `Invoices`(`invoice_number` )
+)
+
+
+Table 7: Tablename is Shipment_Items
+Display name: shipment items
+DDL query for Shipment_Items:
+CREATE TABLE `Shipment_Items` (
+`shipment_id` INTEGER NOT NULL,
+`order_item_id` INTEGER NOT NULL,
+FOREIGN KEY (`order_item_id` ) REFERENCES `Order_Items`(`order_item_id` ),
+FOREIGN KEY (`shipment_id` ) REFERENCES `Shipments`(`shipment_id` )
+)
+

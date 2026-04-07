@@ -1,0 +1,4 @@
+Database: voter_1
+AREA_CODE_STATE(area_code: integer, state: varchar(2)) PK[area_code]
+CONTESTANTS(contestant_number: integer, contestant_name: varchar(50)) PK[contestant_number]
+VOTES(vote_id: integer, phone_number: integer, state: varchar(2), contestant_number: integer, created: timestamp) FK[state→AREA_CODE_STATE.state; contestant_number→CONTESTANTS.contestant_number]

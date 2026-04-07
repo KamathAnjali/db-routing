@@ -1,0 +1,4 @@
+Database: art_1
+Artists(artistID: INTEGER,, lname: TEXT,, fname: TEXT,, birthYear: INTEGER,, deathYear: INTEGER,) PK[artistID]
+Paintings(paintingID: INTEGER,, title: TEXT,, year: INTEGER,, height_mm: INTEGER,, width_mm: INTEGER,, medium: TEXT,, mediumOn: TEXT,, location: TEXT,, painterID: INTEGER,) PK[paintingID] FK[painterID→Artists.artistID]
+Sculptures(sculptureID: INTEGER,, title: TEXT,, year: INTEGER,, medium: TEXT,, location: TEXT,, sculptorID: INTEGER,) PK[sculptureID] FK[sculptorID→Artists.artistID]

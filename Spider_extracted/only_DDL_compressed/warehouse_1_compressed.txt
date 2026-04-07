@@ -1,0 +1,3 @@
+Database: warehouse_1
+Warehouses(Code: INTEGER, Location: VARCHAR(255), Capacity: INTEGER) PK[Code]
+Boxes(Code: CHAR(4), Contents: VARCHAR(255), Value: REAL, Warehouse: INTEGER) PK[Code] FK[Warehouse→Warehouses.Code]

@@ -1,0 +1,60 @@
+This is a Database called icfp_1.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. Inst (displayed as: institution)
+
+2. Authors (displayed as: authors)
+
+3. Papers (displayed as: papers)
+
+4. Authorship (displayed as: authorship count)
+
+
+Table 1: Tablename is Inst
+Display name: institution
+DDL query for Inst:
+CREATE TABLE Inst (
+  instID INTEGER,
+  name TEXT,
+  country TEXT, 
+  PRIMARY KEY (instID)
+)
+
+
+Table 2: Tablename is Authors
+Display name: authors
+DDL query for Authors:
+CREATE TABLE Authors (
+  authID INTEGER,
+  lname TEXT,
+  fname TEXT,
+  PRIMARY KEY (authID)
+)
+
+
+Table 3: Tablename is Papers
+Display name: papers
+DDL query for Papers:
+CREATE TABLE Papers (
+  paperID INTEGER,
+  title TEXT,
+  PRIMARY KEY (paperID)
+)
+
+
+Table 4: Tablename is Authorship
+Display name: authorship count
+DDL query for Authorship:
+CREATE TABLE Authorship (
+  authID INTEGER,
+  instID INTEGER,
+  paperID INTEGER,
+  authOrder INTEGER,
+  PRIMARY KEY (authID, instID, paperID),
+  FOREIGN KEY (authID) REFERENCES Authors (authID),
+  FOREIGN KEY (instID) REFERENCES Inst (instID),
+  FOREIGN KEY (paperID) REFERENCES Papers (paperID)
+)
+

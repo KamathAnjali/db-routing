@@ -1,0 +1,82 @@
+This is a Database called tv_shows.
+This Database consists of 5 tables.
+
+These tables are:
+
+1. city_channel (displayed as: city channel)
+
+2. radio
+
+3. tv_show (displayed as: tv show)
+
+4. city_channel_radio (displayed as: city channel radio)
+
+5. city_channel_tv_show (displayed as: city channel tv show)
+
+
+Table 1: Tablename is city_channel
+Display name: city channel
+DDL query for city_channel:
+CREATE TABLE "city_channel" (
+"ID" int,
+"City" text,
+"Station_name" text,
+"Owned_Since" real,
+"Affiliation" text,
+PRIMARY KEY ("ID")
+)
+
+
+Table 2: Tablename is radio
+DDL query for radio:
+CREATE TABLE "radio" (
+"Radio_ID" int,
+"Transmitter" text,
+"Radio_MHz" text,
+"2FM_MHz" text,
+"RnaG_MHz" text,
+"Lyric_FM_MHz" text,
+"ERP_kW" text,
+PRIMARY KEY ("Radio_ID")
+)
+
+
+Table 3: Tablename is tv_show
+Display name: tv show
+DDL query for tv_show:
+CREATE TABLE "tv_show" (
+"tv_show_ID" int,
+"tv_show_name" text,
+"Sub_tittle" text,
+"Next_show_name" text,
+"Original_Airdate" text,
+PRIMARY KEY ("tv_show_ID")
+)
+
+
+Table 4: Tablename is city_channel_radio
+Display name: city channel radio
+DDL query for city_channel_radio:
+CREATE TABLE "city_channel_radio" (
+"City_channel_ID" int,
+"Radio_ID" int,
+"Is_online" bool,
+PRIMARY KEY ("City_channel_ID","Radio_ID"),
+FOREIGN KEY (`City_channel_ID`) REFERENCES `city_channel`(`ID`),
+FOREIGN KEY (`Radio_ID`) REFERENCES `radio`(`Radio_ID`)
+)
+
+
+Table 5: Tablename is city_channel_tv_show
+Display name: city channel tv show
+DDL query for city_channel_tv_show:
+CREATE TABLE "city_channel_tv_show" (
+"City_channel_ID" int,
+"tv_show_ID" int,
+"Is_online" bool,
+"Is_free" bool,
+PRIMARY KEY ("City_channel_ID","tv_show_ID"),
+FOREIGN KEY (`City_channel_ID`) REFERENCES `city_channel`(`ID`),
+FOREIGN KEY (`tv_show_ID`) REFERENCES `tv_show`(`tv_show_ID`)
+)
+

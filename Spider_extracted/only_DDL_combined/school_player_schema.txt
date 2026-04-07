@@ -1,0 +1,72 @@
+This is a Database called school_player.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. school
+
+2. school_details (displayed as: school details)
+
+3. school_performance (displayed as: school performance)
+
+4. player
+
+
+Table 1: Tablename is school
+DDL query for school:
+CREATE TABLE "school" (
+"School_ID" int,
+"School" text,
+"Location" text,
+"Enrollment" real,
+"Founded" real,
+"Denomination" text,
+"Boys_or_Girls" text,
+"Day_or_Boarding" text,
+"Year_Entered_Competition" real,
+"School_Colors" text,
+PRIMARY KEY ("School_Id")
+)
+
+
+Table 2: Tablename is school_details
+Display name: school details
+DDL query for school_details:
+CREATE TABLE "school_details" (
+"School_ID" int,
+"Nickname" text,
+"Colors" text,
+"League" text,
+"Class" text,
+"Division" text,
+PRIMARY KEY ("School_Id"),
+FOREIGN KEY (`School_ID`) REFERENCES `school`(`School_ID`)
+)
+
+
+Table 3: Tablename is school_performance
+Display name: school performance
+DDL query for school_performance:
+CREATE TABLE "school_performance" (
+"School_Id" int,
+"School_Year" text,
+"Class_A" text,
+"Class_AA" text,
+PRIMARY KEY ("School_Id","School_Year"),
+FOREIGN KEY (`School_ID`) REFERENCES `school`(`School_ID`)
+)
+
+
+Table 4: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+"Player_ID" int,
+"Player" text,
+"Team" text,
+"Age" int,
+"Position" text,
+"School_ID" int,
+PRIMARY KEY ("Player_ID"),
+FOREIGN KEY (`School_ID`) REFERENCES `school`(`School_ID`)
+)
+

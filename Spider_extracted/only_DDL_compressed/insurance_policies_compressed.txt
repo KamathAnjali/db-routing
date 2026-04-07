@@ -1,0 +1,6 @@
+Database: insurance_policies
+Customers(Customer_ID: INTEGER, Customer_Details: VARCHAR(255)) PK[Customer_ID]
+Customer_Policies(Policy_ID: INTEGER, Customer_ID: INTEGER, Policy_Type_Code: CHAR(15), Start_Date: DATE,, End_Date: DATE,) PK[Policy_ID] FK[Customer_ID→Customers.Customer_ID]
+Claims(Claim_ID: INTEGER, Policy_ID: INTEGER, Date_Claim_Made: DATE,, Date_Claim_Settled: DATE,, Amount_Claimed: INTEGER,, Amount_Settled: INTEGER,) PK[Claim_ID] FK[Policy_ID→Customer_Policies.Policy_ID]
+Settlements(Settlement_ID: INTEGER, Claim_ID: INTEGER, Date_Claim_Made: DATE,, Date_Claim_Settled: DATE,, Amount_Claimed: INTEGER,, Amount_Settled: INTEGER,, Customer_Policy_ID: INTEGER) PK[Settlement_ID] FK[Claim_ID→Claims.Claim_ID]
+Payments(Payment_ID: INTEGER, Settlement_ID: INTEGER, Payment_Method_Code: VARCHAR(255),, Date_Payment_Made: DATE,, Amount_Payment: INTEGER,) PK[Payment_ID] FK[Settlement_ID→Settlements.Settlement_ID]

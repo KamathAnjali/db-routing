@@ -1,0 +1,43 @@
+This is a Database called movie_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Movie (displayed as: movie)
+
+2. Reviewer (displayed as: reviewer)
+
+3. Rating (displayed as: rating)
+
+
+Table 1: Tablename is Movie
+Display name: movie
+DDL query for Movie:
+CREATE TABLE Movie(
+	mID int primary key, 
+	title text, 
+	year int, 
+	director text
+)
+
+
+Table 2: Tablename is Reviewer
+Display name: reviewer
+DDL query for Reviewer:
+CREATE TABLE Reviewer(
+	rID int primary key, 
+	name text)
+
+
+Table 3: Tablename is Rating
+Display name: rating
+DDL query for Rating:
+CREATE TABLE Rating(
+	rID int, 
+	mID int, 
+	stars int, 
+	ratingDate date,
+	FOREIGN KEY (mID) references Movie(mID),
+	FOREIGN KEY (rID) references Reviewer(rID)
+)
+

@@ -1,0 +1,60 @@
+This is a Database called flight_4.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. routes
+
+2. airports
+
+3. airlines
+
+
+Table 1: Tablename is routes
+DDL query for routes:
+CREATE TABLE routes (
+   rid integer PRIMARY KEY,
+   dst_apid integer,              
+   dst_ap varchar(4),             
+   src_apid bigint,               
+   src_ap varchar(4),             
+   alid bigint,                   
+   airline varchar(4),            
+   codeshare text,                
+                                  
+   FOREIGN KEY(dst_apid) REFERENCES airports(apid),
+   FOREIGN KEY(src_apid) REFERENCES airports(apid),
+   FOREIGN KEY(alid)     REFERENCES airlines(alid)
+)
+
+
+Table 2: Tablename is airports
+DDL query for airports:
+CREATE TABLE airports (
+   apid integer PRIMARY KEY,      
+   name text NOT NULL,            
+   city text,                     
+   country text,                  
+   x real,                        
+                                  
+   y real,                        
+                                  
+   elevation bigint,              
+   iata character varchar(3),     
+   icao character varchar(4)      
+   
+)
+
+
+Table 3: Tablename is airlines
+DDL query for airlines:
+CREATE TABLE airlines (
+   alid integer PRIMARY KEY,      
+   name text,                     
+   iata varchar(2),               
+   icao varchar(3),               
+   callsign text,                 
+   country text,                  
+   active varchar(2)              
+)
+

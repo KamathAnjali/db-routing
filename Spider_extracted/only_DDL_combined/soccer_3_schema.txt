@@ -1,0 +1,37 @@
+This is a Database called soccer_3.
+This Database consists of 2 tables.
+
+These tables are:
+
+1. club
+
+2. player
+
+
+Table 1: Tablename is club
+DDL query for club:
+CREATE TABLE "club" (
+"Club_ID" int,
+"Name" text,
+"Manager" text,
+"Captain" text,
+"Manufacturer" text,
+"Sponsor" text,
+PRIMARY KEY ("Club_ID")
+)
+
+
+Table 2: Tablename is player
+DDL query for player:
+CREATE TABLE "player" (
+"Player_ID" real,
+"Name" text,
+"Country" text,
+"Earnings" real,
+"Events_number" int,
+"Wins_count" int,
+"Club_ID" int,
+PRIMARY KEY ("Player_ID"),
+FOREIGN KEY ("Club_ID") REFERENCES "club"("Club_ID")
+)
+

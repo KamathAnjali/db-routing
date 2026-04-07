@@ -1,0 +1,5 @@
+Database: concert_singer
+stadium(Stadium_ID: int,, Location: text,, Name: text,, Capacity: int,, Highest: int,, Lowest: int,, Average: int,) PK[Stadium_ID]
+singer(Singer_ID: int,, Name: text,, Country: text,, Song_Name: text,, Song_release_year: text,, Age: int,, Is_male: bool,) PK[Singer_ID]
+concert(concert_ID: int,, concert_Name: text,, Theme: text,, Stadium_ID: text,, Year: text,, FOREIGN: KEY ("Stadium_ID")) PK[concert_ID]
+singer_in_concert(concert_ID: int,, Singer_ID: text,, FOREIGN: KEY ("concert_ID"), FOREIGN: KEY ("Singer_ID")) PK[concert_ID, Singer_ID]

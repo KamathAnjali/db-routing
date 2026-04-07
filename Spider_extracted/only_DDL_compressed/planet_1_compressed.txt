@@ -1,0 +1,7 @@
+Database: planet_1
+Employee(EmployeeID: INTEGER, Name: VARCHAR(255), Position: VARCHAR(255), Salary: REAL, Remarks: VARCHAR(255))
+Planet(PlanetID: INTEGER, Name: VARCHAR(255), Coordinates: REAL)
+Shipment(ShipmentID: INTEGER, Date: DATE,, Manager: INTEGER, Planet: INTEGER) FK[Manager→Employee.EmployeeID; Planet→Planet.PlanetID]
+Has_Clearance(Employee: INTEGER, Planet: INTEGER, Level: INTEGER) PK[Employee, Planet] FK[Employee→Employee.EmployeeID; Planet→Planet.PlanetID]
+Client(AccountNumber: INTEGER, Name: VARCHAR(255))
+Package(Shipment: INTEGER, PackageNumber: INTEGER, Contents: VARCHAR(255), Weight: REAL, Sender: INTEGER, Recipient: INTEGER) PK[Shipment, PackageNumber] FK[Shipment→Shipment.ShipmentID; Sender→Client.AccountNumber; Recipient→Client.AccountNumber]

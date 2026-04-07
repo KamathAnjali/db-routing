@@ -1,0 +1,10 @@
+Database: cre_Doc_Workflow
+Staff(staff_id: INTEGER, staff_details: VARCHAR(255)) PK[staff_id]
+Ref_Staff_Roles(staff_role_code: CHAR(15), staff_role_description: VARCHAR(255)) PK[staff_role_code]
+Process_Outcomes(process_outcome_code: CHAR(15), process_outcome_description: VARCHAR(255)) PK[process_outcome_code]
+Process_Status(process_status_code: CHAR(15), process_status_description: VARCHAR(255)) PK[process_status_code]
+Authors(author_name: VARCHAR(255), other_details: VARCHAR(255)) PK[author_name]
+Documents(document_id: INTEGER, author_name: VARCHAR(255), document_name: VARCHAR(255), document_description: VARCHAR(255), other_details: VARCHAR(255),) PK[document_id] FK[author_name→Authors.author_name]
+Business_Processes(process_id: INTEGER, next_process_id: INTEGER,, process_name: VARCHAR(255), process_description: VARCHAR(255), other_details: VARCHAR(255),) PK[process_id]
+Documents_Processes(document_id: INTEGER, process_id: INTEGER, process_outcome_code: CHAR(15), process_status_code: CHAR(15)) PK[document_id, process_id] FK[document_id→Documents.document_id; process_id→Business_Processes.process_id; process_outcome_code→Process_Outcomes.process_outcome_code; process_status_code→Process_Status.process_status_code]
+Staff_in_Processes(document_id: INTEGER, process_id: INTEGER, staff_id: INTEGER, staff_role_code: CHAR(15), date_from: DATETIME,, date_to: DATETIME,, other_details: VARCHAR(255),, FOREIGN: KEY (document_id, process_id)) PK[document_id, process_id, staff_id] FK[staff_id→Staff.staff_id; staff_role_code→Ref_Staff_Roles.staff_role_code]

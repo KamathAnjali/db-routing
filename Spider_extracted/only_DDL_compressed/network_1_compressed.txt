@@ -1,0 +1,4 @@
+Database: network_1
+Highschooler(ID: int, name: text,, grade: int))
+Friend(student_id: int,, friend_id: int,) PK[student_id, friend_id] FK[student_id→Highschooler.ID; friend_id→Highschooler.ID]
+Likes(student_id: int,, liked_id: int,) PK[student_id, liked_id] FK[liked_id→Highschooler.ID; student_id→Highschooler.ID]

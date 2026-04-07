@@ -1,0 +1,109 @@
+This is a Database called chinook_1.
+This Database consists of 11 tables.
+
+These tables are:
+
+1. Album (displayed as: album)
+
+2. Artist (displayed as: artist)
+
+3. Customer (displayed as: customer)
+
+4. Employee (displayed as: employee)
+
+5. Genre (displayed as: genre)
+
+6. Invoice (displayed as: invoice)
+
+7. InvoiceLine (displayed as: invoice line)
+
+8. MediaType (displayed as: media type)
+
+9. Playlist (displayed as: playlist)
+
+10. PlaylistTrack (displayed as: playlist track)
+
+11. Track (displayed as: track)
+
+
+Table 1: Tablename is Album
+Display name: album
+DDL query for Album:
+
+
+
+Table 2: Tablename is Artist
+Display name: artist
+DDL query for Artist:
+CREATE TABLE `Artist` (
+  `ArtistId` integer NOT NULL
+,  `Name` varchar(120) DEFAULT NULL
+,  PRIMARY KEY (`ArtistId`)
+)
+
+
+Table 3: Tablename is Customer
+Display name: customer
+DDL query for Customer:
+
+
+
+Table 4: Tablename is Employee
+Display name: employee
+DDL query for Employee:
+
+
+
+Table 5: Tablename is Genre
+Display name: genre
+DDL query for Genre:
+CREATE TABLE `Genre` (
+  `GenreId` integer NOT NULL
+,  `Name` varchar(120) DEFAULT NULL
+,  PRIMARY KEY (`GenreId`)
+)
+
+
+Table 6: Tablename is Invoice
+Display name: invoice
+DDL query for Invoice:
+
+
+
+Table 7: Tablename is InvoiceLine
+Display name: invoice line
+DDL query for InvoiceLine:
+
+
+
+Table 8: Tablename is MediaType
+Display name: media type
+DDL query for MediaType:
+CREATE TABLE `MediaType` (
+  `MediaTypeId` integer NOT NULL
+,  `Name` varchar(120) DEFAULT NULL
+,  PRIMARY KEY (`MediaTypeId`)
+)
+
+
+Table 9: Tablename is Playlist
+Display name: playlist
+DDL query for Playlist:
+CREATE TABLE `Playlist` (
+  `PlaylistId` integer NOT NULL
+,  `Name` varchar(120) DEFAULT NULL
+,  PRIMARY KEY (`PlaylistId`)
+)
+
+
+Table 10: Tablename is PlaylistTrack
+Display name: playlist track
+DDL query for PlaylistTrack:
+
+
+
+Table 11: Tablename is Track
+Display name: track
+DDL query for Track:
+
+

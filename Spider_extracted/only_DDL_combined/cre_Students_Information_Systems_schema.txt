@@ -1,0 +1,224 @@
+This is a Database called cre_Students_Information_Systems.
+This Database consists of 15 tables.
+
+These tables are:
+
+1. Students (displayed as: students)
+
+2. Transcripts (displayed as: transcripts)
+
+3. Behaviour_Monitoring (displayed as: behaviour monitoring)
+
+4. Addresses (displayed as: addresses)
+
+5. Ref_Event_Types (displayed as: reference event types)
+
+6. Ref_Achievement_Type (displayed as: reference achievement type)
+
+7. Ref_Address_Types (displayed as: reference address types)
+
+8. Ref_Detention_Type (displayed as: reference detention type)
+
+9. Student_Events (displayed as: student events)
+
+10. Teachers (displayed as: teachers)
+
+11. Student_Loans (displayed as: student loans)
+
+12. Classes (displayed as: classes)
+
+13. Students_Addresses (displayed as: students addresses)
+
+14. Detention (displayed as: detention)
+
+15. Achievements (displayed as: achievements)
+
+
+Table 1: Tablename is Students
+Display name: students
+DDL query for Students:
+CREATE TABLE Students (
+`student_id` INTEGER NOT NULL,
+`bio_data` VARCHAR(255) NOT NULL,
+`student_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`student_id`)
+)
+
+
+Table 2: Tablename is Transcripts
+Display name: transcripts
+DDL query for Transcripts:
+CREATE TABLE Transcripts (
+`transcript_id` INTEGER NOT NULL,
+`student_id` INTEGER NOT NULL,
+`date_of_transcript` DATETIME(3),
+`transcript_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`transcript_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id)
+)
+
+
+Table 3: Tablename is Behaviour_Monitoring
+Display name: behaviour monitoring
+DDL query for Behaviour_Monitoring:
+CREATE TABLE Behaviour_Monitoring (
+`behaviour_monitoring_id` INTEGER NOT NULL,
+`student_id` INTEGER NOT NULL,
+`behaviour_monitoring_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`behaviour_monitoring_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id)
+)
+
+
+Table 4: Tablename is Addresses
+Display name: addresses
+DDL query for Addresses:
+CREATE TABLE Addresses (
+`address_id` INTEGER NOT NULL,
+`address_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`address_id`)
+)
+
+
+Table 5: Tablename is Ref_Event_Types
+Display name: reference event types
+DDL query for Ref_Event_Types:
+CREATE TABLE Ref_Event_Types (
+`event_type_code` CHAR(10) NOT NULL,
+`event_type_description` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`event_type_code`)
+)
+
+
+Table 6: Tablename is Ref_Achievement_Type
+Display name: reference achievement type
+DDL query for Ref_Achievement_Type:
+CREATE TABLE Ref_Achievement_Type (
+`achievement_type_code` CHAR(15) NOT NULL,
+`achievement_type_description` VARCHAR(80),
+PRIMARY KEY (`achievement_type_code`)
+)
+
+
+Table 7: Tablename is Ref_Address_Types
+Display name: reference address types
+DDL query for Ref_Address_Types:
+CREATE TABLE Ref_Address_Types (
+`address_type_code` CHAR(10) NOT NULL,
+`address_type_description` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`address_type_code`)
+)
+
+
+Table 8: Tablename is Ref_Detention_Type
+Display name: reference detention type
+DDL query for Ref_Detention_Type:
+CREATE TABLE Ref_Detention_Type (
+`detention_type_code` CHAR(10) NOT NULL,
+`detention_type_description` VARCHAR(80),
+PRIMARY KEY (`detention_type_code`)
+)
+
+
+Table 9: Tablename is Student_Events
+Display name: student events
+DDL query for Student_Events:
+CREATE TABLE Student_Events (
+`event_id` INTEGER NOT NULL,
+`event_type_code` CHAR(10) NOT NULL,
+`student_id` INTEGER NOT NULL,
+`event_date` DATETIME(3),
+`other_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`event_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id),
+FOREIGN KEY (event_type_code) REFERENCES Ref_Event_Types (event_type_code)
+)
+
+
+Table 10: Tablename is Teachers
+Display name: teachers
+DDL query for Teachers:
+CREATE TABLE Teachers (
+`teacher_id` INTEGER NOT NULL,
+`teacher_details` VARCHAR(255),
+PRIMARY KEY (`teacher_id`)
+)
+
+
+Table 11: Tablename is Student_Loans
+Display name: student loans
+DDL query for Student_Loans:
+CREATE TABLE Student_Loans (
+`student_loan_id` INTEGER NOT NULL,
+`student_id` INTEGER NOT NULL,
+`date_of_loan` DATETIME(3),
+`amount_of_loan` DECIMAL(15,4),
+`other_details` VARCHAR(255),
+PRIMARY KEY (`student_loan_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id)
+)
+
+
+Table 12: Tablename is Classes
+Display name: classes
+DDL query for Classes:
+CREATE TABLE Classes (
+`class_id` INTEGER NOT NULL,
+`student_id` INTEGER NOT NULL,
+`teacher_id` INTEGER NOT NULL,
+`class_details` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`class_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id),
+FOREIGN KEY (teacher_id) REFERENCES Teachers (teacher_id)
+)
+
+
+Table 13: Tablename is Students_Addresses
+Display name: students addresses
+DDL query for Students_Addresses:
+CREATE TABLE Students_Addresses (
+`student_address_id` INTEGER NOT NULL,
+`address_id` INTEGER NOT NULL,
+`address_type_code` CHAR(10) NOT NULL,
+`student_id` INTEGER NOT NULL,
+`date_from` DATETIME(3),
+`date_to` DATETIME(3),
+PRIMARY KEY (`student_address_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id),
+FOREIGN KEY (address_id) REFERENCES Addresses (address_id),
+FOREIGN KEY (address_type_code) REFERENCES Ref_Address_Types (address_type_code)
+)
+
+
+Table 14: Tablename is Detention
+Display name: detention
+DDL query for Detention:
+CREATE TABLE Detention (
+`detention_id` INTEGER NOT NULL,
+`detention_type_code` CHAR(10) NOT NULL,
+`student_id` INTEGER NOT NULL,
+`datetime_detention_start` DATETIME(3),
+`datetime_detention_end` DATETIME(3),
+`detention_summary` VARCHAR(255),
+`other_details` VARCHAR(255),
+PRIMARY KEY (`detention_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id),
+FOREIGN KEY (detention_type_code) REFERENCES Ref_Detention_Type (detention_type_code)
+)
+
+
+Table 15: Tablename is Achievements
+Display name: achievements
+DDL query for Achievements:
+CREATE TABLE Achievements (
+`achievement_id` INTEGER NOT NULL,
+`achievement_type_code` CHAR(15) NOT NULL,
+`student_id` INTEGER NOT NULL,
+`date_achievement` DATETIME(3),
+`achievement_details` VARCHAR(255),
+`other_details` VARCHAR(255),
+PRIMARY KEY (`achievement_id`),
+FOREIGN KEY (student_id) REFERENCES Students (student_id),
+FOREIGN KEY (achievement_type_code) REFERENCES Ref_Achievement_Type (achievement_type_code)
+)
+

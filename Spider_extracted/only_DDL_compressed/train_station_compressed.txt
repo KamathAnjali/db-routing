@@ -1,0 +1,4 @@
+Database: train_station
+station(Station_ID: int,, Name: text,, Annual_entry_exit: real,, Annual_interchanges: real,, Total_Passengers: real,, Location: text,, Main_Services: text,, Number_of_Platforms: int,) PK[Station_ID]
+train(Train_ID: int,, Name: text,, Time: text,, Service: text,) PK[Train_ID]
+train_station(Train_ID: int,, Station_ID: int,, FOREIGN: KEY ("Train_ID"), FOREIGN: KEY ("Station_ID")) PK[Train_ID, Station_ID]

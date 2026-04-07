@@ -1,0 +1,4 @@
+Database: scientist_1
+Scientists(SSN: int,, Name: Char(30)) PK[SSN]
+Projects(Code: Char(4),, Name: Char(50), Hours: int,) PK[Code]
+AssignedTo(Scientist: int, Project: char(4)) PK[Scientist, Project] FK[Scientist→Scientists.SSN; Project→Projects.Code]

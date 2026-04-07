@@ -1,0 +1,91 @@
+This is a Database called tracking_software_problems.
+This Database consists of 6 tables.
+
+These tables are:
+
+1. Problem_Category_Codes (displayed as: problem category codes)
+
+2. Problem_Log (displayed as: problem log)
+
+3. Problem_Status_Codes (displayed as: problem status codes)
+
+4. Product (displayed as: product)
+
+5. Staff (displayed as: staff)
+
+6. Problems (displayed as: problems)
+
+
+Table 1: Tablename is Problem_Category_Codes
+Display name: problem category codes
+DDL query for Problem_Category_Codes:
+CREATE TABLE `Problem_Category_Codes` (
+`problem_category_code` VARCHAR(20) PRIMARY KEY,
+`problem_category_description` VARCHAR(80)
+)
+
+
+Table 2: Tablename is Problem_Log
+Display name: problem log
+DDL query for Problem_Log:
+CREATE TABLE `Problem_Log` (
+`problem_log_id` INTEGER PRIMARY KEY,
+`assigned_to_staff_id` INTEGER NOT NULL,
+`problem_id` INTEGER NOT NULL,
+`problem_category_code` VARCHAR(20) NOT NULL,
+`problem_status_code` VARCHAR(20) NOT NULL,
+`log_entry_date` DATETIME,
+`log_entry_description` VARCHAR(255),
+`log_entry_fix` VARCHAR(255),
+`other_log_details` VARCHAR(255),
+FOREIGN KEY (`problem_category_code` ) REFERENCES `Problem_Category_Codes`(`problem_category_code` ),FOREIGN KEY (`assigned_to_staff_id` ) REFERENCES `Staff`(`staff_id` ),FOREIGN KEY (`problem_id` ) REFERENCES `Problems`(`problem_id` ),FOREIGN KEY (`problem_status_code` ) REFERENCES `Problem_Status_Codes`(`problem_status_code` )
+)
+
+
+Table 3: Tablename is Problem_Status_Codes
+Display name: problem status codes
+DDL query for Problem_Status_Codes:
+CREATE TABLE `Problem_Status_Codes` (
+`problem_status_code` VARCHAR(20) PRIMARY KEY,
+`problem_status_description` VARCHAR(80)
+)
+
+
+Table 4: Tablename is Product
+Display name: product
+DDL query for Product:
+CREATE TABLE `Product` (
+`product_id` INTEGER PRIMARY KEY,
+`product_name` VARCHAR(80),
+`product_details` VARCHAR(255)
+)
+
+
+Table 5: Tablename is Staff
+Display name: staff
+DDL query for Staff:
+CREATE TABLE `Staff` (
+`staff_id` INTEGER PRIMARY KEY,
+`staff_first_name` VARCHAR(80),
+`staff_last_name` VARCHAR(80),
+`other_staff_details` VARCHAR(255)
+)
+
+
+Table 6: Tablename is Problems
+Display name: problems
+DDL query for Problems:
+CREATE TABLE `Problems` (
+`problem_id` INTEGER PRIMARY KEY,
+`product_id` INTEGER NOT NULL,
+`closure_authorised_by_staff_id` INTEGER NOT NULL,
+`reported_by_staff_id` INTEGER NOT NULL,
+`date_problem_reported` DATETIME NOT NULL,
+`date_problem_closed` DATETIME,
+`problem_description` VARCHAR(255),
+`other_problem_details` VARCHAR(255),
+FOREIGN KEY (`closure_authorised_by_staff_id` ) REFERENCES `Staff`(`staff_id` ),
+FOREIGN KEY (`product_id` ) REFERENCES `Product`(`product_id` ),
+FOREIGN KEY (`reported_by_staff_id` ) REFERENCES `Staff`(`staff_id` )
+)
+

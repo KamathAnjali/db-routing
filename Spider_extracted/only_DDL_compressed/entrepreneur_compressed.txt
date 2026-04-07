@@ -1,0 +1,3 @@
+Database: entrepreneur
+entrepreneur(Entrepreneur_ID: int,, People_ID: int,, Company: text,, Money_Requested: real,, Investor: text,, FOREIGN: KEY ("People_ID")) PK[Entrepreneur_ID]
+people(People_ID: int,, Name: text,, Height: real,, Weight: real,, Date_of_Birth: text,) PK[People_ID]

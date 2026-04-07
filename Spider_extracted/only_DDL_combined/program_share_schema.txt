@@ -1,0 +1,63 @@
+This is a Database called program_share.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. program
+
+2. channel
+
+3. broadcast
+
+4. broadcast_share (displayed as: broadcast share)
+
+
+Table 1: Tablename is program
+DDL query for program:
+CREATE TABLE "program" (
+"Program_ID" int,
+"Name" text,
+"Origin" text,
+"Launch" real,
+"Owner" text,
+PRIMARY KEY ("Program_ID")
+)
+
+
+Table 2: Tablename is channel
+DDL query for channel:
+CREATE TABLE "channel" (
+"Channel_ID" int,
+"Name" text,
+"Owner" text,
+"Share_in_percent" real,
+"Rating_in_percent" real,
+PRIMARY KEY ("Channel_ID")
+)
+
+
+Table 3: Tablename is broadcast
+DDL query for broadcast:
+CREATE TABLE "broadcast" (
+"Channel_ID" int,
+"Program_ID" int,
+"Time_of_day" text,
+PRIMARY KEY ("Channel_ID","Program_ID"),
+FOREIGN KEY (`Channel_ID`) REFERENCES `channel`(`Channel_ID`),
+FOREIGN KEY (`Program_ID`) REFERENCES `program`(`Program_ID`)
+)
+
+
+Table 4: Tablename is broadcast_share
+Display name: broadcast share
+DDL query for broadcast_share:
+CREATE TABLE "broadcast_share" (
+"Channel_ID" int,
+"Program_ID" int,
+"Date" text,
+"Share_in_percent" real,
+PRIMARY KEY ("Channel_ID","Program_ID"),
+FOREIGN KEY (`Channel_ID`) REFERENCES `channel`(`Channel_ID`),
+FOREIGN KEY (`Program_ID`) REFERENCES `program`(`Program_ID`)
+)
+

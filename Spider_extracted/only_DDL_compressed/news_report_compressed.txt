@@ -1,0 +1,4 @@
+Database: news_report
+event(Event_ID: int,, Date: text,, Venue: text,, Name: text,, Event_Attendance: int,) PK[Event_ID]
+journalist(journalist_ID: int,, Name: text,, Nationality: text,, Age: text,, Years_working: int,) PK[journalist_ID]
+news_report(journalist_ID: int,, Event_ID: int,, Work_Type: text,, FOREIGN: KEY ("journalist_ID"), FOREIGN: KEY ("Event_ID")) PK[journalist_ID, Event_ID]

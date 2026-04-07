@@ -1,0 +1,3 @@
+Database: election
+county(County_Id: int,, County_name: text,, Population: real,, Zip_code: text,) PK[County_Id]
+party(Party_ID: int,, Year: real,, Party: text,, Governor: text,, Lieutenant_Governor: text,, Comptroller: text,, Attorney_General: text,, US_Senate: text,) PK[Party_ID]

@@ -1,0 +1,3 @@
+Database: network_2
+Person(name: varchar(20), age: INTEGER,, city: TEXT,, gender: TEXT,, job: TEXT)
+PersonFriend(name: varchar(20),, friend: varchar(20),, year: INTEGER,) FK[name→Person.name; friend→Person.name]

@@ -1,0 +1,107 @@
+This is a Database called cre_Doc_and_collections.
+This Database consists of 7 tables.
+
+These tables are:
+
+1. Document_Subsets (displayed as: document subsets)
+
+2. Collection_Subsets (displayed as: collection subsets)
+
+3. Document_Objects (displayed as: document objects)
+
+4. Collections (displayed as: collections)
+
+5. Documents_in_Collections (displayed as: documents in collections)
+
+6. Document_Subset_Members (displayed as: document subset members)
+
+7. Collection_Subset_Members (displayed as: collection subset members)
+
+
+Table 1: Tablename is Document_Subsets
+Display name: document subsets
+DDL query for Document_Subsets:
+CREATE TABLE Document_Subsets (
+Document_Subset_ID INTEGER NOT NULL,
+Document_Subset_Name VARCHAR(255) NOT NULL,
+Document_Subset_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Document_Subset_ID)
+)
+
+
+Table 2: Tablename is Collection_Subsets
+Display name: collection subsets
+DDL query for Collection_Subsets:
+CREATE TABLE Collection_Subsets (
+Collection_Subset_ID INTEGER NOT NULL,
+Collection_Subset_Name VARCHAR(255) NOT NULL,
+Collecrtion_Subset_Details VARCHAR(255) NOT NULL,
+PRIMARY KEY (Collection_Subset_ID)
+)
+
+
+Table 3: Tablename is Document_Objects
+Display name: document objects
+DDL query for Document_Objects:
+CREATE TABLE Document_Objects (
+Document_Object_ID INTEGER NOT NULL,
+Parent_Document_Object_ID INTEGER,
+Owner VARCHAR(255),
+Description VARCHAR(255),
+Other_Details VARCHAR(255),
+PRIMARY KEY (Document_Object_ID)
+)
+
+
+Table 4: Tablename is Collections
+Display name: collections
+DDL query for Collections:
+CREATE TABLE Collections (
+Collection_ID INTEGER NOT NULL,
+Parent_Collection_ID INTEGER,
+Collection_Name VARCHAR(255),
+Collection_Description VARCHAR(255),
+PRIMARY KEY (Collection_ID)
+)
+
+
+Table 5: Tablename is Documents_in_Collections
+Display name: documents in collections
+DDL query for Documents_in_Collections:
+CREATE TABLE Documents_in_Collections (
+Document_Object_ID INTEGER NOT NULL,
+Collection_ID INTEGER NOT NULL,
+PRIMARY KEY (Document_Object_ID, Collection_ID),
+FOREIGN KEY (Document_Object_ID) REFERENCES Document_Objects (Document_Object_ID),
+FOREIGN KEY (Collection_ID) REFERENCES Collections (Collection_ID)
+)
+
+
+Table 6: Tablename is Document_Subset_Members
+Display name: document subset members
+DDL query for Document_Subset_Members:
+CREATE TABLE Document_Subset_Members (
+Document_Object_ID INTEGER NOT NULL,
+Related_Document_Object_ID INTEGER NOT NULL,
+Document_Subset_ID INTEGER NOT NULL,
+PRIMARY KEY (Document_Object_ID, Related_Document_Object_ID),
+FOREIGN KEY (Document_Object_ID) REFERENCES Document_Objects (Document_Object_ID),
+FOREIGN KEY (Related_Document_Object_ID) REFERENCES Document_Objects
+(Document_Object_ID),
+FOREIGN KEY (Document_Subset_ID) REFERENCES Document_Subsets (Document_Subset_ID)
+)
+
+
+Table 7: Tablename is Collection_Subset_Members
+Display name: collection subset members
+DDL query for Collection_Subset_Members:
+CREATE TABLE Collection_Subset_Members (
+Collection_ID INTEGER NOT NULL,
+Related_Collection_ID INTEGER NOT NULL,
+Collection_Subset_ID INTEGER NOT NULL,
+PRIMARY KEY (Collection_ID, Related_Collection_ID),
+FOREIGN KEY (Collection_ID) REFERENCES Collections (Collection_ID),
+FOREIGN KEY (Related_Collection_ID) REFERENCES Collections (Collection_ID),
+FOREIGN KEY (Collection_Subset_ID) REFERENCES Collection_Subsets (Collection_Subset_ID)
+)
+

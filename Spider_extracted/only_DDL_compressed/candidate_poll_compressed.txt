@@ -1,0 +1,3 @@
+Database: candidate_poll
+candidate(Candidate_ID: int,, People_ID: int,, Poll_Source: text,, Date: text,, Support_rate: real,, Consider_rate: real,, Oppose_rate: real,, Unsure_rate: real,, FOREIGN: KEY ("People_ID")) PK[Candidate_ID]
+people(People_ID: int,, Sex: text,, Name: text,, Date_of_Birth: text,, Height: real,, Weight: real,) PK[People_ID]

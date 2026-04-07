@@ -1,0 +1,53 @@
+This is a Database called address_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Student (displayed as: student)
+
+2. Direct_distance (displayed as: direct distance)
+
+3. City (displayed as: city)
+
+
+Table 1: Tablename is Student
+Display name: student
+DDL query for Student:
+CREATE TABLE Student (
+        StuID        INTEGER PRIMARY KEY,
+        LName        VARCHAR(12),
+        Fname        VARCHAR(12),
+        Age      INTEGER,
+        Sex      VARCHAR(1),
+        Major        INTEGER,
+        Advisor      INTEGER,
+        city_code    VARCHAR(3),
+        FOREIGN KEY(city_code) REFERENCES City(city_code)
+ )
+
+
+Table 2: Tablename is Direct_distance
+Display name: direct distance
+DDL query for Direct_distance:
+CREATE TABLE Direct_distance (
+  city1_code varchar(3) ,
+  city2_code varchar(3) ,
+  distance INTEGER,
+  FOREIGN KEY(city1_code) REFERENCES City(city_code),
+  FOREIGN KEY(city2_code) REFERENCES City(city_code)
+  
+)
+
+
+Table 3: Tablename is City
+Display name: city
+DDL query for City:
+CREATE TABLE City (
+       city_code  	VARCHAR(3) PRIMARY KEY,
+       city_name  	VARCHAR(25),
+       state		VARCHAR(2),
+       country		VARCHAR(25),
+       latitude		FLOAT,
+       longitude	FLOAT
+)
+

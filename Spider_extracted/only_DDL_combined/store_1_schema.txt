@@ -1,0 +1,110 @@
+This is a Database called store_1.
+This Database consists of 12 tables.
+
+These tables are:
+
+1. artists (displayed as: sqlite sequence)
+
+2. sqlite_sequence (displayed as: artists)
+
+3. albums
+
+4. employees
+
+5. customers
+
+6. genres
+
+7. invoices
+
+8. media_types (displayed as: media types)
+
+9. tracks
+
+10. invoice_lines (displayed as: invoice lines)
+
+11. playlists
+
+12. playlist_tracks (displayed as: playlist tracks)
+
+
+Table 1: Tablename is artists
+Display name: sqlite sequence
+DDL query for artists:
+CREATE TABLE artists
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(120)
+)
+
+
+Table 2: Tablename is sqlite_sequence
+Display name: artists
+DDL query for sqlite_sequence:
+CREATE TABLE sqlite_sequence(name,seq)
+
+
+Table 3: Tablename is albums
+DDL query for albums:
+
+
+
+Table 4: Tablename is employees
+DDL query for employees:
+
+
+
+Table 5: Tablename is customers
+DDL query for customers:
+
+
+
+Table 6: Tablename is genres
+DDL query for genres:
+CREATE TABLE genres
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(120)
+)
+
+
+Table 7: Tablename is invoices
+DDL query for invoices:
+
+
+
+Table 8: Tablename is media_types
+Display name: media types
+DDL query for media_types:
+CREATE TABLE media_types
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(120)
+)
+
+
+Table 9: Tablename is tracks
+DDL query for tracks:
+
+
+
+Table 10: Tablename is invoice_lines
+Display name: invoice lines
+DDL query for invoice_lines:
+
+
+
+Table 11: Tablename is playlists
+DDL query for playlists:
+CREATE TABLE playlists
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(120)
+)
+
+
+Table 12: Tablename is playlist_tracks
+Display name: playlist tracks
+DDL query for playlist_tracks:
+
+

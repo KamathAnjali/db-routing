@@ -1,0 +1,44 @@
+This is a Database called scientist_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Scientists (displayed as: scientists)
+
+2. Projects (displayed as: projects)
+
+3. AssignedTo (displayed as: assigned to)
+
+
+Table 1: Tablename is Scientists
+Display name: scientists
+DDL query for Scientists:
+CREATE TABLE Scientists (
+  SSN int,
+  Name Char(30) not null,
+  Primary Key (SSN)
+)
+
+
+Table 2: Tablename is Projects
+Display name: projects
+DDL query for Projects:
+CREATE TABLE Projects (
+  Code Char(4),
+  Name Char(50) not null,
+  Hours int,
+  Primary Key (Code)
+)
+
+
+Table 3: Tablename is AssignedTo
+Display name: assigned to
+DDL query for AssignedTo:
+CREATE TABLE AssignedTo (
+  Scientist int not null,
+  Project char(4) not null,
+  Primary Key (Scientist, Project),
+  Foreign Key (Scientist) references Scientists (SSN),
+  Foreign Key (Project) references Projects (Code)
+)
+

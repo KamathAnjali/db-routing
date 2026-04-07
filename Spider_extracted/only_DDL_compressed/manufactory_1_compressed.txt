@@ -1,0 +1,3 @@
+Database: manufactory_1
+Manufacturers(Code: INTEGER,, Name: VARCHAR(255), Headquarter: VARCHAR(255), Founder: VARCHAR(255), Revenue: REAL,) PK[Code]
+Products(Code: INTEGER,, Name: VARCHAR(255), Price: DECIMAL, Manufacturer: INTEGER) PK[Code] FK[Manufacturer→Manufacturers.Code]

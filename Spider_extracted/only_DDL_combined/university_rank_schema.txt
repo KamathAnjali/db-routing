@@ -1,0 +1,66 @@
+This is a Database called university_rank.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. university
+
+2. overall_ranking (displayed as: overall ranking)
+
+3. major
+
+4. major_ranking (displayed as: major ranking)
+
+
+Table 1: Tablename is university
+DDL query for university:
+CREATE TABLE "university" (
+"University_ID" int,
+"University_Name" text,
+"City" text,
+"State" text,
+"Team_Name" text,
+"Affiliation" text,
+"Enrollment" int,
+"Home_Conference" text,
+PRIMARY KEY ("University_ID")
+)
+
+
+Table 2: Tablename is overall_ranking
+Display name: overall ranking
+DDL query for overall_ranking:
+CREATE TABLE "overall_ranking" (
+"Rank" int,
+"University_ID" int,
+"Reputation_point" int,
+"Research_point" int,
+"Citation_point" int,
+"Total" int,
+PRIMARY KEY ("University_ID"),
+FOREIGN KEY (`University_ID`) REFERENCES `university`(`University_ID`)
+)
+
+
+Table 3: Tablename is major
+DDL query for major:
+CREATE TABLE "major" (
+"Major_ID" int,
+"Major_Name" text,
+"Major_Code" int,
+PRIMARY KEY ("Major_ID")
+)
+
+
+Table 4: Tablename is major_ranking
+Display name: major ranking
+DDL query for major_ranking:
+CREATE TABLE "major_ranking" (
+"Rank" int,
+"University_ID" int,
+"Major_ID" int,
+PRIMARY KEY ("Rank","Major_ID","University_ID"),
+FOREIGN KEY (`University_ID`) REFERENCES `university`(`University_ID`),
+FOREIGN KEY (`Major_ID`) REFERENCES `major`(`Major_ID`)
+)
+

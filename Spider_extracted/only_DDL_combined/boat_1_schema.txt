@@ -1,0 +1,44 @@
+This is a Database called boat_1.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. Sailors (displayed as: sailors)
+
+2. Boats (displayed as: boats)
+
+3. Reserves (displayed as: reserves)
+
+
+Table 1: Tablename is Sailors
+Display name: sailors
+DDL query for Sailors:
+CREATE TABLE Sailors (
+sid INTEGER primary key,
+name TEXT,
+rating INTEGER,
+age INTEGER
+)
+
+
+Table 2: Tablename is Boats
+Display name: boats
+DDL query for Boats:
+CREATE TABLE Boats (
+  bid INTEGER primary key,
+  name TEXT,
+  color TEXT
+)
+
+
+Table 3: Tablename is Reserves
+Display name: reserves
+DDL query for Reserves:
+CREATE TABLE Reserves (
+  sid INTEGER,
+  bid INTEGER,
+  day TEXT,
+  foreign key (sid) references Sailors(sid),
+  foreign key (bid) references Boats(bid)
+)
+

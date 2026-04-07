@@ -1,0 +1,581 @@
+This is a Database called baseball_1.
+This Database consists of 26 tables.
+
+These tables are:
+
+1. all_star (displayed as: all star)
+
+2. appearances
+
+3. manager_award (displayed as: manager award)
+
+4. player_award (displayed as: player award)
+
+5. manager_award_vote (displayed as: manager award vote)
+
+6. player_award_vote (displayed as: player award vote)
+
+7. batting
+
+8. batting_postseason (displayed as: batting postseason)
+
+9. player_college (displayed as: player college)
+
+10. fielding
+
+11. fielding_outfield (displayed as: fielding outfield)
+
+12. fielding_postseason (displayed as: fielding postseason)
+
+13. hall_of_fame (displayed as: hall of fame)
+
+14. home_game (displayed as: home game)
+
+15. manager
+
+16. manager_half (displayed as: manager half)
+
+17. player
+
+18. park
+
+19. pitching
+
+20. pitching_postseason (displayed as: pitching postseason)
+
+21. salary
+
+22. college
+
+23. postseason
+
+24. team
+
+25. team_franchise (displayed as: team franchise)
+
+26. team_half (displayed as: team half)
+
+
+Table 1: Tablename is all_star
+Display name: all star
+DDL query for all_star:
+CREATE TABLE all_star (
+    player_id TEXT,
+    year INTEGER,
+    game_num INTEGER,
+    game_id TEXT,
+    team_id TEXT,
+    league_id TEXT,
+    gp NUMERIC,
+    starting_pos NUMERIC,
+    foreign key (player_id) references player(player_id)
+)
+
+
+Table 2: Tablename is appearances
+DDL query for appearances:
+CREATE TABLE appearances (
+    year INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    player_id TEXT,
+    g_all NUMERIC,
+    gs NUMERIC,
+    g_batting INTEGER,
+    g_defense NUMERIC,
+    g_p INTEGER,
+    g_c INTEGER,
+    g_1b INTEGER,
+    g_2b INTEGER,
+    g_3b INTEGER,
+    g_ss INTEGER,
+    g_lf INTEGER,
+    g_cf INTEGER,
+    g_rf INTEGER,
+    g_of INTEGER,
+    g_dh NUMERIC,
+    g_ph NUMERIC,
+    g_pr NUMERIC,
+    foreign key (team_id) references team(team_id),
+    foreign key (player_id) references player(player_id)
+)
+
+
+Table 3: Tablename is manager_award
+Display name: manager award
+DDL query for manager_award:
+CREATE TABLE manager_award (
+    player_id TEXT,
+    award_id TEXT,
+    year INTEGER,
+    league_id TEXT,
+    tie TEXT,
+    notes NUMERIC,
+    foreign key (player_id) references player(player_id)
+)
+
+
+Table 4: Tablename is player_award
+Display name: player award
+DDL query for player_award:
+CREATE TABLE player_award ( 
+	player_id TEXT, 
+	award_id TEXT, 
+	year INTEGER, 
+	league_id TEXT,
+    	tie TEXT,
+    	notes TEXT,
+	foreign key (player_id) references player(player_id)
+)
+
+
+Table 5: Tablename is manager_award_vote
+Display name: manager award vote
+DDL query for manager_award_vote:
+CREATE TABLE manager_award_vote (
+    award_id TEXT,
+    year INTEGER,
+    league_id TEXT,
+    player_id TEXT,
+    points_won INTEGER,
+    points_max INTEGER,
+    votes_first INTEGER)
+
+
+Table 6: Tablename is player_award_vote
+Display name: player award vote
+DDL query for player_award_vote:
+CREATE TABLE player_award_vote (
+    award_id TEXT,
+    year INTEGER,
+    league_id TEXT,
+    player_id TEXT,
+    points_won NUMERIC,
+    points_max INTEGER,
+    votes_first NUMERIC,
+   foreign key (player_id) references player(player_id)
+)
+
+
+Table 7: Tablename is batting
+DDL query for batting:
+CREATE TABLE batting ( player_id TEXT, year INTEGER, stint INTEGER, team_id TEXT, league_id TEXT, g INTEGER, ab NUMERIC,
+    r NUMERIC,
+    h NUMERIC,
+    double NUMERIC,
+    triple NUMERIC,
+    hr NUMERIC,
+    rbi NUMERIC,
+    sb NUMERIC,
+    cs NUMERIC,
+    bb NUMERIC,
+    so NUMERIC,
+    ibb NUMERIC,
+    hbp NUMERIC,
+    sh NUMERIC,
+    sf NUMERIC,
+    g_idp NUMERIC,
+foreign key (player_id) references player(player_id)
+)
+
+
+Table 8: Tablename is batting_postseason
+Display name: batting postseason
+DDL query for batting_postseason:
+CREATE TABLE batting_postseason (
+    year INTEGER,
+    round TEXT,
+    player_id TEXT,
+    team_id TEXT,
+    league_id TEXT,
+    g INTEGER,
+    ab INTEGER,
+    r INTEGER,
+    h INTEGER,
+    double INTEGER,
+    triple INTEGER,
+    hr INTEGER,
+    rbi INTEGER,
+    sb INTEGER,
+    cs NUMERIC,
+    bb INTEGER,
+    so INTEGER,
+    ibb NUMERIC,
+    hbp NUMERIC,
+    sh NUMERIC,
+    sf NUMERIC,
+    g_idp NUMERIC,
+	foreign key (player_id) references player(player_id),
+	foreign key (team_id) references team(team_id)
+)
+
+
+Table 9: Tablename is player_college
+Display name: player college
+DDL query for player_college:
+CREATE TABLE player_college ( player_id TEXT,
+    college_id TEXT,
+    year INTEGER,
+	foreign key (player_id) references player(player_id),
+	foreign key (college_id) references college(college_id)
+)
+
+
+Table 10: Tablename is fielding
+DDL query for fielding:
+CREATE TABLE fielding (
+    player_id TEXT,
+    year INTEGER,
+    stint INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    pos TEXT,
+    g INTEGER,
+    gs NUMERIC,
+    inn_outs NUMERIC,
+    po NUMERIC,
+    a NUMERIC,
+    e NUMERIC,
+    dp NUMERIC,
+    pb NUMERIC,
+    wp NUMERIC,
+    sb NUMERIC,
+    cs NUMERIC,
+    zr NUMERIC,
+	foreign key (player_id) references player(player_id)
+)
+
+
+Table 11: Tablename is fielding_outfield
+Display name: fielding outfield
+DDL query for fielding_outfield:
+CREATE TABLE fielding_outfield (
+    player_id TEXT,
+    year INTEGER,
+    stint INTEGER,
+    glf NUMERIC,
+    gcf NUMERIC,
+    grf NUMERIC,
+	foreign key (player_id) references player(player_id)
+)
+
+
+Table 12: Tablename is fielding_postseason
+Display name: fielding postseason
+DDL query for fielding_postseason:
+CREATE TABLE fielding_postseason (
+    player_id TEXT,
+    year INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    round TEXT,
+    pos TEXT,
+    g INTEGER,
+    gs NUMERIC,
+    inn_outs NUMERIC,
+    po INTEGER,
+    a INTEGER,
+    e INTEGER,
+    dp INTEGER,
+    tp INTEGER,
+    pb NUMERIC,
+    sb NUMERIC,
+    cs NUMERIC,
+	foreign key (player_id) references player(player_id),
+	foreign key (team_id) references player(team_id)
+)
+
+
+Table 13: Tablename is hall_of_fame
+Display name: hall of fame
+DDL query for hall_of_fame:
+CREATE TABLE hall_of_fame (
+    player_id TEXT,
+    yearid INTEGER,
+    votedby TEXT,
+    ballots NUMERIC,
+    needed NUMERIC,
+    votes NUMERIC,
+    inducted TEXT,
+    category TEXT,
+    needed_note TEXT,
+	foreign key (player_id) references player(player_id)
+)
+
+
+Table 14: Tablename is home_game
+Display name: home game
+DDL query for home_game:
+CREATE TABLE home_game (
+    year INTEGER,
+    league_id TEXT,
+    team_id TEXT,
+    park_id TEXT,
+    span_first TEXT,
+    span_last TEXT,
+    games INTEGER,
+    openings INTEGER,
+    attendance INTEGER,
+	foreign key (team_id) references team(team_id),
+	foreign key (park_id) references park(park_id)
+)
+
+
+Table 15: Tablename is manager
+DDL query for manager:
+CREATE TABLE manager (
+    player_id TEXT,
+    year INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    inseason INTEGER,
+    g INTEGER,
+    w INTEGER,
+    l INTEGER,
+    rank NUMERIC,
+    plyr_mgr TEXT,
+	foreign key (team_id) references team(team_id)
+)
+
+
+Table 16: Tablename is manager_half
+Display name: manager half
+DDL query for manager_half:
+CREATE TABLE manager_half (
+    player_id TEXT,
+    year INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    inseason INTEGER,
+    half INTEGER,
+    g INTEGER,
+    w INTEGER,
+    l INTEGER,
+    rank INTEGER,
+	foreign key (team_id) references team(team_id)
+)
+
+
+Table 17: Tablename is player
+DDL query for player:
+CREATE TABLE player (
+    player_id TEXT,
+    birth_year NUMERIC,
+    birth_month NUMERIC,
+    birth_day NUMERIC,
+    birth_country TEXT,
+    birth_state TEXT,
+    birth_city TEXT,
+    death_year NUMERIC,
+    death_month NUMERIC,
+    death_day NUMERIC,
+    death_country TEXT,
+    death_state TEXT,
+    death_city TEXT,
+    name_first TEXT,
+    name_last TEXT,
+    name_given TEXT,
+    weight NUMERIC,
+    height NUMERIC,
+    bats TEXT,
+    throws TEXT,
+    debut TEXT,
+    final_game TEXT,
+    retro_id TEXT,
+    bbref_id TEXT)
+
+
+Table 18: Tablename is park
+DDL query for park:
+CREATE TABLE park (
+    park_id TEXT,
+    park_name TEXT,
+    park_alias TEXT,
+    city TEXT,
+    state TEXT,
+    country TEXT)
+
+
+Table 19: Tablename is pitching
+DDL query for pitching:
+CREATE TABLE pitching (
+    player_id TEXT,
+    year INTEGER,
+    stint INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    w INTEGER,
+    l INTEGER,
+    g INTEGER,
+    gs INTEGER,
+    cg INTEGER,
+    sho INTEGER,
+    sv INTEGER,
+    ipouts NUMERIC,
+    h INTEGER,
+    er INTEGER,
+    hr INTEGER,
+    bb INTEGER,
+    so INTEGER,
+    baopp NUMERIC,
+    era NUMERIC,
+    ibb NUMERIC,
+    wp NUMERIC,
+    hbp NUMERIC,
+    bk INTEGER,
+    bfp NUMERIC,
+    gf NUMERIC,
+    r INTEGER,
+    sh NUMERIC,
+    sf NUMERIC,
+    g_idp NUMERIC)
+
+
+Table 20: Tablename is pitching_postseason
+Display name: pitching postseason
+DDL query for pitching_postseason:
+CREATE TABLE pitching_postseason (
+    player_id TEXT,
+    year INTEGER,
+    round TEXT,
+    team_id TEXT,
+    league_id TEXT,
+    w INTEGER,
+    l INTEGER,
+    g INTEGER,
+    gs INTEGER,
+    cg INTEGER,
+    sho INTEGER,
+    sv INTEGER,
+    ipouts INTEGER,
+    h INTEGER,
+    er INTEGER,
+    hr INTEGER,
+    bb INTEGER,
+    so INTEGER,
+    baopp TEXT,
+    era NUMERIC,
+    ibb NUMERIC,
+    wp NUMERIC,
+    hbp NUMERIC,
+    bk NUMERIC,
+    bfp NUMERIC,
+    gf INTEGER,
+    r INTEGER,
+    sh NUMERIC,
+    sf NUMERIC,
+    g_idp NUMERIC)
+
+
+Table 21: Tablename is salary
+DDL query for salary:
+CREATE TABLE salary (
+    year INTEGER,
+    team_id TEXT,
+    league_id TEXT,
+    player_id TEXT,
+    salary INTEGER)
+
+
+Table 22: Tablename is college
+DDL query for college:
+CREATE TABLE college (
+    college_id TEXT,
+    name_full TEXT,
+    city TEXT,
+    state TEXT,
+    country TEXT)
+
+
+Table 23: Tablename is postseason
+DDL query for postseason:
+CREATE TABLE postseason (
+    year INTEGER,
+    round TEXT,
+    team_id_winner TEXT,
+    league_id_winner TEXT,
+    team_id_loser TEXT,
+    league_id_loser TEXT,
+    wins INTEGER,
+    losses INTEGER,
+    ties INTEGER)
+
+
+Table 24: Tablename is team
+DDL query for team:
+CREATE TABLE team (
+    year INTEGER,
+    league_id TEXT,
+    team_id TEXT,
+    franchise_id TEXT,
+    div_id TEXT,
+    rank INTEGER,
+    g INTEGER,
+    ghome NUMERIC,
+    w INTEGER,
+    l INTEGER,
+    div_win TEXT,
+    wc_win TEXT,
+    lg_win TEXT,
+    ws_win TEXT,
+    r INTEGER,
+    ab INTEGER,
+    h INTEGER,
+    double INTEGER,
+    triple INTEGER,
+    hr INTEGER,
+    bb INTEGER,
+    so NUMERIC,
+    sb NUMERIC,
+    cs NUMERIC,
+    hbp NUMERIC,
+    sf NUMERIC,
+    ra INTEGER,
+    er INTEGER,
+    era NUMERIC,
+    cg INTEGER,
+    sho INTEGER,
+    sv INTEGER,
+    ipouts INTEGER,
+    ha INTEGER,
+    hra INTEGER,
+    bba INTEGER,
+    soa INTEGER,
+    e INTEGER,
+    dp NUMERIC,
+    fp NUMERIC,
+    name TEXT,
+    park TEXT,
+    attendance NUMERIC,
+    bpf INTEGER,
+    ppf INTEGER,
+    team_id_br TEXT,
+    team_id_lahman45 TEXT,
+    team_id_retro TEXT)
+
+
+Table 25: Tablename is team_franchise
+Display name: team franchise
+DDL query for team_franchise:
+CREATE TABLE team_franchise (
+    franchise_id TEXT,
+    franchise_name TEXT,
+    active TEXT,
+    na_assoc TEXT)
+
+
+Table 26: Tablename is team_half
+Display name: team half
+DDL query for team_half:
+CREATE TABLE team_half (
+    year INTEGER,
+    league_id TEXT,
+    team_id TEXT,
+    half INTEGER,
+    div_id TEXT,
+    div_win TEXT,
+    rank INTEGER,
+    g INTEGER,
+    w INTEGER,
+    l INTEGER)
+

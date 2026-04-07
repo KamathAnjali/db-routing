@@ -1,0 +1,69 @@
+This is a Database called swimming.
+This Database consists of 4 tables.
+
+These tables are:
+
+1. swimmer
+
+2. stadium
+
+3. event
+
+4. record
+
+
+Table 1: Tablename is swimmer
+DDL query for swimmer:
+CREATE TABLE "swimmer" (
+"ID" int,
+"name" text,
+"Nationality" text,
+"meter_100" real,
+"meter_200" text,
+"meter_300" text,
+"meter_400" text,
+"meter_500" text,
+"meter_600" text,
+"meter_700" text,
+"Time" text,
+PRIMARY KEY ("ID")
+)
+
+
+Table 2: Tablename is stadium
+DDL query for stadium:
+CREATE TABLE "stadium" (
+"ID" int,
+"name" text,
+"Capacity" int,
+"City" text,
+"Country" text,
+"Opening_year" int,
+PRIMARY KEY ("ID")
+)
+
+
+Table 3: Tablename is event
+DDL query for event:
+CREATE TABLE "event" (
+"ID" int,
+"Name" text,
+"Stadium_ID" int,
+"Year" text,
+PRIMARY KEY ("ID"),
+FOREIGN KEY (`Stadium_ID`) REFERENCES `stadium`(`ID`)
+)
+
+
+Table 4: Tablename is record
+DDL query for record:
+CREATE TABLE "record" (
+"ID" int,
+"Result" text,
+"Swimmer_ID" int,
+"Event_ID" int,
+PRIMARY KEY ("Swimmer_ID","Event_ID"),
+FOREIGN KEY (`Event_ID`) REFERENCES `event`(`ID`),
+FOREIGN KEY (`Swimmer_ID`) REFERENCES `swimmer`(`ID`)
+)
+

@@ -1,0 +1,115 @@
+(venv) anjalikamath@Anjalis-MacBook-Pro Code % python3 26thmarch_openrouter.py 
+21:11:05  INFO  Loading /Users/anjalikamath/sem 6/SOP/Code/results_train_10.json
+21:11:05  INFO  DEBUG_LIMIT=10: processing 10 queries only.
+21:11:05  INFO  Remaining: 10 queries | Est. cost: ~$0.0158 | Est. time: ~0.5 min
+21:11:05  INFO  [1/10] q_id=10706  "Which author had the most papers in the year 2009?"
+21:11:06  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:12:00  INFO    [q_id=10706] Domain       : The question is about academic publications, specifically identifying the author with the most papers in a given year (2009). The domain for each database is classified as follows: icfp_1 (academic), aan_1 (academic), scholar (academic), academic (academic), culture_company (entertainment), network_2 (social), music_2 (entertainment), movie_1 (entertainment), art_1 (art), district_spokesman (government).
+21:12:00  INFO    [q_id=10706] Requirements : The question requires tables and columns that can link authors to papers and include the year of publication. Specifically, it needs: 1) A table for authors (with author IDs and names), 2) A table for papers (with paper IDs and titles), 3) A table linking authors to papers (with author IDs and paper IDs), 4) A column in the papers table or a related table that specifies the year of publication.
+21:12:00  INFO    [q_id=10706] Eliminated   : ['culture_company', 'network_2', 'music_2', 'movie_1', 'art_1', 'district_spokesman']
+21:12:00  INFO    [q_id=10706] Comparison   : icfp_1: ✓ Authors table (authID, lname, fname), ✓ Papers table (paperID, title), ✓ Authorship table (authID, paperID), ✗ Missing year in Papers table. aan_1: ✓ Author table (author_id, name), ✓ Paper table (paper_id, title, year), ✓ Author_list table (paper_id, author_id). scholar: ✓ author table (authorId, authorName), ✓ paper table (paperId, title, year), ✓ writes table (paperId, authorId). academic: ✓ author table (aid, name), ✓ publication table (pid, title, year), ✓ writes table (aid, pid). The comparison shows that aan_1, scholar, and academic have all required columns, while icfp_1 lacks the year column in the Papers table.
+21:12:00  INFO    [q_id=10706] Scores       : {'icfp_1': 0.05, 'aan_1': 0.35, 'scholar': 0.35, 'academic': 0.25, 'culture_company': 0.0, 'network_2': 0.0, 'music_2': 0.0, 'movie_1': 0.0, 'art_1': 0.0, 'district_spokesman': 0.0}
+21:12:03  INFO    [q_id=10706] ✓ correct_db=aan_1 rank=1  entropy=1.231236
+21:12:03  INFO  [2/10] q_id=10658  "List names and addresses for all affiliations."
+21:12:05  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:12:18  INFO    [q_id=10658] Domain       : The question domain is 'affiliations' which typically relates to organizations or institutions associated with individuals. Database domains: aan_1 (academic affiliations), icfp_1 (institutional affiliations), e_government (government services and organizations), local_govt_and_lot (local government services), student_assessment (educational institutions), customers_and_products_contacts (customer relations), local_govt_mdm (local government master data), department_store (retail), customers_and_orders (commerce), cre_Drama_Workshop_Groups (performing arts).
+21:12:18  INFO    [q_id=10658] Requirements : The question requires tables with 'affiliation' or equivalent concept (organization/institution), specifically needing columns for 'name' and 'address'.
+21:12:18  INFO    [q_id=10658] Eliminated   : ['student_assessment', 'customers_and_products_contacts', 'local_govt_mdm', 'department_store', 'customers_and_orders', 'cre_Drama_Workshop_Groups']
+21:12:18  INFO    [q_id=10658] Comparison   : aan_1 has Affiliation(name, address) ✓✓. icfp_1 has Inst(name, country) ✓✗ (missing full address). e_government has Organizations(organization_name) and Party_Addresses linking to Addresses ✓✓. local_govt_and_lot has Organizations(organization_details) but no clear address ✓✗.
+21:12:18  INFO    [q_id=10658] Scores       : {'aan_1': 0.4, 'icfp_1': 0.2, 'e_government': 0.3, 'local_govt_and_lot': 0.03, 'student_assessment': 0.005, 'customers_and_products_contacts': 0.005, 'local_govt_mdm': 0.005, 'department_store': 0.005, 'customers_and_orders': 0.005, 'cre_Drama_Workshop_Groups': 0.005}
+21:12:21  WARNING  Scores don't sum to 1, normalizing.
+21:12:21  INFO    [q_id=10658] ✓ correct_db=aan_1 rank=1  entropy=1.327659
+21:12:21  INFO  [3/10] q_id=10690  "What is the id and the number of citations of the most cited"
+21:12:24  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:12:34  INFO    [q_id=10690] Domain       : The question is about academic papers and their citations, which falls under the academic research domain. Databases classified under this domain: icfp_1, aan_1, scholar, academic. Other databases are not relevant as they cover domains like local government, university rankings, journal committees, product catalogs, document collections, and culture companies.
+21:12:34  INFO    [q_id=10690] Requirements : The question requires tables and columns that can identify papers (id) and count their citations (number of citations). Specifically, we need: 1) A table with paper IDs, 2) A table or column that tracks citations for each paper.
+21:12:34  INFO    [q_id=10690] Eliminated   : ['local_govt_mdm', 'university_rank', 'journal_committee', 'product_catalog', 'cre_Doc_and_collections', 'culture_company']
+21:12:34  INFO    [q_id=10690] Comparison   : icfp_1: ✗ No table or column tracks citations. aan_1: ✓ Has Citation table linking papers to cited papers, allowing citation counts. scholar: ✓ Has paper table with numCitedBy column directly providing citation counts. academic: ✓ Has publication table with citation_num column directly providing citation counts.
+21:12:34  INFO    [q_id=10690] Scores       : {'icfp_1': 0.0, 'aan_1': 0.3, 'scholar': 0.4, 'academic': 0.3, 'local_govt_mdm': 0.0, 'university_rank': 0.0, 'journal_committee': 0.0, 'product_catalog': 0.0, 'cre_Doc_and_collections': 0.0, 'culture_company': 0.0}
+21:12:37  INFO    [q_id=10690] ✗ correct_db=aan_1 rank=2  entropy=1.0889
+21:12:37  INFO  [4/10] q_id=10649  "Count the number of authors."
+21:12:39  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:12:59  INFO    [q_id=10649] Domain       : The question 'Count the number of authors' falls under the domain of bibliographic or academic databases, where author information is typically stored. Databases like icfp_1, aan_1, scholar, book_1, book_press, and academic are relevant as they contain author-related tables. Databases like customers_and_products_contacts, customers_and_orders, book_review, and insurance_and_eClaims are irrelevant as they do not pertain to author information.
+21:12:59  INFO    [q_id=10649] Requirements : The question requires a table that stores author information, specifically a column that uniquely identifies authors (e.g., author_id or authID).
+21:12:59  INFO    [q_id=10649] Eliminated   : ['customers_and_products_contacts', 'customers_and_orders', 'book_review', 'insurance_and_eClaims']
+21:12:59  INFO    [q_id=10649] Comparison   : icfp_1 has Authors(authID) ✓; aan_1 has Author(author_id) ✓; book_1 has Author(idAuthor) ✓; scholar has author(authorId) ✓; book_press has author(Author_ID) ✓; academic has author(aid) ✓. All remaining databases have a direct author table with a unique identifier, making them suitable for counting authors.
+21:12:59  INFO    [q_id=10649] Scores       : {'icfp_1': 0.2, 'aan_1': 0.2, 'book_1': 0.15, 'scholar': 0.15, 'book_press': 0.15, 'academic': 0.15, 'customers_and_products_contacts': 0.0, 'customers_and_orders': 0.0, 'book_review': 0.0, 'insurance_and_eClaims': 0.0}
+21:13:02  INFO    [q_id=10649] ✗ correct_db=aan_1 rank=2  entropy=1.782047
+21:13:02  INFO  [5/10] q_id=10720  "Find the id of the papers whose title has the key word 'tran"
+21:13:03  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:13:14  INFO    [q_id=10720] Domain       : The question domain is academic research papers. Databases classified under this domain: icfp_1, scholar, aan_1, academic. Other databases are not relevant to this domain.
+21:13:14  INFO    [q_id=10720] Requirements : The question requires a table with papers and their titles, specifically needing columns: paper_id (or equivalent) and title.
+21:13:14  INFO    [q_id=10720] Eliminated   : ['local_govt_mdm', 'cre_Doc_and_collections', 'customers_card_transactions', 'tracking_grants_for_research', 'culture_company', 'product_catalog']
+21:13:14  INFO    [q_id=10720] Comparison   : icfp_1: Papers table with paperID (✓) and title (✓). scholar: paper table with paperId (✓) and title (✓). aan_1: Paper table with paper_id (✓) and title (✓). academic: publication table with pid (✓) and title (✓). All four databases meet the requirements, but scholar and aan_1 have more comprehensive schemas related to academic papers.
+21:13:14  INFO    [q_id=10720] Scores       : {'icfp_1': 0.2, 'scholar': 0.3, 'aan_1': 0.3, 'academic': 0.2, 'local_govt_mdm': 0.0, 'cre_Doc_and_collections': 0.0, 'customers_card_transactions': 0.0, 'tracking_grants_for_research': 0.0, 'culture_company': 0.0, 'product_catalog': 0.0}
+21:13:17  INFO    [q_id=10720] ✗ correct_db=aan_1 rank=2  entropy=1.366159
+21:13:17  INFO  [6/10] q_id=10714  "What is the title of the paper that has most number of autho"
+21:13:18  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:13:41  INFO    [q_id=10714] Domain       : The question is about academic papers and their authors. Relevant databases must contain information about papers, authors, and their relationships. Databases not related to academic papers or lacking these elements are irrelevant.
+21:13:41  INFO    [q_id=10714] Requirements : The question requires tables for papers (with titles), authors, and a relationship table linking authors to papers to count the number of authors per paper.
+21:13:41  INFO    [q_id=10714] Eliminated   : ['journal_committee', 'culture_company', 'music_2', 'workshop_paper', 'cre_Doc_and_collections', 'local_govt_mdm']
+21:13:41  INFO    [q_id=10714] Comparison   : icfp_1: Papers(title), Authors, Authorship(paperID, authID) ✓✓✓ | aan_1: Paper(title), Author, Author_list(paper_id, author_id) ✓✓✓ | scholar: paper(title), author, writes(paperId, authorId) ✓✓✓ | academic: publication(title), author, writes(pid, aid) ✓✓✓ | journal_committee: ✗ | culture_company: ✗ | music_2: ✗ | workshop_paper: ✗ | cre_Doc_and_collections: ✗ | local_govt_mdm: ✗
+21:13:41  INFO    [q_id=10714] Scores       : {'icfp_1': 0.3, 'aan_1': 0.25, 'scholar': 0.25, 'academic': 0.2, 'journal_committee': 0.0, 'culture_company': 0.0, 'music_2': 0.0, 'workshop_paper': 0.0, 'cre_Doc_and_collections': 0.0, 'local_govt_mdm': 0.0}
+21:13:44  INFO    [q_id=10714] ✗ correct_db=aan_1 rank=2  entropy=1.376227
+21:13:44  INFO  [7/10] q_id=10663  "What are the titles and paper ids for papers written in affi"
+21:13:44  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:14:08  INFO    [q_id=10663] Domain       : The question domain is academic research papers and their affiliations. Databases classified into this domain: icfp_1, aan_1, scholar, academic. Databases outside this domain: university_rank, workshop_paper, conference, tracking_grants_for_research, culture_company, cre_Doc_and_collections.
+21:14:08  INFO    [q_id=10663] Requirements : The question requires tables and columns that can link papers to their titles and affiliations, specifically Harvard University. Needed tables: Papers (title, paperID), Affiliations (name), and a junction table linking papers to affiliations.
+21:14:08  INFO    [q_id=10663] Eliminated   : ['university_rank', 'workshop_paper', 'conference', 'tracking_grants_for_research', 'culture_company', 'cre_Doc_and_collections']
+21:14:08  INFO    [q_id=10663] Comparison   : icfp_1: ✓ Papers (title, paperID), ✓ Inst (name), ✓ Authorship links papers to institutions. aan_1: ✓ Paper (title, paper_id), ✓ Affiliation (name), ✓ Author_list links papers to affiliations. scholar: ✗ Missing direct affiliation link to papers. academic: ✗ Missing direct affiliation link to papers.
+21:14:08  INFO    [q_id=10663] Scores       : {'icfp_1': 0.4, 'aan_1': 0.4, 'scholar': 0.1, 'academic': 0.1, 'university_rank': 0.0, 'workshop_paper': 0.0, 'conference': 0.0, 'tracking_grants_for_research': 0.0, 'culture_company': 0.0, 'cre_Doc_and_collections': 0.0}
+21:14:11  INFO    [q_id=10663] ✗ correct_db=aan_1 rank=2  entropy=1.19355
+21:14:11  INFO  [8/10] q_id=10674  "List the names of all authors and their number of papers in "
+21:14:12  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:14:33  INFO    [q_id=10674] Domain       : The question domain is academic publications, specifically tracking authors and their paper counts. Databases classified by domain: icfp_1 (academic publications), aan_1 (academic publications), scholar (academic publications), academic (academic publications), book_1 (book sales), journal_committee (journal editing), music_2 (music), book_press (book publishing), university_rank (university rankings), workshop_paper (academic workshops).
+21:14:33  INFO    [q_id=10674] Requirements : The question requires tables for authors (with names) and papers, plus a junction table linking authors to papers to count papers per author.
+21:14:33  INFO    [q_id=10674] Eliminated   : ['book_1', 'journal_committee', 'music_2', 'book_press', 'university_rank', 'workshop_paper']
+21:14:33  INFO    [q_id=10674] Comparison   : icfp_1: ✓ Authors (authID, lname, fname), ✓ Papers (paperID), ✓ Authorship (authID, paperID). aan_1: ✓ Author (author_id, name), ✓ Paper (paper_id), ✓ Author_list (author_id, paper_id). scholar: ✓ author (authorId, authorName), ✓ paper (paperId), ✓ writes (authorId, paperId). academic: ✓ author (aid, name), ✓ publication (pid), ✓ writes (aid, pid). Other DBs lack necessary tables/columns for author-paper relationships.
+21:14:33  INFO    [q_id=10674] Scores       : {'icfp_1': 0.3, 'aan_1': 0.25, 'scholar': 0.25, 'academic': 0.2, 'book_1': 0.0, 'journal_committee': 0.0, 'music_2': 0.0, 'book_press': 0.0, 'university_rank': 0.0, 'workshop_paper': 0.0}
+21:14:36  INFO    [q_id=10674] ✗ correct_db=aan_1 rank=2  entropy=1.376227
+21:14:36  INFO  [9/10] q_id=10688  "How many reference papers does paper with id D12-1027 have?"
+21:14:39  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:15:00  INFO    [q_id=10688] Domain       : The question is about academic papers and their references, which falls under the domain of academic research and publication databases.
+21:15:00  INFO    [q_id=10688] Requirements : The question requires a database that can track papers and their references. Specifically, it needs a table for papers and a table or relationship that tracks citations or references between papers.
+21:15:00  INFO    [q_id=10688] Eliminated   : ['cre_Doc_and_collections', 'local_govt_mdm', 'insurance_and_eClaims', 'document_management', 'tracking_grants_for_research', 'product_catalog']
+21:15:00  INFO    [q_id=10688] Comparison   : The remaining databases (icfp_1, aan_1, scholar, academic) are compared based on their ability to track papers and references. icfp_1 lacks a citation table, so it's eliminated. aan_1 has a Citation table that tracks references between papers, which is exactly what's needed. scholar has a cite table that also tracks references between papers. academic has a cite table as well, but its schema is more complex and less directly focused on citations compared to aan_1 and scholar.
+21:15:00  INFO    [q_id=10688] Scores       : {'icfp_1': 0.0, 'aan_1': 0.5, 'scholar': 0.4, 'academic': 0.1, 'cre_Doc_and_collections': 0.0, 'local_govt_mdm': 0.0, 'insurance_and_eClaims': 0.0, 'document_management': 0.0, 'tracking_grants_for_research': 0.0, 'product_catalog': 0.0}
+21:15:03  INFO    [q_id=10688] ✓ correct_db=aan_1 rank=1  entropy=0.943348
+21:15:03  INFO  [10/10] q_id=10680  "List names of all authors who have only 1 paper."
+21:15:03  INFO  HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+21:15:18  INFO    [q_id=10680] Domain       : The question pertains to academic publications and authors. Databases classified under this domain: icfp_1, aan_1, scholar, academic. Non-relevant databases: journal_committee, music_2, book_1, boat_1, insurance_and_eClaims, cre_Doc_Workflow.
+21:15:18  INFO    [q_id=10680] Requirements : The question requires tables that track authors and their paper counts, specifically: Authors (with names) and a many-to-many relationship between authors and papers (to count papers per author).
+21:15:18  INFO    [q_id=10680] Eliminated   : ['journal_committee', 'music_2', 'book_1', 'boat_1', 'insurance_and_eClaims', 'cre_Doc_Workflow']
+21:15:18  INFO    [q_id=10680] Comparison   : icfp_1: ✓ Authors table with authID, lname, fname. ✓ Authorship table linking authID to paperID. aan_1: ✓ Author table with author_id, name. ✓ Author_list table linking author_id to paper_id. scholar: ✓ author table with authorId, authorName. ✓ writes table linking authorId to paperId. academic: ✓ author table with aid, name. ✓ writes table linking aid to pid. All four relevant databases have the necessary tables and columns to answer the question.
+21:15:18  INFO    [q_id=10680] Scores       : {'icfp_1': 0.3, 'aan_1': 0.25, 'scholar': 0.25, 'academic': 0.2, 'journal_committee': 0.0, 'music_2': 0.0, 'book_1': 0.0, 'boat_1': 0.0, 'insurance_and_eClaims': 0.0, 'cre_Doc_Workflow': 0.0}
+21:15:21  INFO    [q_id=10680] ✗ correct_db=aan_1 rank=2  entropy=1.376227
+21:15:21  INFO    ── Progress: 10/10 done | Top-1 acc: 3/10 (30.0%) | 25.6s/query | ETA: 0.0 min
+21:15:21  INFO  
+=======================================================
+21:15:21  INFO    FINAL SUMMARY — 10 queries
+21:15:21  INFO    Top-1 accuracy : 3/10 = 30.0%
+21:15:21  INFO    Top-2 accuracy : 10/10 = 100.0%
+21:15:21  INFO    Not in top10    : 0
+21:15:21  INFO    Avg entropy    : 1.3062
+21:15:21  INFO    Total time     : 4.3 min
+21:15:21  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_3.json
+
+
+12:15:13  INFO  
+=======================================================
+12:15:13  INFO    FINAL SUMMARY — 200 queries
+12:15:13  INFO    Top-1 accuracy : 143/200 = 71.5%
+12:15:13  INFO    Top-2 accuracy : 167/200 = 83.5%
+12:15:13  INFO    Not in top10    : 14
+12:15:13  INFO    Avg entropy    : 0.7684
+12:15:13  INFO    Total time     : 42.9 min
+12:15:13  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+=======================================================
+16:15:19  INFO    FINAL SUMMARY — 500 queries
+16:15:19  INFO    Top-1 accuracy : 357/500 = 71.4%
+16:15:19  INFO    Top-2 accuracy : 410/500 = 82.0%
+16:15:19  INFO    Not in top10    : 33
+16:15:19  INFO    Avg entropy    : 0.8296
+16:15:19  INFO    Total time     : 41.4 min
+16:15:19  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+16:15:19  INFO  =======================================================

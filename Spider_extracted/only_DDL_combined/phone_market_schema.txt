@@ -1,0 +1,48 @@
+This is a Database called phone_market.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. phone
+
+2. market
+
+3. phone_market (displayed as: phone market)
+
+
+Table 1: Tablename is phone
+DDL query for phone:
+CREATE TABLE "phone" (
+"Name" text,
+"Phone_ID" int,
+"Memory_in_G" int,
+"Carrier" text,
+"Price" real,
+PRIMARY KEY ("Phone_ID")
+)
+
+
+Table 2: Tablename is market
+DDL query for market:
+CREATE TABLE "market" (
+"Market_ID" int,
+"District" text,
+"Num_of_employees" int,
+"Num_of_shops" real,
+"Ranking" int,
+PRIMARY KEY ("Market_ID")
+)
+
+
+Table 3: Tablename is phone_market
+Display name: phone market
+DDL query for phone_market:
+CREATE TABLE "phone_market" (
+"Market_ID" int,
+"Phone_ID" text,
+"Num_of_stock" int,
+PRIMARY KEY ("Market_ID","Phone_ID"),
+FOREIGN KEY ("Market_ID") REFERENCES `market`("Market_ID"),
+FOREIGN KEY ("Phone_ID") REFERENCES `phone`("Phone_ID")
+)
+

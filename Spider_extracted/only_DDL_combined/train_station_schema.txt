@@ -1,0 +1,49 @@
+This is a Database called train_station.
+This Database consists of 3 tables.
+
+These tables are:
+
+1. station
+
+2. train
+
+3. train_station (displayed as: train station)
+
+
+Table 1: Tablename is station
+DDL query for station:
+CREATE TABLE "station" (
+"Station_ID" int,
+"Name" text,
+"Annual_entry_exit" real,
+"Annual_interchanges" real,
+"Total_Passengers" real,
+"Location" text,
+"Main_Services" text,
+"Number_of_Platforms" int,
+PRIMARY KEY ("Station_ID")
+)
+
+
+Table 2: Tablename is train
+DDL query for train:
+CREATE TABLE "train" (
+"Train_ID" int,
+"Name" text,
+"Time" text,
+"Service" text,
+PRIMARY KEY ("Train_ID")
+)
+
+
+Table 3: Tablename is train_station
+Display name: train station
+DDL query for train_station:
+CREATE TABLE "train_station" (
+"Train_ID" int,
+"Station_ID" int,	
+PRIMARY KEY ("Train_ID","Station_ID"),
+FOREIGN KEY ("Train_ID") REFERENCES "train"("Train_ID"),
+FOREIGN KEY ("Station_ID") REFERENCES "station"("Station_ID")
+)
+

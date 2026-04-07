@@ -1,0 +1,5 @@
+Database: chinook_1
+Artist(ArtistId: integer, Name: varchar(120)) PK[ArtistId]
+Genre(GenreId: integer, Name: varchar(120)) PK[GenreId]
+MediaType(MediaTypeId: integer, Name: varchar(120)) PK[MediaTypeId]
+Playlist(PlaylistId: integer, Name: varchar(120)) PK[PlaylistId]

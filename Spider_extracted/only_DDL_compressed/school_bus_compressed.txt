@@ -1,0 +1,4 @@
+Database: school_bus
+driver(Driver_ID: int,, Name: text,, Party: text,, Home_city: text,, Age: int,) PK[Driver_ID]
+school(School_ID: int,, Grade: text,, School: text,, Location: text,, Type: text,) PK[School_ID]
+school_bus(School_ID: int,, Driver_ID: int,, Years_Working: int,, If_full_time: bool,, FOREIGN: KEY ("School_ID"), FOREIGN: KEY ("Driver_ID")) PK[School_ID, Driver_ID]

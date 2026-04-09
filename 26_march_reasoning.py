@@ -34,7 +34,7 @@ MODEL_NAME        = "deepseek/deepseek-chat-v3-0324"
 MAX_RETRIES       = 3
 RETRY_DELAY       = 5
 REQUEST_DELAY     = 3.0
-DEBUG_LIMIT       = 750    # set to None for full run
+DEBUG_LIMIT       = 100    # set to None for full run
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 base_dir      = Path(__file__).parent

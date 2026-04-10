@@ -76,7 +76,7 @@
         "question": "Find the names of all instructors whose name includes the substring \u201cdar\u201d.",
         "top1_db": "icfp_1",
         "correct_db": "college_2",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.05555500000000002,
             "entropy": 1.132416,
@@ -136,7 +136,7 @@
         "question": "What is the number of employees?",
         "top1_db": "company_1",
         "correct_db": "flight_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.366159,
@@ -184,7 +184,7 @@
         "question": "Return the average price for each product type.",
         "top1_db": "customers_and_orders",
         "correct_db": "department_store",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.623862,
@@ -376,7 +376,7 @@
         "question": "Which Advisor has most of students? List advisor and the number of students.",
         "top1_db": "pets_1",
         "correct_db": "restaurant_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.94591,
@@ -460,7 +460,7 @@
         "question": "Which states have more than 2 parks?",
         "top1_db": "cre_Theme_park",
         "correct_db": "baseball_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.2,
             "entropy": 1.029653,
@@ -688,7 +688,7 @@
         "question": "Who is the advisor of Linda Smith? Give me the first name and last name.",
         "top1_db": "allergy_1",
         "correct_db": "activity_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.767761,
@@ -700,7 +700,7 @@
         "question": "List the last names of the students whose gender is \"F\" or \"M\".",
         "top1_db": "voter_2",
         "correct_db": "online_exams",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 2.004151,
@@ -784,7 +784,7 @@
         "question": "What are id and name of the products whose price is lower than 600 or higher than 900?",
         "top1_db": "customers_and_orders",
         "correct_db": "department_store",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.721905,
@@ -892,7 +892,7 @@
         "question": "How many students are there?",
         "top1_db": "voter_2",
         "correct_db": "dorm_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 2.033144,
@@ -988,7 +988,7 @@
         "question": "Give the ids and names of products with price lower than 600 or higher than 900.",
         "top1_db": "e_commerce",
         "correct_db": "department_store",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.09999999999999998,
             "entropy": 1.557113,
@@ -1000,7 +1000,7 @@
         "question": "What are the ids of all products that were either ordered more than 3 times or have a cumulative amount purchased of above 80000?",
         "top1_db": "customers_and_orders",
         "correct_db": "department_store",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.903687,
@@ -1156,7 +1156,7 @@
         "question": "people working on sensor fusion",
         "top1_db": "tracking_grants_for_research",
         "correct_db": "scholar",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.2,
             "entropy": 1.029653,
@@ -1216,7 +1216,7 @@
         "question": "What is the name of the oldest student?",
         "top1_db": "voter_2",
         "correct_db": "network_2",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.10000000000000003,
             "entropy": 1.0889,
@@ -1228,7 +1228,7 @@
         "question": "Find the full names of employees who help customers with the first name Leonie.",
         "top1_db": "department_store",
         "correct_db": "chinook_1",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.09999999999999998,
             "entropy": 1.695743,
@@ -1408,7 +1408,7 @@
         "question": "Give the state that has the most customers.",
         "top1_db": "customers_and_addresses",
         "correct_db": "customer_complaints",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 0.693147,
@@ -1420,7 +1420,7 @@
         "question": "How many authors do we have?",
         "top1_db": "icfp_1",
         "correct_db": "cre_Doc_Workflow",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.386294,
@@ -1540,7 +1540,7 @@
         "question": "Find the name of the most expensive product.",
         "top1_db": "manufactory_1",
         "correct_db": "customer_deliveries",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.721905,
@@ -1600,7 +1600,7 @@
         "question": "What are the distinct buildings with capacities of greater than 50?",
         "top1_db": "dorm_1",
         "correct_db": "college_2",
-        "predicted_rank": NaN,
+        "predicted_rank": "Not in Top 10",
         "confidence_scores": {
             "margin": 0.0,
             "entropy": 1.383149,

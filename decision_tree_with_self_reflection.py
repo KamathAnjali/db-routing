@@ -12,28 +12,46 @@ with open(file_path, 'r') as f:
     data = json.load(f)
 
 extracted_data = []
-
 for entry in data:
-    # Basic safety check for data integrity
     if not entry.get('top10') or len(entry['top10']) < 2:
         continue
         
     top1_score = entry['top10'][0]['llm_score']
     top2_score = entry['top10'][1]['llm_score']
-    rank = entry.get('correct_db_rank')
+    top1_id = entry['top10'][0]['db_id']
     
-    # Define our Label: 1 if LLM was wrong (Ambiguous), 0 if it was right (Clear)
-    # We treat 'None' as wrong because the correct DB wasn't found at all
+    # --- SELF-REFLECTION FEATURES ---
+    reasoning = entry.get('reasoning', {})
+    eliminated = reasoning.get('step2_eliminated', [])
+    comparison = str(reasoning.get('step3_comparison', ""))
+    
+    # 1. Logical Conflict: Did it pick a DB it said it eliminated?
+    logical_conflict = 1 if top1_id in eliminated else 0
+    
+    # 2. Hedge Count: Did it use words like "uncertain" or "not explicit"?
+    uncertainty_keywords = ['but no', 'not explicit', 'not clear', 'no explicit', 'however']
+    hedge_count = sum(1 for word in uncertainty_keywords if word in comparison.lower())
+    
+    # 3. Step 3 Complexity: How many schemas did it have to compare?
+    # (Using the count of 'db' mentions or underscores as a proxy)
+    comp_complexity = comparison.count('_')
+
+    rank = entry.get('correct_db_rank')
     label = 1 if rank is None or rank > 1 else 0
 
-    features = {
+    extracted_data.append({
         'concentration': top1_score,
         'margin': top1_score - top2_score,
         'entropy': entry.get('overall_entropy', 0),
+        'logical_conflict': logical_conflict,
+        'hedge_count': hedge_count,
+        'comp_complexity': comp_complexity,
         'is_ambiguous': label,
-        'actual_rank': rank # Stored for the final bound calculation
-    }
-    extracted_data.append(features)
+        'actual_rank': rank
+    })
+
+# Update your X_train/X_test columns:
+# X = df[['concentration', 'margin', 'entropy', 'logical_conflict', 'hedge_count', 'comp_complexity']]
 
 df = pd.DataFrame(extracted_data)
 
@@ -41,16 +59,27 @@ df = pd.DataFrame(extracted_data)
 # We use df_test later to access the 'actual_rank' for the final math
 df_train, df_test = train_test_split(df, test_size=0.2, random_state=42)
 
-X_train = df_train[['concentration', 'margin', 'entropy']]
+# --- UPDATE SECTION 2 ---
+# Define the full set of features including Reflection
+feature_cols = [
+    'concentration', 
+    'margin', 
+    'entropy', 
+    'logical_conflict', 
+    'hedge_count', 
+    'comp_complexity'
+]
+
+X_train = df_train[feature_cols]
 y_train = df_train['is_ambiguous']
 
-X_test = df_test[['concentration', 'margin', 'entropy']]
+X_test = df_test[feature_cols]
 y_test = df_test['is_ambiguous']
 
 # 3. TRAIN DECISION TREE
 # 'class_weight' makes the model more paranoid about missing errors (False Negatives)
 # 'max_depth' keeps the flowchart simple and readable
-clf = DecisionTreeClassifier(max_depth=4, class_weight='balanced', random_state=42)
+clf = DecisionTreeClassifier(max_depth=6, class_weight='balanced', random_state=42)
 clf.fit(X_train, y_train)
 
 # 4. PREDICT AND EVALUATE
@@ -86,45 +115,3 @@ print(f"Absolute Ceiling (Retrieval Limit): {absolute_ceiling:.2f}%")
 print(f"Current Upper Bound (System Limit): {current_upper_bound:.2f}%")
 print(f"Unfixable Queries (Not in Top 10): {not_in_top10}")
 
-# 6. VISUALIZE THE FLOWCHART
-plt.figure(figsize=(20,10))
-plot_tree(clf, 
-          feature_names=['Concentration', 'Margin', 'Entropy'], 
-          class_names=['Clear', 'Ambiguous'], 
-          filled=True, 
-          rounded=True)
-plt.title("How the System Decides to Flag a Database Query")
-plt.show()
-
-# --- SAVING THE AMBIGUOUS QUERIES ---
-
-# 1. We filter the test dataframe for queries the model flagged as '1'
-ambiguous_df = df_test[df_test['prediction'] == 1]
-
-# 2. We can merge back with the original data to get the question text 
-# (Since df_test only has features and IDs, we use the index to find the original text)
-output_list = []
-for index, row in ambiguous_df.iterrows():
-    # 'index' in df matches the original order in our 'data' list
-    original_entry = data[index] 
-    
-    # We create a record of what happened
-    record = {
-        "question_id": original_entry.get("question_id"),
-        "question": original_entry.get("question"),
-        "top1_db": original_entry['top10'][0]['db_id'],
-        "correct_db": original_entry.get("correct_db"),
-        "predicted_rank": "Not in Top 10" if pd.isna(row['actual_rank']) else row['actual_rank'],   
-        "confidence_scores": {
-            "margin": row['margin'],
-            "entropy": row['entropy'],
-            "concentration": row['concentration'],
-        }
-    }
-    output_list.append(record)
-
-# 3. Save to a new JSON file
-with open('flagged_ambiguous_queries.json', 'w') as f:
-    json.dump(output_list, f, indent=4)
-
-print(f"\nSuccessfully saved {len(output_list)} ambiguous queries to 'flagged_ambiguous_queries.json'")

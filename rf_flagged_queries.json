@@ -1,0 +1,1010 @@
+[
+    {
+        "question": "return me the conference, which have the most number of papers by \" H. V. Jagadish \" .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 2
+    },
+    {
+        "question": "What are the venues and years where Columbia University had papers ?",
+        "top1_db": "aan_1",
+        "correct_db": "aan_1",
+        "rank": 1
+    },
+    {
+        "question": "Show all role codes with at least 3 employees.",
+        "top1_db": "cre_Doc_Tracking_DB",
+        "correct_db": "cre_Doc_Tracking_DB",
+        "rank": 1
+    },
+    {
+        "question": "Find the first names and offices of all instructors who have taught some course and the course description and the department name.",
+        "top1_db": "college_2",
+        "correct_db": "college_1",
+        "rank": 2
+    },
+    {
+        "question": "Question Answering publications",
+        "top1_db": "academic",
+        "correct_db": "scholar",
+        "rank": 2
+    },
+    {
+        "question": "How many papers are published by the institution \"Tokohu University\"?",
+        "top1_db": "icfp_1",
+        "correct_db": "icfp_1",
+        "rank": 1
+    },
+    {
+        "question": "Find the names of all instructors whose name includes the substring \u201cdar\u201d.",
+        "top1_db": "icfp_1",
+        "correct_db": "college_2",
+        "rank": null
+    },
+    {
+        "question": "What is the color code and description of the product named \"chervil\"?",
+        "top1_db": "products_gen_characteristics",
+        "correct_db": "products_gen_characteristics",
+        "rank": 1
+    },
+    {
+        "question": "What are the names of students who took a course in the Fall of 2003?",
+        "top1_db": "student_transcripts_tracking",
+        "correct_db": "college_2",
+        "rank": 2
+    },
+    {
+        "question": "What are the salaries and manager ids for employees who have managers?",
+        "top1_db": "hr_1",
+        "correct_db": "hr_1",
+        "rank": 1
+    },
+    {
+        "question": "Count the number of different official languages corresponding to countries that players who play Defender are from.",
+        "top1_db": "soccer_1",
+        "correct_db": "match_season",
+        "rank": 3
+    },
+    {
+        "question": "What is the number of employees?",
+        "top1_db": "company_1",
+        "correct_db": "flight_1",
+        "rank": null
+    },
+    {
+        "question": "What articles have been published since 2006 about the effects of juicing for cancer patients ?",
+        "top1_db": "academic",
+        "correct_db": "scholar",
+        "rank": 2
+    },
+    {
+        "question": "How many papers were accepted at nature communications 2015 ?",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "Please show the most common publication date.",
+        "top1_db": "book_2",
+        "correct_db": "book_2",
+        "rank": 1
+    },
+    {
+        "question": "Return the average price for each product type.",
+        "top1_db": "customers_and_orders",
+        "correct_db": "department_store",
+        "rank": null
+    },
+    {
+        "question": "How many kinds of products have not been sold?",
+        "top1_db": "customers_and_orders",
+        "correct_db": "e_commerce",
+        "rank": 5
+    },
+    {
+        "question": "Count the number of games taken place in park \"Columbia Park\" in 1907.",
+        "top1_db": "baseball_1",
+        "correct_db": "baseball_1",
+        "rank": 1
+    },
+    {
+        "question": "Find the name and building of the department with the highest budget.",
+        "top1_db": "college_2",
+        "correct_db": "college_2",
+        "rank": 1
+    },
+    {
+        "question": "What is the name of department where has the smallest number of professors?",
+        "top1_db": "college_1",
+        "correct_db": "college_1",
+        "rank": 1
+    },
+    {
+        "question": "Show the names of customers and names of dishes they order, in descending order of the quantity of dish.",
+        "top1_db": "restaurant_bills",
+        "correct_db": "restaurant_bills",
+        "rank": 1
+    },
+    {
+        "question": "Find the pilots who have either plane Piper Cub or plane F-14 Fighter.",
+        "top1_db": "pilot_record",
+        "correct_db": "pilot_1",
+        "rank": 2
+    },
+    {
+        "question": "papers related to Question Answering",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "what are the names of the ships ordered by ascending tonnage?",
+        "top1_db": "ship_mission",
+        "correct_db": "ship_mission",
+        "rank": 1
+    },
+    {
+        "question": "Show the enrollment and primary_conference of the oldest college.",
+        "top1_db": "university_basketball",
+        "correct_db": "university_basketball",
+        "rank": 1
+    },
+    {
+        "question": "What are the full names of customers with the account name 900?",
+        "top1_db": "customers_and_invoices",
+        "correct_db": "customers_and_invoices",
+        "rank": 1
+    },
+    {
+        "question": "papers published in eccv 2016 by ali farhadi",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "What are the ids and names for each of the documents?",
+        "top1_db": "document_management",
+        "correct_db": "cre_Docs_and_Epenses",
+        "rank": 3
+    },
+    {
+        "question": "In which years were more than one institution founded?",
+        "top1_db": "institution_sports",
+        "correct_db": "institution_sports",
+        "rank": 1
+    },
+    {
+        "question": "What is the number of distinct countries of all players?",
+        "top1_db": "soccer_3",
+        "correct_db": "soccer_3",
+        "rank": 1
+    },
+    {
+        "question": "Which Advisor has most of students? List advisor and the number of students.",
+        "top1_db": "pets_1",
+        "correct_db": "restaurant_1",
+        "rank": null
+    },
+    {
+        "question": "what is the biggest city in usa",
+        "top1_db": "geo",
+        "correct_db": "geo",
+        "rank": 1
+    },
+    {
+        "question": "What are the distinct ids and prices for goods that cost less than the average good?",
+        "top1_db": "bakery_1",
+        "correct_db": "bakery_1",
+        "rank": 1
+    },
+    {
+        "question": "Show headquarters with at least two companies in the banking industry.",
+        "top1_db": "company_office",
+        "correct_db": "gas_company",
+        "rank": 3
+    },
+    {
+        "question": "return me the authors who have papers in PVLDB after 2010 .",
+        "top1_db": "aan_1",
+        "correct_db": "academic",
+        "rank": 3
+    },
+    {
+        "question": "What is the total number of companies?",
+        "top1_db": "company_office",
+        "correct_db": "gas_company",
+        "rank": 4
+    },
+    {
+        "question": "return me the area of PVLDB .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 2
+    },
+    {
+        "question": "Which states have more than 2 parks?",
+        "top1_db": "cre_Theme_park",
+        "correct_db": "baseball_1",
+        "rank": null
+    },
+    {
+        "question": "How many products do we have?",
+        "top1_db": "customers_and_orders",
+        "correct_db": "customers_and_orders",
+        "rank": 1
+    },
+    {
+        "question": "How many products are there in the records?",
+        "top1_db": "customers_and_products_contacts",
+        "correct_db": "product_catalog",
+        "rank": 4
+    },
+    {
+        "question": "Show the constructors that are used both by drivers with age lower than 20 and drivers with age over than 30.",
+        "top1_db": "formula_1",
+        "correct_db": "car_road_race",
+        "rank": 3
+    },
+    {
+        "question": "what is the population density of the smallest state",
+        "top1_db": "geo",
+        "correct_db": "geo",
+        "rank": 1
+    },
+    {
+        "question": "What are the total and average points of drivers?",
+        "top1_db": "car_racing",
+        "correct_db": "car_racing",
+        "rank": 1
+    },
+    {
+        "question": "What are the names of everybody sorted by age in descending order?",
+        "top1_db": "network_2",
+        "correct_db": "network_2",
+        "rank": 1
+    },
+    {
+        "question": "Show the name of the customer who has the most orders.",
+        "top1_db": "customers_and_orders",
+        "correct_db": "customers_and_products_contacts",
+        "rank": 4
+    },
+    {
+        "question": "On average how large is the population of the counties?",
+        "top1_db": "county_public_safety",
+        "correct_db": "election",
+        "rank": 2
+    },
+    {
+        "question": "find the names of people who are taller than 200 or lower than 190.",
+        "top1_db": "body_builder",
+        "correct_db": "candidate_poll",
+        "rank": 3
+    },
+    {
+        "question": "How many projects are there?",
+        "top1_db": "tracking_grants_for_research",
+        "correct_db": "cre_Docs_and_Epenses",
+        "rank": 2
+    },
+    {
+        "question": "Find the names of users whose emails contain \u2018superstar\u2019 or \u2018edu\u2019.",
+        "top1_db": "student_assessment",
+        "correct_db": "twitter_1",
+        "rank": 7
+    },
+    {
+        "question": "How many companies are headquartered in the US?",
+        "top1_db": "company_office",
+        "correct_db": "company_employee",
+        "rank": 2
+    },
+    {
+        "question": "What is the name and age of the sailor with maximum age?",
+        "top1_db": "boat_1",
+        "correct_db": "boat_1",
+        "rank": 1
+    },
+    {
+        "question": "Who sent most number of packages? List client name and number of packages sent by that client.",
+        "top1_db": "planet_1",
+        "correct_db": "planet_1",
+        "rank": 1
+    },
+    {
+        "question": "Find all the product whose name contains the word \"Scanner\".",
+        "top1_db": "e_commerce",
+        "correct_db": "store_product",
+        "rank": 4
+    },
+    {
+        "question": "Who is the advisor of Linda Smith? Give me the first name and last name.",
+        "top1_db": "allergy_1",
+        "correct_db": "activity_1",
+        "rank": null
+    },
+    {
+        "question": "List the last names of the students whose gender is \"F\" or \"M\".",
+        "top1_db": "voter_2",
+        "correct_db": "online_exams",
+        "rank": null
+    },
+    {
+        "question": "return me the conference, which has the most number of papers containing keyword \" Relational Database \" .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 2
+    },
+    {
+        "question": "What are the names and locations of all tracks?",
+        "top1_db": "race_track",
+        "correct_db": "race_track",
+        "rank": 1
+    },
+    {
+        "question": "Show total points of all players.",
+        "top1_db": "sports_competition",
+        "correct_db": "sports_competition",
+        "rank": 1
+    },
+    {
+        "question": "Find the number of employees we have.",
+        "top1_db": "hr_1",
+        "correct_db": "cre_Doc_Tracking_DB",
+        "rank": 5
+    },
+    {
+        "question": "List the name, location, mascot for all schools.",
+        "top1_db": "school_finance",
+        "correct_db": "school_finance",
+        "rank": 1
+    },
+    {
+        "question": "Find all the policy types that are used by more than 2 customers.",
+        "top1_db": "insurance_policies",
+        "correct_db": "insurance_and_eClaims",
+        "rank": 3
+    },
+    {
+        "question": "What are id and name of the products whose price is lower than 600 or higher than 900?",
+        "top1_db": "customers_and_orders",
+        "correct_db": "department_store",
+        "rank": null
+    },
+    {
+        "question": "Show all document names using templates with template type code BK.",
+        "top1_db": "cre_Doc_Template_Mgt",
+        "correct_db": "cre_Doc_Template_Mgt",
+        "rank": 1
+    },
+    {
+        "question": "What are the first and last names of all the candidates?",
+        "top1_db": "candidate_poll",
+        "correct_db": "student_assessment",
+        "rank": 2
+    },
+    {
+        "question": "What are the main indstries and total market value for each industry?",
+        "top1_db": "company_office",
+        "correct_db": "gas_company",
+        "rank": 2
+    },
+    {
+        "question": "How many articles were published in the Cell journal in 2015 ?",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "Which customer made the most orders? Find the customer name.",
+        "top1_db": "customers_and_orders",
+        "correct_db": "tracking_orders",
+        "rank": 5
+    },
+    {
+        "question": "What are the customer name and date of the orders whose status is \"Delivered\".",
+        "top1_db": "customers_and_orders",
+        "correct_db": "customers_and_addresses",
+        "rank": 4
+    },
+    {
+        "question": "find the code of the country where has the greatest number of players.",
+        "top1_db": "soccer_1",
+        "correct_db": "wta_1",
+        "rank": 8
+    },
+    {
+        "question": "return me the papers written by \" H. V. Jagadish \" and \" Divesh Srivastava \" with the most number of citations .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 3
+    },
+    {
+        "question": "Find the last names of all the authors that have written a paper with title containing the word \"Monadic\".",
+        "top1_db": "icfp_1",
+        "correct_db": "icfp_1",
+        "rank": 1
+    },
+    {
+        "question": "How old is the youngest winning pilot and what is their name?",
+        "top1_db": "aircraft",
+        "correct_db": "aircraft",
+        "rank": 1
+    },
+    {
+        "question": "How many students are there?",
+        "top1_db": "voter_2",
+        "correct_db": "dorm_1",
+        "rank": null
+    },
+    {
+        "question": "Return the number of flights arriving in Aberdeen.",
+        "top1_db": "flight_company",
+        "correct_db": "flight_2",
+        "rank": 3
+    },
+    {
+        "question": "Return the weight of the shortest person.",
+        "top1_db": "body_builder",
+        "correct_db": "entrepreneur",
+        "rank": 3
+    },
+    {
+        "question": "How many students, on average, does each college have enrolled?",
+        "top1_db": "university_rank",
+        "correct_db": "soccer_2",
+        "rank": 9
+    },
+    {
+        "question": "What is the average age of all the club leaders?",
+        "top1_db": "club_leader",
+        "correct_db": "club_leader",
+        "rank": 1
+    },
+    {
+        "question": "Find the titles of movies that don\u2019t have any rating.",
+        "top1_db": "movie_1",
+        "correct_db": "movie_2",
+        "rank": 2
+    },
+    {
+        "question": "Papers authored by Liwen Xiong in 2015",
+        "top1_db": "aan_1",
+        "correct_db": "scholar",
+        "rank": 2
+    },
+    {
+        "question": "On which date did some customer buy a good that costs more than 15 dollars?",
+        "top1_db": "customers_and_products_contacts",
+        "correct_db": "bakery_1",
+        "rank": 3
+    },
+    {
+        "question": "Give the ids and names of products with price lower than 600 or higher than 900.",
+        "top1_db": "e_commerce",
+        "correct_db": "department_store",
+        "rank": null
+    },
+    {
+        "question": "What are the ids of all products that were either ordered more than 3 times or have a cumulative amount purchased of above 80000?",
+        "top1_db": "customers_and_orders",
+        "correct_db": "department_store",
+        "rank": null
+    },
+    {
+        "question": "What are the names of all cinemas not showing any movies?",
+        "top1_db": "movie_2",
+        "correct_db": "movie_2",
+        "rank": 1
+    },
+    {
+        "question": "Return the sale prices of books authored by Plato.",
+        "top1_db": "book_1",
+        "correct_db": "book_1",
+        "rank": 1
+    },
+    {
+        "question": "List all names of courses with 1 credit?",
+        "top1_db": "college_1",
+        "correct_db": "college_3",
+        "rank": 3
+    },
+    {
+        "question": "What is the average amount of items ordered in each order?",
+        "top1_db": "customers_and_orders",
+        "correct_db": "customers_and_addresses",
+        "rank": 2
+    },
+    {
+        "question": "How many products are there under the category \"Seeds\"?",
+        "top1_db": "products_gen_characteristics",
+        "correct_db": "products_gen_characteristics",
+        "rank": 1
+    },
+    {
+        "question": "How many official languages are spoken in Afghanistan?",
+        "top1_db": "country_language",
+        "correct_db": "world_1",
+        "rank": 2
+    },
+    {
+        "question": "How many customers do we have?",
+        "top1_db": "customers_and_products_contacts",
+        "correct_db": "customers_and_orders",
+        "rank": 3
+    },
+    {
+        "question": "Which shop has the most employees? Give me the shop name.",
+        "top1_db": "employee_hire_evaluation",
+        "correct_db": "employee_hire_evaluation",
+        "rank": 1
+    },
+    {
+        "question": "Count the number of different customers who have bought a Monitor Product.",
+        "top1_db": "customers_and_products_contacts",
+        "correct_db": "customers_and_orders",
+        "rank": 2
+    },
+    {
+        "question": "What are the names and cities of the branches that do not have any registered members?",
+        "top1_db": "shop_membership",
+        "correct_db": "shop_membership",
+        "rank": 1
+    },
+    {
+        "question": "List all the log ids and their descriptions from the problem logs.",
+        "top1_db": "tracking_software_problems",
+        "correct_db": "tracking_software_problems",
+        "rank": 1
+    },
+    {
+        "question": "List the names of courses in alphabetical order?",
+        "top1_db": "student_assessment",
+        "correct_db": "student_assessment",
+        "rank": 1
+    },
+    {
+        "question": "people working on sensor fusion",
+        "top1_db": "tracking_grants_for_research",
+        "correct_db": "scholar",
+        "rank": null
+    },
+    {
+        "question": "return me all the papers in VLDB conference in \" University of Michigan \" .",
+        "top1_db": "aan_1",
+        "correct_db": "academic",
+        "rank": 3
+    },
+    {
+        "question": "What is the description of document type 'Paper'?",
+        "top1_db": "cre_Docs_and_Epenses",
+        "correct_db": "cre_Doc_Control_Systems",
+        "rank": 3
+    },
+    {
+        "question": "What are the order ids for orders that include both Pride and Prejudice and The Little Prince?",
+        "top1_db": "book_1",
+        "correct_db": "book_1",
+        "rank": 1
+    },
+    {
+        "question": "What are the type and title of the books that are not rated?",
+        "top1_db": "book_review",
+        "correct_db": "book_review",
+        "rank": 1
+    },
+    {
+        "question": "What is the name of the oldest student?",
+        "top1_db": "voter_2",
+        "correct_db": "network_2",
+        "rank": null
+    },
+    {
+        "question": "Find the full names of employees who help customers with the first name Leonie.",
+        "top1_db": "department_store",
+        "correct_db": "chinook_1",
+        "rank": null
+    },
+    {
+        "question": "how many papers jamie callan published each year ?",
+        "top1_db": "aan_1",
+        "correct_db": "scholar",
+        "rank": 2
+    },
+    {
+        "question": "Compute the average age of all the dogs.",
+        "top1_db": "dog_kennels",
+        "correct_db": "dog_kennels",
+        "rank": 1
+    },
+    {
+        "question": "What are the names of all movies that were created after the most recent Steven Spielberg film?",
+        "top1_db": "imdb",
+        "correct_db": "movie_1",
+        "rank": 3
+    },
+    {
+        "question": "return me the papers of \" H. V. Jagadish \" containing keyword \" User Study \" .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 2
+    },
+    {
+        "question": "Which students do not have any answers? Find their first names.",
+        "top1_db": "online_exams",
+        "correct_db": "online_exams",
+        "rank": 1
+    },
+    {
+        "question": "How many members are not living in Hartford?",
+        "top1_db": "shop_membership",
+        "correct_db": "coffee_shop",
+        "rank": 4
+    },
+    {
+        "question": "What is the name and job title of the staff who was assigned the latest?",
+        "top1_db": "cre_Doc_Workflow",
+        "correct_db": "department_store",
+        "rank": 8
+    },
+    {
+        "question": "What are the items with chocolate flavor that were purchased at most 10 times.",
+        "top1_db": "bakery_1",
+        "correct_db": "bakery_1",
+        "rank": 1
+    },
+    {
+        "question": "What is the name and distance of every aircraft that can cover a distance of more than 5000 and which at least 5 people can fly?",
+        "top1_db": "flight_1",
+        "correct_db": "flight_1",
+        "rank": 1
+    },
+    {
+        "question": "how many italian restaurants are in the yolo county ?",
+        "top1_db": "restaurants",
+        "correct_db": "restaurants",
+        "rank": 1
+    },
+    {
+        "question": "What's the name of the course with most number of enrollments?",
+        "top1_db": "student_assessment",
+        "correct_db": "student_transcripts_tracking",
+        "rank": 4
+    },
+    {
+        "question": "Show the players and the years played.",
+        "top1_db": "baseball_1",
+        "correct_db": "match_season",
+        "rank": 2
+    },
+    {
+        "question": "Show all product names and the total quantity ordered for each product name.",
+        "top1_db": "e_commerce",
+        "correct_db": "customers_and_invoices",
+        "rank": 6
+    },
+    {
+        "question": "What is average enrollment of colleges in the state FL?",
+        "top1_db": "university_rank",
+        "correct_db": "soccer_2",
+        "rank": 3
+    },
+    {
+        "question": "Give the state that has the most customers.",
+        "top1_db": "customers_and_addresses",
+        "correct_db": "customer_complaints",
+        "rank": null
+    },
+    {
+        "question": "How many authors do we have?",
+        "top1_db": "icfp_1",
+        "correct_db": "cre_Doc_Workflow",
+        "rank": null
+    },
+    {
+        "question": "What are the first names and birthdates of the professors in charge of ACCT-211?",
+        "top1_db": "college_1",
+        "correct_db": "college_1",
+        "rank": 1
+    },
+    {
+        "question": "Show the account name, id and the number of transactions for each account.",
+        "top1_db": "customers_card_transactions",
+        "correct_db": "customers_and_invoices",
+        "rank": 2
+    },
+    {
+        "question": "papers that are coauthored by Peter Mertens and Dina Barbian",
+        "top1_db": "icfp_1",
+        "correct_db": "scholar",
+        "rank": 3
+    },
+    {
+        "question": "Find the name of the customer who made the most orders.",
+        "top1_db": "customers_and_addresses",
+        "correct_db": "tracking_orders",
+        "rank": 5
+    },
+    {
+        "question": "How many courses does each student take? List the student id, the student biographical data and the course count.",
+        "top1_db": "student_assessment",
+        "correct_db": "cre_Students_Information_Systems",
+        "rank": 6
+    },
+    {
+        "question": "List the name of all playlist.",
+        "top1_db": "store_1",
+        "correct_db": "store_1",
+        "rank": 1
+    },
+    {
+        "question": "What is the average transcript date?",
+        "top1_db": "student_transcripts_tracking",
+        "correct_db": "student_transcripts_tracking",
+        "rank": 1
+    },
+    {
+        "question": "list all the reviews by Niloofar",
+        "top1_db": "yelp",
+        "correct_db": "yelp",
+        "rank": 1
+    },
+    {
+        "question": "Find the number of movies whose rating is \u2018G\u2019.",
+        "top1_db": "movie_2",
+        "correct_db": "movie_2",
+        "rank": 1
+    },
+    {
+        "question": "Find the name of companies whose revenue is greater than the average revenue of all companies.",
+        "top1_db": "gas_company",
+        "correct_db": "manufactory_1",
+        "rank": 2
+    },
+    {
+        "question": "Find the common personal name of course authors and students.",
+        "top1_db": "e_learning",
+        "correct_db": "e_learning",
+        "rank": 1
+    },
+    {
+        "question": "Find the name of the most expensive product.",
+        "top1_db": "manufactory_1",
+        "correct_db": "customer_deliveries",
+        "rank": null
+    },
+    {
+        "question": "Show all company names and headquarters in the descending order of market value.",
+        "top1_db": "gas_company",
+        "correct_db": "gas_company",
+        "rank": 1
+    },
+    {
+        "question": "What is the average rating of songs for each language?",
+        "top1_db": "sing_contest",
+        "correct_db": "music_1",
+        "rank": 2
+    },
+    {
+        "question": "Find the number of classes offered for all class rooms that held at least 2 classes.",
+        "top1_db": "college_1",
+        "correct_db": "college_1",
+        "rank": 1
+    },
+    {
+        "question": "Find the first names of all the teachers that teach in classroom 110.",
+        "top1_db": "student_1",
+        "correct_db": "student_1",
+        "rank": 1
+    },
+    {
+        "question": "What are the distinct buildings with capacities of greater than 50?",
+        "top1_db": "dorm_1",
+        "correct_db": "college_2",
+        "rank": null
+    },
+    {
+        "question": "What is the lowest salary in departments with average salary greater than the overall average.",
+        "top1_db": "company_1",
+        "correct_db": "college_2",
+        "rank": 10
+    },
+    {
+        "question": "How many teachers does the student named MADLOCK RAY have?",
+        "top1_db": "cre_Students_Information_Systems",
+        "correct_db": "student_1",
+        "rank": 5
+    },
+    {
+        "question": "Give me all the Moroccan restaurant in Texas",
+        "top1_db": "restaurants",
+        "correct_db": "yelp",
+        "rank": 2
+    },
+    {
+        "question": "What are names of countries with the top 3 largest population?",
+        "top1_db": "world_1",
+        "correct_db": "world_1",
+        "rank": 1
+    },
+    {
+        "question": "Who advises student 1004?",
+        "top1_db": "allergy_1",
+        "correct_db": "allergy_1",
+        "rank": 1
+    },
+    {
+        "question": "conference papers of subhasis chaudhuri",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "What is the average sale price of books written by George Orwell?",
+        "top1_db": "book_1",
+        "correct_db": "book_1",
+        "rank": 1
+    },
+    {
+        "question": "Find the first names and offices of all instructors who have taught some course and also find the course description.",
+        "top1_db": "college_2",
+        "correct_db": "college_1",
+        "rank": 2
+    },
+    {
+        "question": "What are the ids of the students who registered for some courses but had the least number of courses for all students?",
+        "top1_db": "student_assessment",
+        "correct_db": "student_assessment",
+        "rank": 1
+    },
+    {
+        "question": "Show names for all aircrafts with distances more than the average.",
+        "top1_db": "aircraft",
+        "correct_db": "flight_1",
+        "rank": 2
+    },
+    {
+        "question": "where is mount whitney located",
+        "top1_db": "mountain_photos",
+        "correct_db": "geo",
+        "rank": 3
+    },
+    {
+        "question": "return me the number of papers on VLDB conference .",
+        "top1_db": "scholar",
+        "correct_db": "academic",
+        "rank": 5
+    },
+    {
+        "question": "Which film has the most copies in the inventory? List both title and id.",
+        "top1_db": "sakila_1",
+        "correct_db": "sakila_1",
+        "rank": 1
+    },
+    {
+        "question": "Which authors have published more than 1 book according to the database? Give me their names.",
+        "top1_db": "book_1",
+        "correct_db": "book_press",
+        "rank": 2
+    },
+    {
+        "question": "Show the title and publication dates of books.",
+        "top1_db": "book_2",
+        "correct_db": "book_2",
+        "rank": 1
+    },
+    {
+        "question": "Who are Noah A Smith 's co-authors",
+        "top1_db": "icfp_1",
+        "correct_db": "scholar",
+        "rank": 3
+    },
+    {
+        "question": "What are the names of the clients who do not have any booking?",
+        "top1_db": "products_for_hire",
+        "correct_db": "cre_Drama_Workshop_Groups",
+        "rank": 4
+    },
+    {
+        "question": "Give me a list of distinct product ids from orders placed between 1975-01-01 and 1976-01-01?",
+        "top1_db": "customers_and_products_contacts",
+        "correct_db": "tracking_orders",
+        "rank": 4
+    },
+    {
+        "question": "how many David M. Blei papers are in AISTATS ?",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "What are the census rankings of cities that do not have the status \"Village\"?",
+        "top1_db": "geo",
+        "correct_db": "farm",
+        "rank": 4
+    },
+    {
+        "question": "What are the titles of books with the highest purchase price across all books ?",
+        "top1_db": "book_1",
+        "correct_db": "book_1",
+        "rank": 1
+    },
+    {
+        "question": "What are the names of mountains that have a height of over 5000 or a prominence of over 1000?",
+        "top1_db": "climbing",
+        "correct_db": "climbing",
+        "rank": 1
+    },
+    {
+        "question": "What are all distinct country for artists?",
+        "top1_db": "music_1",
+        "correct_db": "theme_gallery",
+        "rank": 4
+    },
+    {
+        "question": "What are all the receipt numbers that have a good with a price above 10 or have the earliest date?",
+        "top1_db": "bakery_1",
+        "correct_db": "bakery_1",
+        "rank": 1
+    },
+    {
+        "question": "Find all cities in which there is a restaurant called \" MGM Grand Buffet \"",
+        "top1_db": "restaurants",
+        "correct_db": "yelp",
+        "rank": 2
+    },
+    {
+        "question": "How many clubs are there?",
+        "top1_db": "sports_competition",
+        "correct_db": "club_1",
+        "rank": 3
+    },
+    {
+        "question": "Show all information on students.",
+        "top1_db": "cre_Students_Information_Systems",
+        "correct_db": "online_exams",
+        "rank": 10
+    },
+    {
+        "question": "What campuses are located in Northridge, Los Angeles or in San Francisco, San Francisco?",
+        "top1_db": "university_rank",
+        "correct_db": "csu_1",
+        "rank": 2
+    },
+    {
+        "question": "For each type of food, what are the average, maximum and minimum price?",
+        "top1_db": "bakery_1",
+        "correct_db": "bakery_1",
+        "rank": 1
+    },
+    {
+        "question": "What are the names of all the races that occurred in the year 2017?",
+        "top1_db": "formula_1",
+        "correct_db": "formula_1",
+        "rank": 1
+    },
+    {
+        "question": "How many faculty members are at the university that gave the least number of degrees in 2001?",
+        "top1_db": "csu_1",
+        "correct_db": "csu_1",
+        "rank": 1
+    },
+    {
+        "question": "How many papers has David M. Blei published in AISTATS ?",
+        "top1_db": "scholar",
+        "correct_db": "scholar",
+        "rank": 1
+    },
+    {
+        "question": "How many customers have no payment histories?",
+        "top1_db": "customers_card_transactions",
+        "correct_db": "driving_school",
+        "rank": 4
+    },
+    {
+        "question": "What is the name of the highest mountain?",
+        "top1_db": "geo",
+        "correct_db": "climbing",
+        "rank": 3
+    }
+]

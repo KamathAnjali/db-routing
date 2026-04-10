@@ -65,3 +65,12 @@
 16:24:44  INFO    Total time     : 89.8 min
 16:24:44  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
 16:24:44  INFO  =======================================================
+=======================================================
+11:58:24  INFO    FINAL SUMMARY — 2000 queries
+11:58:24  INFO    Top-1 accuracy : 1410/2000 = 70.5%
+11:58:24  INFO    Top-2 accuracy : 1625/2000 = 81.2%
+11:58:24  INFO    Not in top10    : 139
+11:58:24  INFO    Avg entropy    : 0.8594
+11:58:24  INFO    Total time     : 517.0 min
+11:58:24  INFO    Saved to       : /Users/anjalikamath/sem 6/SOP/Code/llm_rerank_openrouter_reasoning.json
+11:58:24  INFO  =======================================================

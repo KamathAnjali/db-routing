@@ -128,3 +128,20 @@ with open('flagged_ambiguous_queries.json', 'w') as f:
     json.dump(output_list, f, indent=4)
 
 print(f"\nSuccessfully saved {len(output_list)} ambiguous queries to 'flagged_ambiguous_queries.json'")
+
+# --- DEEP DIVE INTO TOP 10 FAILURES ---
+
+# 1. Analyze the 28 (False Negatives): Classifier said 'Clear' (0), but LLM was 'Wrong' (1)
+false_negatives = df_test[(df_test['prediction'] == 0) & (df_test['is_ambiguous'] == 1)]
+fn_not_in_top10 = false_negatives['actual_rank'].isna().sum()
+
+# 2. Analyze the 97 (True Positives): Classifier said 'Ambiguous' (1), and LLM was 'Wrong' (1)
+true_positives = df_test[(df_test['prediction'] == 1) & (df_test['is_ambiguous'] == 1)]
+tp_not_in_top10 = true_positives['actual_rank'].isna().sum()
+
+print("\n--- Failure Analysis: Retrieval vs. Classification ---")
+print(f"Out of the 28 False Negatives: {fn_not_in_top10} were not in Top 10 (Impossible to fix)")
+print(f"Out of the 28 False Negatives: {28 - fn_not_in_top10} were in Top 10 (Classifier simply missed them)")
+
+print(f"\nOut of the 97 True Positives: {tp_not_in_top10} were not in Top 10 (Flagged correctly as 'Impossible')")
+print(f"Out of the 97 True Positives: {97 - tp_not_in_top10} were in Top 10 (Flagged correctly as 'Fixable')")

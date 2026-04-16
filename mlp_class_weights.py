@@ -53,20 +53,3 @@ print(classification_report(y_test, preds))
 print("Balanced accuracy:", balanced_accuracy_score(y_test, preds))
 print("ROC-AUC:", roc_auc_score(y_test, proba))
 print("model_threshold:",model_threshold, "; weight:", weight)
-
-
-# ── Attach predictions back to dataframe ─────────────
-test_df = df.loc[test_idx].copy()
-test_df["ambiguous_prob"] = proba
-test_df["is_ambiguous"] = preds
-
-# ── Filter ambiguous queries ─────────────────────────
-ambiguous_df = test_df[test_df["is_ambiguous"] == 1]
-
-# ── Save to JSON ─────────────────────────────────────
-output = ambiguous_df[["qid", "query", "ambiguous_prob"]].to_dict(orient="records")
-
-with open("ambiguous_queries.json", "w") as f:
-    json.dump(output, f, indent=2)
-
-print(f"\nSaved {len(output)} ambiguous queries to ambiguous_queries.json")

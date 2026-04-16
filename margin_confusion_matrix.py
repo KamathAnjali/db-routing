@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 INPUT_FILE = "llm_rerank_openrouter_reasoning.json"
-THRESHOLD  = 0.21
+THRESHOLD  = 0.20
 
 with open(INPUT_FILE) as f:
     data = json.load(f)
@@ -64,4 +64,3 @@ ax.set_title(f"Confusion Matrix: Margin vs Classification\n(Margin threshold = {
 
 plt.tight_layout()
 plt.savefig("confusion_matrix.png", dpi=150, bbox_inches="tight")
-plt.show()

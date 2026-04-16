@@ -23,7 +23,7 @@ import sys
 if len(sys.argv) > 1:
     ambiguity_threshold = float(sys.argv[1])
 else:
-    ambiguity_threshold = 0.20  # default
+    ambiguity_threshold = 0.15  # default
 
 # ── LABELING ──────────────────────────────────────────────────────────────────
 

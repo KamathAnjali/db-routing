@@ -31,7 +31,7 @@ for fold, (train_idx, test_idx) in enumerate(kf.split(X, y)):
     X_train_s = scaler.fit_transform(X_train)
     X_test_s  = scaler.transform(X_test)
 
-    sample_weights = np.where(y_train == 1, 2.2, 1.0)
+    sample_weights = np.where(y_train == 1, 2.0, 1.0)
 
     mlp = MLPClassifier(
         hidden_layer_sizes=(64, 32),
